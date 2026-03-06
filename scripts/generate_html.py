@@ -135,6 +135,13 @@ main { padding: 16px 24px; max-width: 900px; }
   font-size: 11px;
 }
 .comment-link:hover { text-decoration: underline; }
+.card-title-en {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 3px;
+}
 .empty { color: var(--muted); padding: 20px 0; }
 .archive-section { margin-top: 24px; }
 .archive-section h2 {
@@ -206,7 +213,9 @@ def card_html(item: dict) -> str:
     source = item.get("source", "")
     color = SOURCE_COLORS.get(source, "#888")
     label = SOURCE_LABELS.get(source, source)
-    title = escape(item.get("title", ""))
+    title_en = escape(item.get("title", ""))
+    title_ja = escape(item.get("title_ja", ""))
+    title = title_ja if title_ja else title_en
     url = escape(item.get("url", "#"))
     desc = escape(item.get("description", ""))
     date = format_date(item.get("published_at", ""))
@@ -235,10 +244,15 @@ def card_html(item: dict) -> str:
     if desc and desc != title:
         desc_html = f'<p class="card-desc">{desc}</p>'
 
+    en_subtitle = ""
+    if title_ja and title_en:
+        en_subtitle = f'<span class="card-title-en">{title_en}</span>'
+
     return (
         f'<div class="card" data-source="{source}">'
         f'<div class="card-source" style="color:{color}">{label}</div>'
         f'<a href="{url}" target="_blank" class="card-title">{title}</a>'
+        f"{en_subtitle}"
         f"{desc_html}"
         f'<div class="card-meta">{meta_html}</div>'
         f"</div>"
