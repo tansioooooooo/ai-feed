@@ -1,22 +1,32 @@
 {
-  "updated_at": "2026-03-06T06:19:27.858309+00:00",
+  "updated_at": "2026-03-06T13:15:57.067976+00:00",
   "hackernews": [
     {
       "source": "hackernews",
       "title": "GPT-5.4",
       "url": "https://openai.com/index/introducing-gpt-5-4/",
-      "score": 754,
-      "comments": 628,
+      "score": 886,
+      "comments": 697,
       "hn_url": "https://news.ycombinator.com/item?id=47265045",
       "published_at": "2026-03-05T18:08:10+00:00",
       "title_ja": "GPT-5.4"
     },
     {
       "source": "hackernews",
+      "title": "Hardening Firefox with Anthropic's Red Team",
+      "url": "https://blog.mozilla.org/en/firefox/hardening-firefox-anthropic-red-team/",
+      "score": 54,
+      "comments": 13,
+      "hn_url": "https://news.ycombinator.com/item?id=47273854",
+      "published_at": "2026-03-06T11:53:18+00:00",
+      "title_ja": "AnthropicのRed TeamによるFirefoxのセキュリティ強化"
+    },
+    {
+      "source": "hackernews",
       "title": "Labor market impacts of AI: A new measure and early evidence",
       "url": "https://www.anthropic.com/research/labor-market-impacts",
-      "score": 129,
-      "comments": 178,
+      "score": 236,
+      "comments": 355,
       "hn_url": "https://news.ycombinator.com/item?id=47268391",
       "published_at": "2026-03-05T22:55:01+00:00",
       "title_ja": "AIの労働市場への影響：新しい指標と初期エビデンス"
@@ -25,8 +35,8 @@
       "source": "hackernews",
       "title": "A standard protocol to handle and discard low-effort, AI-Generated pull requests",
       "url": "https://406.fail/",
-      "score": 142,
-      "comments": 43,
+      "score": 219,
+      "comments": 74,
       "hn_url": "https://news.ycombinator.com/item?id=47267947",
       "published_at": "2026-03-05T22:04:59+00:00",
       "title_ja": "低品質なAI生成プルリクエストを処理・却下するための標準プロトコル"
@@ -35,101 +45,91 @@
       "source": "hackernews",
       "title": "AI and the Ship of Theseus",
       "url": "https://lucumr.pocoo.org/2026/3/5/theseus/",
-      "score": 81,
-      "comments": 87,
+      "score": 131,
+      "comments": 134,
       "hn_url": "https://news.ycombinator.com/item?id=47263048",
       "published_at": "2026-03-05T15:49:45+00:00",
       "title_ja": "AIとテセウスの船"
     },
     {
       "source": "hackernews",
+      "title": "Launch HN: Vela (YC W26) – AI for complex scheduling",
+      "url": "https://news.ycombinator.com/item?id=47264741",
+      "score": 51,
+      "comments": 39,
+      "hn_url": "https://news.ycombinator.com/item?id=47264741",
+      "published_at": "2026-03-05T17:43:31+00:00",
+      "title_ja": "Launch HN: Vela (YC W26) – 複雑なスケジューリング向けAI"
+    },
+    {
+      "source": "hackernews",
       "title": "The L in \"LLM\" Stands for Lying",
       "url": "https://acko.net/blog/the-l-in-llm-stands-for-lying/",
-      "score": 629,
-      "comments": 433,
+      "score": 643,
+      "comments": 456,
       "hn_url": "https://news.ycombinator.com/item?id=47257394",
       "published_at": "2026-03-05T04:02:32+00:00",
-      "title_ja": "「LLM」のLは嘘つきのL"
+      "title_ja": "「LLM」のLはLying（嘘）の略"
     },
     {
       "source": "hackernews",
       "title": "Relicensing with AI-Assisted Rewrite",
       "url": "https://tuananh.net/2026/03/05/relicensing-with-ai-assisted-rewrite/",
-      "score": 383,
-      "comments": 374,
+      "score": 392,
+      "comments": 377,
       "hn_url": "https://news.ycombinator.com/item?id=47257803",
       "published_at": "2026-03-05T05:07:33+00:00",
-      "title_ja": "AI支援による書き直しでライセンス変更"
-    },
-    {
-      "source": "hackernews",
-      "title": "Claude's Cycles [pdf]",
-      "url": "https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf",
-      "score": 806,
-      "comments": 348,
-      "hn_url": "https://news.ycombinator.com/item?id=47230710",
-      "published_at": "2026-03-03T10:57:42+00:00",
-      "title_ja": "Claudeのサイクル [PDF]"
-    },
-    {
-      "source": "hackernews",
-      "title": "AMD will bring its “Ryzen AI” processors to standard desktop PCs for first time",
-      "url": "https://arstechnica.com/gadgets/2026/03/amd-ryzen-ai-400-cpus-will-bring-upgraded-graphics-to-socket-am5-desktops/",
-      "score": 226,
-      "comments": 212,
-      "hn_url": "https://news.ycombinator.com/item?id=47216825",
-      "published_at": "2026-03-02T11:51:57+00:00",
-      "title_ja": "AMDが「Ryzen AI」プロセッサをデスクトップPCに初めて展開へ"
+      "title_ja": "AI支援による書き直しでのライセンス変更"
     },
     {
       "source": "hackernews",
       "title": "Something is afoot in the land of Qwen",
       "url": "https://simonwillison.net/2026/Mar/4/qwen/",
-      "score": 773,
-      "comments": 350,
+      "score": 774,
+      "comments": 352,
       "hn_url": "https://news.ycombinator.com/item?id=47249343",
       "published_at": "2026-03-04T15:55:34+00:00",
-      "title_ja": "Qwen界隈で何かが起きている"
+      "title_ja": "Qwenの世界で何かが動いている"
     },
     {
       "source": "hackernews",
-      "title": "Intelligence is a commodity. Context is the real AI Moat",
-      "url": "https://adlrocha.substack.com/p/adlrocha-intelligence-is-a-commodity",
-      "score": 121,
-      "comments": 96,
-      "hn_url": "https://news.ycombinator.com/item?id=47205009",
-      "published_at": "2026-03-01T09:04:19+00:00",
-      "title_ja": "知性はコモディティ化した。コンテキストこそが真のAI優位の源泉"
+      "title": "We might all be AI engineers now",
+      "url": "https://yasint.dev/we-might-all-be-ai-engineers-now/",
+      "score": 53,
+      "comments": 70,
+      "hn_url": "https://news.ycombinator.com/item?id=47272734",
+      "published_at": "2026-03-06T09:13:30+00:00",
+      "title_ja": "私たちは今や皆AIエンジニアかもしれない"
     },
     {
       "source": "hackernews",
-      "title": "Qwen3.5 Fine-Tuning Guide",
-      "url": "https://unsloth.ai/docs/models/qwen3.5/fine-tune",
-      "score": 402,
-      "comments": 103,
-      "hn_url": "https://news.ycombinator.com/item?id=47246296",
-      "published_at": "2026-03-04T12:04:31+00:00",
-      "title_ja": "Qwen3.5ファインチューニングガイド"
+      "title": "AMD will bring its “Ryzen AI” processors to standard desktop PCs for first time",
+      "url": "https://arstechnica.com/gadgets/2026/03/amd-ryzen-ai-400-cpus-will-bring-upgraded-graphics-to-socket-am5-desktops/",
+      "score": 227,
+      "comments": 215,
+      "hn_url": "https://news.ycombinator.com/item?id=47216825",
+      "published_at": "2026-03-02T11:51:57+00:00",
+      "title_ja": "AMDの「Ryzen AI」プロセッサが初めて標準デスクトップPCに搭載へ"
     },
     {
       "source": "hackernews",
       "title": "Meta’s AI smart glasses and data privacy concerns",
       "url": "https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything",
-      "score": 1423,
+      "score": 1425,
       "comments": 805,
       "hn_url": "https://news.ycombinator.com/item?id=47225130",
       "published_at": "2026-03-02T22:32:35+00:00",
-      "title_ja": "MetaのAIスマートグラスとデータプライバシーの懸念"
+      "title_ja": "MetaのAIスマートグラスとデータプライバシーへの懸念"
     },
     {
       "source": "hackernews",
-      "title": "Pentagon formally labels Anthropic supply-chain risk",
-      "url": "https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
-      "score": 394,
-      "comments": 256,
-      "hn_url": "https://news.ycombinator.com/item?id=47266084",
-      "published_at": "2026-03-05T19:24:35+00:00",
-      "title_ja": "国防総省がAnthropicをサプライチェーンリスクとして正式に指定"
+      "title": "Qwen3.5 Fine-Tuning Guide",
+      "url": "https://unsloth.ai/docs/models/qwen3.5/fine-tune",
+      "score": 406,
+      "comments": 103,
+      "hn_url": "https://news.ycombinator.com/item?id=47246296",
+      "published_at": "2026-03-04T12:04:31+00:00",
+      "title_ja": "Qwen3.5ファインチューニングガイド"
     },
     {
       "source": "hackernews",
@@ -139,37 +139,47 @@
       "comments": 23,
       "hn_url": "https://news.ycombinator.com/item?id=47232903",
       "published_at": "2026-03-03T14:30:58+00:00",
-      "title_ja": "Launch HN: Cekura (YC F24) — 音声・チャットAIエージェントのテスト・監視ツール"
+      "title_ja": "Launch HN: Cekura (YC F24) – 音声・チャットAIエージェントのテスト・監視ツール"
+    },
+    {
+      "source": "hackernews",
+      "title": "Intelligence is a commodity. Context is the real AI Moat",
+      "url": "https://adlrocha.substack.com/p/adlrocha-intelligence-is-a-commodity",
+      "score": 123,
+      "comments": 98,
+      "hn_url": "https://news.ycombinator.com/item?id=47205009",
+      "published_at": "2026-03-01T09:04:19+00:00",
+      "title_ja": "知性はコモディティ。コンテキストこそが真のAIの競争優位性"
     },
     {
       "source": "hackernews",
       "title": "Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’",
       "url": "https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/",
-      "score": 780,
-      "comments": 413,
+      "score": 784,
+      "comments": 419,
       "hn_url": "https://news.ycombinator.com/item?id=47255662",
       "published_at": "2026-03-04T23:51:10+00:00",
-      "title_ja": "Dario AmodeiがOpenAIの軍事契約をめぐる発言を「真っ赤な嘘」と批判"
+      "title_ja": "Dario Amodei、OpenAIの軍事契約に関する発言を「完全な嘘」と批判"
     },
     {
       "source": "hackernews",
       "title": "Jensen Huang says Nvidia is pulling back from OpenAI and Anthropic",
       "url": "https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/",
-      "score": 215,
+      "score": 218,
       "comments": 105,
       "hn_url": "https://news.ycombinator.com/item?id=47256781",
       "published_at": "2026-03-05T02:33:58+00:00",
-      "title_ja": "Jensen HuangがNvidiaのOpenAIおよびAnthropicからの投資撤退を示唆"
+      "title_ja": "Jensen Huang、NvidiaがOpenAIとAnthropicへの投資を縮小すると発言"
     },
     {
       "source": "hackernews",
       "title": "NanoGPT Slowrun: Language Modeling with Limited Data, Infinite Compute",
       "url": "https://qlabs.sh/slowrun",
-      "score": 181,
+      "score": 183,
       "comments": 35,
       "hn_url": "https://news.ycombinator.com/item?id=47251259",
       "published_at": "2026-03-04T17:56:04+00:00",
-      "title_ja": "NanoGPT Slowrun：限られたデータと無限の計算資源による言語モデリング"
+      "title_ja": "NanoGPT Slowrun: データ制限・計算資源無制限での言語モデリング"
     },
     {
       "source": "hackernews",
@@ -179,7 +189,7 @@
       "comments": 20,
       "hn_url": "https://news.ycombinator.com/item?id=47203219",
       "published_at": "2026-03-01T03:03:46+00:00",
-      "title_ja": "TorchLean：Leanによるニューラルネットワークの形式化"
+      "title_ja": "TorchLean: Leanによるニューラルネットワークの形式化"
     },
     {
       "source": "hackernews",
@@ -189,107 +199,99 @@
       "comments": 379,
       "hn_url": "https://news.ycombinator.com/item?id=47226608",
       "published_at": "2026-03-03T01:12:30+00:00",
-      "title_ja": "AIによる捏造引用問題でArs TechnicaがライターをGPT"
+      "title_ja": "Ars Technica、AI捏造引用問題でライターを解雇"
     },
     {
       "source": "hackernews",
-      "title": "You need to rewrite your CLI for AI agents",
-      "url": "https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/",
-      "score": 155,
-      "comments": 63,
-      "hn_url": "https://news.ycombinator.com/item?id=47252459",
-      "published_at": "2026-03-04T19:20:03+00:00",
-      "title_ja": "AIエージェントのためにCLIを書き直す必要がある"
+      "title": "Pentagon formally labels Anthropic supply-chain risk",
+      "url": "https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
+      "score": 412,
+      "comments": 271,
+      "hn_url": "https://news.ycombinator.com/item?id=47266084",
+      "published_at": "2026-03-05T19:24:35+00:00",
+      "title_ja": "国防総省、Anthropicをサプライチェーンリスクに正式認定"
     }
   ],
   "hatena": [
     {
       "source": "hatena",
-      "title": "MCPはなぜCLIに負けたのか —— 経緯と構造を整理する",
-      "url": "https://zenn.dev/hiraly/articles/3409b886607274",
-      "description": "2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半。2026年3月現在、MCPの優位性はほぼ失われている。MCP不要論がHacker Newsのトップに繰り返し上がり、Anthropic自身がMC...",
-      "bookmarks": 449,
-      "published_at": "2026-03-05T13:13:39Z"
-    },
-    {
-      "source": "hatena",
       "title": "日本生命、米国でOpenAIを提訴　「ChatGPTが非弁行為」 - 日本経済新聞",
       "url": "https://www.nikkei.com/article/DGXZQOGN060800W6A300C2000000/",
       "description": "【シリコンバレー=山田遼太郎】日本生命保険の米国法人が米裁判所に米オープンAIを提訴したことが5日わかった。同社が弁護士資格を持たずに対話型AI（人工知能）「Chat（チャット）GPT」を通じて法的助言をした結果、日本生命が不当な訴訟に直面したと主張して1030万ドル（約16億円）強の損害賠償を求めている。中西部イ...",
-      "bookmarks": 119,
+      "bookmarks": 195,
       "published_at": "2026-03-05T23:07:01Z"
     },
     {
       "source": "hatena",
       "title": "Claude Codeを組織導入するためのプラン選定ガイド",
       "url": "https://zenn.dev/knowledgework/articles/claude-code-organization-plan-guide",
-      "description": "はじめに Anthropicの製品体系はここ1年で大きく変わった。Claude Codeが使えるプランも変遷を重ねて、「結局どのプランをどう組み合わせればいいのか」が分かりにくい。 この記事では、製品体系の整理と、Claude Codeを組織で活用するためのプラン構成のベストプラクティスを紹介する。Knowledge Workでの実際の運用例...",
-      "bookmarks": 98,
+      "description": "はじめに Anthropicの製品体系はここ1年で大きく変わった。Claude Codeが使えるプランも変わってきて、「結局どのプランをどう組み合わせればいいのか」が分かりにくい。 この記事では、製品体系の整理と、Claude Codeを組織で活用するためのプラン構成のベストプラクティスを紹介する。Knowledge Workでの実際の運用例...",
+      "bookmarks": 186,
       "published_at": "2026-03-06T00:09:37Z"
+    },
+    {
+      "source": "hatena",
+      "title": "MCPはなぜCLIに負けたのか —— 経緯と構造を整理する",
+      "url": "https://zenn.dev/hiraly/articles/3409b886607274",
+      "description": "2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半。2026年3月現在、MCPの優位性はほぼ失われている。MCP不要論がHacker Newsのトップに繰り返し上がり、Anthropic自身がMC...",
+      "bookmarks": 560,
+      "published_at": "2026-03-05T13:13:39Z"
     },
     {
       "source": "hatena",
       "title": "【保存版】Claude課金すべき？Cowrok・Skills・Claude Codeの使い方全解説",
       "url": "https://newspicks.com/news/16173894/body/",
       "description": "AIテーマのPodcastエピソードの記事版です！ ジェネトピ(Generative AI Topic)は、明日から試したくなるリアルなAI活用秘話を、雑談感覚でゆるく学べるPodcastです！ Spotify Youtube Apple Podcast 最新動向をウォッチしている人以外にも、AIを身近に感じられるコンテンツを作りたいと思いPodcastを始めました。エピソ...",
-      "bookmarks": 35,
+      "bookmarks": 118,
       "published_at": "2026-03-05T12:45:10Z"
     },
     {
       "source": "hatena",
-      "title": "OpenAIが「GPT-5.4」提供、Excelと連携　アンソロピック上回る性能 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOGN05CGB0V00C26A3000000/",
-      "description": "【シリコンバレー=山田遼太郎】米オープンAIは5日、新たな人工知能（AI）モデル「GPT-5.4」の提供を始めたと発表した。「エクセル」など表計算ソフトの操作やプレゼンテーション資料の作成といった事務作業の性能を高めた。法人向けのAIに強い米新興アンソロピックに対抗する。同日から対話型AI「Chat（チャット）GPT」...",
-      "bookmarks": 33,
-      "published_at": "2026-03-05T23:00:02Z"
+      "title": "ガバメントAIで試用する国内大規模言語モデル（LLM）の公募結果｜デジタル庁",
+      "url": "https://www.digital.go.jp/news/10d55c63-b3e1-42b9-9cc5-93a06943ae0e",
+      "description": "ホーム新着・更新ガバメントAIで試用する国内大規模言語モデル（LLM）の公募結果 ガバメントAIで試用する国内大規模言語モデル（LLM）の公募結果 ガバメントAIで試用する国内大規模言語モデル（LLM：Large Language Model）の公募を行ったところ15件の応募があり、審査の結果、7件を選定しました。 経緯人口減少と少子高...",
+      "bookmarks": 47,
+      "published_at": "2026-03-06T05:28:59Z"
+    },
+    {
+      "source": "hatena",
+      "title": "“政府認定AI”選定へ　デジタル庁、国産7モデルを検証　全府省庁18万人に展開",
+      "url": "https://www.itmedia.co.jp/aiplus/articles/2603/06/news097.html",
+      "description": "デジタル庁は3月6日、政府調達を前提に、生成AIプラットフォーム「源内」で試用する国産LLM（大規模言語モデル）を発表した。NTTグループの「tsuzumi 2」、ソフトバンクの「Sarashina2 mini」など7モデルを選定。5月から2027年3月にかけて、これらの利用を前提に、源内を全府省庁の職員約18万人に展開。実用性を検証して...",
+      "bookmarks": 29,
+      "published_at": "2026-03-06T05:21:17Z"
     },
     {
       "source": "hatena",
       "title": "Anthropic、AIの労働市場インパクトを測る新指標　プログラマーは75％、清掃員は0％",
       "url": "https://www.itmedia.co.jp/aiplus/articles/2603/06/news076.html",
       "description": "米Anthropicは3月5日（現地時間）、AIによる労働市場への影響を測定するための新しい指標「Labor market impacts of AI」を発表した。 同社がこのような指標を作成した背景には、過去の経済的混乱（業務のオフショア化や産業用ロボットの導入など）における労働市場への影響予測が、しばしば不正確だったという歴史的な...",
-      "bookmarks": 28,
+      "bookmarks": 47,
       "published_at": "2026-03-06T00:13:12Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Google Workspace CLI（gws）が登場！早速インストールしてClaude Codeから操作してみた | DevelopersIO",
-      "url": "https://dev.classmethod.jp/articles/google-workspace-cli-gws-launch-try-claude-code/",
-      "description": "",
-      "bookmarks": 91,
-      "published_at": "2026-03-05T02:33:01Z"
     },
     {
       "source": "hatena",
       "title": "「無料でAIエージェント作れるやん」→ ローカルLLMに100回ツール呼び出しさせたら\"成功したはずの出力\"がカオスだった話 - Qiita",
       "url": "https://qiita.com/toarusyakaijin/items/3ab5caa68a8a33f5ec73",
       "description": "前回「MCPなんていらない」って書いた人間が、もっと手前の問題に気づいた話 先日、こんな記事を書きました。私が。 「MCPサーバー作るのもうやめていい？」〜CLIがMCPを圧倒する本当の理由〜 「MCP はトークンの無駄遣い、CLI の方が35倍効率いい！」と勢いよく書き上げて、意気揚々と投稿したわけです。 ……が、投稿ボ...",
-      "bookmarks": 23,
+      "bookmarks": 42,
       "published_at": "2026-03-05T22:57:01Z"
     },
     {
       "source": "hatena",
-      "title": "久々にOllamaを触ったら、量子化で別物になってた",
-      "url": "https://zenn.dev/dassimen/articles/fb7c9c893479ee",
-      "description": "本記事の構成について この記事は、AIを使用して構成の整理や下書きを支援してもらっています。 しかし、内容は精査の上理解を表現しています。 まずはじめに 久々にOllamaのドキュメントを開いたら、見慣れない単語が目に入った。 量子化（Quantization） 以前にOllamaを触ったとき（前回の記事）は、gemma3を動かして...",
-      "bookmarks": 26,
-      "published_at": "2026-03-05T11:47:25Z"
+      "title": "OpenAIが「GPT-5.4」提供、Excelと連携　アンソロピック上回る性能 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOGN05CGB0V00C26A3000000/",
+      "description": "【シリコンバレー=山田遼太郎】米オープンAIは5日、新たな人工知能（AI）モデル「GPT-5.4」の提供を始めたと発表した。「エクセル」など表計算ソフトの操作やプレゼンテーション資料の作成といった事務作業の性能を高めた。法人向けのAIに強い米新興アンソロピックに対抗する。同日から対話型AI「Chat（チャット）GPT」...",
+      "bookmarks": 46,
+      "published_at": "2026-03-05T23:00:02Z"
     },
     {
       "source": "hatena",
-      "title": "Claude Code Skills で「使うほど賢くなる」投資分析AIを作った話 Vol.2【Neo4j × 個人開発】 - Qiita",
-      "url": "https://qiita.com/okikusan-public/items/405949f83e8a39a49566",
-      "description": "前回の記事（Claude Code Skills で株スクリーニングを自動化した話【Python × yfinance × バイブコーディング】）で、Claude Code Skills による投資分析の自動化を紹介した。あれから数ヶ月、システムは「使うほど賢くなる」仕組みへと進化した。本記事ではその仕組みと、個人開発で得た設計判断を共有する。 前回の記...",
-      "bookmarks": 13,
-      "published_at": "2026-03-05T06:06:48Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Codeはプロンプトインジェクションで.envを漏洩させるのか？検証してみた - Qiita",
-      "url": "https://qiita.com/NF0000/items/6743216583b66168ec12",
-      "description": "はじめに 2026年3月、Claude Codeを利用した開発中にプロンプトインジェクション攻撃を受け、Google広告のMCCアカウントが乗っ取られるというインシデントが報告されました（参考ポスト。 本記事では、このインシデントの攻撃手法を理解するために自分で検証環境を構築し、実際にどのパターンが通るのかを試した結果を共...",
-      "bookmarks": 18,
-      "published_at": "2026-03-05T23:20:23Z"
+      "title": "ChatGPTやGeminiからClaudeへカンタンに移行できる？　新しい「メモリインポート機能」を試してみた",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/06/news022.html",
+      "description": "どうもHPかわさきです。 今回は小ネタです（今回も？）。ChatGPTやGeminiを使っている間に蓄積されたユーザー情報（「ですます調」が好きとか、「母さんみたいにいってくれ」とか、Python Loveとか）って、普通にしていると気付きませんが、チャットボットが返す答えを考えるときに重要な役割を担っているはずです。別の...",
+      "bookmarks": 12,
+      "published_at": "2026-03-06T01:43:47Z"
     }
   ],
   "twitter": []
