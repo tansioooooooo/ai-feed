@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Feed</title>
+<style>
+  :root {
+    --bg: #0f0f13;
+    --surface: #1a1a22;
+    --border: #2a2a38;
+    --text: #e8e8f0;
+    --muted: #7a7a9a;
+    --accent: #7c6af7;
+    --hn: #ff6600;
+    --hatena: #008fde;
+    --twitter: #1d9bf0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  header {
+    padding: 20px 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-top {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+  .updated { font-size: 12px; color: var(--muted); }
+  .tabs {
+    display: flex;
+    gap: 0;
+  }
+  .tab {
+    padding: 8px 18px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: var(--muted);
+    font-size: 13px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s;
+  }
+  .tab:hover { color: var(--text); }
+  .tab.active { color: var(--text); border-bottom-color: var(--accent); }
+  .count {
+    display: inline-block;
+    background: var(--border);
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-size: 11px;
+    margin-left: 5px;
+  }
+  main { padding: 16px 24px; max-width: 900px; }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .cards { display: flex; flex-direction: column; gap: 10px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    transition: border-color 0.15s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card-source {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+  }
+  .card-title {
+    display: block;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+  .card-title:hover { color: var(--accent); }
+  .card-desc {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 6px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-meta {
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .account { color: var(--twitter); }
+  .score { color: var(--muted); }
+  .comment-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 11px;
+  }
+  .comment-link:hover { text-decoration: underline; }
+  .empty { color: var(--muted); padding: 20px 0; }
+  @media (max-width: 600px) {
+    header, main { padding-left: 16px; padding-right: 16px; }
+    .tab { padding: 8px 12px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1>AI Feed</h1>
+    <span class="updated">更新: 2026/03/06 03:41 UTC</span>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('all', this)">
+      すべて <span class="count">35</span>
+    </button>
+    <button class="tab" onclick="switchTab('hn', this)">
+      HN <span class="count">21</span>
+    </button>
+    <button class="tab" onclick="switchTab('hatena', this)">
+      はてな <span class="count">14</span>
+    </button>
+    <button class="tab" onclick="switchTab('twitter', this)">
+      Twitter <span class="count">0</span>
+    </button>
+  </div>
+</header>
+<main>
+  <div id="panel-all" class="panel active">
+    <div class="cards">
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="card-title">GPT-5.4</a>
+      
+      <div class="card-meta"><span class="date">03/05 18:08</span> · <span class="score">▲ 676</span> · <a href="https://news.ycombinator.com/item?id=47265045" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://jido.run/blog/jido-2-0-is-here" target="_blank" class="card-title">Show HN: Jido 2.0, Elixir Agent Framework</a>
+      
+      <div class="card-meta"><span class="date">03/05 15:48</span> · <span class="score">▲ 251</span> · <a href="https://news.ycombinator.com/item?id=47263036" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://lucumr.pocoo.org/2026/3/5/theseus/" target="_blank" class="card-title">AI and the Ship of Theseus</a>
+      
+      <div class="card-meta"><span class="date">03/05 15:49</span> · <span class="score">▲ 62</span> · <a href="https://news.ycombinator.com/item?id=47263048" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://alibaba.github.io/page-agent/" target="_blank" class="card-title">Show HN: PageAgent, A GUI agent that lives inside your web app</a>
+      
+      <div class="card-meta"><span class="date">03/05 17:01</span> · <span class="score">▲ 76</span> · <a href="https://news.ycombinator.com/item?id=47264138" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://acko.net/blog/the-l-in-llm-stands-for-lying/" target="_blank" class="card-title">The L in "LLM" Stands for Lying</a>
+      
+      <div class="card-meta"><span class="date">03/05 04:02</span> · <span class="score">▲ 619</span> · <a href="https://news.ycombinator.com/item?id=47257394" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf" target="_blank" class="card-title">Claude's Cycles [pdf]</a>
+      
+      <div class="card-meta"><span class="date">03/03 10:57</span> · <span class="score">▲ 806</span> · <a href="https://news.ycombinator.com/item?id=47230710" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://adlrocha.substack.com/p/adlrocha-intelligence-is-a-commodity" target="_blank" class="card-title">Intelligence is a commodity. Context is the real AI Moat</a>
+      
+      <div class="card-meta"><span class="date">03/01 09:04</span> · <span class="score">▲ 120</span> · <a href="https://news.ycombinator.com/item?id=47205009" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523" target="_blank" class="card-title">Pentagon formally labels Anthropic supply-chain risk</a>
+      
+      <div class="card-meta"><span class="date">03/05 19:24</span> · <span class="score">▲ 382</span> · <a href="https://news.ycombinator.com/item?id=47266084" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything" target="_blank" class="card-title">Meta’s AI smart glasses and data privacy concerns</a>
+      
+      <div class="card-meta"><span class="date">03/02 22:32</span> · <span class="score">▲ 1422</span> · <a href="https://news.ycombinator.com/item?id=47225130" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/" target="_blank" class="card-title">Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’</a>
+      
+      <div class="card-meta"><span class="date">03/04 23:51</span> · <span class="score">▲ 778</span> · <a href="https://news.ycombinator.com/item?id=47255662" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://news.ycombinator.com/item?id=47232903" target="_blank" class="card-title">Launch HN: Cekura (YC F24) – Testing and monitoring for voice and chat AI agents</a>
+      
+      <div class="card-meta"><span class="date">03/03 14:30</span> · <span class="score">▲ 89</span> · <a href="https://news.ycombinator.com/item?id=47232903" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://simonwillison.net/guides/agentic-engineering-patterns/" target="_blank" class="card-title">Agentic Engineering Patterns</a>
+      
+      <div class="card-meta"><span class="date">03/04 05:00</span> · <span class="score">▲ 531</span> · <a href="https://news.ycombinator.com/item?id=47243272" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/" target="_blank" class="card-title">Jensen Huang says Nvidia is pulling back from OpenAI and Anthropic</a>
+      
+      <div class="card-meta"><span class="date">03/05 02:33</span> · <span class="score">▲ 215</span> · <a href="https://news.ycombinator.com/item?id=47256781" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://qlabs.sh/slowrun" target="_blank" class="card-title">NanoGPT Slowrun: Language Modeling with Limited Data, Infinite Compute</a>
+      
+      <div class="card-meta"><span class="date">03/04 17:56</span> · <span class="score">▲ 181</span> · <a href="https://news.ycombinator.com/item?id=47251259" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://openai.com/index/gpt-5-3-instant/" target="_blank" class="card-title">GPT‑5.3 Instant</a>
+      
+      <div class="card-meta"><span class="date">03/03 17:57</span> · <span class="score">▲ 395</span> · <a href="https://news.ycombinator.com/item?id=47236169" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/" target="_blank" class="card-title">You need to rewrite your CLI for AI agents</a>
+      
+      <div class="card-meta"><span class="date">03/04 19:20</span> · <span class="score">▲ 155</span> · <a href="https://news.ycombinator.com/item?id=47252459" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://leandojo.org/torchlean.html" target="_blank" class="card-title">TorchLean: Formalizing Neural Networks in Lean</a>
+      
+      <div class="card-meta"><span class="date">03/01 03:03</span> · <span class="score">▲ 103</span> · <a href="https://news.ycombinator.com/item?id=47203219" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes" target="_blank" class="card-title">Ars Technica fires reporter after AI controversy involving fabricated quotes</a>
+      
+      <div class="card-meta"><span class="date">03/03 01:12</span> · <span class="score">▲ 601</span> · <a href="https://news.ycombinator.com/item?id=47226608" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www.windowslatest.com/2026/03/02/microsoft-gets-tired-of-microslop-bans-the-word-on-its-discord-then-locks-the-server-after-backlash/" target="_blank" class="card-title">“Microslop” filtered in the official Microsoft Copilot Discord server</a>
+      
+      <div class="card-meta"><span class="date">03/02 10:23</span> · <span class="score">▲ 1177</span> · <a href="https://news.ycombinator.com/item?id=47216047" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="http://karpathy.github.io/2026/02/12/microgpt/" target="_blank" class="card-title">Microgpt</a>
+      
+      <div class="card-meta"><span class="date">03/01 01:39</span> · <span class="score">▲ 1926</span> · <a href="https://news.ycombinator.com/item?id=47202708" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://schipper.ai/posts/parallel-coding-agents/" target="_blank" class="card-title">Parallel coding agents with tmux and Markdown specs</a>
+      
+      <div class="card-meta"><span class="date">03/02 14:24</span> · <span class="score">▲ 188</span> · <a href="https://news.ycombinator.com/item?id=47218318" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" class="card-title">MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</a>
+      <p class="card-desc">2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半。2026年3月現在、MCPの優位性はほぼ失われている。MCP不要論がHacker Newsのトップに繰り返し上がり、Anthropic自身がMC...</p>
+      <div class="card-meta"><span class="date">03/05 13:13</span> · <span class="score">🔖 360</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.nikkei.com/article/DGXZQOGN060800W6A300C2000000/" target="_blank" class="card-title">日本生命、米国でOpenAIを提訴　「ChatGPTが非弁行為」 - 日本経済新聞</a>
+      <p class="card-desc">【シリコンバレー=山田遼太郎】日本生命保険の米国法人が米裁判所に米オープンAIを提訴したことが5日わかった。同社が弁護士資格を持たずに対話型AI（人工知能）「Chat（チャット）GPT」を通じて法的助言をした結果、日本生命が不当な訴訟に直面したと主張して1030万ドル（約16億円）強の損害賠償を求めている。中西部イ...</p>
+      <div class="card-meta"><span class="date">03/05 23:07</span> · <span class="score">🔖 73</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://zenn.dev/knowledgework/articles/claude-code-organization-plan-guide" target="_blank" class="card-title">Claude Codeを組織導入するためのプラン選定ガイド</a>
+      <p class="card-desc">はじめに Anthropicの製品体系はここ1年で大きく変わった。Claude Codeが使えるプランも変遷を重ねて、「結局どのプランをどう組み合わせればいいのか」が分かりにくい。 この記事では、製品体系の整理と、Claude Codeを組織で活用するためのプラン構成のベストプラクティスを紹介する。Knowledge Workでの実際の運用例...</p>
+      <div class="card-meta"><span class="date">03/06 00:09</span> · <span class="score">🔖 58</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.publickey1.jp/blog/26/google_workspacegwsgoogleagent_skillsai.html" target="_blank" class="card-title">Google Workspaceをコマンドラインで操作する「gws」、Googleがオープンソースで公開。Agent Skillsファイルも提供し、AIエージェントによる適切な操作実現</a>
+      <p class="card-desc">Googleは、GmailやGoogle Drive、Sheets、Docs、Calendarなどを始めとするGoogle Workspace製品に対してコマンドラインからの操作を可能にする「gws」をオープンソースで公開しました。 gwsを用いることで、人間やAIエージェントがコマンドラインを通じてGoogle Workspaceの管理機能（Admin）を含むどのGoogle Workspace</p>
+      <div class="card-meta"><span class="date">03/05 14:24</span> · <span class="score">🔖 53</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://dev.classmethod.jp/articles/google-workspace-cli-gws-launch-try-claude-code/" target="_blank" class="card-title">Google Workspace CLI（gws）が登場！早速インストールしてClaude Codeから操作してみた | DevelopersIO</a>
+      
+      <div class="card-meta"><span class="date">03/05 02:33</span> · <span class="score">🔖 73</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.nikkei.com/article/DGXZQOGN05CGB0V00C26A3000000/" target="_blank" class="card-title">OpenAIが「GPT-5.4」提供、Excelと連携　アンソロピック上回る性能 - 日本経済新聞</a>
+      <p class="card-desc">【シリコンバレー=山田遼太郎】米オープンAIは5日、新たな人工知能（AI）モデル「GPT-5.4」の提供を始めたと発表した。「エクセル」など表計算ソフトの操作やプレゼンテーション資料の作成といった事務作業の性能を高めた。法人向けのAIに強い米新興アンソロピックに対抗する。同日から対話型AI「Chat（チャット）GPT」...</p>
+      <div class="card-meta"><span class="date">03/05 23:00</span> · <span class="score">🔖 15</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.itmedia.co.jp/aiplus/articles/2603/06/news076.html" target="_blank" class="card-title">Anthropic、AIの労働市場インパクトを測る新指標　プログラマーは75％、清掃員は0％</a>
+      <p class="card-desc">米Anthropicは3月5日（現地時間）、AIによる労働市場への影響を測定するための新しい指標「Labor market impacts of AI」を発表した。 同社がこのような指標を作成した背景には、過去の経済的混乱（業務のオフショア化や産業用ロボットの導入など）における労働市場への影響予測が、しばしば不正確だったという歴史的な...</p>
+      <div class="card-meta"><span class="date">03/06 00:13</span> · <span class="score">🔖 12</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://qiita.com/kenimo49/items/27e2a11e80fe3b835f96" target="_blank" class="card-title">AI時代にすべてをGitHubで管理するあなたへ — HTTPS接続、今すぐやめてください - Qiita</a>
+      <p class="card-desc">はじめに Claude Code、Cursor、Copilot — AIにコードを書かせる時代になりました。 そしてその流れで、コード以外もGitHubに置く人が増えています。 AIエージェントの設定ファイル・記憶データ 会社のナレッジベース 契約書・請求書 確定申告の書類（PDF・画像） 「AIに自分の情報を持たせたい」「どのPCからでもアクセ...</p>
+      <div class="card-meta"><span class="date">03/05 18:46</span> · <span class="score">🔖 24</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://newspicks.com/news/16173894/body/" target="_blank" class="card-title">【保存版】Claude課金すべき？Cowrok・Skills・Claude Codeの使い方全解説</a>
+      <p class="card-desc">AIテーマのPodcastエピソードの記事版です！ ジェネトピ(Generative AI Topic)は、明日から試したくなるリアルなAI活用秘話を、雑談感覚でゆるく学べるPodcastです！ Spotify Youtube Apple Podcast 最新動向をウォッチしている人以外にも、AIを身近に感じられるコンテンツを作りたいと思いPodcastを始めました。エピソ...</p>
+      <div class="card-meta"><span class="date">03/05 12:45</span> · <span class="score">🔖 17</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://zenn.dev/dassimen/articles/fb7c9c893479ee" target="_blank" class="card-title">久々にOllamaを触ったら、量子化で別物になってた</a>
+      <p class="card-desc">本記事の構成について この記事は、AIを使用して構成の整理や下書きを支援してもらっています。 しかし、内容は精査の上理解を表現しています。 まずはじめに 久々にOllamaのドキュメントを開いたら、見慣れない単語が目に入った。 量子化（Quantization） 以前にOllamaを触ったとき（前回の記事）は、gemma3を動かして...</p>
+      <div class="card-meta"><span class="date">03/05 11:47</span> · <span class="score">🔖 19</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://speakerdeck.com/hiroki13/yan-yu-zhi-neng-tokong-jian-zhi-neng-wojian-nebei-etaai-wen-zhang-zhong-noren-wu-noyi-dong-gui-ji-wodi-tu-shang-nizai-xian-suruainituite" target="_blank" class="card-title">言語知能と空間知能を兼ね備えたAI − 文章中の人物の移動軌跡を地図上に再現するAIについて −</a>
+      <p class="card-desc">第132回人工知能基本問題研究会(SIG-FPAI)（ https://sig-fpai.org/past/fpai132.html ）の招待講演にて使用した発表スライド（一部修正版）</p>
+      <div class="card-meta"><span class="date">03/05 10:47</span> · <span class="score">🔖 17</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://tech.smarthr.jp/entry/2026/03/05/091302" target="_blank" class="card-title">バックエンドエンジニアがフロントエンドをLLMに頼って実装した反省点 - SmartHR Tech Blog</a>
+      <p class="card-desc">SmartHRでプロダクトエンジニアをしている大澤と申します。この記事では、バックエンドエンジニアである自分がフロントエンドのコードをLLMに頼って実装した際の反省点について紹介します。 現在、LLMはだいぶ良い感じのコードを書いてくれるようになってきています。Claude Opus 4.6が生成したRubyのコードはあまり手直...</p>
+      <div class="card-meta"><span class="date">03/05 07:00</span> · <span class="score">🔖 37</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://nyosegawa.github.io/posts/skill-auditor/" target="_blank" class="card-title">作ったAgent Skill、ちゃんと動いていますか？監査用のSkill、skill-auditorを作った話</a>
+      <p class="card-desc">はじめに こんにちは！逆瀬川ちゃん (@gyakuse) です！ 今日は前回の記事で「未解決の問題」として残しておいた、スキル間のAttention競合問題に正面から取り組んだ話をしていきます。作ったスキルが10個、20個と増えてきたとき、それぞれがちゃんと正しく発火しているのか。あるスキルのdescriptionを改善したら別のス...</p>
+      <div class="card-meta"><span class="date">03/05 07:56</span> · <span class="score">🔖 9</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://forest.watch.impress.co.jp/docs/news/2090674.html" target="_blank" class="card-title">AIノートブック「NotebookLM」の動画概要が進化、まるで映画のようなクオリティに／「Gemini 3」＋「Nano Banana Pro」＋「Veo 3」で実現</a>
+      
+      <div class="card-meta"><span class="date">03/05 03:19</span> · <span class="score">🔖 33</span></div>
+    </div></div>
+  </div>
+  <div id="panel-hn" class="panel">
+    <div class="cards">
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="card-title">GPT-5.4</a>
+      
+      <div class="card-meta"><span class="date">03/05 18:08</span> · <span class="score">▲ 676</span> · <a href="https://news.ycombinator.com/item?id=47265045" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://jido.run/blog/jido-2-0-is-here" target="_blank" class="card-title">Show HN: Jido 2.0, Elixir Agent Framework</a>
+      
+      <div class="card-meta"><span class="date">03/05 15:48</span> · <span class="score">▲ 251</span> · <a href="https://news.ycombinator.com/item?id=47263036" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://lucumr.pocoo.org/2026/3/5/theseus/" target="_blank" class="card-title">AI and the Ship of Theseus</a>
+      
+      <div class="card-meta"><span class="date">03/05 15:49</span> · <span class="score">▲ 62</span> · <a href="https://news.ycombinator.com/item?id=47263048" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://alibaba.github.io/page-agent/" target="_blank" class="card-title">Show HN: PageAgent, A GUI agent that lives inside your web app</a>
+      
+      <div class="card-meta"><span class="date">03/05 17:01</span> · <span class="score">▲ 76</span> · <a href="https://news.ycombinator.com/item?id=47264138" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://acko.net/blog/the-l-in-llm-stands-for-lying/" target="_blank" class="card-title">The L in "LLM" Stands for Lying</a>
+      
+      <div class="card-meta"><span class="date">03/05 04:02</span> · <span class="score">▲ 619</span> · <a href="https://news.ycombinator.com/item?id=47257394" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf" target="_blank" class="card-title">Claude's Cycles [pdf]</a>
+      
+      <div class="card-meta"><span class="date">03/03 10:57</span> · <span class="score">▲ 806</span> · <a href="https://news.ycombinator.com/item?id=47230710" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://adlrocha.substack.com/p/adlrocha-intelligence-is-a-commodity" target="_blank" class="card-title">Intelligence is a commodity. Context is the real AI Moat</a>
+      
+      <div class="card-meta"><span class="date">03/01 09:04</span> · <span class="score">▲ 120</span> · <a href="https://news.ycombinator.com/item?id=47205009" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523" target="_blank" class="card-title">Pentagon formally labels Anthropic supply-chain risk</a>
+      
+      <div class="card-meta"><span class="date">03/05 19:24</span> · <span class="score">▲ 382</span> · <a href="https://news.ycombinator.com/item?id=47266084" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything" target="_blank" class="card-title">Meta’s AI smart glasses and data privacy concerns</a>
+      
+      <div class="card-meta"><span class="date">03/02 22:32</span> · <span class="score">▲ 1422</span> · <a href="https://news.ycombinator.com/item?id=47225130" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/" target="_blank" class="card-title">Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’</a>
+      
+      <div class="card-meta"><span class="date">03/04 23:51</span> · <span class="score">▲ 778</span> · <a href="https://news.ycombinator.com/item?id=47255662" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://news.ycombinator.com/item?id=47232903" target="_blank" class="card-title">Launch HN: Cekura (YC F24) – Testing and monitoring for voice and chat AI agents</a>
+      
+      <div class="card-meta"><span class="date">03/03 14:30</span> · <span class="score">▲ 89</span> · <a href="https://news.ycombinator.com/item?id=47232903" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://simonwillison.net/guides/agentic-engineering-patterns/" target="_blank" class="card-title">Agentic Engineering Patterns</a>
+      
+      <div class="card-meta"><span class="date">03/04 05:00</span> · <span class="score">▲ 531</span> · <a href="https://news.ycombinator.com/item?id=47243272" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/" target="_blank" class="card-title">Jensen Huang says Nvidia is pulling back from OpenAI and Anthropic</a>
+      
+      <div class="card-meta"><span class="date">03/05 02:33</span> · <span class="score">▲ 215</span> · <a href="https://news.ycombinator.com/item?id=47256781" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://qlabs.sh/slowrun" target="_blank" class="card-title">NanoGPT Slowrun: Language Modeling with Limited Data, Infinite Compute</a>
+      
+      <div class="card-meta"><span class="date">03/04 17:56</span> · <span class="score">▲ 181</span> · <a href="https://news.ycombinator.com/item?id=47251259" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://openai.com/index/gpt-5-3-instant/" target="_blank" class="card-title">GPT‑5.3 Instant</a>
+      
+      <div class="card-meta"><span class="date">03/03 17:57</span> · <span class="score">▲ 395</span> · <a href="https://news.ycombinator.com/item?id=47236169" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/" target="_blank" class="card-title">You need to rewrite your CLI for AI agents</a>
+      
+      <div class="card-meta"><span class="date">03/04 19:20</span> · <span class="score">▲ 155</span> · <a href="https://news.ycombinator.com/item?id=47252459" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://leandojo.org/torchlean.html" target="_blank" class="card-title">TorchLean: Formalizing Neural Networks in Lean</a>
+      
+      <div class="card-meta"><span class="date">03/01 03:03</span> · <span class="score">▲ 103</span> · <a href="https://news.ycombinator.com/item?id=47203219" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes" target="_blank" class="card-title">Ars Technica fires reporter after AI controversy involving fabricated quotes</a>
+      
+      <div class="card-meta"><span class="date">03/03 01:12</span> · <span class="score">▲ 601</span> · <a href="https://news.ycombinator.com/item?id=47226608" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://www.windowslatest.com/2026/03/02/microsoft-gets-tired-of-microslop-bans-the-word-on-its-discord-then-locks-the-server-after-backlash/" target="_blank" class="card-title">“Microslop” filtered in the official Microsoft Copilot Discord server</a>
+      
+      <div class="card-meta"><span class="date">03/02 10:23</span> · <span class="score">▲ 1177</span> · <a href="https://news.ycombinator.com/item?id=47216047" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="http://karpathy.github.io/2026/02/12/microgpt/" target="_blank" class="card-title">Microgpt</a>
+      
+      <div class="card-meta"><span class="date">03/01 01:39</span> · <span class="score">▲ 1926</span> · <a href="https://news.ycombinator.com/item?id=47202708" target="_blank" class="comment-link">コメント →</a></div>
+    </div>
+
+    <div class="card" data-source="hackernews">
+      <div class="card-source" style="color:#ff6600">🟠 Hacker News</div>
+      <a href="https://schipper.ai/posts/parallel-coding-agents/" target="_blank" class="card-title">Parallel coding agents with tmux and Markdown specs</a>
+      
+      <div class="card-meta"><span class="date">03/02 14:24</span> · <span class="score">▲ 188</span> · <a href="https://news.ycombinator.com/item?id=47218318" target="_blank" class="comment-link">コメント →</a></div>
+    </div></div>
+  </div>
+  <div id="panel-hatena" class="panel">
+    <div class="cards">
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" class="card-title">MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</a>
+      <p class="card-desc">2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半。2026年3月現在、MCPの優位性はほぼ失われている。MCP不要論がHacker Newsのトップに繰り返し上がり、Anthropic自身がMC...</p>
+      <div class="card-meta"><span class="date">03/05 13:13</span> · <span class="score">🔖 360</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.nikkei.com/article/DGXZQOGN060800W6A300C2000000/" target="_blank" class="card-title">日本生命、米国でOpenAIを提訴　「ChatGPTが非弁行為」 - 日本経済新聞</a>
+      <p class="card-desc">【シリコンバレー=山田遼太郎】日本生命保険の米国法人が米裁判所に米オープンAIを提訴したことが5日わかった。同社が弁護士資格を持たずに対話型AI（人工知能）「Chat（チャット）GPT」を通じて法的助言をした結果、日本生命が不当な訴訟に直面したと主張して1030万ドル（約16億円）強の損害賠償を求めている。中西部イ...</p>
+      <div class="card-meta"><span class="date">03/05 23:07</span> · <span class="score">🔖 73</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://zenn.dev/knowledgework/articles/claude-code-organization-plan-guide" target="_blank" class="card-title">Claude Codeを組織導入するためのプラン選定ガイド</a>
+      <p class="card-desc">はじめに Anthropicの製品体系はここ1年で大きく変わった。Claude Codeが使えるプランも変遷を重ねて、「結局どのプランをどう組み合わせればいいのか」が分かりにくい。 この記事では、製品体系の整理と、Claude Codeを組織で活用するためのプラン構成のベストプラクティスを紹介する。Knowledge Workでの実際の運用例...</p>
+      <div class="card-meta"><span class="date">03/06 00:09</span> · <span class="score">🔖 58</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.publickey1.jp/blog/26/google_workspacegwsgoogleagent_skillsai.html" target="_blank" class="card-title">Google Workspaceをコマンドラインで操作する「gws」、Googleがオープンソースで公開。Agent Skillsファイルも提供し、AIエージェントによる適切な操作実現</a>
+      <p class="card-desc">Googleは、GmailやGoogle Drive、Sheets、Docs、Calendarなどを始めとするGoogle Workspace製品に対してコマンドラインからの操作を可能にする「gws」をオープンソースで公開しました。 gwsを用いることで、人間やAIエージェントがコマンドラインを通じてGoogle Workspaceの管理機能（Admin）を含むどのGoogle Workspace</p>
+      <div class="card-meta"><span class="date">03/05 14:24</span> · <span class="score">🔖 53</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://dev.classmethod.jp/articles/google-workspace-cli-gws-launch-try-claude-code/" target="_blank" class="card-title">Google Workspace CLI（gws）が登場！早速インストールしてClaude Codeから操作してみた | DevelopersIO</a>
+      
+      <div class="card-meta"><span class="date">03/05 02:33</span> · <span class="score">🔖 73</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.nikkei.com/article/DGXZQOGN05CGB0V00C26A3000000/" target="_blank" class="card-title">OpenAIが「GPT-5.4」提供、Excelと連携　アンソロピック上回る性能 - 日本経済新聞</a>
+      <p class="card-desc">【シリコンバレー=山田遼太郎】米オープンAIは5日、新たな人工知能（AI）モデル「GPT-5.4」の提供を始めたと発表した。「エクセル」など表計算ソフトの操作やプレゼンテーション資料の作成といった事務作業の性能を高めた。法人向けのAIに強い米新興アンソロピックに対抗する。同日から対話型AI「Chat（チャット）GPT」...</p>
+      <div class="card-meta"><span class="date">03/05 23:00</span> · <span class="score">🔖 15</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://www.itmedia.co.jp/aiplus/articles/2603/06/news076.html" target="_blank" class="card-title">Anthropic、AIの労働市場インパクトを測る新指標　プログラマーは75％、清掃員は0％</a>
+      <p class="card-desc">米Anthropicは3月5日（現地時間）、AIによる労働市場への影響を測定するための新しい指標「Labor market impacts of AI」を発表した。 同社がこのような指標を作成した背景には、過去の経済的混乱（業務のオフショア化や産業用ロボットの導入など）における労働市場への影響予測が、しばしば不正確だったという歴史的な...</p>
+      <div class="card-meta"><span class="date">03/06 00:13</span> · <span class="score">🔖 12</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://qiita.com/kenimo49/items/27e2a11e80fe3b835f96" target="_blank" class="card-title">AI時代にすべてをGitHubで管理するあなたへ — HTTPS接続、今すぐやめてください - Qiita</a>
+      <p class="card-desc">はじめに Claude Code、Cursor、Copilot — AIにコードを書かせる時代になりました。 そしてその流れで、コード以外もGitHubに置く人が増えています。 AIエージェントの設定ファイル・記憶データ 会社のナレッジベース 契約書・請求書 確定申告の書類（PDF・画像） 「AIに自分の情報を持たせたい」「どのPCからでもアクセ...</p>
+      <div class="card-meta"><span class="date">03/05 18:46</span> · <span class="score">🔖 24</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://newspicks.com/news/16173894/body/" target="_blank" class="card-title">【保存版】Claude課金すべき？Cowrok・Skills・Claude Codeの使い方全解説</a>
+      <p class="card-desc">AIテーマのPodcastエピソードの記事版です！ ジェネトピ(Generative AI Topic)は、明日から試したくなるリアルなAI活用秘話を、雑談感覚でゆるく学べるPodcastです！ Spotify Youtube Apple Podcast 最新動向をウォッチしている人以外にも、AIを身近に感じられるコンテンツを作りたいと思いPodcastを始めました。エピソ...</p>
+      <div class="card-meta"><span class="date">03/05 12:45</span> · <span class="score">🔖 17</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://zenn.dev/dassimen/articles/fb7c9c893479ee" target="_blank" class="card-title">久々にOllamaを触ったら、量子化で別物になってた</a>
+      <p class="card-desc">本記事の構成について この記事は、AIを使用して構成の整理や下書きを支援してもらっています。 しかし、内容は精査の上理解を表現しています。 まずはじめに 久々にOllamaのドキュメントを開いたら、見慣れない単語が目に入った。 量子化（Quantization） 以前にOllamaを触ったとき（前回の記事）は、gemma3を動かして...</p>
+      <div class="card-meta"><span class="date">03/05 11:47</span> · <span class="score">🔖 19</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://speakerdeck.com/hiroki13/yan-yu-zhi-neng-tokong-jian-zhi-neng-wojian-nebei-etaai-wen-zhang-zhong-noren-wu-noyi-dong-gui-ji-wodi-tu-shang-nizai-xian-suruainituite" target="_blank" class="card-title">言語知能と空間知能を兼ね備えたAI − 文章中の人物の移動軌跡を地図上に再現するAIについて −</a>
+      <p class="card-desc">第132回人工知能基本問題研究会(SIG-FPAI)（ https://sig-fpai.org/past/fpai132.html ）の招待講演にて使用した発表スライド（一部修正版）</p>
+      <div class="card-meta"><span class="date">03/05 10:47</span> · <span class="score">🔖 17</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://tech.smarthr.jp/entry/2026/03/05/091302" target="_blank" class="card-title">バックエンドエンジニアがフロントエンドをLLMに頼って実装した反省点 - SmartHR Tech Blog</a>
+      <p class="card-desc">SmartHRでプロダクトエンジニアをしている大澤と申します。この記事では、バックエンドエンジニアである自分がフロントエンドのコードをLLMに頼って実装した際の反省点について紹介します。 現在、LLMはだいぶ良い感じのコードを書いてくれるようになってきています。Claude Opus 4.6が生成したRubyのコードはあまり手直...</p>
+      <div class="card-meta"><span class="date">03/05 07:00</span> · <span class="score">🔖 37</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://nyosegawa.github.io/posts/skill-auditor/" target="_blank" class="card-title">作ったAgent Skill、ちゃんと動いていますか？監査用のSkill、skill-auditorを作った話</a>
+      <p class="card-desc">はじめに こんにちは！逆瀬川ちゃん (@gyakuse) です！ 今日は前回の記事で「未解決の問題」として残しておいた、スキル間のAttention競合問題に正面から取り組んだ話をしていきます。作ったスキルが10個、20個と増えてきたとき、それぞれがちゃんと正しく発火しているのか。あるスキルのdescriptionを改善したら別のス...</p>
+      <div class="card-meta"><span class="date">03/05 07:56</span> · <span class="score">🔖 9</span></div>
+    </div>
+
+    <div class="card" data-source="hatena">
+      <div class="card-source" style="color:#008fde">🔵 はてな</div>
+      <a href="https://forest.watch.impress.co.jp/docs/news/2090674.html" target="_blank" class="card-title">AIノートブック「NotebookLM」の動画概要が進化、まるで映画のようなクオリティに／「Gemini 3」＋「Nano Banana Pro」＋「Veo 3」で実現</a>
+      
+      <div class="card-meta"><span class="date">03/05 03:19</span> · <span class="score">🔖 33</span></div>
+    </div></div>
+  </div>
+  <div id="panel-twitter" class="panel">
+    <div class="cards"><p class="empty">記事がありません</p></div>
+  </div>
+</main>
+<script>
+  function switchTab(id, el) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('panel-' + id).classList.add('active');
+  }
+</script>
+</body>
+</html>
