@@ -236,9 +236,12 @@ def fetch_twitter(accounts: list[str], instances: list[str]) -> list[dict]:
     print("Fetching Twitter...")
 
     # twikit (guest) を最初に試す
-    items = _fetch_twitter_twikit(accounts)
-    if items:
-        return items
+    try:
+        items = _fetch_twitter_twikit(accounts)
+        if items:
+            return items
+    except Exception as e:
+        print(f"  twikit failed: {e}")
 
     # twikit が使えなかった場合は RSSHub にフォールバック
     print("  Falling back to RSSHub...")
