@@ -33,7 +33,28 @@ def main() -> None:
     with open(FEED_PATH, encoding="utf-8") as f:
         feed = json.load(f)
 
-    for key in ["hackernews", "hatena", "twitter"]:
+    # hackernews: {relevant, title_ja} のオブジェクト配列
+    hn_items = feed.get("hackernews", [])
+    hn_flags = classification.get("hackernews", [])
+    if hn_flags and len(hn_flags) == len(hn_items):
+        original = len(hn_items)
+        filtered = []
+        for item, flag in zip(hn_items, hn_flags):
+            if isinstance(flag, dict):
+                if not flag.get("relevant", True):
+                    continue
+                if flag.get("title_ja"):
+                    item["title_ja"] = flag["title_ja"]
+            elif not flag:
+                continue
+            filtered.append(item)
+        feed["hackernews"] = filtered
+        print(f"  hackernews: {original} -> {len(filtered)}")
+    else:
+        print(f"  hackernews: length mismatch or empty, keeping all {len(hn_items)}")
+
+    # hatena, twitter: boolean 配列
+    for key in ["hatena", "twitter"]:
         items = feed.get(key, [])
         flags = classification.get(key, [])
         if flags and len(flags) == len(items):
@@ -43,7 +64,7 @@ def main() -> None:
             ]
             print(f"  {key}: {original} -> {len(feed[key])}")
         else:
-            print(f"  {key}: classification length mismatch or empty, keeping all {len(items)}")
+            print(f"  {key}: length mismatch or empty, keeping all {len(items)}")
 
     with open(FEED_PATH, "w", encoding="utf-8") as f:
         json.dump(feed, f, ensure_ascii=False, indent=2)
