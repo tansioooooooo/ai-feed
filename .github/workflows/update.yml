@@ -47,29 +47,36 @@ jobs:
             3. twitter は全件 "ai_relevant": true にする（監視アカウントがAI関連のため）
             4. 更新した JSON を docs/feed.json に Write tool で上書き保存
 
-            JSON の構造は変えないでください。追加するのは各 item への "ai_relevant" フィールドのみです。
+            重要:
+            - JSON の構造は変えないでください。追加するのは各 item への "ai_relevant" フィールドのみです。
+            - 出力は valid JSON でなければなりません。文字列中のダブルクォートやバックスラッシュは正しくエスケープしてください。
+            - Write tool で保存する前に、JSONとして正しい形式か確認してください。
 
       - name: Filter irrelevant items and generate HTML
         run: |
-          python - <<'EOF'
+          python3 -c "
           import json
           from pathlib import Path
 
-          feed_path = Path("docs/feed.json")
-          with open(feed_path, encoding="utf-8") as f:
-              feed = json.load(f)
+          feed_path = Path('docs/feed.json')
+          try:
+              with open(feed_path, encoding='utf-8') as f:
+                  feed = json.load(f)
+          except json.JSONDecodeError as e:
+              print(f'Warning: JSON parse error ({e}), skipping filter step')
+              import sys; sys.exit(0)
 
-          for key in ["hackernews", "hatena", "twitter"]:
+          for key in ['hackernews', 'hatena', 'twitter']:
               feed[key] = [
                   item for item in feed.get(key, [])
-                  if item.get("ai_relevant", True)
+                  if item.get('ai_relevant', True)
               ]
 
-          with open(feed_path, "w", encoding="utf-8") as f:
+          with open(feed_path, 'w', encoding='utf-8') as f:
               json.dump(feed, f, ensure_ascii=False, indent=2)
 
-          print("Filtered feed saved")
-          EOF
+          print('Filtered feed saved')
+          "
           python scripts/generate_html.py
 
       - name: Commit and push
