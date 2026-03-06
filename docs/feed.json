@@ -1,0 +1,309 @@
+{
+  "updated_at": "2026-03-06T03:41:40.906697+00:00",
+  "hackernews": [
+    {
+      "source": "hackernews",
+      "title": "GPT-5.4",
+      "url": "https://openai.com/index/introducing-gpt-5-4/",
+      "score": 676,
+      "comments": 589,
+      "hn_url": "https://news.ycombinator.com/item?id=47265045",
+      "published_at": "2026-03-05T18:08:10+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Show HN: Jido 2.0, Elixir Agent Framework",
+      "url": "https://jido.run/blog/jido-2-0-is-here",
+      "score": 251,
+      "comments": 56,
+      "hn_url": "https://news.ycombinator.com/item?id=47263036",
+      "published_at": "2026-03-05T15:48:52+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "AI and the Ship of Theseus",
+      "url": "https://lucumr.pocoo.org/2026/3/5/theseus/",
+      "score": 62,
+      "comments": 65,
+      "hn_url": "https://news.ycombinator.com/item?id=47263048",
+      "published_at": "2026-03-05T15:49:45+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Show HN: PageAgent, A GUI agent that lives inside your web app",
+      "url": "https://alibaba.github.io/page-agent/",
+      "score": 76,
+      "comments": 35,
+      "hn_url": "https://news.ycombinator.com/item?id=47264138",
+      "published_at": "2026-03-05T17:01:47+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "The L in \"LLM\" Stands for Lying",
+      "url": "https://acko.net/blog/the-l-in-llm-stands-for-lying/",
+      "score": 619,
+      "comments": 426,
+      "hn_url": "https://news.ycombinator.com/item?id=47257394",
+      "published_at": "2026-03-05T04:02:32+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Claude's Cycles [pdf]",
+      "url": "https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf",
+      "score": 806,
+      "comments": 347,
+      "hn_url": "https://news.ycombinator.com/item?id=47230710",
+      "published_at": "2026-03-03T10:57:42+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Intelligence is a commodity. Context is the real AI Moat",
+      "url": "https://adlrocha.substack.com/p/adlrocha-intelligence-is-a-commodity",
+      "score": 120,
+      "comments": 92,
+      "hn_url": "https://news.ycombinator.com/item?id=47205009",
+      "published_at": "2026-03-01T09:04:19+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Pentagon formally labels Anthropic supply-chain risk",
+      "url": "https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
+      "score": 382,
+      "comments": 251,
+      "hn_url": "https://news.ycombinator.com/item?id=47266084",
+      "published_at": "2026-03-05T19:24:35+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Meta’s AI smart glasses and data privacy concerns",
+      "url": "https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything",
+      "score": 1422,
+      "comments": 805,
+      "hn_url": "https://news.ycombinator.com/item?id=47225130",
+      "published_at": "2026-03-02T22:32:35+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’",
+      "url": "https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/",
+      "score": 778,
+      "comments": 412,
+      "hn_url": "https://news.ycombinator.com/item?id=47255662",
+      "published_at": "2026-03-04T23:51:10+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Launch HN: Cekura (YC F24) – Testing and monitoring for voice and chat AI agents",
+      "url": "https://news.ycombinator.com/item?id=47232903",
+      "score": 89,
+      "comments": 23,
+      "hn_url": "https://news.ycombinator.com/item?id=47232903",
+      "published_at": "2026-03-03T14:30:58+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Agentic Engineering Patterns",
+      "url": "https://simonwillison.net/guides/agentic-engineering-patterns/",
+      "score": 531,
+      "comments": 297,
+      "hn_url": "https://news.ycombinator.com/item?id=47243272",
+      "published_at": "2026-03-04T05:00:37+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Jensen Huang says Nvidia is pulling back from OpenAI and Anthropic",
+      "url": "https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/",
+      "score": 215,
+      "comments": 104,
+      "hn_url": "https://news.ycombinator.com/item?id=47256781",
+      "published_at": "2026-03-05T02:33:58+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "NanoGPT Slowrun: Language Modeling with Limited Data, Infinite Compute",
+      "url": "https://qlabs.sh/slowrun",
+      "score": 181,
+      "comments": 35,
+      "hn_url": "https://news.ycombinator.com/item?id=47251259",
+      "published_at": "2026-03-04T17:56:04+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "GPT‑5.3 Instant",
+      "url": "https://openai.com/index/gpt-5-3-instant/",
+      "score": 395,
+      "comments": 303,
+      "hn_url": "https://news.ycombinator.com/item?id=47236169",
+      "published_at": "2026-03-03T17:57:33+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "You need to rewrite your CLI for AI agents",
+      "url": "https://justin.poehnelt.com/posts/rewrite-your-cli-for-ai-agents/",
+      "score": 155,
+      "comments": 63,
+      "hn_url": "https://news.ycombinator.com/item?id=47252459",
+      "published_at": "2026-03-04T19:20:03+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "TorchLean: Formalizing Neural Networks in Lean",
+      "url": "https://leandojo.org/torchlean.html",
+      "score": 103,
+      "comments": 20,
+      "hn_url": "https://news.ycombinator.com/item?id=47203219",
+      "published_at": "2026-03-01T03:03:46+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Ars Technica fires reporter after AI controversy involving fabricated quotes",
+      "url": "https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes",
+      "score": 601,
+      "comments": 379,
+      "hn_url": "https://news.ycombinator.com/item?id=47226608",
+      "published_at": "2026-03-03T01:12:30+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "“Microslop” filtered in the official Microsoft Copilot Discord server",
+      "url": "https://www.windowslatest.com/2026/03/02/microsoft-gets-tired-of-microslop-bans-the-word-on-its-discord-then-locks-the-server-after-backlash/",
+      "score": 1177,
+      "comments": 549,
+      "hn_url": "https://news.ycombinator.com/item?id=47216047",
+      "published_at": "2026-03-02T10:23:06+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Microgpt",
+      "url": "http://karpathy.github.io/2026/02/12/microgpt/",
+      "score": 1926,
+      "comments": 326,
+      "hn_url": "https://news.ycombinator.com/item?id=47202708",
+      "published_at": "2026-03-01T01:39:26+00:00"
+    },
+    {
+      "source": "hackernews",
+      "title": "Parallel coding agents with tmux and Markdown specs",
+      "url": "https://schipper.ai/posts/parallel-coding-agents/",
+      "score": 188,
+      "comments": 131,
+      "hn_url": "https://news.ycombinator.com/item?id=47218318",
+      "published_at": "2026-03-02T14:24:15+00:00"
+    }
+  ],
+  "hatena": [
+    {
+      "source": "hatena",
+      "title": "MCPはなぜCLIに負けたのか —— 経緯と構造を整理する",
+      "url": "https://zenn.dev/hiraly/articles/3409b886607274",
+      "description": "2024年11月、AnthropicがMCP（Model Context Protocol）を発表したとき、業界は一気に動いた。各社がMCPサーバーを競って実装し、「AI first」の証明としてMCP対応をアピールした。 それから約1年半。2026年3月現在、MCPの優位性はほぼ失われている。MCP不要論がHacker Newsのトップに繰り返し上がり、Anthropic自身がMC...",
+      "bookmarks": 360,
+      "published_at": "2026-03-05T13:13:39Z"
+    },
+    {
+      "source": "hatena",
+      "title": "日本生命、米国でOpenAIを提訴　「ChatGPTが非弁行為」 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOGN060800W6A300C2000000/",
+      "description": "【シリコンバレー=山田遼太郎】日本生命保険の米国法人が米裁判所に米オープンAIを提訴したことが5日わかった。同社が弁護士資格を持たずに対話型AI（人工知能）「Chat（チャット）GPT」を通じて法的助言をした結果、日本生命が不当な訴訟に直面したと主張して1030万ドル（約16億円）強の損害賠償を求めている。中西部イ...",
+      "bookmarks": 73,
+      "published_at": "2026-03-05T23:07:01Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Claude Codeを組織導入するためのプラン選定ガイド",
+      "url": "https://zenn.dev/knowledgework/articles/claude-code-organization-plan-guide",
+      "description": "はじめに Anthropicの製品体系はここ1年で大きく変わった。Claude Codeが使えるプランも変遷を重ねて、「結局どのプランをどう組み合わせればいいのか」が分かりにくい。 この記事では、製品体系の整理と、Claude Codeを組織で活用するためのプラン構成のベストプラクティスを紹介する。Knowledge Workでの実際の運用例...",
+      "bookmarks": 58,
+      "published_at": "2026-03-06T00:09:37Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Google Workspaceをコマンドラインで操作する「gws」、Googleがオープンソースで公開。Agent Skillsファイルも提供し、AIエージェントによる適切な操作実現",
+      "url": "https://www.publickey1.jp/blog/26/google_workspacegwsgoogleagent_skillsai.html",
+      "description": "Googleは、GmailやGoogle Drive、Sheets、Docs、Calendarなどを始めとするGoogle Workspace製品に対してコマンドラインからの操作を可能にする「gws」をオープンソースで公開しました。 gwsを用いることで、人間やAIエージェントがコマンドラインを通じてGoogle Workspaceの管理機能（Admin）を含むどのGoogle Workspace",
+      "bookmarks": 53,
+      "published_at": "2026-03-05T14:24:49Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Google Workspace CLI（gws）が登場！早速インストールしてClaude Codeから操作してみた | DevelopersIO",
+      "url": "https://dev.classmethod.jp/articles/google-workspace-cli-gws-launch-try-claude-code/",
+      "description": "",
+      "bookmarks": 73,
+      "published_at": "2026-03-05T02:33:01Z"
+    },
+    {
+      "source": "hatena",
+      "title": "OpenAIが「GPT-5.4」提供、Excelと連携　アンソロピック上回る性能 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOGN05CGB0V00C26A3000000/",
+      "description": "【シリコンバレー=山田遼太郎】米オープンAIは5日、新たな人工知能（AI）モデル「GPT-5.4」の提供を始めたと発表した。「エクセル」など表計算ソフトの操作やプレゼンテーション資料の作成といった事務作業の性能を高めた。法人向けのAIに強い米新興アンソロピックに対抗する。同日から対話型AI「Chat（チャット）GPT」...",
+      "bookmarks": 15,
+      "published_at": "2026-03-05T23:00:02Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Anthropic、AIの労働市場インパクトを測る新指標　プログラマーは75％、清掃員は0％",
+      "url": "https://www.itmedia.co.jp/aiplus/articles/2603/06/news076.html",
+      "description": "米Anthropicは3月5日（現地時間）、AIによる労働市場への影響を測定するための新しい指標「Labor market impacts of AI」を発表した。 同社がこのような指標を作成した背景には、過去の経済的混乱（業務のオフショア化や産業用ロボットの導入など）における労働市場への影響予測が、しばしば不正確だったという歴史的な...",
+      "bookmarks": 12,
+      "published_at": "2026-03-06T00:13:12Z"
+    },
+    {
+      "source": "hatena",
+      "title": "AI時代にすべてをGitHubで管理するあなたへ — HTTPS接続、今すぐやめてください - Qiita",
+      "url": "https://qiita.com/kenimo49/items/27e2a11e80fe3b835f96",
+      "description": "はじめに Claude Code、Cursor、Copilot — AIにコードを書かせる時代になりました。 そしてその流れで、コード以外もGitHubに置く人が増えています。 AIエージェントの設定ファイル・記憶データ 会社のナレッジベース 契約書・請求書 確定申告の書類（PDF・画像） 「AIに自分の情報を持たせたい」「どのPCからでもアクセ...",
+      "bookmarks": 24,
+      "published_at": "2026-03-05T18:46:22Z"
+    },
+    {
+      "source": "hatena",
+      "title": "【保存版】Claude課金すべき？Cowrok・Skills・Claude Codeの使い方全解説",
+      "url": "https://newspicks.com/news/16173894/body/",
+      "description": "AIテーマのPodcastエピソードの記事版です！ ジェネトピ(Generative AI Topic)は、明日から試したくなるリアルなAI活用秘話を、雑談感覚でゆるく学べるPodcastです！ Spotify Youtube Apple Podcast 最新動向をウォッチしている人以外にも、AIを身近に感じられるコンテンツを作りたいと思いPodcastを始めました。エピソ...",
+      "bookmarks": 17,
+      "published_at": "2026-03-05T12:45:10Z"
+    },
+    {
+      "source": "hatena",
+      "title": "久々にOllamaを触ったら、量子化で別物になってた",
+      "url": "https://zenn.dev/dassimen/articles/fb7c9c893479ee",
+      "description": "本記事の構成について この記事は、AIを使用して構成の整理や下書きを支援してもらっています。 しかし、内容は精査の上理解を表現しています。 まずはじめに 久々にOllamaのドキュメントを開いたら、見慣れない単語が目に入った。 量子化（Quantization） 以前にOllamaを触ったとき（前回の記事）は、gemma3を動かして...",
+      "bookmarks": 19,
+      "published_at": "2026-03-05T11:47:25Z"
+    },
+    {
+      "source": "hatena",
+      "title": "言語知能と空間知能を兼ね備えたAI − 文章中の人物の移動軌跡を地図上に再現するAIについて −",
+      "url": "https://speakerdeck.com/hiroki13/yan-yu-zhi-neng-tokong-jian-zhi-neng-wojian-nebei-etaai-wen-zhang-zhong-noren-wu-noyi-dong-gui-ji-wodi-tu-shang-nizai-xian-suruainituite",
+      "description": "第132回人工知能基本問題研究会(SIG-FPAI)（ https://sig-fpai.org/past/fpai132.html ）の招待講演にて使用した発表スライド（一部修正版）",
+      "bookmarks": 17,
+      "published_at": "2026-03-05T10:47:57Z"
+    },
+    {
+      "source": "hatena",
+      "title": "バックエンドエンジニアがフロントエンドをLLMに頼って実装した反省点 - SmartHR Tech Blog",
+      "url": "https://tech.smarthr.jp/entry/2026/03/05/091302",
+      "description": "SmartHRでプロダクトエンジニアをしている大澤と申します。この記事では、バックエンドエンジニアである自分がフロントエンドのコードをLLMに頼って実装した際の反省点について紹介します。 現在、LLMはだいぶ良い感じのコードを書いてくれるようになってきています。Claude Opus 4.6が生成したRubyのコードはあまり手直...",
+      "bookmarks": 37,
+      "published_at": "2026-03-05T07:00:49Z"
+    },
+    {
+      "source": "hatena",
+      "title": "作ったAgent Skill、ちゃんと動いていますか？監査用のSkill、skill-auditorを作った話",
+      "url": "https://nyosegawa.github.io/posts/skill-auditor/",
+      "description": "はじめに こんにちは！逆瀬川ちゃん (@gyakuse) です！ 今日は前回の記事で「未解決の問題」として残しておいた、スキル間のAttention競合問題に正面から取り組んだ話をしていきます。作ったスキルが10個、20個と増えてきたとき、それぞれがちゃんと正しく発火しているのか。あるスキルのdescriptionを改善したら別のス...",
+      "bookmarks": 9,
+      "published_at": "2026-03-05T07:56:55Z"
+    },
+    {
+      "source": "hatena",
+      "title": "AIノートブック「NotebookLM」の動画概要が進化、まるで映画のようなクオリティに／「Gemini 3」＋「Nano Banana Pro」＋「Veo 3」で実現",
+      "url": "https://forest.watch.impress.co.jp/docs/news/2090674.html",
+      "description": "",
+      "bookmarks": 33,
+      "published_at": "2026-03-05T03:19:01Z"
+    }
+  ],
+  "twitter": []
+}
