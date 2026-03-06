@@ -21,6 +21,7 @@ import yaml
 ROOT = Path(__file__).parent.parent
 CONFIG_PATH = ROOT / "config.yml"
 OUTPUT_PATH = ROOT / "docs" / "feed.json"
+DAILY_DIR = ROOT / "docs" / "daily"
 
 
 def load_config():
@@ -31,18 +32,41 @@ def load_config():
 # ─────────────────────────────────────────────
 # Hacker News
 # ─────────────────────────────────────────────
+# 具体的なモデル名・企業名・製品名で一次フィルタ
 AI_KEYWORDS = [
-    "llm", "gpt", "claude", "gemini", "openai", "anthropic", "deepmind",
-    "artificial intelligence", "machine learning", "deep learning",
-    "neural network", "transformer", "diffusion", "embedding", "rag",
-    "fine.tun", "inference", "foundation model", "language model",
-    "multimodal", "agent", "mistral", "llama", "copilot", "grok",
-    "ai ", " ai,", " ai.", "generative", "chatbot", "stable diffusion",
-    "midjourney", "sora", "dall-e", "whisper", "reinforcement learning",
+    # モデル名
+    "gpt-4", "gpt-5", "gpt4", "gpt5", "o1", "o3", "o4",
+    "claude", "sonnet", "opus", "haiku",
+    "gemini", "gemma",
+    "llama", "mistral", "mixtral", "phi-4", "phi-3",
+    "grok", "deepseek", "qwen", "command r",
+    # 企業・研究機関
+    "openai", "anthropic", "deepmind", "google ai", "meta ai", "xai",
+    "hugging face", "huggingface", "stability ai", "cohere", "perplexity",
+    # 製品・ツール
+    "chatgpt", "copilot github", "github copilot", "cursor",
+    "midjourney", "dall-e", "stable diffusion", "sora", "whisper",
+    "claude code", "devin", "codex",
+    # 技術用語（具体的なもの）
+    "llm", "large language model", "language model",
+    "foundation model", "generative ai", "gen ai",
+    "fine-tuning", "fine tuning", "rlhf", "rag",
+    "transformer", "diffusion model",
+    "machine learning", "deep learning", "neural network",
+    "artificial intelligence",
+    "multimodal", "text-to-image", "text-to-video",
+    "embedding", "vector database", "token", "context window",
+    "inference", "training run", "gpu cluster",
+    "reinforcement learning",
 ]
+
+# 正規表現パターン: 単語境界付きで "AI" を検出（"MAIL" 等を除外）
+_AI_WORD_RE = re.compile(r"\bAI\b")
 
 
 def is_ai_related(text: str) -> bool:
+    if _AI_WORD_RE.search(text):
+        return True
     t = text.lower()
     return any(kw in t for kw in AI_KEYWORDS)
 
@@ -130,9 +154,52 @@ def fetch_hatena(feed_url: str) -> list[dict]:
 
 
 # ─────────────────────────────────────────────
-# Twitter via RSSHub
+# Twitter via twikit (primary) / RSSHub (fallback)
 # ─────────────────────────────────────────────
-def fetch_twitter_account(account: str, instances: list[str]) -> list[dict]:
+def _fetch_twitter_twikit(accounts: list[str]) -> list[dict]:
+    """twikit の guest モジュールで認証不要のツイート取得を試みる。"""
+    import asyncio
+
+    try:
+        from twikit.guest import GuestClient
+    except ImportError:
+        print("  twikit not installed, skipping")
+        return []
+
+    async def _fetch_all() -> list[dict]:
+        client = GuestClient()
+        await client.activate()
+        all_items: list[dict] = []
+
+        for account in accounts:
+            try:
+                user = await client.get_user_by_screen_name(account)
+                tweets = await client.get_user_tweets(user.id)
+                for tweet in list(tweets)[:10]:
+                    text = getattr(tweet, "text", "") or ""
+                    created = getattr(tweet, "created_at", "") or ""
+                    tweet_id = getattr(tweet, "id", "")
+                    url = f"https://x.com/{account}/status/{tweet_id}" if tweet_id else ""
+                    all_items.append({
+                        "source": "twitter",
+                        "account": account,
+                        "title": text[:100],
+                        "url": url,
+                        "description": text[:300],
+                        "published_at": created,
+                    })
+                print(f"  @{account}: {min(len(list(tweets)), 10)} posts (twikit)")
+            except Exception as e:
+                print(f"  @{account}: twikit failed ({e})")
+            await asyncio.sleep(0.5)
+
+        return all_items
+
+    return asyncio.run(_fetch_all())
+
+
+def _fetch_twitter_rsshub(account: str, instances: list[str]) -> list[dict]:
+    """RSSHub フォールバック: 1アカウント分のツイートを取得。"""
     for instance in instances:
         url = f"{instance}/twitter/user/{account}"
         try:
@@ -150,9 +217,7 @@ def fetch_twitter_account(account: str, instances: list[str]) -> list[dict]:
                 link = item.findtext("link", "")
                 pub_date = item.findtext("pubDate", "")
                 desc = item.findtext("description", "")
-                # HTMLタグ除去
                 clean_desc = re.sub(r"<[^>]+>", "", desc).strip()
-
                 items.append({
                     "source": "twitter",
                     "account": account,
@@ -161,20 +226,30 @@ def fetch_twitter_account(account: str, instances: list[str]) -> list[dict]:
                     "description": clean_desc[:300] if clean_desc else title,
                     "published_at": pub_date,
                 })
-            return items[:10]  # 各アカウント最新10件
+            return items[:10]
         except Exception:
             continue
-    print(f"  @{account}: all instances failed, skipping")
     return []
 
 
 def fetch_twitter(accounts: list[str], instances: list[str]) -> list[dict]:
-    print("Fetching Twitter via RSSHub...")
-    all_items = []
+    print("Fetching Twitter...")
+
+    # twikit (guest) を最初に試す
+    items = _fetch_twitter_twikit(accounts)
+    if items:
+        return items
+
+    # twikit が使えなかった場合は RSSHub にフォールバック
+    print("  Falling back to RSSHub...")
+    all_items: list[dict] = []
     for account in accounts:
-        items = fetch_twitter_account(account, instances)
-        print(f"  @{account}: {len(items)} posts")
-        all_items.extend(items)
+        account_items = _fetch_twitter_rsshub(account, instances)
+        if account_items:
+            print(f"  @{account}: {len(account_items)} posts (rsshub)")
+        else:
+            print(f"  @{account}: all methods failed, skipping")
+        all_items.extend(account_items)
         time.sleep(0.5)
     return all_items
 
@@ -185,6 +260,7 @@ def fetch_twitter(accounts: list[str], instances: list[str]) -> list[dict]:
 def main():
     config = load_config()
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    DAILY_DIR.mkdir(parents=True, exist_ok=True)
 
     hn_items = fetch_hn(min_score=config.get("hn_min_score", 50))
     hatena_items = fetch_hatena(config["hatena_feed"])
@@ -193,17 +269,37 @@ def main():
         config["rsshub_instances"]
     )
 
+    now = datetime.now(timezone.utc)
     result = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "updated_at": now.isoformat(),
         "hackernews": hn_items,
         "hatena": hatena_items,
         "twitter": twitter_items,
     }
 
+    # 最新の feed.json を保存（Claude フィルタ用）
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved to {OUTPUT_PATH}")
+    # 日付別ファイルにも保存（履歴用）
+    today = now.strftime("%Y-%m-%d")
+    daily_path = DAILY_DIR / f"{today}.json"
+    if daily_path.exists():
+        # 同日2回目の実行: 既存データとマージ（URL で重複排除）
+        with open(daily_path, encoding="utf-8") as f:
+            existing = json.load(f)
+        for key in ["hackernews", "hatena", "twitter"]:
+            existing_urls = {item["url"] for item in existing.get(key, [])}
+            for item in result.get(key, []):
+                if item["url"] not in existing_urls:
+                    existing[key].append(item)
+        existing["updated_at"] = result["updated_at"]
+        result = existing
+
+    with open(daily_path, "w", encoding="utf-8") as f:
+        json.dump(result, f, ensure_ascii=False, indent=2)
+
+    print(f"\nSaved to {OUTPUT_PATH} and {daily_path}")
     print(f"  HN: {len(hn_items)}, Hatena: {len(hatena_items)}, Twitter: {len(twitter_items)}")
 
 

@@ -4,7 +4,7 @@ on:
   schedule:
     # 毎日 9:00 と 21:00 JST (= 0:00 と 12:00 UTC)
     - cron: "0 0,12 * * *"
-  workflow_dispatch: # 手動実行も可能
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -24,42 +24,40 @@ jobs:
           python-version: "3.12"
 
       - name: Install dependencies
-        run: pip install requests pyyaml
+        run: pip install -r requirements.txt
 
       - name: Fetch feeds
         run: python scripts/fetch_feeds.py
 
-      - name: Backup feed.json before Claude
-        run: cp docs/feed.json docs/feed.backup.json
-
-      - name: Filter with Claude (Claude Code Actions)
-        id: claude_filter
+      - name: Classify with Claude (structured output)
+        id: claude_classify
         continue-on-error: true
-        uses: anthropics/claude-code-action@beta
+        uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          mode: agent
-          direct_prompt: |
+          prompt: |
             docs/feed.json を読んで、各記事がAI・LLM・機械学習に関連するか判定してください。
 
-            以下の基準で関連性を判定してください：
+            判定基準:
             - 含める: LLM/生成AI/機械学習モデル/AIツール/AI企業動向/AI研究
             - 除く: 一般的なソフトウェア開発・Web技術（AI要素がないもの）・政治・スポーツ等
 
             手順:
             1. docs/feed.json を Read tool で読み込む
-            2. hackernews と hatena の各 item に "ai_relevant": true/false を追加
-            3. twitter は全件 "ai_relevant": true にする（監視アカウントがAI関連のため）
-            4. 更新した JSON を docs/feed.json に Write tool で上書き保存
+            2. hackernews と hatena の各アイテムを判定する
+            3. twitter は全件 true とする（監視アカウントがAI関連のため）
+            4. ファイルを変更しないでください。結果を構造化出力として返してください。
 
-            重要:
-            - JSON の構造は変えないでください。追加するのは各 item への "ai_relevant" フィールドのみです。
-            - 出力は valid JSON でなければなりません。文字列中のダブルクォートやバックスラッシュは正しくエスケープしてください。
-            - Write tool で保存する前に、python3 -c "import json; json.load(open('docs/feed.json'))" を Bash で実行して検証してください。
+            出力形式:
+            - hackernews: 各アイテムのインデックス(0始まり)順に true/false の配列
+            - hatena: 各アイテムのインデックス(0始まり)順に true/false の配列
+            - twitter: 各アイテムのインデックス(0始まり)順に true/false の配列（全件 true）
+          allowed_tools: "Read"
+          claude_args: "--json-schema '{\"type\":\"object\",\"properties\":{\"hackernews\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}},\"hatena\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}},\"twitter\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}}},\"required\":[\"hackernews\",\"hatena\",\"twitter\"]}'"
 
-      - name: Validate and filter feed.json
+      - name: Merge classification and generate HTML
         run: |
-          python3 scripts/filter_feed.py
+          python scripts/merge_classification.py '${{ steps.claude_classify.outputs.structured_output }}'
 
       - name: Commit and push
         run: |
