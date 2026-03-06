@@ -1,0 +1,33 @@
+twitter_accounts:
+  # 公式アカウント
+  - OpenAI
+  - ChatGPTApp
+  - AnthropicAI
+  - claudeai
+  - GoogleAI
+  - GoogleDeepMind
+  - GeminiApp
+  - googleaidevs
+  - googleaistudio
+  - xai
+  # 個人アカウント（所属公表済み）
+  - sama
+  - gdb
+  - embirico
+  - willdepue
+  - DarioAmodei
+  - alexalbert__
+  - demishassabis
+  - OriolVinyalsML
+  - OfficialLoganK
+
+# RSSHubのパブリックインスタンス（不安定な場合はフォールバック）
+rsshub_instances:
+  - https://rsshub.app
+  - https://rss.shab.fun
+  - https://rsshub.rssforever.com
+
+hatena_feed: https://b.hatena.ne.jp/hotentry/it.rss
+hacker_news_api: https://hacker-news.firebaseio.com/v0
+# HNのAI関連キーワード（Claude側でさらに絞る）
+hn_min_score: 50
