@@ -207,6 +207,7 @@ def card_html(item: dict) -> str:
     color = SOURCE_COLORS.get(source, "#888")
     label = SOURCE_LABELS.get(source, source)
     title = escape(item.get("title", ""))
+    title_ja = escape(item.get("title_ja", ""))
     url = escape(item.get("url", "#"))
     desc = escape(item.get("description", ""))
     date = format_date(item.get("published_at", ""))
@@ -235,10 +236,18 @@ def card_html(item: dict) -> str:
     if desc and desc != title:
         desc_html = f'<p class="card-desc">{desc}</p>'
 
+    if title_ja:
+        title_html = (
+            f'<a href="{url}" target="_blank" class="card-title">{title_ja}</a>'
+            f'<span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">{title}</span>'
+        )
+    else:
+        title_html = f'<a href="{url}" target="_blank" class="card-title">{title}</a>'
+
     return (
         f'<div class="card" data-source="{source}">'
         f'<div class="card-source" style="color:{color}">{label}</div>'
-        f'<a href="{url}" target="_blank" class="card-title">{title}</a>'
+        f"{title_html}"
         f"{desc_html}"
         f'<div class="card-meta">{meta_html}</div>'
         f"</div>"
