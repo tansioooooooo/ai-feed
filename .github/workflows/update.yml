@@ -1,0 +1,79 @@
+name: Update AI Feed
+
+on:
+  schedule:
+    # 毎日 9:00 と 21:00 JST (= 0:00 と 12:00 UTC)
+    - cron: "0 0,12 * * *"
+  workflow_dispatch: # 手動実行も可能
+
+permissions:
+  contents: write
+
+jobs:
+  update-feed:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Fetch feeds
+        run: python scripts/fetch_feeds.py
+
+      - name: Filter with Claude (Claude Code Actions)
+        uses: anthropics/claude-code-action@beta
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          direct_prompt: |
+            docs/feed.json を読んで、各記事がAI・LLM・機械学習に関連するか判定してください。
+
+            以下の基準で関連性を判定してください：
+            - ✅ 含める: LLM/生成AI/機械学習モデル/AIツール/AI企業動向/AI研究
+            - ❌ 除く: 一般的なソフトウェア開発・Web技術（AI要素がないもの）・政治・スポーツ等
+
+            手順:
+            1. docs/feed.json を Read tool で読み込む
+            2. hackernews と hatena の各 item に "ai_relevant": true/false を追加
+            3. twitter は全件 "ai_relevant": true にする（監視アカウントがAI関連のため）
+            4. 更新した JSON を docs/feed.json に Write tool で上書き保存
+
+            JSON の構造は変えないでください。追加するのは各 item への "ai_relevant" フィールドのみです。
+
+      - name: Filter irrelevant items and generate HTML
+        run: |
+          python - <<'EOF'
+          import json
+          from pathlib import Path
+
+          feed_path = Path("docs/feed.json")
+          with open(feed_path, encoding="utf-8") as f:
+              feed = json.load(f)
+
+          for key in ["hackernews", "hatena", "twitter"]:
+              feed[key] = [
+                  item for item in feed.get(key, [])
+                  if item.get("ai_relevant", True)
+              ]
+
+          with open(feed_path, "w", encoding="utf-8") as f:
+              json.dump(feed, f, ensure_ascii=False, indent=2)
+
+          print("Filtered feed saved")
+          EOF
+          python scripts/generate_html.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --cached --quiet || git commit -m "chore: update feed $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
