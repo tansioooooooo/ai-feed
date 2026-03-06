@@ -135,6 +135,13 @@ main { padding: 16px 24px; max-width: 900px; }
   font-size: 11px;
 }
 .comment-link:hover { text-decoration: underline; }
+.card-title-original {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
 .empty { color: var(--muted); padding: 20px 0; }
 .archive-section { margin-top: 24px; }
 .archive-section h2 {
@@ -207,6 +214,7 @@ def card_html(item: dict) -> str:
     color = SOURCE_COLORS.get(source, "#888")
     label = SOURCE_LABELS.get(source, source)
     title = escape(item.get("title", ""))
+    title_ja = escape(item.get("title_ja", ""))
     url = escape(item.get("url", "#"))
     desc = escape(item.get("description", ""))
     date = format_date(item.get("published_at", ""))
@@ -235,10 +243,19 @@ def card_html(item: dict) -> str:
     if desc and desc != title:
         desc_html = f'<p class="card-desc">{desc}</p>'
 
+    # HN アイテムに日本語タイトルがある場合は日本語を主タイトル、英語を副題として表示
+    if title_ja:
+        title_section = (
+            f'<a href="{url}" target="_blank" class="card-title">{title_ja}</a>'
+            f'<div class="card-title-original">{title}</div>'
+        )
+    else:
+        title_section = f'<a href="{url}" target="_blank" class="card-title">{title}</a>'
+
     return (
         f'<div class="card" data-source="{source}">'
         f'<div class="card-source" style="color:{color}">{label}</div>'
-        f'<a href="{url}" target="_blank" class="card-title">{title}</a>'
+        f"{title_section}"
         f"{desc_html}"
         f'<div class="card-meta">{meta_html}</div>'
         f"</div>"
