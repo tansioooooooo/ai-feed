@@ -1,155 +1,165 @@
 {
-  "updated_at": "2026-03-07T02:38:12.848235+00:00",
+  "updated_at": "2026-03-07T13:05:33.496389+00:00",
   "hackernews": [
+    {
+      "source": "hackernews",
+      "title": "Tell HN: I'm 60 years old. Claude Code has re-ignited a passion",
+      "url": "https://news.ycombinator.com/item?id=47282777",
+      "score": 586,
+      "comments": 453,
+      "hn_url": "https://news.ycombinator.com/item?id=47282777",
+      "published_at": "2026-03-07T00:05:06+00:00",
+      "title_ja": "60歳の私に情熱を再び灯したClaude Code"
+    },
+    {
+      "source": "hackernews",
+      "title": "LLMs work best when the user defines their acceptance criteria first",
+      "url": "https://blog.katanaquant.com/p/your-llm-doesnt-write-correct-code",
+      "score": 264,
+      "comments": 197,
+      "hn_url": "https://news.ycombinator.com/item?id=47283337",
+      "published_at": "2026-03-07T01:17:57+00:00",
+      "title_ja": "LLMはユーザーが先に受け入れ基準を定義すると最も効果的"
+    },
+    {
+      "source": "hackernews",
+      "title": "Sarvam 105B, the first competitive Indian open source LLM",
+      "url": "https://www.sarvam.ai/blogs/sarvam-30b-105b",
+      "score": 89,
+      "comments": 20,
+      "hn_url": "https://news.ycombinator.com/item?id=47285422",
+      "published_at": "2026-03-07T07:43:57+00:00",
+      "title_ja": "Sarvam 105B：インド初の競争力あるオープンソースLLM"
+    },
     {
       "source": "hackernews",
       "title": "Hardening Firefox with Anthropic's Red Team",
       "url": "https://www.anthropic.com/news/mozilla-firefox-security",
-      "score": 499,
-      "comments": 143,
+      "score": 580,
+      "comments": 158,
       "hn_url": "https://news.ycombinator.com/item?id=47273854",
       "published_at": "2026-03-06T11:53:18+00:00",
-      "title_ja": "AnthropicのRed TeamによるFirefoxの堅牢化"
-    },
-    {
-      "source": "hackernews",
-      "title": "Tell HN: I'm 60 years old. Claude Code has ignited a passion again",
-      "url": "https://news.ycombinator.com/item?id=47282777",
-      "score": 104,
-      "comments": 60,
-      "hn_url": "https://news.ycombinator.com/item?id=47282777",
-      "published_at": "2026-03-07T00:05:06+00:00",
-      "title_ja": "HNへ: 60歳の私がClaude Codeで情熱を取り戻した"
+      "title_ja": "AnthropicのRed TeamによるFirefoxのセキュリティ強化"
     },
     {
       "source": "hackernews",
       "title": "A tool that removes censorship from open-weight LLMs",
       "url": "https://github.com/elder-plinius/OBLITERATUS",
-      "score": 128,
-      "comments": 54,
+      "score": 182,
+      "comments": 82,
       "hn_url": "https://news.ycombinator.com/item?id=47275291",
       "published_at": "2026-03-06T14:27:55+00:00",
-      "title_ja": "オープンウェイトLLMの検閲を解除するツール"
-    },
-    {
-      "source": "hackernews",
-      "title": "Anthropic, please make a new Slack",
-      "url": "https://www.fivetran.com/blog/anthropic-please-make-a-new-slack",
-      "score": 206,
-      "comments": 188,
-      "hn_url": "https://news.ycombinator.com/item?id=47280200",
-      "published_at": "2026-03-06T19:52:08+00:00",
-      "title_ja": "Anthropicよ、新しいSlackを作ってくれ"
+      "title_ja": "オープンウェイトLLMの検閲を除去するツール"
     },
     {
       "source": "hackernews",
       "title": "Show HN: Claude-replay – A video-like player for Claude Code sessions",
       "url": "https://github.com/es617/claude-replay",
-      "score": 67,
-      "comments": 27,
+      "score": 86,
+      "comments": 29,
       "hn_url": "https://news.ycombinator.com/item?id=47276604",
       "published_at": "2026-03-06T15:57:27+00:00",
-      "title_ja": "Show HN: Claude-replay – Claude Codeセッションをビデオ形式で再生するプレイヤー"
+      "title_ja": "Show HN: Claude-replay – Claude Codeセッションをビデオのように再生するプレイヤー"
     },
     {
       "source": "hackernews",
       "title": "GPT-5.4",
       "url": "https://openai.com/index/introducing-gpt-5-4/",
-      "score": 984,
-      "comments": 780,
+      "score": 996,
+      "comments": 787,
       "hn_url": "https://news.ycombinator.com/item?id=47265045",
       "published_at": "2026-03-05T18:08:10+00:00",
       "title_ja": "GPT-5.4"
     },
     {
       "source": "hackernews",
+      "title": "Anthropic, please make a new Slack",
+      "url": "https://www.fivetran.com/blog/anthropic-please-make-a-new-slack",
+      "score": 250,
+      "comments": 234,
+      "hn_url": "https://news.ycombinator.com/item?id=47280200",
+      "published_at": "2026-03-06T19:52:08+00:00",
+      "title_ja": "Anthropic、新しいSlackを作ってほしい"
+    },
+    {
+      "source": "hackernews",
       "title": "We might all be AI engineers now",
       "url": "https://yasint.dev/we-might-all-be-ai-engineers-now/",
-      "score": 183,
-      "comments": 287,
+      "score": 203,
+      "comments": 319,
       "hn_url": "https://news.ycombinator.com/item?id=47272734",
       "published_at": "2026-03-06T09:13:30+00:00",
-      "title_ja": "私たちは皆、AIエンジニアになりつつあるかもしれない"
+      "title_ja": "私たちは今やみんなAIエンジニアかもしれない"
     },
     {
       "source": "hackernews",
       "title": "Launch HN: Vela (YC W26) – AI for complex scheduling",
       "url": "https://news.ycombinator.com/item?id=47264741",
-      "score": 56,
-      "comments": 42,
+      "score": 58,
+      "comments": 43,
       "hn_url": "https://news.ycombinator.com/item?id=47264741",
       "published_at": "2026-03-05T17:43:31+00:00",
-      "title_ja": "Launch HN: Vela (YC W26) – 複雑なスケジューリング向けAI"
-    },
-    {
-      "source": "hackernews",
-      "title": "Labor market impacts of AI: A new measure and early evidence",
-      "url": "https://www.anthropic.com/research/labor-market-impacts",
-      "score": 313,
-      "comments": 531,
-      "hn_url": "https://news.ycombinator.com/item?id=47268391",
-      "published_at": "2026-03-05T22:55:01+00:00",
-      "title_ja": "AIの労働市場への影響：新たな指標と初期エビデンス"
+      "title_ja": "Launch HN: Vela (YC W26) – 複雑なスケジューリングのためのAI"
     },
     {
       "source": "hackernews",
       "title": "A standard protocol to handle and discard low-effort, AI-Generated pull requests",
       "url": "https://406.fail/",
-      "score": 288,
-      "comments": 106,
+      "score": 298,
+      "comments": 110,
       "hn_url": "https://news.ycombinator.com/item?id=47267947",
       "published_at": "2026-03-05T22:04:59+00:00",
-      "title_ja": "低品質なAI生成プルリクエストを処理・却下するための標準プロトコル"
+      "title_ja": "低品質なAI生成プルリクエストを処理・破棄するための標準プロトコル"
+    },
+    {
+      "source": "hackernews",
+      "title": "Labor market impacts of AI: A new measure and early evidence",
+      "url": "https://www.anthropic.com/research/labor-market-impacts",
+      "score": 322,
+      "comments": 547,
+      "hn_url": "https://news.ycombinator.com/item?id=47268391",
+      "published_at": "2026-03-05T22:55:01+00:00",
+      "title_ja": "AIが労働市場に与える影響：新たな指標と初期エビデンス"
+    },
+    {
+      "source": "hackernews",
+      "title": "The L in \"LLM\" Stands for Lying",
+      "url": "https://acko.net/blog/the-l-in-llm-stands-for-lying/",
+      "score": 660,
+      "comments": 471,
+      "hn_url": "https://news.ycombinator.com/item?id=47257394",
+      "published_at": "2026-03-05T04:02:32+00:00",
+      "title_ja": "「LLM」のLは嘘（Lying）を意味する"
     },
     {
       "source": "hackernews",
       "title": "AI and the Ship of Theseus",
       "url": "https://lucumr.pocoo.org/2026/3/5/theseus/",
-      "score": 171,
-      "comments": 179,
+      "score": 177,
+      "comments": 182,
       "hn_url": "https://news.ycombinator.com/item?id=47263048",
       "published_at": "2026-03-05T15:49:45+00:00",
       "title_ja": "AIとテセウスの船"
     },
     {
       "source": "hackernews",
-      "title": "The L in \"LLM\" Stands for Lying",
-      "url": "https://acko.net/blog/the-l-in-llm-stands-for-lying/",
-      "score": 654,
-      "comments": 468,
-      "hn_url": "https://news.ycombinator.com/item?id=47257394",
-      "published_at": "2026-03-05T04:02:32+00:00",
-      "title_ja": "「LLM」のLは嘘つきのL"
-    },
-    {
-      "source": "hackernews",
       "title": "Relicensing with AI-Assisted Rewrite",
       "url": "https://tuananh.net/2026/03/05/relicensing-with-ai-assisted-rewrite/",
-      "score": 395,
-      "comments": 385,
+      "score": 396,
+      "comments": 387,
       "hn_url": "https://news.ycombinator.com/item?id=47257803",
       "published_at": "2026-03-05T05:07:33+00:00",
-      "title_ja": "AIアシストによるリライトでリライセンス"
+      "title_ja": "AIによるコード書き直しを使ったライセンス変更"
     },
     {
       "source": "hackernews",
       "title": "Something is afoot in the land of Qwen",
       "url": "https://simonwillison.net/2026/Mar/4/qwen/",
-      "score": 779,
+      "score": 780,
       "comments": 357,
       "hn_url": "https://news.ycombinator.com/item?id=47249343",
       "published_at": "2026-03-04T15:55:34+00:00",
-      "title_ja": "Qwenの世界で何かが起きている"
-    },
-    {
-      "source": "hackernews",
-      "title": "Claude Code wiped our production database with a Terraform command",
-      "url": "https://twitter.com/Al_Grigor/status/2029889772181934425",
-      "score": 128,
-      "comments": 143,
-      "hn_url": "https://news.ycombinator.com/item?id=47278720",
-      "published_at": "2026-03-06T18:07:52+00:00",
-      "title_ja": "Claude CodeがTerraformコマンドで本番データベースを消去した"
+      "title_ja": "Qwen界隈で何かが起きている"
     },
     {
       "source": "hackernews",
@@ -159,47 +169,17 @@
       "comments": 22,
       "hn_url": "https://news.ycombinator.com/item?id=47232903",
       "published_at": "2026-03-03T14:30:58+00:00",
-      "title_ja": "Launch HN: Cekura (YC F24) – 音声・チャットAIエージェントのテストと監視"
+      "title_ja": "Launch HN: Cekura (YC F24) – 音声・チャットAIエージェントのテストとモニタリング"
     },
     {
       "source": "hackernews",
       "title": "Qwen3.5 Fine-Tuning Guide",
       "url": "https://unsloth.ai/docs/models/qwen3.5/fine-tune",
-      "score": 410,
+      "score": 412,
       "comments": 105,
       "hn_url": "https://news.ycombinator.com/item?id=47246296",
       "published_at": "2026-03-04T12:04:31+00:00",
       "title_ja": "Qwen3.5 ファインチューニングガイド"
-    },
-    {
-      "source": "hackernews",
-      "title": "Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’",
-      "url": "https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/",
-      "score": 789,
-      "comments": 423,
-      "hn_url": "https://news.ycombinator.com/item?id=47255662",
-      "published_at": "2026-03-04T23:51:10+00:00",
-      "title_ja": "ダリオ・アモデイ、軍事契約をめぐるOpenAIの発言を「まったくの嘘」と批判"
-    },
-    {
-      "source": "hackernews",
-      "title": "NanoGPT Slowrun: Language Modeling with Limited Data, Infinite Compute",
-      "url": "https://qlabs.sh/slowrun",
-      "score": 184,
-      "comments": 35,
-      "hn_url": "https://news.ycombinator.com/item?id=47251259",
-      "published_at": "2026-03-04T17:56:04+00:00",
-      "title_ja": "NanoGPT Slowrun：限られたデータと無限の計算資源による言語モデリング"
-    },
-    {
-      "source": "hackernews",
-      "title": "Jensen Huang says Nvidia is pulling back from OpenAI and Anthropic",
-      "url": "https://techcrunch.com/2026/03/04/jensen-huang-says-nvidia-is-pulling-back-from-openai-and-anthropic-but-his-explanation-raises-more-questions-than-it-answers/",
-      "score": 222,
-      "comments": 106,
-      "hn_url": "https://news.ycombinator.com/item?id=47256781",
-      "published_at": "2026-03-05T02:33:58+00:00",
-      "title_ja": "ジェンスン・フアン、NvidiaがOpenAIとAnthropicから距離を置くと発言"
     }
   ],
   "hatena": [
@@ -208,80 +188,96 @@
       "title": "ChatGPT5.4Proに小説を書かせたら「AIが書いたにしては面白い」というレベルをはるかに超えてて、仰天した｜ふろむだ",
       "url": "https://note.com/fromdusktildawn/n/n36b18b002010",
       "description": "ChatGPT5.4Proに小説を書かせたら「AIが書いたにしては面白い」というレベルをはるかに超えてて、仰天した あまりに面白くて20回ぐらい読んだけど、まだ面白い。 プロンプトはたった５行。 以下、それを転載する。 タイトルは『まだ起きるな』。 まだ起きるな 死んだ、と思った。 雨の交差点いっぱいに、信号無視の配送...",
-      "bookmarks": 38,
+      "bookmarks": 464,
       "published_at": "2026-03-06T23:56:45Z"
     },
     {
       "source": "hatena",
-      "title": "Symphony - OpenAIが発表したチケット駆動AI開発ツールについて",
-      "url": "https://zenn.dev/komlock_lab/articles/openai-symphony",
-      "description": "こんにちは！ブロックチェーンエンジニアの山口夏生です。 ブロックチェーン×AI Agentで自律経済圏を創る開発組織Komlock labでCTOをしています。 コーディングエージェントを複数並列で自律的に回すマルチエージェント開発が、ここ数ヶ月でエンジニアの間に急速に広まっていますが、まだそれぞれ試行錯誤しているフェー...",
+      "title": "「.env見るな」は通じない－AI時代のシークレット管理術",
+      "url": "https://zenn.dev/76hata/articles/d6d9de62d001a8",
+      "description": "はじめに Claude Codeをはじめとした AIコーディングエージェントが普及するなか、こんな疑問を持ったことはないでしょうか。 「.envは読むな」とシステムプロンプトに書いてある。でも、プロンプトインジェクションで言い方を変えれば読まれる、という話を聞いた。じゃあどうやって管理すればいいの？ この記事では、そ...",
       "bookmarks": 101,
-      "published_at": "2026-03-06T12:00:27Z"
-    },
-    {
-      "source": "hatena",
-      "title": "コードレビューにClaude Code subagentsを導入したら、レビューレベルが改善した話",
-      "url": "https://zenn.dev/mgdx_blog/articles/8f7994ad84151d",
-      "description": "はじめに こんにちは！ みなさんは、コードレビューの負担に悩んでいませんか？マイクロサービスが増えるにつれて、レビュー対象のコードも増え続け、セキュリティやパフォーマンス、テストカバレッジなど、チェックすべき観点も多岐にわたるようになりました。レビュー待ち時間が開発速度のボトルネックになってしまう…...",
-      "bookmarks": 48,
-      "published_at": "2026-03-05T10:57:06Z"
-    },
-    {
-      "source": "hatena",
-      "title": "【保存版】Claude課金すべき？Cowrok・Skills・Claude Codeの使い方全解説",
-      "url": "https://newspicks.com/news/16173894/body/",
-      "description": "AIテーマのPodcastエピソードの記事版です！ ジェネトピ(Generative AI Topic)は、明日から試したくなるリアルなAI活用秘話を、雑談感覚でゆるく学べるPodcastです！ Spotify Youtube Apple Podcast 最新動向をウォッチしている人以外にも、AIを身近に感じられるコンテンツを作りたいと思いPodcastを始めました。エピソ...",
-      "bookmarks": 310,
-      "published_at": "2026-03-05T12:45:10Z"
-    },
-    {
-      "source": "hatena",
-      "title": "ClawX - Open Source AI Research Assistant",
-      "url": "https://claw-x.com/?lang=en",
-      "description": "ClawX is an open-source desktop AI research assistant built on the OpenClaw ecosystem. Runs 24/7 on your computer, autonomously browsing the web, monitoring data sources, and delivering AI-powered res",
-      "bookmarks": 30,
-      "published_at": "2026-03-06T05:11:21Z"
+      "published_at": "2026-03-07T02:15:12Z"
     },
     {
       "source": "hatena",
       "title": "コミットメッセージを自分で書かない",
       "url": "https://zenn.dev/hfm/articles/commit-message-generated-by-ai",
       "description": "git alias を使ってコミットメッセージをAIに書かせる 最近はこれを git alias に入れて、コミットメッセージをゼロから書くことがほぼなくなりました。 aicommit = \"!f() { COMMITMSG=$(claude --no-session-persistence --print 'Generate ONLY a one-line Git commit message ",
-      "bookmarks": 14,
+      "bookmarks": 128,
       "published_at": "2026-03-06T00:13:02Z"
+    },
+    {
+      "source": "hatena",
+      "title": "生成AI時代の開発と運用 / Dev and Ops in Gen AI era",
+      "url": "https://speakerdeck.com/ymotongpoo/dev-and-ops-in-gen-ai-era",
+      "description": "JAWS DAYS 2026の登壇資料です https://fortee.jp/jawsdays-2026/proposal/59962e25-4761-4d86-81c8-9d6547aa8f9b",
+      "bookmarks": 51,
+      "published_at": "2026-03-07T06:08:21Z"
+    },
+    {
+      "source": "hatena",
+      "title": "コードレビューにClaude Code subagentsを導入したら、レビューレベルが改善した話",
+      "url": "https://zenn.dev/mgdx_blog/articles/8f7994ad84151d",
+      "description": "はじめに こんにちは！ みなさんは、コードレビューの負担に悩んでいませんか？マイクロサービスが増えるにつれて、レビュー対象のコードも増え続け、セキュリティやパフォーマンス、テストカバレッジなど、チェックすべき観点も多岐にわたるようになりました。レビュー待ち時間が開発速度のボトルネックになってしまう…...",
+      "bookmarks": 146,
+      "published_at": "2026-03-05T10:57:06Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Claude Code に `cc` というエイリアスをつけたら PC がハングした話",
+      "url": "https://zenn.dev/owayo/articles/6190821ac1dd1e",
+      "description": "はじめに Claude Code を普段からターミナルで使っています。毎回 claude と打つのが面倒だったので、cc というエイリアスを設定していました。 Claude Code だから cc。完璧な略称ですよね？ ...と思っていたら、ある日マシンのメモリが 40GB 食われてハングしました。 TL;DR Claude Code のエイリアスとして alias cc=...",
+      "bookmarks": 15,
+      "published_at": "2026-03-06T11:56:28Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Claude Codeの進化と各機能の活かし方",
+      "url": "https://speakerdeck.com/oikon48/claude-codenojin-hua-toge-ji-neng-nohuo-kasifang",
+      "description": "Claude Codeの進化～Oikonさんと学ぶ、各機能の活かし方～(Findyさま): https://findy.connpass.com/event/385245/ X (Twitter) : https://x.com/oikon48 English ver: https://sp…",
+      "bookmarks": 39,
+      "published_at": "2026-03-06T10:33:17Z"
+    },
+    {
+      "source": "hatena",
+      "title": "GitHub - loadbalance-sudachi-kun/claude-code-statusline: Claude Code statusline with rate limit display",
+      "url": "https://github.com/loadbalance-sudachi-kun/claude-code-statusline",
+      "description": "You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reloa",
+      "bookmarks": 15,
+      "published_at": "2026-03-06T11:34:44Z"
+    },
+    {
+      "source": "hatena",
+      "title": "ソフトウェア開発に起きているパラダイムシフト",
+      "url": "https://newspicks.com/news/16183007/body/",
+      "description": "昨今生成AIの進化は目覚ましく、私たちの働き方やビジネスモデルすら大きく変えようとしています。 特にソフトウェア開発では、今後以下のような点が大きく変化していくと予想されています。 コーディングの完全な自動化 コーディングコストの低下によるカスタムソフトウェアの台頭 AI Agent中心のユーザ体験への移行 一...",
+      "bookmarks": 20,
+      "published_at": "2026-03-06T07:11:56Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Symphony - OpenAIが発表したチケット駆動AI開発ツールについて",
+      "url": "https://zenn.dev/komlock_lab/articles/openai-symphony",
+      "description": "こんにちは！ブロックチェーンエンジニアの山口夏生です。 ブロックチェーン×AI Agentで自律経済圏を創る開発組織Komlock labでCTOをしています。 コーディングエージェントを複数並列で自律的に回すマルチエージェント開発が、ここ数ヶ月でエンジニアの間に急速に広まっていますが、まだそれぞれ試行錯誤しているフェー...",
+      "bookmarks": 154,
+      "published_at": "2026-03-06T12:00:27Z"
     },
     {
       "source": "hatena",
       "title": "家庭用PCで使える無料OCRツール「NDLOCR-Lite」を国立国会図書館が公開、生成速度が世界最速と謳う拡散型LLM「Mercury 2」など生成AI技術5つを解説（生成AIウィークリー） | テクノエッジ TechnoEdge",
       "url": "https://www.techno-edge.net/article/2026/03/06/4899.html",
       "description": "この1週間の気になる生成AI技術・研究をいくつかピックアップして解説する今回の「生成AIウィークリー」（第134回）は、GPT-5-miniを上回る「Qwen3.5」の軽量モデル群や、国立国会図書館が発表した家庭用PCで使える無料OCRツール「NDLOCR-Lite」を取り上げます。 また、生成速度が従来の5倍以上高速な拡散ベースのLLM「M...",
-      "bookmarks": 14,
+      "bookmarks": 39,
       "published_at": "2026-03-06T06:42:58Z"
     },
     {
       "source": "hatena",
-      "title": "GPT-5.4が来た: Codexで1Mコンテキストを有効にする方法と他モデルとの比較",
-      "url": "https://nyosegawa.github.io/posts/gpt-5-4-codex-1m-context/",
-      "description": "こんにちは！逆瀬川 (@gyakuse) ちゃんです 今日はOpenAIから本日リリースされたGPT-5.4について、Codexリポジトリのソースコードから読み取れるinstructionsの進化、1Mコンテキストウィンドウの有効化方法、そして他モデルとのベンチマーク比較をまとめていきたいと思います。 GPT-5.4の概要 GPT-5.4は2026年3月6日（日...",
-      "bookmarks": 30,
-      "published_at": "2026-03-06T13:30:10Z"
-    },
-    {
-      "source": "hatena",
-      "title": "スマホからも PC からも使えるプライベート LLM 環境 (Qwen 3.5-4B) を AWS に構築してみた | DevelopersIO",
-      "url": "https://dev.classmethod.jp/articles/qwen-3-5-4b-aws-gpu-private-llm-ollama-tailscale/",
-      "description": "Claude や ChatGPT の障害に備えて、ローカル LLM (Qwen 3.5-4B) を AWS の GPU インスタンス上にセルフホストしました。Tailscale を使うことで、スマホからも PC からも同じ URL でプライベートにアクセスできます。Terraform のコード全文と、実際に使ってみた所感を紹介します。 はじめに Claude や ChatGPT などの...",
-      "bookmarks": 6,
-      "published_at": "2026-03-05T14:27:17Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Codeの進化と各機能の活かし方",
-      "url": "https://speakerdeck.com/oikon48/claude-codenojin-hua-toge-ji-neng-nohuo-kasifang",
-      "description": "Claude Codeの進化～Oikonさんと学ぶ、各機能の活かし方～(Findyさま): https://findy.connpass.com/event/385245/ X (Twitter) : https://x.com/oikon48",
-      "bookmarks": 5,
-      "published_at": "2026-03-06T10:33:17Z"
+      "title": "「Claude Codeに向いているプログラミング言語」ベンチマークの方法論的問題について",
+      "url": "https://zenn.dev/kmizu/articles/2026-03-ai-coding-bench-methodology",
+      "description": "予備実験として「こういう傾向が見られた」と報告するのであれば有意義だと思います。ただ、交絡因子を分離できていない段階で「動的型付け言語が効率的」という因果的な結論まで踏み込むのは、少しミスリーディングではないかと感じました。 3. 測定しているものと結論の間にずれがある（構成概念妥当性の問題） 統計的...",
+      "bookmarks": 4,
+      "published_at": "2026-03-07T02:40:06Z"
     }
   ],
   "twitter": []
