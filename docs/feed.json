@@ -1,31 +1,41 @@
 {
-  "updated_at": "2026-03-09T02:52:22.973167+00:00",
+  "updated_at": "2026-03-09T13:24:08.744547+00:00",
   "hackernews": [
+    {
+      "source": "hackernews",
+      "title": "Show HN: Mcp2cli – One CLI for every API, 96-99% fewer tokens than native MCP",
+      "url": "https://github.com/knowsuchagency/mcp2cli",
+      "score": 113,
+      "comments": 67,
+      "hn_url": "https://news.ycombinator.com/item?id=47305149",
+      "published_at": "2026-03-09T05:18:46+00:00",
+      "title_ja": "Show HN: Mcp2cli – あらゆるAPIに対応する単一CLI、ネイティブMCPより96〜99%少ないトークン"
+    },
     {
       "source": "hackernews",
       "title": "LLM Writing Tropes.md",
       "url": "https://tropes.fyi/tropes-md",
-      "score": 322,
-      "comments": 150,
+      "score": 342,
+      "comments": 164,
       "hn_url": "https://news.ycombinator.com/item?id=47291513",
       "published_at": "2026-03-07T21:08:40+00:00",
-      "title_ja": "LLMの文章クセまとめ.md"
+      "title_ja": "LLMの文章パターン集"
     },
     {
       "source": "hackernews",
-      "title": "Claude struggles to cope with ChatGPT exodus",
-      "url": "https://www.forbes.com/sites/barrycollins/2026/03/06/claude-struggles-to-cope-with-chatgpt-exodus/",
-      "score": 147,
-      "comments": 139,
-      "hn_url": "https://news.ycombinator.com/item?id=47298997",
-      "published_at": "2026-03-08T17:14:53+00:00",
-      "title_ja": "ChatGPT離脱ユーザーの急増でClaudeがパンク状態に"
+      "title": "How to run Qwen 3.5 locally",
+      "url": "https://unsloth.ai/docs/models/qwen3.5",
+      "score": 473,
+      "comments": 156,
+      "hn_url": "https://news.ycombinator.com/item?id=47292522",
+      "published_at": "2026-03-07T23:32:17+00:00",
+      "title_ja": "Qwen 3.5をローカルで実行する方法"
     },
     {
       "source": "hackernews",
       "title": "Phi-4-reasoning-vision and the lessons of training a multimodal reasoning model",
       "url": "https://www.microsoft.com/en-us/research/blog/phi-4-reasoning-vision-and-the-lessons-of-training-a-multimodal-reasoning-model/",
-      "score": 84,
+      "score": 88,
       "comments": 9,
       "hn_url": "https://news.ycombinator.com/item?id=47258737",
       "published_at": "2026-03-05T07:36:22+00:00",
@@ -33,40 +43,30 @@
     },
     {
       "source": "hackernews",
-      "title": "How to run Qwen 3.5 locally",
-      "url": "https://unsloth.ai/docs/models/qwen3.5",
-      "score": 448,
-      "comments": 145,
-      "hn_url": "https://news.ycombinator.com/item?id=47292522",
-      "published_at": "2026-03-07T23:32:17+00:00",
-      "title_ja": "Qwen 3.5をローカルで実行する方法"
-    },
-    {
-      "source": "hackernews",
       "title": "Will Claude Code ruin our team?",
       "url": "https://justinjackson.ca/claude-code-ruin",
-      "score": 82,
-      "comments": 84,
+      "score": 95,
+      "comments": 91,
       "hn_url": "https://news.ycombinator.com/item?id=47293938",
       "published_at": "2026-03-08T02:59:35+00:00",
-      "title_ja": "Claude Codeはチームを壊すか？"
+      "title_ja": "Claude Codeはチームを壊滅させるのか？"
     },
     {
       "source": "hackernews",
-      "title": "AI doesn't replace white collar work",
-      "url": "https://www.marble.onl/posts/ai_doesnt_replace_work.html",
-      "score": 57,
-      "comments": 89,
-      "hn_url": "https://news.ycombinator.com/item?id=47299988",
-      "published_at": "2026-03-08T18:57:21+00:00",
-      "title_ja": "AIはホワイトカラーの仕事を代替しない"
+      "title": "Claude struggles to cope with ChatGPT exodus",
+      "url": "https://www.forbes.com/sites/barrycollins/2026/03/06/claude-struggles-to-cope-with-chatgpt-exodus/",
+      "score": 160,
+      "comments": 145,
+      "hn_url": "https://news.ycombinator.com/item?id=47298997",
+      "published_at": "2026-03-08T17:14:53+00:00",
+      "title_ja": "ClaudeはChatGPTからの大量移行に苦戦"
     },
     {
       "source": "hackernews",
       "title": "GPT-5.4",
       "url": "https://openai.com/index/introducing-gpt-5-4/",
-      "score": 1012,
-      "comments": 802,
+      "score": 1014,
+      "comments": 805,
       "hn_url": "https://news.ycombinator.com/item?id=47265045",
       "published_at": "2026-03-05T18:08:10+00:00",
       "title_ja": "GPT-5.4"
@@ -75,51 +75,41 @@
       "source": "hackernews",
       "title": "Hardening Firefox with Anthropic's Red Team",
       "url": "https://www.anthropic.com/news/mozilla-firefox-security",
-      "score": 625,
-      "comments": 168,
+      "score": 626,
+      "comments": 170,
       "hn_url": "https://news.ycombinator.com/item?id=47273854",
       "published_at": "2026-03-06T11:53:18+00:00",
-      "title_ja": "AnthropicのRed Teamと進めるFirefoxのセキュリティ強化"
+      "title_ja": "AnthropicのRed TeamによるFirefoxのセキュリティ強化"
     },
     {
       "source": "hackernews",
       "title": "LLMs work best when the user defines their acceptance criteria first",
       "url": "https://blog.katanaquant.com/p/your-llm-doesnt-write-correct-code",
-      "score": 447,
-      "comments": 404,
+      "score": 449,
+      "comments": 409,
       "hn_url": "https://news.ycombinator.com/item?id=47283337",
       "published_at": "2026-03-07T01:17:57+00:00",
-      "title_ja": "LLMは受け入れ基準を事前に定義するほど効果を発揮する"
+      "title_ja": "LLMはユーザーが受け入れ基準を先に定義すると最もうまく機能する"
     },
     {
       "source": "hackernews",
       "title": "Show HN: Claude-replay – A video-like player for Claude Code sessions",
       "url": "https://github.com/es617/claude-replay",
-      "score": 100,
+      "score": 101,
       "comments": 34,
       "hn_url": "https://news.ycombinator.com/item?id=47276604",
       "published_at": "2026-03-06T15:57:27+00:00",
-      "title_ja": "Claude Codeセッションをビデオ風に再生するClaude-replayを作った"
+      "title_ja": "Show HN: Claude-replay – Claude Codeセッションのビデオ風プレイヤー"
     },
     {
       "source": "hackernews",
-      "title": "Verification debt: the hidden cost of AI-generated code",
-      "url": "https://fazy.medium.com/agentic-coding-ais-adolescence-b0d13452f981",
-      "score": 111,
-      "comments": 95,
-      "hn_url": "https://news.ycombinator.com/item?id=47289406",
-      "published_at": "2026-03-07T17:08:30+00:00",
-      "title_ja": "検証コスト：AIが生成したコードに潜む隠れた負債"
-    },
-    {
-      "source": "hackernews",
-      "title": "Tell HN: I'm 60 years old. Claude Code has re-ignited a passion",
-      "url": "https://news.ycombinator.com/item?id=47282777",
-      "score": 1039,
-      "comments": 942,
-      "hn_url": "https://news.ycombinator.com/item?id=47282777",
-      "published_at": "2026-03-07T00:05:06+00:00",
-      "title_ja": "60歳の私がClaude Codeで情熱を取り戻した話"
+      "title": "AI doesn't replace white collar work",
+      "url": "https://www.marble.onl/posts/ai_doesnt_replace_work.html",
+      "score": 61,
+      "comments": 96,
+      "hn_url": "https://news.ycombinator.com/item?id=47299988",
+      "published_at": "2026-03-08T18:57:21+00:00",
+      "title_ja": "AIはホワイトカラーの仕事を代替しない"
     },
     {
       "source": "hackernews",
@@ -129,121 +119,119 @@
       "comments": 43,
       "hn_url": "https://news.ycombinator.com/item?id=47264741",
       "published_at": "2026-03-05T17:43:31+00:00",
-      "title_ja": "Vela (YC W26) – 複雑なスケジューリングのためのAI"
+      "title_ja": "Launch HN: Vela (YC W26) – 複雑なスケジューリングのためのAI"
+    },
+    {
+      "source": "hackernews",
+      "title": "Tell HN: I'm 60 years old. Claude Code has re-ignited a passion",
+      "url": "https://news.ycombinator.com/item?id=47282777",
+      "score": 1049,
+      "comments": 950,
+      "hn_url": "https://news.ycombinator.com/item?id=47282777",
+      "published_at": "2026-03-07T00:05:06+00:00",
+      "title_ja": "Tell HN: 60歳の私に、Claude Codeが情熱を再点火した"
+    },
+    {
+      "source": "hackernews",
+      "title": "Verification debt: the hidden cost of AI-generated code",
+      "url": "https://fazy.medium.com/agentic-coding-ais-adolescence-b0d13452f981",
+      "score": 112,
+      "comments": 95,
+      "hn_url": "https://news.ycombinator.com/item?id=47289406",
+      "published_at": "2026-03-07T17:08:30+00:00",
+      "title_ja": "検証負債：AIが生成したコードの隠れたコスト"
+    },
+    {
+      "source": "hackernews",
+      "title": "We might all be AI engineers now",
+      "url": "https://yasint.dev/we-might-all-be-ai-engineers-now/",
+      "score": 221,
+      "comments": 344,
+      "hn_url": "https://news.ycombinator.com/item?id=47272734",
+      "published_at": "2026-03-06T09:13:30+00:00",
+      "title_ja": "私たちは皆、AIエンジニアになるのかもしれない"
     }
   ],
   "hatena": [
     {
       "source": "hatena",
-      "title": "南場智子「ますます“速さ”が命題に」DeNA AI Day2026全文書き起こし - エンジニアtype | 転職type",
-      "url": "https://type.jp/et/feature/30605/",
-      "description": "NEW! 2026.03.08 ITニュース DeNA生成AIAI 「開発エンジニアの人生が一変した1年」だった――。 2025年に「AIオールイン」を宣言したDeNA。あれから1年、会長の南場智子さんは劇的な変化をそう切り出した。 コーディングに手を動かすことが激減し、AIが自らタスクを請け負うAIエージェントが民主化したこの1年。最前線で南...",
-      "bookmarks": 867,
-      "published_at": "2026-03-08T01:48:55Z"
+      "title": "Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス",
+      "url": "https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/",
+      "description": "こんにちは！逆瀬川ちゃん (@gyakuse) です！ 今日はHarness Engineering(ハーネスエンジニアリング)について、2026年3月時点のベストプラクティスを徹底的にまとめていきたいと思います。 Harness Engineeringとは何か 定義を辿る Mitchell Hashimotoによる最初の定義を辿れば、Harness Engineeringとは人間によるAGENT",
+      "bookmarks": 297,
+      "published_at": "2026-03-09T07:02:10Z"
     },
     {
       "source": "hatena",
-      "title": "Claude Codeにバックドア入りOSSを渡したら、何の疑いもなく実装した - Qiita",
-      "url": "https://qiita.com/NF0000/items/66510f959b1c22f011a7",
-      "description": "はじめに バックドアが仕込まれたOSSをClaude Codeに渡して「機能追加して」と頼んだら、何の疑いもなく、バックドアごと踏襲して実装しました。 前回の記事では、プロンプトインジェクションによる.env漏洩を検証しました。今回はもっと現実的なシナリオで、GitHubでOSSを見つけてcloneし、AIで開発を始めるケースです...",
-      "bookmarks": 118,
-      "published_at": "2026-03-08T10:57:07Z"
-    },
-    {
-      "source": "hatena",
-      "title": "ジュニアエンジニアの人、AI後はこうしたらええんちゃう？という話｜牛尾　剛",
-      "url": "https://note.com/simplearchitect/n/nf00d38494ac3",
-      "description": "先日、たまたま、Microsoft のキャンパスで大学生の皆さんと話す機会があって、こんなことを聞かれました。 私は大学生で１年ぐらい前からエンジニアになったのですが、世の中は AI の世界ですけど、どうやって学んでいけばよいのですか？AI コーディングとかやったほうが良いのですか？ たしか、こんな質問だったような...",
-      "bookmarks": 96,
-      "published_at": "2026-03-08T01:11:39Z"
-    },
-    {
-      "source": "hatena",
-      "title": "システムのメモリ・CPU・GPUに合わせて適切なAIモデルを教えてくれるターミナルツール「llmfit」",
-      "url": "https://gigazine.net/news/20260308-llmfit/",
-      "description": "生成AIの話題に欠くことのない昨今、ある程度のパワーを有するPCが手元にある方は一度ならず「ローカルで生成AIを動かしてみたい」という思いに駆られた事があるのではないでしょうか。とはいえ余程AIモデルに関する知識が深くなければどのAIモデルなら自分の環境で快適に動作させられるのか把握するのは困難です。ネッ...",
-      "bookmarks": 37,
-      "published_at": "2026-03-08T10:23:45Z"
-    },
-    {
-      "source": "hatena",
-      "title": "OpenAI、「Codex for Windows」正式リリース。Windowsサンドボックス内で安全にAIエージェントを実行、WSLにも対応",
-      "url": "https://www.publickey1.jp/blog/26/openaicodex_for_windowswindowsaiwsl.html",
-      "description": "OpenAI、「Codex for Windows」正式リリース。Windowsサンドボックス内で安全にAIエージェントを実行、WSLにも対応 OpenAIは、Windows対応のAIエージェントによる開発環境「Codex for Windows」の正式リリースを発表しました。 Codex for Windowsは、AIエージェントを用いてプログラミングやテストを行うための開発環境...",
+      "title": "Claude Codeのghコマンドpermission問題をreadonly用ラッパーで解決する - $shibayu36->blog;",
+      "url": "https://blog.shibayu36.org/entry/2026/03/09/173000",
+      "description": "Claude Codeでgh apiを使って情報を取得しようとすると、毎回権限プロンプトが表示されてつらい。例えば以下のようなただコミット一覧を取得するだけのコマンドでも、毎回許可が必要になる。 gh api \"repos/anthropics/claude-code/commits?per_page=100&page=1\" かといって利便性のためにgh api全体に対してallowを設定...",
       "bookmarks": 30,
-      "published_at": "2026-03-08T14:02:21Z"
+      "published_at": "2026-03-09T10:12:26Z"
     },
     {
       "source": "hatena",
-      "title": "Claude Codeが「音声モード」搭載。AIに話しかけながらのコーディングが可能に",
-      "url": "https://www.publickey1.jp/blog/26/claude_codeai.html",
-      "description": "Anthropicが提供するAIコーディングツールであるClaude Codeに、新たに「音声モード」が搭載されることが明らかになりました。 AnthropicでClaude Codeを担当するエンジニアThariq Shihipar氏が次のようにX/Twitterへのポストで明らかにしています。 Voice mode is rolling out now in Claude Code. It’s",
-      "bookmarks": 25,
-      "published_at": "2026-03-08T14:02:13Z"
+      "title": "Claude Code / Codexの弱点を解決するOSS「GSD」の設計が良かった",
+      "url": "https://zenn.dev/komlock_lab/articles/gsd-guide-handson",
+      "description": "こんにちは！ブロックチェーンエンジニアの山口夏生です。 ブロックチェーン×AI Agentで自律経済圏を創る開発組織Komlock labでCTOをしています。 GSD（GET SHIT DONE）とは何か 「How We Built The World's Most Powerful Coding Agent」というXの投稿が114K Viewsを記録して話題になっている。 AIコーディングエー",
+      "bookmarks": 24,
+      "published_at": "2026-03-09T06:20:19Z"
     },
     {
       "source": "hatena",
-      "title": "ClaudeCodeでマーケターの課題を解決する",
-      "url": "https://speakerdeck.com/kenichiota0711/claudecodedemaketanoke-ti-wojie-jue-suru",
-      "description": "Claude Codeを活用してマーケターの方の課題を解決するエピソードをまとめました。 事業会社のデザイナーやマーケターの方に読んでいただきたいです。 ＜主な内容＞ ・自社課題、AI技術、構想の接続 ・AIツール選定 ・3つの構造について ・SKILLの活用と拡充サイクル 引き続…",
-      "bookmarks": 129,
-      "published_at": "2026-03-08T01:34:21Z"
+      "title": "Claude Codeが本番DBを消した事故 ― 改めて確認しておきたいインフラの基本 - Qiita",
+      "url": "https://qiita.com/nogataka/items/fd00eff2cc08684fe77d",
+      "description": "はじめに 2026年2月末、オンライン学習コミュニティの運営者がClaude Codeを使ってTerraformを操作した結果、本番環境のRDSデータベースとすべてのスナップショットが削除されました。2.5年分のコース運営データ（課題提出テーブルだけで約194万行）が一瞬で消えた事故です。 この記事を読んで、率直に怖いと思いました...",
+      "bookmarks": 38,
+      "published_at": "2026-03-08T10:03:52Z"
     },
     {
       "source": "hatena",
-      "title": "デザイナーがClaudeとFigma MCPで試したこと（VibeCoding実践記）｜yiping",
-      "url": "https://note.com/20191201yiping/n/ne38e9bd31786",
-      "description": "Claude CodeとFigma MCPを使って、一つ小さなプロダクトを作ってみた流れと気づきを振り返り用にまとめました。 コーディングはできないけど、自分で一つプロダクトを作ってみたいデザイナー向けに少しでも参考になればと思います〜 プロダクト概要Weekly Blooms は、週末に「小さな挑戦」を宣言・達成して自己効力感を...",
-      "bookmarks": 18,
-      "published_at": "2026-03-08T14:54:14Z"
+      "title": "エプスタイン・ファイル218GBをAIモデル「Claude Opus 4.6」で精査した結果レポート「Epstein-research」が公開中",
+      "url": "https://gigazine.net/news/20260309-epstein-research/",
+      "description": "児童人身売買や性的虐待の疑いで逮捕されて獄中死したジェフリー・エプスタインの捜査関連データ、通称「エプスタイン・ファイル」が2025年12月から2026年1月末にかけて大量に公開され、世界中を揺るがす大きなスキャンダルとなっています。このエプスタイン・ファイルをClaude Opus 4.6とfaster-whisperで構造化して分...",
+      "bookmarks": 4,
+      "published_at": "2026-03-09T11:06:50Z"
     },
     {
       "source": "hatena",
-      "title": "ChatGPTから400万人が離脱、需要急増で対応に苦しむアンソロピックClaude | Forbes JAPAN 公式サイト（フォーブス ジャパン）",
-      "url": "https://forbesjapan.com/articles/detail/93254",
-      "description": "Anthropic（アンソロピック）は、同社のチャットボット「Claude」への需要が急増し、この1週間に複数のサービス障害が起きたことを認めた。 推計400万人超がOpenAIのChatGPTを離れるAnthropicは、OpenAIが米国防総省と物議を醸す契約を結んだことを受けて、ChatGPTを離れる人々の波の恩恵を受けている。同社は米国時間2...",
-      "bookmarks": 13,
-      "published_at": "2026-03-08T06:36:40Z"
+      "title": "カンリー社内Claude Code勉強会の資料を公開します",
+      "url": "https://zenn.dev/canly/articles/cc0891517e45cc",
+      "description": "本記事について 株式会社カンリーでは、2025年6月頃から全エンジニア向けにClaude Codeを導入しています。 それ以前にDevinやCursorなども導入しており、現在ではこれら3ツールを個人の裁量で使い分けて業務をしています。 その中においてツールの理解度・習熟度は個人でばらつきがあり、組織として活用レベルを一段上げ...",
+      "bookmarks": 8,
+      "published_at": "2026-02-13T01:10:46Z"
+    },
+    {
+      "source": "hatena",
+      "title": "GraphRAGを実際に構築して分かった「使うほど賢くなるAI」の仕組み",
+      "url": "https://zenn.dev/okikusan/articles/0f8295e7ecaa19",
+      "description": "はじめに ─ 「AIに文書を読ませる」だけでは足りなかった 最近、「社内の文書をAIに読ませて質問に答えさせる」という仕組みを耳にする機会が増えました。いわゆる RAG（Retrieval Augmented Generation） です。 これ、確かに便利なんです。マニュアルや規則集をAIに渡しておけば、「この手続きどうやるの？」と聞くだ...",
+      "bookmarks": 24,
+      "published_at": "2026-03-08T19:15:46Z"
     },
     {
       "source": "hatena",
       "title": "Claude Code が RAG を捨てた理由 -「Agentic Search」という選択肢",
       "url": "https://zenn.dev/acntechjp/articles/c1296f425baf03",
       "description": "先日、YouTube で公開された技術チャンネル The Pragmatic Engineer のインタビュー動画（2026年3月公開）を見ていて、興味深い話を耳にしました。ゲストは Claude Code の中心的な開発者である Boris Cherny 氏。動画全体では Claude Code の開発経緯や、AI がエンジニアの働き方をどう変えるかといったテーマが語られ...",
-      "bookmarks": 7,
+      "bookmarks": 72,
       "published_at": "2026-03-08T06:41:37Z"
     },
     {
       "source": "hatena",
-      "title": "汎用推薦システム ── Embedding基盤とBigQuery Vector Searchで実現する高速システム構築 - ZOZO TECH BLOG",
-      "url": "https://techblog.zozo.com/entry/general-pipelines",
-      "description": "はじめに こんにちは。データシステム部・MA推薦ブロックの伊藤（@rabbit_x86）です。私たちのチームでは、メール配信などのマーケティングオートメーション（MA）に関する推薦システムを開発・運用しています。 従来、ZOZOTOWNのMA施策における推薦システムでは、開発リードタイムと推薦精度のトレードオフが課題でした...",
-      "bookmarks": 7,
-      "published_at": "2026-03-09T02:30:45Z"
+      "title": "国防総省がサプライチェーンリスクに指定したAnthropicにGoogle・Amazon・Microsoftが防衛関連以外で協力表明、一方「なぜ指定したのか」について国防総省のAI担当者が語る",
+      "url": "https://gigazine.net/news/20260309-anthropic-supply-chain-risk/",
+      "description": "AIの軍事利用を巡りアメリカ国防総省と意見が対立したAnthropicが「サプライチェーンリスク」に指定された問題で、複数のテック企業がAnthropicとの提携を継続すると表明したことが分かりました。 Microsoft says Anthropic’s products remain available to customers after Pentagon blacklist https:/",
+      "bookmarks": 20,
+      "published_at": "2026-03-09T05:14:58Z"
     },
     {
       "source": "hatena",
-      "title": "【特集】 今さら聞けない「ローカルLLM」。LM Studioなら自分のPCで手軽に試せます！",
-      "url": "https://pc.watch.impress.co.jp/docs/topic/feature/2090806.html",
-      "description": "",
-      "bookmarks": 10,
-      "published_at": "2026-03-08T21:51:11Z"
-    },
-    {
-      "source": "hatena",
-      "title": "An Economy of AI Agents",
-      "url": "https://arxiv.org/pdf/2509.01063",
-      "description": "An Economy of AI Agents Gillian K. Hadfield* Johns Hopkins Andrew Koh† MIT This version: September 3, 2025 Prepared for the NBER Handbook on the Economics of Transformative AI Abstract In the coming d",
-      "bookmarks": 9,
-      "published_at": "2026-03-08T04:58:49Z"
-    },
-    {
-      "source": "hatena",
-      "title": "続【Claude Code】Wordの詳細設計書とどう向き合うか",
-      "url": "https://zenn.dev/acntechjp/articles/a7ee3dc65bc4a7",
-      "description": "Wordの設計書はテキストが基本的に上から下へ流れる線形構造です。Excel方眼紙のようにセル座標を意識して「B3からE5が結合されていて、そこにテーブル名が入っている」といった読み取りをする必要がありません。この点だけでも、AIに渡すハードルはExcelよりかなり低いと言えるかもしれません。 Word設計書にある、Exce...",
-      "bookmarks": 17,
-      "published_at": "2026-03-07T04:37:18Z"
+      "title": "「原始人のように自分で書くしかない」…Claudeの障害でソフトウェア開発者はAIへの依存を痛感 | Business Insider Japan",
+      "url": "https://www.businessinsider.jp/article/2603-claude-outages-anthropic-ai-software-engineers-developers-coding-dependance/",
+      "description": "メタ（Meta）のシニア・ソフトウェア・エンジニアであるガウレシュ・パンディット（Gauresh Pandit）は、「Claudeのようなツールはエンジニアの日常業務の中に急速に組み込まれるようになっている」とBusiness Insiderに語った。また、Claudeが停止した際には、手作業でコードを書くと時間がかかると考え、コーディング...",
+      "bookmarks": 8,
+      "published_at": "2026-03-09T05:03:12Z"
     }
   ],
   "twitter": []
