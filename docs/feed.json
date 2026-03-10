@@ -1,115 +1,155 @@
 {
-  "updated_at": "2026-03-10T02:43:49.113185+00:00",
+  "updated_at": "2026-03-10T13:21:26.525056+00:00",
   "hackernews": [
+    {
+      "source": "hackernews",
+      "title": "Redox OS has adopted a Certificate of Origin policy and a strict no-LLM policy",
+      "url": "https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md",
+      "score": 228,
+      "comments": 214,
+      "hn_url": "https://news.ycombinator.com/item?id=47320661",
+      "published_at": "2026-03-10T08:54:53+00:00",
+      "title_ja": "Redox OSがOrigin証明ポリシーとLLM完全禁止ポリシーを採用"
+    },
+    {
+      "source": "hackernews",
+      "title": "Yann LeCun's AI startup raises $1B in Europe's largest ever seed round",
+      "url": "https://www.ft.com/content/e5245ec3-1a58-4eff-ab58-480b6259aaf1",
+      "score": 141,
+      "comments": 92,
+      "hn_url": "https://news.ycombinator.com/item?id=47321533",
+      "published_at": "2026-03-10T10:50:30+00:00",
+      "title_ja": "Yann LeCunのAIスタートアップがヨーロッパ史上最大のシードラウンドで10億ドルを調達"
+    },
+    {
+      "source": "hackernews",
+      "title": "LoGeR – 3D reconstruction from extremely long videos (DeepMind, UC Berkeley)",
+      "url": "https://loger-project.github.io",
+      "score": 83,
+      "comments": 22,
+      "hn_url": "https://news.ycombinator.com/item?id=47319620",
+      "published_at": "2026-03-10T06:16:06+00:00",
+      "title_ja": "LoGeR – 超長尺動画からの3D再構成（DeepMind・UCバークレー）"
+    },
+    {
+      "source": "hackernews",
+      "title": "No, it doesn't cost Anthropic $5k per Claude Code user",
+      "url": "https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/",
+      "score": 303,
+      "comments": 222,
+      "hn_url": "https://news.ycombinator.com/item?id=47317132",
+      "published_at": "2026-03-09T23:22:06+00:00",
+      "title_ja": "AnthropicはClaude Codeユーザー1人あたり5,000ドルかかっていない"
+    },
     {
       "source": "hackernews",
       "title": "Is legal the same as legitimate: AI reimplementation and the erosion of copyleft",
       "url": "https://writings.hongminhee.org/2026/03/legal-vs-legitimate/",
-      "score": 366,
-      "comments": 389,
+      "score": 507,
+      "comments": 517,
       "hn_url": "https://news.ycombinator.com/item?id=47310160",
       "published_at": "2026-03-09T15:12:53+00:00",
-      "title_ja": "合法と正当の違い：AIの再実装とコピーレフトの侵食"
+      "title_ja": "合法と正当は同じか：AIによる再実装とコピーレフトの侵食"
+    },
+    {
+      "source": "hackernews",
+      "title": "Learnings from paying artists royalties for AI-generated art",
+      "url": "https://www.kapwing.com/blog/learnings-from-paying-artists-royalties-for-ai-generated-art/",
+      "score": 154,
+      "comments": 124,
+      "hn_url": "https://news.ycombinator.com/item?id=47318421",
+      "published_at": "2026-03-10T02:24:52+00:00",
+      "title_ja": "AI生成アートの著作権使用料をアーティストに支払って学んだこと"
+    },
+    {
+      "source": "hackernews",
+      "title": "OpenAI is walking away from expanding its Stargate data center with Oracle",
+      "url": "https://www.cnbc.com/2026/03/09/oracle-is-building-yesterdays-data-centers-with-tomorrows-debt.html",
+      "score": 390,
+      "comments": 229,
+      "hn_url": "https://news.ycombinator.com/item?id=47315128",
+      "published_at": "2026-03-09T20:36:43+00:00",
+      "title_ja": "OpenAIがOracleとのStargateデータセンター拡張から撤退"
     },
     {
       "source": "hackernews",
       "title": "Show HN: VS Code Agent Kanban: Task Management for the AI-Assisted Developer",
       "url": "https://www.appsoftware.com/blog/introducing-vs-code-agent-kanban-task-management-for-the-ai-assisted-developer",
-      "score": 88,
-      "comments": 44,
+      "score": 92,
+      "comments": 45,
       "hn_url": "https://news.ycombinator.com/item?id=47307169",
       "published_at": "2026-03-09T10:28:08+00:00",
-      "title_ja": "Show HN: VS Code Agent Kanban — AI支援開発者向けタスク管理ツール"
-    },
-    {
-      "source": "hackernews",
-      "title": "Code Review for Claude Code",
-      "url": "https://claude.com/blog/code-review",
-      "score": 57,
-      "comments": 32,
-      "hn_url": "https://news.ycombinator.com/item?id=47313787",
-      "published_at": "2026-03-09T19:03:26+00:00",
-      "title_ja": "Claude Code のコードレビュー機能"
-    },
-    {
-      "source": "hackernews",
-      "title": "Revealed: UK's multibillion AI drive is built on 'phantom investments'",
-      "url": "https://www.theguardian.com/technology/2026/mar/09/revealed-uks-multibillion-ai-drive-is-built-on-phantom-investments",
-      "score": 89,
-      "comments": 48,
-      "hn_url": "https://news.ycombinator.com/item?id=47309811",
-      "published_at": "2026-03-09T14:45:12+00:00",
-      "title_ja": "英国の数十億ポンド規模のAI推進策は「幻の投資」に基づいていたと判明"
+      "title_ja": "VS Code Agent Kanban：AI支援開発者向けタスク管理ツール"
     },
     {
       "source": "hackernews",
       "title": "LLM Writing Tropes.md",
       "url": "https://tropes.fyi/tropes-md",
-      "score": 362,
-      "comments": 184,
+      "score": 370,
+      "comments": 190,
       "hn_url": "https://news.ycombinator.com/item?id=47291513",
       "published_at": "2026-03-07T21:08:40+00:00",
-      "title_ja": "LLMが書く文章の定番パターン集"
+      "title_ja": "LLMの文章表現あるある集"
     },
     {
       "source": "hackernews",
-      "title": "Things I've Done with AI",
-      "url": "https://sjer.red/blog/2026/built-with-ai/",
-      "score": 74,
-      "comments": 108,
-      "hn_url": "https://news.ycombinator.com/item?id=47314123",
-      "published_at": "2026-03-09T19:24:20+00:00",
-      "title_ja": "AIでやってみたこと"
+      "title": "Revealed: UK's multibillion AI drive is built on 'phantom investments'",
+      "url": "https://www.theguardian.com/technology/2026/mar/09/revealed-uks-multibillion-ai-drive-is-built-on-phantom-investments",
+      "score": 96,
+      "comments": 52,
+      "hn_url": "https://news.ycombinator.com/item?id=47309811",
+      "published_at": "2026-03-09T14:45:12+00:00",
+      "title_ja": "英国の数十億ポンドAI推進計画が「幽霊投資」で成り立っていることが判明"
     },
     {
       "source": "hackernews",
       "title": "How to run Qwen 3.5 locally",
       "url": "https://unsloth.ai/docs/models/qwen3.5",
-      "score": 481,
-      "comments": 162,
+      "score": 484,
+      "comments": 163,
       "hn_url": "https://news.ycombinator.com/item?id=47292522",
       "published_at": "2026-03-07T23:32:17+00:00",
-      "title_ja": "Qwen 3.5 をローカルで実行する方法"
-    },
-    {
-      "source": "hackernews",
-      "title": "Nvidia backs AI data center startup Nscale as it hits $14.6B valuation",
-      "url": "https://www.cnbc.com/2026/03/09/nscale-ai-data-center-nvidia-raise.html",
-      "score": 51,
-      "comments": 49,
-      "hn_url": "https://news.ycombinator.com/item?id=47307419",
-      "published_at": "2026-03-09T10:58:15+00:00",
-      "title_ja": "NvidiaがAIデータセンタースタートアップNscaleに出資、評価額146億ドルに"
+      "title_ja": "Qwen 3.5をローカルで実行する方法"
     },
     {
       "source": "hackernews",
       "title": "Will Claude Code ruin our team?",
       "url": "https://justinjackson.ca/claude-code-ruin",
-      "score": 107,
-      "comments": 101,
+      "score": 110,
+      "comments": 108,
       "hn_url": "https://news.ycombinator.com/item?id=47293938",
       "published_at": "2026-03-08T02:59:35+00:00",
-      "title_ja": "Claude Code はチームを壊してしまうのか？"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: Mcp2cli – One CLI for every API, 96-99% fewer tokens than native MCP",
-      "url": "https://github.com/knowsuchagency/mcp2cli",
-      "score": 141,
-      "comments": 101,
-      "hn_url": "https://news.ycombinator.com/item?id=47305149",
-      "published_at": "2026-03-09T05:18:46+00:00",
-      "title_ja": "Show HN: Mcp2cli — あらゆるAPIに対応するCLI、ネイティブMCPより96〜99%少ないトークン数"
+      "title_ja": "Claude Codeはチームを台無しにするか？"
     },
     {
       "source": "hackernews",
       "title": "GPT-5.4",
       "url": "https://openai.com/index/introducing-gpt-5-4/",
-      "score": 1016,
+      "score": 1018,
       "comments": 806,
       "hn_url": "https://news.ycombinator.com/item?id=47265045",
       "published_at": "2026-03-05T18:08:10+00:00",
       "title_ja": "GPT-5.4"
+    },
+    {
+      "source": "hackernews",
+      "title": "Terence Tao: Formalizing a proof in Lean using Claude Code [video]",
+      "url": "https://www.youtube.com/watch?v=JHEO7cplfk8",
+      "score": 54,
+      "comments": 1,
+      "hn_url": "https://news.ycombinator.com/item?id=47306852",
+      "published_at": "2026-03-09T09:51:29+00:00",
+      "title_ja": "Terence Tao：Claude Codeを使ったLeanでの証明の形式化【動画】"
+    },
+    {
+      "source": "hackernews",
+      "title": "Code Review for Claude Code",
+      "url": "https://claude.com/blog/code-review",
+      "score": 73,
+      "comments": 41,
+      "hn_url": "https://news.ycombinator.com/item?id=47313787",
+      "published_at": "2026-03-09T19:03:26+00:00",
+      "title_ja": "Claude Code向けコードレビュー機能"
     },
     {
       "source": "hackernews",
@@ -123,121 +163,95 @@
     },
     {
       "source": "hackernews",
-      "title": "Claude struggles to cope with ChatGPT exodus",
-      "url": "https://www.forbes.com/sites/barrycollins/2026/03/06/claude-struggles-to-cope-with-chatgpt-exodus/",
-      "score": 169,
-      "comments": 151,
-      "hn_url": "https://news.ycombinator.com/item?id=47298997",
-      "published_at": "2026-03-08T17:14:53+00:00",
-      "title_ja": "ChatGPTからの移行でClaudeがパンク状態に"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: Claude-replay – A video-like player for Claude Code sessions",
-      "url": "https://github.com/es617/claude-replay",
-      "score": 102,
-      "comments": 35,
-      "hn_url": "https://news.ycombinator.com/item?id=47276604",
-      "published_at": "2026-03-06T15:57:27+00:00",
-      "title_ja": "Show HN: Claude-replay — Claude Codeセッションを動画のように再生するプレイヤー"
+      "title": "Nvidia backs AI data center startup Nscale as it hits $14.6B valuation",
+      "url": "https://www.cnbc.com/2026/03/09/nscale-ai-data-center-nvidia-raise.html",
+      "score": 52,
+      "comments": 52,
+      "hn_url": "https://news.ycombinator.com/item?id=47307419",
+      "published_at": "2026-03-09T10:58:15+00:00",
+      "title_ja": "NvidiaがAIデータセンタースタートアップNscaleを支援、評価額146億ドルに"
     }
   ],
   "hatena": [
     {
       "source": "hatena",
+      "title": "【無料】Anthropic公式「エージェントスキル入門」講座が公開　Claude Codeでの活用法が分かる22分の動画",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/10/news010.html",
+      "description": "連載目次 Anthropic公式が提供するオンライン講座「Anthropic Academy」に、AI開発ツール「Claude Code」などで利用できる新しい概念「エージェントスキル（Agent Skills）」を解説するコースが追加された。動画の公開日から判断すると、このコースは最近（2026年3月初旬ごろ）公開されたものとみられる。なお、このコー...",
+      "bookmarks": 256,
+      "published_at": "2026-03-10T02:59:02Z"
+    },
+    {
+      "source": "hatena",
+      "title": "ノア・スミス「誰も語っていないAIバブル崩壊の第三シナリオ」（2025年12月9日）",
+      "url": "https://econ101.jp/noah-smith_3rd-scenario/",
+      "description": "Art by Nano Banana Pro AI がモノになるとしても，そして，すごく急速に採用がすすんだとしても，利益はうまないかもしれない 実は，AIバブルとその崩壊の可能性についてはすでにたくさん記事を書いてきた．8月には，データーセンターの資金調達をプライベートクレジットで行うと，いざバブルが崩壊したときに金融危機...",
+      "bookmarks": 68,
+      "published_at": "2026-03-10T04:43:27Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Devinが本番APIで障害を起こした経緯と学び - tacomsテックブログ",
+      "url": "https://tacoms-inc.hatenablog.com/entry/2026/03/10/142115",
+      "description": "はじめに こんにちは。tacomsエンジニアの @ikuwow です。 tacomsでは約1年前から、Cognition AI社の自律型AIソフトウェアエンジニア「Devin」を業務に導入しています。 日常的な開発タスクに活用し、生産性向上に大きく貢献してくれています。 https://devin.ai/ そんな中、珍しく本番障害にまで至ったケースがありまし...",
+      "bookmarks": 69,
+      "published_at": "2026-03-10T05:25:01Z"
+    },
+    {
+      "source": "hatena",
       "title": "Code Review for Claude Code | Claude",
       "url": "https://claude.com/blog/code-review",
       "description": "Today we're introducing Code Review, which dispatches a team of agents on every PR to catch the bugs that skims miss, built for depth, not speed. It's the system we run on nearly every PR at Anthropic",
-      "bookmarks": 180,
+      "bookmarks": 356,
       "published_at": "2026-03-09T19:27:38Z"
     },
     {
       "source": "hatena",
-      "title": "「GPTやめる」軍事利用でOpenAIに逆風　幹部離脱、アプリ削除4倍 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOGN09AN90Z00C26A3000000/",
-      "description": "【シリコンバレー=山田遼太郎】人工知能（AI）の軍事利用について米国防総省と結んだ契約を巡り、米オープンAIに逆風が強まっている。同社のロボット部門の幹部が反発して退社し、社内には亀裂が生まれた。「QuitGPT（GPTをやめる）」と称する抗議活動が盛り上がり、3月上旬に一時アプリの削除数が前週比4倍に急増した。...",
-      "bookmarks": 140,
-      "published_at": "2026-03-09T20:03:31Z"
+      "title": "RAGで足りなくなったので Agentic Search を調べてみた",
+      "url": "https://zenn.dev/edash_tech_blog/articles/02582c4f70d0fb",
+      "description": "はじめに 「なんでそこにあるデータを見てくれないかなぁ（泣）」…RAGを自作した人なら、一度はこう思ったことがあるのではないでしょうか。 私自身、社内情報検索用のチャットボットをRAGで構築しましたが、回答精度がなかなか上がりませんでした。チャンクサイズを調整し、ハイブリッド検索を導入し、リランキングを入...",
+      "bookmarks": 17,
+      "published_at": "2026-03-10T07:35:03Z"
     },
     {
       "source": "hatena",
-      "title": "Microsoft、アンソロピックのAI「Cowork」で資料作成自動に　「365」に搭載 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOGN093KY0Z00C26A3000000/",
-      "description": "【シリコンバレー=山田遼太郎】米マイクロソフトは9日、業務ソフト群「マイクロソフト365」上で米新興アンソロピックの人工知能（AI）ツール「Cowork（コワーク）」の提供を始めると発表した。企業がクラウドに保存している電子メールや各種ファイルのデータを基に、表計算やプレゼンテーションの資料作成を自動化できる...",
-      "bookmarks": 100,
-      "published_at": "2026-03-09T13:12:36Z"
-    },
-    {
-      "source": "hatena",
-      "title": "頭のいい人だけが知っている、ChatGPTの「便利すぎる使い方」・ベスト1",
-      "url": "https://diamond.jp/articles/-/385321",
-      "description": "AIが「使えるかどうか」は、人間側の「使い方」で決まります。 そう語るのは、グーグル、マイクロソフト、NTTドコモ、富士通、KDDIなどを含む600社以上、のべ2万人以上に思考・発想の研修をしてきた石井力重氏だ。そのノウハウをAIで誰でも実践できる方法をまとめた書籍『AIを使って考えるための全技術』が発売。全680ペ...",
-      "bookmarks": 45,
-      "published_at": "2026-03-07T22:08:24Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Microsoft 365 Copilotが「Claude」対応。PC作業をAI代行",
-      "url": "https://pc.watch.impress.co.jp/docs/news/2091826.html",
-      "description": "",
-      "bookmarks": 118,
-      "published_at": "2026-03-09T13:05:51Z"
-    },
-    {
-      "source": "hatena",
-      "title": "かくして我々はOpenAIのAIに監視されることになった » p2ptk[.]org",
-      "url": "https://p2ptk.org/privacy/5454",
-      "description": "以下の文章は、電子フロンティア財団の「Weasel Words: OpenAI’s Pentagon Deal Won’t Stop AI‑Powered Surveillance」という記事を翻訳したものである。 誤解なきよう予め補足しておくと、本稿で取り上げるOpenAIと国防総省との契約は、OpenAIのAIモデルを国防総省の機密ネットワーク内にデプロイし、軍事・諜報業務に...",
-      "bookmarks": 16,
-      "published_at": "2026-03-09T13:14:31Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Anthropicがトランプ政権を提訴　GoogleやOpenAIの従業員がアミカスブリーフ提出",
-      "url": "https://www.itmedia.co.jp/news/articles/2603/10/news058.html",
-      "description": "米Anthropicは3月9日（現地時間）、予告通り、違法な報復を行ったとして米トランプ政権を提訴した。その数時間後、米OpenAIや米Googleの従業員37人が、Anthropicの訴訟を支持するアミカスブリーフ（訴訟当事者ではない第三者が裁判所に提出する意見書）を提出した。 訴状（PDF）によると、Anthropic側は、自社のAIモデル...",
-      "bookmarks": 15,
-      "published_at": "2026-03-09T22:55:23Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス",
-      "url": "https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/",
-      "description": "こんにちは！逆瀬川ちゃん (@gyakuse) です！ 今日はHarness Engineering(ハーネスエンジニアリング)について、2026年3月時点のベストプラクティスを徹底的にまとめていきたいと思います。 Harness Engineeringとは何か 定義を辿る Mitchell Hashimotoによる最初の定義を辿れば、Harness Engineeringとは人間によるAGENT",
-      "bookmarks": 675,
-      "published_at": "2026-03-09T07:02:10Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude CodeとGitHub Projectsで、チーム開発のコンテキスト共有とタスク管理を自動化する | DevelopersIO",
-      "url": "https://dev.classmethod.jp/articles/claude-github-gemini/",
-      "description": "",
-      "bookmarks": 68,
-      "published_at": "2026-03-07T05:17:15Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Code で SKILL.md に展開されるセッション ID を利用するプラグインを作ろう - ぽ靴な缶",
-      "url": "https://blog.pokutuna.com/entry/claude-code-session-id-plugins",
-      "description": "時限式の許可を与える allow-until / その場でセッションを分岐する side-fork について いまいち知られていない挙動として、Claude Code の SKILL.md には実行時に値が展開されるプレースホルダが用意されている。 code.claude.com $ARGUMENTS は slash command 時代からおなじみだけど、配布したスキルのスクリプトの...",
-      "bookmarks": 10,
-      "published_at": "2026-03-09T02:46:26Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude CoworkがMicrosoft 365 Copilotに採用。「Copilot Cowork」としてリサーチプレビュー公開",
-      "url": "https://www.publickey1.jp/blog/26/claude_coworkmicrosoft_365_copilotcopilot_cowork.html",
-      "description": "マイクロソフトは、同社のオフィススイートのAI機能である「Microsoft 365 Copilot」を拡張し、AnthropicのClaude Coworkを採用した「Copilot Cowork」を発表しました。 そもそもAnthropicのClaude Coworkは、Claude Codeのエージェント機能を基に、ITエンジニアではない一般ユーザーがPCで行う業務、例えばWebブラウザ..",
+      "title": "Anthropic、Coworkに“業務特化Claude”を構築できるプラグイン追加",
+      "url": "https://atmarkit.itmedia.co.jp/ait/articles/2603/10/news018.html",
+      "description": "Anthropic、Coworkに“業務特化Claude”を構築できるプラグイン追加：AIエージェントのチーム向けカスタマイズを可能に Anthropicは、AIエージェント機能「Cowork」にスキルやコネクター、スラッシュコマンド、サブエージェントを組み合わせて、業務に特化した「Claude」をカスタマイズできるプラグイン機能を追加した。",
       "bookmarks": 5,
-      "published_at": "2026-03-09T22:05:03Z"
+      "published_at": "2026-03-10T07:08:51Z"
     },
     {
       "source": "hatena",
-      "title": "Claude Codeのghコマンドpermission問題をreadonly用ラッパーで解決する - $shibayu36->blog;",
-      "url": "https://blog.shibayu36.org/entry/2026/03/09/173000",
-      "description": "Claude Codeでgh apiを使って情報を取得しようとすると、毎回権限プロンプトが表示されてつらい。例えば以下のようなただコミット一覧を取得するだけのコマンドでも、毎回許可が必要になる。 gh api \"repos/anthropics/claude-code/commits?per_page=100&page=1\" かといって利便性のためにgh api全体に対してallowを設定...",
-      "bookmarks": 125,
-      "published_at": "2026-03-09T10:12:26Z"
+      "title": "アップル「M5 Max搭載MacBook Pro」と「M5 Air」レビュー。AI時代の「ローカルLLM処理」テストで分かった圧倒的な差 | Business Insider Japan",
+      "url": "https://www.businessinsider.jp/article/2603-apple-macbook-pro-m5max-air-m5-review/",
+      "description": "外観に変化なし。ストレージは一気に「倍増」先に外観や仕様の話をしておこう。 今回のモデルでは、搭載インターフェースからカメラ、本体色に至るまで、MacBook Air/Proともに変化はない。 MacBook Air（13インチ・M5搭載モデル、メインメモリー16GB）。撮影：西田宗千佳MacBook Pro（14インチ・M5 Max搭載モデル、メイ...",
+      "bookmarks": 18,
+      "published_at": "2026-03-10T04:34:03Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Agent Safehouse",
+      "url": "https://agent-safehouse.dev/",
+      "description": "Go full --yolo. We've got you.macOS-native sandboxing for local agents. Move fast, break nothing. LLMs are probabilistic - 1% chance of disaster makes it a matter of when, not if.",
+      "bookmarks": 8,
+      "published_at": "2026-03-08T21:05:46Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Qwen3.5の中規模モデル(122B/35B/27B/9B)をコーディングエージェントで試してみる - きしだのHatena",
+      "url": "https://nowokay.hatenablog.com/entry/2026/03/08/205807",
+      "description": "Qwen3.5の中規模モデル(122B/35B/27B/9B)をコーディングエージェントで試してみます。 結論としては、122Bは使える、27Bはなんとか、35Bはストレスに耐えながら、9Bは全然むり、という感じ。 27Bは修正で関係ないところを壊す、35Bは修正として関係ない作業をする、9Bはコンパイル通るコードを書けなかった。 Qwen3.5シ...",
+      "bookmarks": 12,
+      "published_at": "2026-03-08T12:34:34Z"
+    },
+    {
+      "source": "hatena",
+      "title": "米最高裁、AIからクリエイターを救う » p2ptk[.]org",
+      "url": "https://p2ptk.org/copyright/5449",
+      "description": "以下の文章は、コリイ・ドクトロウの「Supreme Court saves artists from AI」という記事を翻訳したものである。 Pluralistic 最高裁判所は、AI生成物には著作権が認められないとした判決に対する上告審の申立てを棄却した。この棄却により、最高裁はクリエイティブワーカーの利益を守るうえで、極めて重大な一歩を記し...",
+      "bookmarks": 10,
+      "published_at": "2026-03-07T00:14:49Z"
     }
   ],
   "twitter": []
