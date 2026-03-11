@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W11</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W11 (2026-03-09 〜 2026-03-15)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">46</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">27</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">19</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">今週のAIシーンはYann LeCunの10億ドル調達から著作権問題まで幅広いトピックが活発に議論された。特にオープンソースAIの合法性と倫理を問う記事が高い反響を呼んだ。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">AI資金調達ラッシュ</div><div class="trend-desc">Yann LeCunのスタートアップがヨーロッパ史上最大のシードラウンドを実施するなど、AI関連の大型投資が続いている。</div></div>
+<div class="trend-item"><div class="trend-title">著作権とコピーレフトの侵食</div><div class="trend-desc">AIがオープンソースライセンスをどのように扱うべきかを巡る議論が活発化。法的に合法でも倫理的に正当かという問いが焦点に。</div></div>
+<div class="trend-item"><div class="trend-title">AIコスト論争</div><div class="trend-desc">Claude Codeのコストに関する誤解を指摘する記事が大きな注目を集め、AIサービスの収益モデルに関心が集まった。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">LLM</span><span class="keyword">Claude</span><span class="keyword">OpenAI</span><span class="keyword">著作権</span><span class="keyword">資金調達</span><span class="keyword">オープンソース</span><span class="keyword">DeepMind</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP5</h2>
+    <div class="articles-grid"><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://news.ycombinator.com/item?id=47282777" target="_blank" class="article-link">Tell HN: 60歳の私に、Claude Codeが情熱を再点火した</a><span class="article-score">▲ 1049</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="article-link">GPT-5.4</a><span class="article-score">▲ 1014</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://www.anthropic.com/news/mozilla-firefox-security" target="_blank" class="article-link">AnthropicのRed TeamによるFirefoxのセキュリティ強化</a><span class="article-score">▲ 626</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://writings.hongminhee.org/2026/03/legal-vs-legitimate/" target="_blank" class="article-link">合法と正当は同じか：AIによる再実装とコピーレフトの侵食</a><span class="article-score">▲ 507</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://unsloth.ai/docs/models/qwen3.5" target="_blank" class="article-link">Qwen 3.5をローカルで実行する方法</a><span class="article-score">▲ 473</span></div></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP5</h2>
+    <div class="articles-grid"><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/" target="_blank" class="article-link">Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス</a><span class="article-score">🔖 297</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://atmarkit.itmedia.co.jp/ait/articles/2603/10/news010.html" target="_blank" class="article-link">【無料】Anthropic公式「エージェントスキル入門」講座が公開　Claude Codeでの活用法が分かる22分の動画</a><span class="article-score">🔖 256</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://zenn.dev/acntechjp/articles/c1296f425baf03" target="_blank" class="article-link">Claude Code が RAG を捨てた理由 -「Agentic Search」という選択肢</a><span class="article-score">🔖 72</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://tacoms-inc.hatenablog.com/entry/2026/03/10/142115" target="_blank" class="article-link">Devinが本番APIで障害を起こした経緯と学び - tacomsテックブログ</a><span class="article-score">🔖 69</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://econ101.jp/noah-smith_3rd-scenario/" target="_blank" class="article-link">ノア・スミス「誰も語っていないAIバブル崩壊の第三シナリオ」（2025年12月9日）</a><span class="article-score">🔖 68</span></div></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">来週はLLMの新モデルリリースや規制動向に注目が集まりそう。特にEUのAI法の実装に関する議論が進む可能性がある。</div>
+  </section>
+</main>
+</body>
+</html>
