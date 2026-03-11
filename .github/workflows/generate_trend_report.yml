@@ -1,0 +1,88 @@
+name: Generate AI Trend Reports
+
+on:
+  schedule:
+    # 毎週月曜 10:00 JST (= 1:00 UTC) に週次レポート
+    - cron: "0 1 * * 1"
+    # 毎月1日 10:00 JST (= 1:00 UTC) に月次レポート
+    - cron: "0 1 1 * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Report mode"
+        required: true
+        default: "weekly"
+        type: choice
+        options: [weekly, monthly]
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine report mode
+        id: mode
+        run: |
+          # workflow_dispatch の場合は入力値、スケジュールは曜日/日付で判断
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "mode=${{ inputs.mode }}" >> $GITHUB_OUTPUT
+          elif [ "$(date -u +%d)" = "01" ]; then
+            echo "mode=monthly" >> $GITHUB_OUTPUT
+          else
+            echo "mode=weekly" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Analyze trends with Claude (structured output)
+        id: claude_analyze
+        continue-on-error: true
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            docs/daily/ ディレクトリの JSON ファイルを読んで、${{ steps.mode.outputs.mode == 'weekly' && '今週' || '今月' }}の AI トレンドを分析してください。
+
+            ## 手順
+            1. docs/daily/ 以下の最新 ${{ steps.mode.outputs.mode == 'weekly' && '7' || '30' }} 日分の JSON ファイルを Read tool で読み込む
+            2. 記事のタイトル・内容からトレンドを分析する
+            3. ファイルは変更しないでください。結果を構造化出力として返してください。
+
+            ## 分析内容
+            - summary: 期間全体のまとめ（200字程度）
+            - trends: 主要トレンド 3〜6 件（タイトルと説明）
+            - keywords: 注目キーワード 5〜10 件
+            - outlook: 来週/来月の展望（100字程度）
+          allowed_tools: "Read,Glob"
+          claude_args: >-
+            --json-schema '{"type":"object","properties":{"summary":{"type":"string"},"trends":{"type":"array","items":{"type":"object","properties":{"title":{"type":"string"},"description":{"type":"string"}},"required":["title","description"]}},"keywords":{"type":"array","items":{"type":"string"}},"outlook":{"type":"string"}},"required":["summary","trends","keywords","outlook"]}'
+
+      - name: Generate trend report HTML
+        run: |
+          python scripts/generate_trend_report.py \
+            --mode ${{ steps.mode.outputs.mode }} \
+            '${{ steps.claude_analyze.outputs.structured_output }}'
+
+      - name: Commit and push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git"
+          git add docs/
+          git diff --cached --quiet || git commit -m "chore: generate ${{ steps.mode.outputs.mode }} trend report $(date -u +'%Y-%m-%d')"
+          git push
