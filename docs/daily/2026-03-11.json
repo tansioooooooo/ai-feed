@@ -1,227 +1,239 @@
 {
-  "updated_at": "2026-03-11T07:38:15.515091+00:00",
+  "updated_at": "2026-03-11T19:36:56.004277+00:00",
   "hackernews": [
+    {
+      "source": "hackernews",
+      "title": "Show HN: Open-source browser for AI agents",
+      "url": "https://github.com/theredsix/agent-browser-protocol",
+      "score": 63,
+      "comments": 17,
+      "hn_url": "https://news.ycombinator.com/item?id=47336171",
+      "published_at": "2026-03-11T14:39:30+00:00",
+      "title_ja": "Show HN: AIエージェント向けオープンソースブラウザ"
+    },
+    {
+      "source": "hackernews",
+      "title": "How we hacked McKinsey's AI platform",
+      "url": "https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform",
+      "score": 292,
+      "comments": 113,
+      "hn_url": "https://news.ycombinator.com/item?id=47333627",
+      "published_at": "2026-03-11T09:59:03+00:00",
+      "title_ja": "McKinseyのAIプラットフォームをハッキングした方法"
+    },
     {
       "source": "hackernews",
       "title": "Yann LeCun raises $1B to build AI that understands the physical world",
       "url": "https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/",
-      "score": 430,
-      "comments": 358,
+      "score": 588,
+      "comments": 471,
       "hn_url": "https://news.ycombinator.com/item?id=47320600",
       "published_at": "2026-03-10T08:46:53+00:00",
-      "title_ja": "Yann LeCunが10億ドルを調達し、物理世界を理解するAIを開発へ"
+      "title_ja": "Yann LeCunが物理世界を理解するAI構築のために10億ドルを調達"
     },
     {
       "source": "hackernews",
       "title": "Debian decides not to decide on AI-generated contributions",
       "url": "https://lwn.net/SubscriberLink/1061544/125f911834966dd0/",
-      "score": 317,
-      "comments": 240,
+      "score": 367,
+      "comments": 276,
       "hn_url": "https://news.ycombinator.com/item?id=47324087",
       "published_at": "2026-03-10T14:53:13+00:00",
-      "title_ja": "DebianがAI生成コントリビューションの扱いを決定せず"
+      "title_ja": "DebianがAI生成コントリビューションについて決定を保留"
+    },
+    {
+      "source": "hackernews",
+      "title": "Ask HN: Is Claude down again?",
+      "url": "https://news.ycombinator.com/item?id=47336163",
+      "score": 71,
+      "comments": 65,
+      "hn_url": "https://news.ycombinator.com/item?id=47336163",
+      "published_at": "2026-03-11T14:39:21+00:00",
+      "title_ja": "Ask HN: Claudeがまたダウンしている？"
     },
     {
       "source": "hackernews",
       "title": "Launch HN: RunAnywhere (YC W26) – Faster AI Inference on Apple Silicon",
       "url": "https://github.com/RunanywhereAI/rcli",
-      "score": 205,
-      "comments": 124,
+      "score": 232,
+      "comments": 144,
       "hn_url": "https://news.ycombinator.com/item?id=47326101",
       "published_at": "2026-03-10T17:14:52+00:00",
-      "title_ja": "Launch HN: RunAnywhere (YC W26) – Apple SiliconでのAI推論を高速化"
+      "title_ja": "Launch HN: RunAnywhere (YC W26) – Apple SiliconでのAI推論高速化"
+    },
+    {
+      "source": "hackernews",
+      "title": "Surpassing vLLM with a Generated Inference Stack",
+      "url": "https://infinity.inc/case-studies/qwen3-optimization",
+      "score": 57,
+      "comments": 20,
+      "hn_url": "https://news.ycombinator.com/item?id=47324364",
+      "published_at": "2026-03-10T15:12:52+00:00",
+      "title_ja": "生成された推論スタックでvLLMを超える"
+    },
+    {
+      "source": "hackernews",
+      "title": "Elevated errors on login with Claude Code",
+      "url": "https://status.claude.com/incidents/jm3b4jjy2jrt",
+      "score": 52,
+      "comments": 49,
+      "hn_url": "https://news.ycombinator.com/item?id=47336889",
+      "published_at": "2026-03-11T15:28:18+00:00",
+      "title_ja": "Claude Codeへのログインでエラーが多発"
     },
     {
       "source": "hackernews",
       "title": "After outages, Amazon to make senior engineers sign off on AI-assisted changes",
       "url": "https://arstechnica.com/ai/2026/03/after-outages-amazon-to-make-senior-engineers-sign-off-on-ai-assisted-changes/",
-      "score": 545,
-      "comments": 434,
+      "score": 623,
+      "comments": 462,
       "hn_url": "https://news.ycombinator.com/item?id=47323017",
       "published_at": "2026-03-10T13:31:17+00:00",
-      "title_ja": "障害多発を受け、AmazonがAIアシスト変更にシニアエンジニアの承認を義務化"
+      "title_ja": "障害発生後、AmazonはAI支援による変更にシニアエンジニアの承認を義務付けへ"
     },
     {
       "source": "hackernews",
       "title": "I built a programming language using Claude Code",
       "url": "https://ankursethi.com/blog/programming-language-claude-code/",
-      "score": 117,
-      "comments": 161,
+      "score": 126,
+      "comments": 181,
       "hn_url": "https://news.ycombinator.com/item?id=47325595",
       "published_at": "2026-03-10T16:37:29+00:00",
-      "title_ja": "Claude Codeを使ってプログラミング言語を作った"
+      "title_ja": "Claude Codeでプログラミング言語を作った"
     },
     {
       "source": "hackernews",
       "title": "Redox OS has adopted a Certificate of Origin policy and a strict no-LLM policy",
       "url": "https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md",
-      "score": 383,
-      "comments": 391,
+      "score": 399,
+      "comments": 436,
       "hn_url": "https://news.ycombinator.com/item?id=47320661",
       "published_at": "2026-03-10T08:54:53+00:00",
-      "title_ja": "Redox OSがOrigin証明ポリシーとLLM完全禁止ポリシーを採用"
-    },
-    {
-      "source": "hackernews",
-      "title": "PgAdmin 4 9.13 with AI Assistant Panel",
-      "url": "https://www.pgadmin.org/docs/pgadmin4/9.13/query_tool.html#ai-assistant-panel",
-      "score": 86,
-      "comments": 30,
-      "hn_url": "https://news.ycombinator.com/item?id=47322033",
-      "published_at": "2026-03-10T11:58:36+00:00",
-      "title_ja": "pgAdmin 4 9.13にAIアシスタントパネルが追加"
+      "title_ja": "Redox OSがOrigin証明ポリシーと厳格なLLM禁止ポリシーを採用"
     },
     {
       "source": "hackernews",
       "title": "No, it doesn't cost Anthropic $5k per Claude Code user",
       "url": "https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/",
-      "score": 451,
-      "comments": 327,
+      "score": 465,
+      "comments": 340,
       "hn_url": "https://news.ycombinator.com/item?id=47317132",
       "published_at": "2026-03-09T23:22:06+00:00",
-      "title_ja": "いや、AnthropicはClaude Codeユーザー1人あたり5,000ドルもかかっていない"
+      "title_ja": "AnthropicはClaude Codeユーザー1人につき5,000ドルもかかっていない"
     },
     {
       "source": "hackernews",
       "title": "LoGeR – 3D reconstruction from extremely long videos (DeepMind, UC Berkeley)",
       "url": "https://loger-project.github.io",
-      "score": 138,
-      "comments": 27,
+      "score": 145,
+      "comments": 30,
       "hn_url": "https://news.ycombinator.com/item?id=47319620",
       "published_at": "2026-03-10T06:16:06+00:00",
       "title_ja": "LoGeR – 超長尺動画からの3D再構成（DeepMind・UCバークレー）"
     },
     {
       "source": "hackernews",
+      "title": "PgAdmin 4 9.13 with AI Assistant Panel",
+      "url": "https://www.pgadmin.org/docs/pgadmin4/9.13/query_tool.html#ai-assistant-panel",
+      "score": 92,
+      "comments": 34,
+      "hn_url": "https://news.ycombinator.com/item?id=47322033",
+      "published_at": "2026-03-10T11:58:36+00:00",
+      "title_ja": "pgAdmin 4 9.13にAIアシスタントパネルが追加"
+    },
+    {
+      "source": "hackernews",
       "title": "Show HN: How I topped the HuggingFace open LLM leaderboard on two gaming GPUs",
       "url": "https://dnhkng.github.io/posts/rys/",
-      "score": 380,
-      "comments": 101,
+      "score": 425,
+      "comments": 110,
       "hn_url": "https://news.ycombinator.com/item?id=47322887",
       "published_at": "2026-03-10T13:18:55+00:00",
-      "title_ja": "Show HN: ゲーミングGPU2枚でHuggingFaceオープンLLMリーダーボード首位を獲得した方法"
+      "title_ja": "Show HN: ゲーミングGPU2枚でHuggingFaceオープンLLMリーダーボードのトップに立った方法"
     },
     {
       "source": "hackernews",
       "title": "OpenAI is walking away from expanding its Stargate data center with Oracle",
       "url": "https://www.cnbc.com/2026/03/09/oracle-is-building-yesterdays-data-centers-with-tomorrows-debt.html",
-      "score": 415,
-      "comments": 242,
+      "score": 421,
+      "comments": 245,
       "hn_url": "https://news.ycombinator.com/item?id=47315128",
       "published_at": "2026-03-09T20:36:43+00:00",
-      "title_ja": "OpenAIがOracleとのStargateデータセンター拡張から撤退"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: VS Code Agent Kanban: Task Management for the AI-Assisted Developer",
-      "url": "https://www.appsoftware.com/blog/introducing-vs-code-agent-kanban-task-management-for-the-ai-assisted-developer",
-      "score": 94,
-      "comments": 50,
-      "hn_url": "https://news.ycombinator.com/item?id=47307169",
-      "published_at": "2026-03-09T10:28:08+00:00",
-      "title_ja": "Show HN: VS Code Agent Kanban – AIアシスト開発者向けタスク管理ツール"
-    },
-    {
-      "source": "hackernews",
-      "title": "Learnings from paying artists royalties for AI-generated art",
-      "url": "https://www.kapwing.com/blog/learnings-from-paying-artists-royalties-for-ai-generated-art/",
-      "score": 166,
-      "comments": 155,
-      "hn_url": "https://news.ycombinator.com/item?id=47318421",
-      "published_at": "2026-03-10T02:24:52+00:00",
-      "title_ja": "AI生成アートでアーティストにロイヤリティを支払って得た知見"
-    },
-    {
-      "source": "hackernews",
-      "title": "LLM Writing Tropes.md",
-      "url": "https://tropes.fyi/tropes-md",
-      "score": 376,
-      "comments": 190,
-      "hn_url": "https://news.ycombinator.com/item?id=47291513",
-      "published_at": "2026-03-07T21:08:40+00:00",
-      "title_ja": "LLMの文章に見られる典型的な表現パターン集"
+      "title_ja": "OpenAIがOracleとのStargate データセンター拡張から撤退"
     }
   ],
   "hatena": [
     {
       "source": "hatena",
-      "title": "デバッグはもう人間の仕事ではなくなった",
-      "url": "https://zenn.dev/dinii/articles/debugging-is-solved",
-      "description": "こんにちは、ダイニーの ogino です。 弊社では、ほとんどの技術的な不具合の調査・解決を AI に丸投げできるようになりました。 これは単なるコードレベルのバグに限りません。本番環境や特定のユーザーだけでしか発生しない問題、インフラの設定ミスなど含めすべてに言える話です。 Claude Code を使い始めてからここ...",
-      "bookmarks": 203,
-      "published_at": "2026-03-09T07:25:23Z"
-    },
-    {
-      "source": "hatena",
-      "title": "非情報系研究者へ送る Transformer入門",
-      "url": "https://speakerdeck.com/rishiyama/fei-qing-bao-xi-yan-jiu-zhe-hesong-ru-transformerru-men",
-      "description": "第2回植物異分野勉強会@総研大にて「WET研究者のためのTransformer入門」　で用いた資料を改変．ニューラルネットワークの基礎からTransformerおよびアテンションの概念について概説． 作成者：秋庭孔樹，石山遼，見田壮一 ハンズオン資料： 1. ニューラルネットワークを動かそ…",
-      "bookmarks": 160,
-      "published_at": "2026-03-10T04:03:02Z"
-    },
-    {
-      "source": "hatena",
-      "title": "米軍がイラン無人機封じにAI新兵器、Google元CEO関与　費用400分の1 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOGN100970Q6A310C2000000/",
-      "description": "【ワシントン=飛田臨太郎】米軍はイランが駆使する安価な攻撃ドローン（無人機）を迎撃するため、人工知能（AI）を使った新型兵器を投入する。迎撃ミサイルに比べ生産コストを400分の1に抑えた。イランは安価なドローンを使って周辺基地や施設に反撃しており、米国や同盟国は高額な兵器を消耗する状況からの打開を図る。...",
+      "title": "Claude Code Skills (Agent Skills) 入門【社内勉強会スライド】 | DevelopersIO",
+      "url": "https://dev.classmethod.jp/articles/claude-code-skills-for-cloud-bu-consulting-members/",
+      "description": "社内のチームメンバー(クラウド事業本部コンサルティング部)向けに 「 Claude Code Skills (Agent Skills) 勉強会 」を開催しました。 DevelopersIO向けに調整したスライドを掲載します。 スライドの内容:テキスト情報を以降に記載します。参考になれば幸いです。 勉強会の目的 勉強会の背景やゴール、アジェンダを連携...",
       "bookmarks": 90,
-      "published_at": "2026-03-10T20:41:39Z"
+      "published_at": "2026-03-11T02:13:54Z"
     },
     {
       "source": "hatena",
-      "title": "AIエージェントが勝手に ブログで個人攻撃、 「野放し」に歯止めなく",
-      "url": "https://www.technologyreview.jp/s/379025/online-harassment-is-entering-its-ai-era/",
-      "description": "Online harassment is entering its AI era AIエージェントが勝手に ブログで個人攻撃、 「野放し」に歯止めなく オープンソース管理者がAIエージェントの参加を拒否した翌朝、AIは彼の経歴を独自に調査し、中傷記事を書いていた。明示的な指示はなく、AIが自ら判断したとみられる。研究者たちはこうした事態を予測して...",
-      "bookmarks": 57,
-      "published_at": "2026-03-11T00:01:45Z"
+      "title": "このゲームこう変えれば面白いかもという謎の人間の直感の力、AIも身につけて欲しい - ABAの日誌",
+      "url": "https://aba.hatenablog.com/entry/2026/03/11/182225",
+      "description": "AIエージェントにGodotのゲームを作らせることが可能になった。となればやることはただ一つ。Godotゲームの自動生成である。 このプロジェクトでは、AI に小さな Godot ゲームを素早く作らせ、人間が遊んで感想を返し、AI がそれを受けて改善する、という制作ループを定義している。できれば全自動でイケてるゲームを作...",
+      "bookmarks": 24,
+      "published_at": "2026-03-11T09:33:06Z"
     },
     {
       "source": "hatena",
-      "title": "Anthropic、「Code Review」を公開--プルリクレビューを劇的に効率化",
-      "url": "https://japan.zdnet.com/article/35244799/2/",
-      "description": "マルチエージェントによるレビュー、コスト効果 Code Reviewの処理は極めて迅速で、複雑なレビューでも約20分で完了する。プルリクエストが作成されると、Code Reviewが起動して複数のエージェントが並列でコードの分析を開始する。役割の異なるエージェントたちが潜在的なバグの検出、誤検知を排除するための検証、そし...",
-      "bookmarks": 87,
-      "published_at": "2026-03-10T04:20:15Z"
+      "title": "LLMに長期記憶を実装する",
+      "url": "https://zenn.dev/acntechjp/articles/efcc4f224cc8ca",
+      "description": "--2026.03.10 21:04 ヘブ則、💡追加 --2026.03.10 20:09 memory_server.py アップし忘れてた。GitHubに追加 LLMと長期記憶 LLMには記憶がない。正確に言えば、コンテキストウィンドウという短期記憶はあるが、会話が終われば全て消える。人間の脳が持つ長期記憶（エピソード記憶、意味記憶、手続き記憶、そしてそれらを...",
+      "bookmarks": 46,
+      "published_at": "2026-03-11T06:56:37Z"
     },
     {
       "source": "hatena",
-      "title": "Claude Code Skillsのチーム展開で気づいたSkill管理の課題と対策 - 株式会社ヘンリー エンジニアブログ",
-      "url": "https://dev.henry.jp/entry/claude-code-skills-for-teams",
-      "description": "株式会社ヘンリーでソフトウェアエンジニアをしているwarabiです。 ヘンリーでは以前から開発にClaude Codeを用いていましたが、最近はSkillの活用などでClaude Codeの性能をもっと引き出そうとする動きが活発になっており、ブログでの発信も増えてきています。 Claude Code を活用した電子カルテの外部連携仕様書メンテ...",
-      "bookmarks": 16,
-      "published_at": "2026-03-11T02:38:12Z"
+      "title": "【2026/3/9最新】Claude Code新機能『Code Review』、早速使ったら2つのPRで$100超かかった話",
+      "url": "https://zenn.dev/canly/articles/1535fde47ca866",
+      "description": "はじめに 2026年3月9日、Claude Codeに新機能「Code Review」がリリースされました。 PRが作成されると、複数のエージェントがチームとして派遣され、バグを並列で探索・検証・ランク付けしてくれるという機能です。 早速使ってみたのですが、非常に高価ということが分かったので、コストを抑える方法も含めて共有します...",
+      "bookmarks": 12,
+      "published_at": "2026-03-11T04:51:11Z"
     },
     {
       "source": "hatena",
-      "title": "マイクロソフトが「.NET Skills」公開。AIエージェントの.NET開発能力を拡張",
-      "url": "https://www.publickey1.jp/blog/26/net_skillsainet.html",
-      "description": "マイクロソフトは、AIエージェントの能力を拡張する「Agent Skills」の仕組みに対応した、.NETの開発スキルを向上させる「.NET Skills」を公開しました。 Agent Skillsは、Anthropicが提唱したAIエージェントの能力を拡張する仕組みです。現在では事実上の業界標準となっています。 Agent Skillsに対応したフォーマット...",
-      "bookmarks": 57,
-      "published_at": "2026-03-10T13:42:52Z"
+      "title": "Opus4.6でdraw.io図を生成したらもはやLLMの前提が崩れてた件",
+      "url": "https://zenn.dev/acntechjp/articles/4ab4491afd5a8b",
+      "description": "はじめに 「LLMは空間的な推論が苦手」「テキストベースで座標を扱うのだから、複雑な図はぐちゃぐちゃになるはず」──これは自分がずっと持っていた前提でした。おそらく同じように考えている方も多いのではないでしょうか。 実際、以前のモデルで試した限りでは、この前提はおおむね正しかったと思います。構成が複雑に...",
+      "bookmarks": 48,
+      "published_at": "2026-03-11T04:57:58Z"
     },
     {
       "source": "hatena",
-      "title": "無料で簡単にAIエージェントでブラウザやファイルの自動操作ができる「Agent Zero」、ChatGPT・Claude・Geminiと連携できローカルAIも使用可能",
-      "url": "https://gigazine.net/news/20260311-agent-zero/",
-      "description": "ユーザーの指示に応じてOSをツールとして使い、情報収集やコード実行、他エージェントとの協調などを通じてタスク達成を目指すオープンソースのパーソナルAIエージェントフレームワーク「Agent Zero」が公開されています。 agent0ai/agent-zero: Agent Zero AI framework https://github.com/agent0ai/agent-zero Agent",
-      "bookmarks": 11,
-      "published_at": "2026-03-11T02:20:04Z"
+      "title": "ユーザーの代わりに買い物できるPerplexityのAIブラウザ「Comet」のAmazonへのアクセス禁止命令を裁判所が下す、さらにAmazonのデータの複製をすべて破棄することも義務付け",
+      "url": "https://gigazine.net/news/20260311-amazon-win-court-perplexity-comet/",
+      "description": "アメリカのカリフォルニア州北部地区連邦地方裁判所が、AIスタートアップ企業のPerplexityが提供するAI搭載ウェブブラウザ「Comet」に対し、Amazonのパスワード保護されたシステムへのアクセスを一時的に禁止する予備差止命令を2026年3月9日付けで下しました。 Amazon.com Services LLC v. Perplexity AI, Inc. | Northe...",
+      "bookmarks": 9,
+      "published_at": "2026-03-11T03:16:55Z"
     },
     {
       "source": "hatena",
-      "title": "Agent Skills | Microsoft",
-      "url": "https://microsoft.github.io/skills/",
-      "description": "All134Core7Python41.NET29TypeScript24Java26Rust7 All134Foundry32M3653General13Data23Messaging14Entra15Monitoring9Integration7Compute8Communication5Frontend3Partner2 Build Azure AI Foundry agents using",
-      "bookmarks": 16,
-      "published_at": "2026-03-10T12:55:41Z"
+      "title": "Geminiが文書も表計算もスライドも自動生成、Workspace大型刷新",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2092373.html",
+      "description": "",
+      "bookmarks": 35,
+      "published_at": "2026-03-11T04:51:28Z"
     },
     {
       "source": "hatena",
-      "title": "GoogleがAI「Gemini」をGoogleドキュメント・スプレッドシート・スライド・ドライブに全面展開、「作成を手伝って」で文書の草案生成が可能に",
-      "url": "https://gigazine.net/news/20260311-gemini-workspace/",
-      "description": "GeminiがGoogleドキュメントなどのGoogle Workspaceでの作業をサポートする共同作業パートナーとして統合されることが2026年3月10日に発表されました。Geminiを用いることで文書の草案を作成したり、データの統合と分析をしたりといったことが可能です。 Google shares Gemini updates to Docs, Sheets, Slides and Driv",
-      "bookmarks": 11,
-      "published_at": "2026-03-11T03:16:37Z"
+      "title": "MetaがAIエージェントソーシャルネットワーク「Moltbook」を買収",
+      "url": "https://gigazine.net/news/20260311-moltbook-agent/",
+      "description": "AIエージェント専用のSNS「Moltbook」をMetaが買収したことが報じられました。Moltbookの開発者であるマット・シュリヒト氏とビジネスパートナーのベン・パー氏はMetaのAI研究を率いる部門である「Meta Superintelligence Labs(MSL)」に採用される予定です。 Facebook parent Meta acquires Moltbook, an AI ag",
+      "bookmarks": 6,
+      "published_at": "2026-03-11T04:56:55Z"
+    },
+    {
+      "source": "hatena",
+      "title": "llmock — Deterministic mock LLM server for testing",
+      "url": "https://llmock.copilotkit.dev/",
+      "description": "{ \"fixtures\": [ { \"match\": { \"userMessage\": \"capital of France\" }, \"response\": { \"content\": \"The capital of France is Paris.\" } } ] } Why llmock Stop paying for flaky tests Tests that hit real LLM API",
+      "bookmarks": 5,
+      "published_at": "2026-03-11T03:32:34Z"
     }
   ],
   "twitter": []
