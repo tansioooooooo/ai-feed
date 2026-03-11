@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Feed - 週次トレンドレポート 2026-W11</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+main { padding: 20px 24px; max-width: 900px; }
+section { margin-bottom: 32px; }
+h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+h3 { font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 8px; }
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  color: var(--text);
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.trend-title {
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+.trend-desc {
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.keyword-tag {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--text);
+}
+.keyword-tag .kw-count {
+  color: var(--accent);
+  font-weight: 600;
+  margin-left: 4px;
+}
+.article-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+}
+.article-card a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-card a:hover { color: var(--accent); }
+.article-card .en-title {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.article-meta {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+.stat-number { font-size: 24px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.source-badge {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 4px;
+}
+.source-hn { background: #ff660022; color: #ff6600; }
+.source-hatena { background: #008fde22; color: #008fde; }
+.source-twitter { background: #1d9bf022; color: #1d9bf0; }
+.week-section { margin-bottom: 24px; }
+.week-section h3 { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../../index.html">AI Feed</a></h1>
+    <span class="subtitle">週次トレンドレポート 2026-W11</span>
+  </div>
+</header>
+<main>
+  <a href="../../index.html" class="back-link">&larr; Latest</a>
+
+  <section>
+    <h2>週間サマリー</h2>
+    <div class="stats-grid"><div class="stat-card"><div class="stat-number">46</div><div class="stat-label">総記事数</div></div><div class="stat-card"><div class="stat-number">27</div><div class="stat-label">HN</div></div><div class="stat-card"><div class="stat-number">19</div><div class="stat-label">Hatena</div></div><div class="stat-card"><div class="stat-number">0</div><div class="stat-label">Twitter</div></div></div>
+    <div class="summary-box">（Claude API キー未設定のため自動生成スキップ）</div>
+  </section>
+
+  
+
+  <section>
+    <h2>注目キーワード</h2>
+    <div class="keywords"><span class="keyword-tag">claude<span class="kw-count">24</span></span><span class="keyword-tag">code<span class="kw-count">23</span></span><span class="keyword-tag">anthropic<span class="kw-count">7</span></span><span class="keyword-tag">llm<span class="kw-count">5</span></span><span class="keyword-tag">show<span class="kw-count">5</span></span><span class="keyword-tag">agent<span class="kw-count">3</span></span><span class="keyword-tag">api<span class="kw-count">3</span></span><span class="keyword-tag">team<span class="kw-count">3</span></span><span class="keyword-tag">chatgpt<span class="kw-count">2</span></span><span class="keyword-tag">rag<span class="kw-count">2</span></span><span class="keyword-tag">openai<span class="kw-count">2</span></span><span class="keyword-tag">mcp2cli<span class="kw-count">2</span></span><span class="keyword-tag">cli<span class="kw-count">2</span></span><span class="keyword-tag">mcp<span class="kw-count">2</span></span><span class="keyword-tag">training<span class="kw-count">1</span></span></div>
+  </section>
+
+  <section>
+    <h2>HN 週間ランキング TOP5</h2>
+    <div class="article-card"><span class="source-badge source-hackernews">HN</span><a href="https://news.ycombinator.com/item?id=47282777" target="_blank">Tell HN: 60歳の私に、Claude Codeが情熱を再点火した</a><div class="en-title">Tell HN: I&#x27;m 60 years old. Claude Code has re-ignited a passion</div><div class="article-meta">&#9650; 1049 &middot; <a href="https://news.ycombinator.com/item?id=47282777" target="_blank" style="color:var(--accent)">comments</a></div></div>
+<div class="article-card"><span class="source-badge source-hackernews">HN</span><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank">GPT-5.4</a><div class="en-title">GPT-5.4</div><div class="article-meta">&#9650; 1014 &middot; <a href="https://news.ycombinator.com/item?id=47265045" target="_blank" style="color:var(--accent)">comments</a></div></div>
+<div class="article-card"><span class="source-badge source-hackernews">HN</span><a href="https://www.anthropic.com/news/mozilla-firefox-security" target="_blank">AnthropicのRed TeamによるFirefoxのセキュリティ強化</a><div class="en-title">Hardening Firefox with Anthropic&#x27;s Red Team</div><div class="article-meta">&#9650; 626 &middot; <a href="https://news.ycombinator.com/item?id=47273854" target="_blank" style="color:var(--accent)">comments</a></div></div>
+<div class="article-card"><span class="source-badge source-hackernews">HN</span><a href="https://writings.hongminhee.org/2026/03/legal-vs-legitimate/" target="_blank">合法と正当は同じか：AIによる再実装とコピーレフトの侵食</a><div class="en-title">Is legal the same as legitimate: AI reimplementation and the erosion of copyleft</div><div class="article-meta">&#9650; 507 &middot; <a href="https://news.ycombinator.com/item?id=47310160" target="_blank" style="color:var(--accent)">comments</a></div></div>
+<div class="article-card"><span class="source-badge source-hackernews">HN</span><a href="https://unsloth.ai/docs/models/qwen3.5" target="_blank">Qwen 3.5をローカルで実行する方法</a><div class="en-title">How to run Qwen 3.5 locally</div><div class="article-meta">&#9650; 473 &middot; <a href="https://news.ycombinator.com/item?id=47292522" target="_blank" style="color:var(--accent)">comments</a></div></div>
+  </section>
+
+  <section>
+    <h2>Hatena 週間ランキング TOP5</h2>
+    <div class="article-card"><span class="source-badge source-hatena">Hatena</span><a href="https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/" target="_blank">Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス</a><div class="article-meta">&#128278; 297</div></div>
+<div class="article-card"><span class="source-badge source-hatena">Hatena</span><a href="https://atmarkit.itmedia.co.jp/ait/articles/2603/10/news010.html" target="_blank">【無料】Anthropic公式「エージェントスキル入門」講座が公開　Claude Codeでの活用法が分かる22分の動画</a><div class="article-meta">&#128278; 256</div></div>
+<div class="article-card"><span class="source-badge source-hatena">Hatena</span><a href="https://zenn.dev/acntechjp/articles/c1296f425baf03" target="_blank">Claude Code が RAG を捨てた理由 -「Agentic Search」という選択肢</a><div class="article-meta">&#128278; 72</div></div>
+<div class="article-card"><span class="source-badge source-hatena">Hatena</span><a href="https://tacoms-inc.hatenablog.com/entry/2026/03/10/142115" target="_blank">Devinが本番APIで障害を起こした経緯と学び - tacomsテックブログ</a><div class="article-meta">&#128278; 69</div></div>
+<div class="article-card"><span class="source-badge source-hatena">Hatena</span><a href="https://econ101.jp/noah-smith_3rd-scenario/" target="_blank">ノア・スミス「誰も語っていないAIバブル崩壊の第三シナリオ」（2025年12月9日）</a><div class="article-meta">&#128278; 68</div></div>
+  </section>
+
+  
+</main>
+</body>
+</html>

@@ -268,6 +268,18 @@ def format_updated(updated_at: str) -> str:
         return updated_at
 
 
+def load_trend_reports() -> dict[str, list[str]]:
+    """週次・月次レポートのパス一覧を返す（新しい順）。"""
+    result: dict[str, list[str]] = {"weekly": [], "monthly": []}
+    for key, subdir in [("weekly", "weekly"), ("monthly", "monthly")]:
+        d = ROOT / "docs" / subdir
+        if d.exists():
+            result[key] = sorted(
+                [f.stem for f in d.glob("*.html")], reverse=True
+            )
+    return result
+
+
 def load_daily_dates() -> list[tuple[str, int]]:
     """Return list of (date_str, item_count) sorted newest first."""
     if not DAILY_DIR.exists():
@@ -288,12 +300,44 @@ def load_daily_dates() -> list[tuple[str, int]]:
     return dates
 
 
+def generate_trend_section(trend_reports: dict[str, list[str]]) -> str:
+    weekly = trend_reports.get("weekly", [])
+    monthly = trend_reports.get("monthly", [])
+    if not weekly and not monthly:
+        return ""
+
+    items = []
+    for name in weekly[:4]:
+        items.append(
+            f'<a href="weekly/{name}.html" class="archive-link">'
+            f'<span>&#128200; {name}</span>'
+            f'<span class="archive-count">週次</span></a>'
+        )
+    for name in monthly[:3]:
+        items.append(
+            f'<a href="monthly/{name}.html" class="archive-link">'
+            f'<span>&#128197; {name}</span>'
+            f'<span class="archive-count">月次</span></a>'
+        )
+
+    links = "\n".join(items)
+    return (
+        f'<div class="archive-section">'
+        f"<h2>Trend Reports</h2>"
+        f'<div class="archive-list">{links}</div>'
+        f"</div>"
+    )
+
+
 def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
     twitter_items = feed.get("twitter", [])
     all_items = hn_items + hatena_items + twitter_items
+
+    trend_reports = load_trend_reports()
+    trend_html = generate_trend_section(trend_reports)
 
     archive_html = ""
     if daily_dates:
@@ -352,6 +396,7 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
   <div id="panel-twitter" class="panel">
     <div class="cards">{render_cards(twitter_items)}</div>
   </div>
+  {trend_html}
   {archive_html}
 </main>
 <script>{TAB_JS}</script>
