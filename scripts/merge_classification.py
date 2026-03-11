@@ -19,6 +19,7 @@ def main() -> None:
     if len(sys.argv) < 2 or not sys.argv[1].strip():
         print("No classification data provided, skipping AI filter")
         generate_html()
+        generate_trend_reports()
         return
 
     raw = sys.argv[1].strip()
@@ -28,6 +29,7 @@ def main() -> None:
     except json.JSONDecodeError as e:
         print(f"Warning: failed to parse classification JSON ({e}), skipping filter")
         generate_html()
+        generate_trend_reports()
         return
 
     with open(FEED_PATH, encoding="utf-8") as f:
@@ -79,6 +81,7 @@ def main() -> None:
         print(f"Updated daily file: {daily_path}")
 
     generate_html()
+    generate_trend_reports()
 
 
 def generate_html() -> None:
@@ -86,6 +89,45 @@ def generate_html() -> None:
         [sys.executable, str(ROOT / "scripts" / "generate_html.py")],
         check=True,
     )
+
+
+def generate_trend_reports() -> None:
+    """週次・月次トレンドレポートを生成する（ANTHROPIC_API_KEY があれば Claude 分析付き）。"""
+    import os
+    from datetime import date
+
+    today = date.today()
+    script = str(ROOT / "scripts" / "generate_trend_report.py")
+
+    # 週次レポートは毎回生成（今週分を更新）
+    try:
+        result = subprocess.run(
+            [sys.executable, script, "--mode", "weekly",
+             "--date", today.strftime("%Y-%m-%d")],
+            env={**os.environ},
+            capture_output=True,
+            text=True,
+        )
+        print(result.stdout.strip())
+        if result.returncode != 0:
+            print(f"Weekly report error: {result.stderr.strip()}")
+    except Exception as e:
+        print(f"Weekly report failed: {e}")
+
+    # 月次レポートも毎回生成（今月分を更新）
+    try:
+        result = subprocess.run(
+            [sys.executable, script, "--mode", "monthly",
+             "--date", today.strftime("%Y-%m-%d")],
+            env={**os.environ},
+            capture_output=True,
+            text=True,
+        )
+        print(result.stdout.strip())
+        if result.returncode != 0:
+            print(f"Monthly report error: {result.stderr.strip()}")
+    except Exception as e:
+        print(f"Monthly report failed: {e}")
 
 
 if __name__ == "__main__":

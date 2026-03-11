@@ -13,6 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 FEED_PATH = ROOT / "docs" / "feed.json"
 DAILY_DIR = ROOT / "docs" / "daily"
+WEEKLY_DIR = ROOT / "docs" / "weekly"
+MONTHLY_DIR = ROOT / "docs" / "monthly"
 OUTPUT_PATH = ROOT / "docs" / "index.html"
 
 SOURCE_LABELS = {
@@ -163,6 +165,27 @@ main { padding: 16px 24px; max-width: 900px; }
 }
 .archive-link:hover { border-color: var(--accent); color: var(--accent); }
 .archive-count { color: var(--muted); font-size: 12px; }
+.trend-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  transition: border-color 0.15s;
+}
+.trend-link:hover { border-color: var(--accent); color: var(--accent); }
+.trend-badge {
+  font-size: 11px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 2px 7px;
+}
 .back-link {
   display: inline-block;
   color: var(--accent);
@@ -268,6 +291,17 @@ def format_updated(updated_at: str) -> str:
         return updated_at
 
 
+def load_trend_reports() -> dict[str, list[str]]:
+    """週次・月次レポートの一覧を返す。{"weekly": [...], "monthly": [...]}"""
+    result: dict[str, list[str]] = {"weekly": [], "monthly": []}
+    for key, d in [("weekly", WEEKLY_DIR), ("monthly", MONTHLY_DIR)]:
+        if d.exists():
+            result[key] = sorted(
+                [f.stem for f in d.glob("*.html")], reverse=True
+            )
+    return result
+
+
 def load_daily_dates() -> list[tuple[str, int]]:
     """Return list of (date_str, item_count) sorted newest first."""
     if not DAILY_DIR.exists():
@@ -288,12 +322,42 @@ def load_daily_dates() -> list[tuple[str, int]]:
     return dates
 
 
-def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
+def generate_index_html(
+    feed: dict,
+    daily_dates: list[tuple[str, int]],
+    trend_reports: dict[str, list[str]] | None = None,
+) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
     twitter_items = feed.get("twitter", [])
     all_items = hn_items + hatena_items + twitter_items
+
+    # Trend reports section
+    trend_html = ""
+    if trend_reports:
+        weekly = trend_reports.get("weekly", [])
+        monthly = trend_reports.get("monthly", [])
+        if weekly or monthly:
+            trend_links = ""
+            for label in weekly[:4]:
+                trend_links += (
+                    f'<a href="weekly/{label}.html" class="trend-link">'
+                    f"<span>{label}</span>"
+                    f'<span class="trend-badge">Weekly</span></a>\n'
+                )
+            for label in monthly[:4]:
+                trend_links += (
+                    f'<a href="monthly/{label}.html" class="trend-link">'
+                    f"<span>{label}</span>"
+                    f'<span class="trend-badge">Monthly</span></a>\n'
+                )
+            trend_html = (
+                f'<div class="archive-section">'
+                f"<h2>Trend Reports</h2>"
+                f'<div class="archive-list">{trend_links}</div>'
+                f"</div>"
+            )
 
     archive_html = ""
     if daily_dates:
@@ -352,6 +416,7 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
   <div id="panel-twitter" class="panel">
     <div class="cards">{render_cards(twitter_items)}</div>
   </div>
+  {trend_html}
   {archive_html}
 </main>
 <script>{TAB_JS}</script>
@@ -437,7 +502,8 @@ def main() -> None:
 
     # Generate index.html with archive links
     daily_dates = load_daily_dates()
-    html = generate_index_html(feed, daily_dates)
+    trend_reports = load_trend_reports()
+    html = generate_index_html(feed, daily_dates, trend_reports)
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
