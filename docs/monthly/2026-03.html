@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Feed - 月次レポート 2026年3月</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --surface2: #22222e;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4caf8a;
+  --orange: #ff6600;
+  --blue: #1d9bf0;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top { display: flex; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.period { font-size: 14px; color: var(--muted); }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.back-link:hover { text-decoration: underline; }
+main { padding: 24px; max-width: 960px; }
+section { margin-bottom: 36px; }
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+h3 { font-size: 14px; font-weight: 600; margin-bottom: 10px; color: var(--muted); }
+
+/* --- トレンドキーワード --- */
+.keyword-cloud { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.keyword-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 13px;
+}
+.keyword-tag.rank1 { border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.keyword-tag.rank2 { border-color: #5a52c0; color: #9d96f5; }
+.keyword-count { color: var(--muted); font-size: 11px; }
+
+/* --- ランキングリスト --- */
+.rank-list { display: flex; flex-direction: column; gap: 8px; }
+.rank-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  transition: border-color 0.15s;
+}
+.rank-item:hover { border-color: var(--accent); }
+.rank-num {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--muted);
+  min-width: 28px;
+  text-align: right;
+  padding-top: 1px;
+}
+.rank-num.gold { color: #f5c542; }
+.rank-num.silver { color: #b0b8c1; }
+.rank-num.bronze { color: #cd7f32; }
+.rank-body { flex: 1; min-width: 0; }
+.rank-title {
+  display: block;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+.rank-title:hover { color: var(--accent); }
+.rank-title-ja {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.rank-meta { font-size: 12px; color: var(--muted); }
+.rank-score { color: var(--orange); font-weight: 600; }
+.rank-bm { color: var(--blue); font-weight: 600; }
+.rank-source {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--border);
+  margin-left: 6px;
+}
+
+/* --- 統計サマリー --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+}
+.stat-num { font-size: 28px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+/* --- 日別推移バー --- */
+.daily-bars { display: flex; flex-direction: column; gap: 6px; }
+.daily-bar-row { display: flex; align-items: center; gap: 10px; }
+.daily-bar-label { font-size: 12px; color: var(--muted); min-width: 80px; }
+.daily-bar-track {
+  flex: 1;
+  height: 18px;
+  background: var(--surface2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.daily-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+.daily-bar-count { font-size: 12px; color: var(--muted); min-width: 36px; text-align: right; }
+
+/* --- テーマ分析 --- */
+.theme-list { display: flex; flex-direction: column; gap: 8px; }
+.theme-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.theme-name { font-weight: 600; font-size: 13px; margin-bottom: 4px; }
+.theme-desc { font-size: 12px; color: var(--muted); }
+.theme-count { font-size: 11px; color: var(--accent); margin-top: 4px; }
+
+/* --- 週別セクション（月次用） --- */
+.week-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+}
+.week-section h3 { color: var(--text); margin-bottom: 8px; }
+.week-top-articles { font-size: 12px; color: var(--muted); }
+.week-top-articles a { color: var(--accent); text-decoration: none; }
+.week-top-articles a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period">月次レポート 2026年3月</span>
+  </div>
+  <a href="../index.html" class="back-link">&larr; トップへ戻る</a>
+</header>
+<main>
+
+  <!-- 月間サマリー -->
+  <section>
+    <h2>📊 2026年3月 サマリー</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">99</div>
+        <div class="stat-label">総記事数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">50</div>
+        <div class="stat-label">Hacker News</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">49</div>
+        <div class="stat-label">はてな</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Twitter</div>
+      </div>
+    </div>
+    <h3>日別記事数</h3>
+    <div class="daily-bars"><div class="daily-bar-row"><span class="daily-bar-label">2026-03-01</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-02</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-03</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-04</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-05</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-06</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:100%"></div></div><span class="daily-bar-count">31</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-07</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:96%"></div></div><span class="daily-bar-count">30</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-08</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:93%"></div></div><span class="daily-bar-count">29</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-09</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:80%"></div></div><span class="daily-bar-count">25</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-10</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:87%"></div></div><span class="daily-bar-count">27</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-11</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-12</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-13</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-14</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-15</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-16</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-17</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-18</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-19</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-20</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-21</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-22</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-23</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-24</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-25</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-26</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-27</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-28</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-29</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-30</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div>
+<div class="daily-bar-row"><span class="daily-bar-label">2026-03-31</span><div class="daily-bar-track"><div class="daily-bar-fill" style="width:0%"></div></div><span class="daily-bar-count">0</span></div></div>
+  </section>
+
+  <!-- トレンドキーワード -->
+  <section>
+    <h2>🔥 今月のホットキーワード</h2>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">
+      今月収集した全記事タイトルから頻出キーワードを抽出しています。
+    </p>
+    <div class="keyword-cloud"><span class="keyword-tag rank1">ai <span class="keyword-count">55</span></span>
+<span class="keyword-tag rank2">claude <span class="keyword-count">39</span></span>
+<span class="keyword-tag rank2">code <span class="keyword-count">36</span></span>
+<span class="keyword-tag">anthropic <span class="keyword-count">19</span></span>
+<span class="keyword-tag">llm <span class="keyword-count">16</span></span>
+<span class="keyword-tag">openai <span class="keyword-count">13</span></span>
+<span class="keyword-tag">hn <span class="keyword-count">10</span></span>
+<span class="keyword-tag">chatgpt <span class="keyword-count">6</span></span>
+<span class="keyword-tag">team <span class="keyword-count">5</span></span>
+<span class="keyword-tag">firefox <span class="keyword-count">4</span></span>
+<span class="keyword-tag">red <span class="keyword-count">4</span></span>
+<span class="keyword-tag">launch <span class="keyword-count">4</span></span>
+<span class="keyword-tag">yc <span class="keyword-count">4</span></span>
+<span class="keyword-tag">qwen <span class="keyword-count">4</span></span>
+<span class="keyword-tag">nvidia <span class="keyword-count">4</span></span>
+<span class="keyword-tag">lean <span class="keyword-count">4</span></span>
+<span class="keyword-tag">cli <span class="keyword-count">4</span></span>
+<span class="keyword-tag">gpt-5.4 <span class="keyword-count">3</span></span>
+<span class="keyword-tag">ai-generated <span class="keyword-count">3</span></span>
+<span class="keyword-tag">pc <span class="keyword-count">3</span></span>
+<span class="keyword-tag">qwen3.5 <span class="keyword-count">3</span></span>
+<span class="keyword-tag">api <span class="keyword-count">3</span></span>
+<span class="keyword-tag">mcp <span class="keyword-count">3</span></span>
+<span class="keyword-tag">agent <span class="keyword-count">3</span></span>
+<span class="keyword-tag">qiita <span class="keyword-count">3</span></span>
+<span class="keyword-tag">rag <span class="keyword-count">3</span></span>
+<span class="keyword-tag">ツール <span class="keyword-count">3</span></span>
+<span class="keyword-tag">hardening <span class="keyword-count">2</span></span>
+<span class="keyword-tag">standard <span class="keyword-count">2</span></span>
+<span class="keyword-tag">vela <span class="keyword-count">2</span></span></div>
+  </section>
+
+  <!-- トレンドテーマ -->
+  <section>
+    <h2>📌 今月のトレンドテーマ</h2>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">
+      記事内容を自動分類して今月のAI界隈の主要テーマを分析しました。
+    </p>
+    <div class="theme-list"><div class="theme-item"><div class="theme-name">LLM・モデルリリース</div><div class="theme-desc">新しいAIモデルのリリースや公開に関する話題</div><div class="theme-count">関連記事 41 件</div></div>
+<div class="theme-item"><div class="theme-name">開発者ツール・コーディングAI</div><div class="theme-desc">AIを活用した開発支援ツール・コーディングエージェントの話題</div><div class="theme-count">関連記事 40 件</div></div>
+<div class="theme-item"><div class="theme-name">画像・動画・マルチモーダル</div><div class="theme-desc">画像生成・動画生成・マルチモーダルAIの話題</div><div class="theme-count">関連記事 5 件</div></div>
+<div class="theme-item"><div class="theme-name">AI規制・著作権・倫理</div><div class="theme-desc">AI利用の法的・倫理的側面に関する議論</div><div class="theme-count">関連記事 4 件</div></div>
+<div class="theme-item"><div class="theme-name">研究・論文</div><div class="theme-desc">AI研究論文・ベンチマーク・技術的知見</div><div class="theme-count">関連記事 4 件</div></div>
+<div class="theme-item"><div class="theme-name">資金調達・ビジネス動向</div><div class="theme-desc">AI企業の資金調達・買収・事業展開の動向</div><div class="theme-count">関連記事 3 件</div></div></div>
+  </section>
+
+  <!-- 週別サマリー -->
+  <section>
+    <h2>📅 週別サマリー</h2>
+    <div class="week-section"><h3>2026-W09（0件）</h3><div class="week-top-articles"></div></div><div class="week-section"><h3>2026-W10（63件）</h3><div class="week-top-articles"><ul style='margin:4px 0 0 16px'><li><a href="https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything" target="_blank">MetaのAIスマートグラスとデータプライバシーへの懸念</a></li><li><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank">GPT-5.4</a></li><li><a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank">MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</a></li><li><a href="https://note.com/fromdusktildawn/n/n36b18b002010" target="_blank">ChatGPT5.4Proに小説を書かせたら「AIが書いたにしては面白い」というレベルをはるかに超えてて、仰天した｜ふろむだ</a></li></ul></div></div><div class="week-section"><h3>2026-W11（46件）</h3><div class="week-top-articles"><ul style='margin:4px 0 0 16px'><li><a href="https://news.ycombinator.com/item?id=47282777" target="_blank">Tell HN: 60歳の私に、Claude Codeが情熱を再点火した</a></li><li><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank">GPT-5.4</a></li><li><a href="https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/" target="_blank">Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス</a></li><li><a href="https://atmarkit.itmedia.co.jp/ait/articles/2603/10/news010.html" target="_blank">【無料】Anthropic公式「エージェントスキル入門」講座が公開　Claude Codeでの活用法が分かる22分の動画</a></li></ul></div></div><div class="week-section"><h3>2026-W12（0件）</h3><div class="week-top-articles"></div></div><div class="week-section"><h3>2026-W13（0件）</h3><div class="week-top-articles"></div></div><div class="week-section"><h3>2026-W14（0件）</h3><div class="week-top-articles"></div></div>
+  </section>
+
+  <!-- HN トップ10 -->
+  <section>
+    <h2>🟠 Hacker News 月間ランキング TOP10</h2>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">スコア（upvote数）上位10件</p>
+    <div class="rank-list"><div class="rank-item"><span class="rank-num gold">1</span><div class="rank-body"><a href="https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything" target="_blank" class="rank-title">Meta’s AI smart glasses and data privacy concerns</a><span class="rank-title-ja">MetaのAIスマートグラスとデータプライバシーへの懸念</span><div class="rank-meta"><span class="rank-score">▲ 1425</span> · <a href="https://news.ycombinator.com/item?id=47225130" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num silver">2</span><div class="rank-body"><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="rank-title">GPT-5.4</a><span class="rank-title-ja">GPT-5.4</span><div class="rank-meta"><span class="rank-score">▲ 886</span> · <a href="https://news.ycombinator.com/item?id=47265045" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num bronze">3</span><div class="rank-body"><a href="https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/" target="_blank" class="rank-title">Dario Amodei calls OpenAI’s messaging around military deal ‘straight up lies’</a><span class="rank-title-ja">Dario Amodei、OpenAIの軍事契約に関する発言を「完全な嘘」と批判</span><div class="rank-meta"><span class="rank-score">▲ 784</span> · <a href="https://news.ycombinator.com/item?id=47255662" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num">4</span><div class="rank-body"><a href="https://simonwillison.net/2026/Mar/4/qwen/" target="_blank" class="rank-title">Something is afoot in the land of Qwen</a><span class="rank-title-ja">Qwenの世界で何かが動いている</span><div class="rank-meta"><span class="rank-score">▲ 774</span> · <a href="https://news.ycombinator.com/item?id=47249343" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num">5</span><div class="rank-body"><a href="https://acko.net/blog/the-l-in-llm-stands-for-lying/" target="_blank" class="rank-title">The L in &quot;LLM&quot; Stands for Lying</a><span class="rank-title-ja">「LLM」のLはLying（嘘）の略</span><div class="rank-meta"><span class="rank-score">▲ 643</span> · <a href="https://news.ycombinator.com/item?id=47257394" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num">6</span><div class="rank-body"><a href="https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes" target="_blank" class="rank-title">Ars Technica fires reporter after AI controversy involving fabricated quotes</a><span class="rank-title-ja">Ars Technica、AI捏造引用問題でライターを解雇</span><div class="rank-meta"><span class="rank-score">▲ 601</span> · <a href="https://news.ycombinator.com/item?id=47226608" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num">7</span><div class="rank-body"><a href="https://news.ycombinator.com/item?id=47282777" target="_blank" class="rank-title">Tell HN: I&#x27;m 60 years old. Claude Code has re-ignited a passion</a><span class="rank-title-ja">60歳の私に情熱を再び灯したClaude Code</span><div class="rank-meta"><span class="rank-score">▲ 586</span> · <a href="https://news.ycombinator.com/item?id=47282777" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num">8</span><div class="rank-body"><a href="https://www.anthropic.com/news/mozilla-firefox-security" target="_blank" class="rank-title">Hardening Firefox with Anthropic&#x27;s Red Team</a><span class="rank-title-ja">AnthropicのRed TeamによるFirefoxのセキュリティ強化</span><div class="rank-meta"><span class="rank-score">▲ 580</span> · <a href="https://news.ycombinator.com/item?id=47273854" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num">9</span><div class="rank-body"><a href="https://writings.hongminhee.org/2026/03/legal-vs-legitimate/" target="_blank" class="rank-title">Is legal the same as legitimate: AI reimplementation and the erosion of copyleft</a><span class="rank-title-ja">合法と正当は同じか：AIによる再実装とコピーレフトの侵食</span><div class="rank-meta"><span class="rank-score">▲ 507</span> · <a href="https://news.ycombinator.com/item?id=47310160" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div>
+<div class="rank-item"><span class="rank-num">10</span><div class="rank-body"><a href="https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523" target="_blank" class="rank-title">Pentagon formally labels Anthropic supply-chain risk</a><span class="rank-title-ja">国防総省、Anthropicをサプライチェーンリスクに正式認定</span><div class="rank-meta"><span class="rank-score">▲ 412</span> · <a href="https://news.ycombinator.com/item?id=47266084" target="_blank" style="color:var(--accent);font-size:11px">comments</a><span class="rank-source">hackernews</span></div></div></div></div>
+  </section>
+
+  <!-- Hatena トップ10 -->
+  <section>
+    <h2>🔵 はてなブックマーク 月間ランキング TOP10</h2>
+    <p style="font-size:12px;color:var(--muted);margin-bottom:12px">ブックマーク数上位10件</p>
+    <div class="rank-list"><div class="rank-item"><span class="rank-num gold">1</span><div class="rank-body"><a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" class="rank-title">MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</a><div class="rank-meta"><span class="rank-bm">🔖 560</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num silver">2</span><div class="rank-body"><a href="https://note.com/fromdusktildawn/n/n36b18b002010" target="_blank" class="rank-title">ChatGPT5.4Proに小説を書かせたら「AIが書いたにしては面白い」というレベルをはるかに超えてて、仰天した｜ふろむだ</a><div class="rank-meta"><span class="rank-bm">🔖 464</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num bronze">3</span><div class="rank-body"><a href="https://type.jp/et/feature/30605/" target="_blank" class="rank-title">南場智子「ますます“速さ”が命題に」DeNA AI Day2026全文書き起こし - エンジニアtype | 転職type</a><div class="rank-meta"><span class="rank-bm">🔖 463</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num">4</span><div class="rank-body"><a href="https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/" target="_blank" class="rank-title">Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス</a><div class="rank-meta"><span class="rank-bm">🔖 297</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num">5</span><div class="rank-body"><a href="https://atmarkit.itmedia.co.jp/ait/articles/2603/10/news010.html" target="_blank" class="rank-title">【無料】Anthropic公式「エージェントスキル入門」講座が公開　Claude Codeでの活用法が分かる22分の動画</a><div class="rank-meta"><span class="rank-bm">🔖 256</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num">6</span><div class="rank-body"><a href="https://www.nikkei.com/article/DGXZQOGN060800W6A300C2000000/" target="_blank" class="rank-title">日本生命、米国でOpenAIを提訴　「ChatGPTが非弁行為」 - 日本経済新聞</a><div class="rank-meta"><span class="rank-bm">🔖 195</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num">7</span><div class="rank-body"><a href="https://zenn.dev/knowledgework/articles/claude-code-organization-plan-guide" target="_blank" class="rank-title">Claude Codeを組織導入するためのプラン選定ガイド</a><div class="rank-meta"><span class="rank-bm">🔖 186</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num">8</span><div class="rank-body"><a href="https://zenn.dev/komlock_lab/articles/openai-symphony" target="_blank" class="rank-title">Symphony - OpenAIが発表したチケット駆動AI開発ツールについて</a><div class="rank-meta"><span class="rank-bm">🔖 154</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num">9</span><div class="rank-body"><a href="https://zenn.dev/mgdx_blog/articles/8f7994ad84151d" target="_blank" class="rank-title">コードレビューにClaude Code subagentsを導入したら、レビューレベルが改善した話</a><div class="rank-meta"><span class="rank-bm">🔖 146</span><span class="rank-source">hatena</span></div></div></div>
+<div class="rank-item"><span class="rank-num">10</span><div class="rank-body"><a href="https://blog.inorinrinrin.com/entry/2026/03/07/180419" target="_blank" class="rank-title">3分で学ぶ GitHub Copilot CLI の基本とベストプラクティス - プププなテクブ</a><div class="rank-meta"><span class="rank-bm">🔖 142</span><span class="rank-source">hatena</span></div></div></div></div>
+  </section>
+
+</main>
+</body>
+</html>

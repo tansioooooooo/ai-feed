@@ -13,6 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 FEED_PATH = ROOT / "docs" / "feed.json"
 DAILY_DIR = ROOT / "docs" / "daily"
+WEEKLY_DIR = ROOT / "docs" / "weekly"
+MONTHLY_DIR = ROOT / "docs" / "monthly"
 OUTPUT_PATH = ROOT / "docs" / "index.html"
 
 SOURCE_LABELS = {
@@ -288,12 +290,48 @@ def load_daily_dates() -> list[tuple[str, int]]:
     return dates
 
 
+def load_trend_reports() -> dict:
+    """Return weekly and monthly report file names sorted newest first."""
+    weekly = sorted(
+        [f.stem for f in WEEKLY_DIR.glob("*.html") if WEEKLY_DIR.exists()],
+        reverse=True,
+    )
+    monthly = sorted(
+        [f.stem for f in MONTHLY_DIR.glob("*.html") if MONTHLY_DIR.exists()],
+        reverse=True,
+    )
+    return {"weekly": weekly, "monthly": monthly}
+
+
 def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
     twitter_items = feed.get("twitter", [])
     all_items = hn_items + hatena_items + twitter_items
+
+    trend_reports = load_trend_reports()
+    trend_html = ""
+    if trend_reports["weekly"] or trend_reports["monthly"]:
+        trend_links = []
+        for w in trend_reports["weekly"][:4]:
+            trend_links.append(
+                f'<a href="weekly/{w}.html" class="archive-link">'
+                f'<span>&#128200; 週次 {w}</span>'
+                f'<span class="archive-count">trend</span></a>'
+            )
+        for m in trend_reports["monthly"][:3]:
+            trend_links.append(
+                f'<a href="monthly/{m}.html" class="archive-link">'
+                f'<span>&#128197; 月次 {m}</span>'
+                f'<span class="archive-count">report</span></a>'
+            )
+        trend_html = (
+            f'<div class="archive-section">'
+            f"<h2>Trend Reports</h2>"
+            f'<div class="archive-list">{"".join(trend_links)}</div>'
+            f"</div>"
+        )
 
     archive_html = ""
     if daily_dates:
@@ -352,6 +390,7 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
   <div id="panel-twitter" class="panel">
     <div class="cards">{render_cards(twitter_items)}</div>
   </div>
+  {trend_html}
   {archive_html}
 </main>
 <script>{TAB_JS}</script>

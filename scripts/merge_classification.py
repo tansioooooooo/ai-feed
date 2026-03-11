@@ -86,6 +86,15 @@ def generate_html() -> None:
         [sys.executable, str(ROOT / "scripts" / "generate_html.py")],
         check=True,
     )
+    subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "generate_trend_report.py")],
+        check=True,
+    )
+    # トレンドレポート生成後に再度 index.html を更新（レポートへのリンク追加のため）
+    subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "generate_html.py")],
+        check=True,
+    )
 
 
 if __name__ == "__main__":
