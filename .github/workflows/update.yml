@@ -2,8 +2,8 @@ name: Update AI Feed
 
 on:
   schedule:
-    # 毎日 9:00 と 21:00 JST (= 0:00 と 12:00 UTC)
-    - cron: "0 0,12 * * *"
+    # 毎日 4:00 と 16:00 JST (= 19:00 と 7:00 UTC)
+    - cron: "0 19,7 * * *"
   workflow_dispatch:
 
 permissions:
