@@ -13,6 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 FEED_PATH = ROOT / "docs" / "feed.json"
 DAILY_DIR = ROOT / "docs" / "daily"
+WEEKLY_DIR = ROOT / "docs" / "weekly"
+MONTHLY_DIR = ROOT / "docs" / "monthly"
 OUTPUT_PATH = ROOT / "docs" / "index.html"
 
 SOURCE_LABELS = {
@@ -288,7 +290,19 @@ def load_daily_dates() -> list[tuple[str, int]]:
     return dates
 
 
-def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
+def load_trend_reports() -> dict[str, list[str]]:
+    """Return {'weekly': [...filenames...], 'monthly': [...filenames...]} sorted newest first."""
+    result: dict[str, list[str]] = {"weekly": [], "monthly": []}
+    for key, dir_path in [("weekly", WEEKLY_DIR), ("monthly", MONTHLY_DIR)]:
+        if dir_path.exists():
+            result[key] = sorted(
+                [f.stem for f in dir_path.glob("*.html")],
+                reverse=True,
+            )
+    return result
+
+
+def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_reports: dict | None = None) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
@@ -309,6 +323,29 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
             f'<div class="archive-list">{links}</div>'
             f"</div>"
         )
+
+    trend_html = ""
+    if trend_reports:
+        weekly_links = "\n".join(
+            f'<a href="weekly/{name}.html" class="archive-link">'
+            f"<span>&#128202; {name}</span>"
+            f'<span class="archive-count">週次レポート</span></a>'
+            for name in trend_reports.get("weekly", [])[:8]
+        )
+        monthly_links = "\n".join(
+            f'<a href="monthly/{name}.html" class="archive-link">'
+            f"<span>&#128197; {name}</span>"
+            f'<span class="archive-count">月次レポート</span></a>'
+            for name in trend_reports.get("monthly", [])[:6]
+        )
+        if weekly_links or monthly_links:
+            combined = "\n".join(filter(None, [monthly_links, weekly_links]))
+            trend_html = (
+                f'<div class="archive-section">'
+                f"<h2>Trend Reports</h2>"
+                f'<div class="archive-list">{combined}</div>'
+                f"</div>"
+            )
 
     return f"""<!DOCTYPE html>
 <html lang="ja">
@@ -352,6 +389,7 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
   <div id="panel-twitter" class="panel">
     <div class="cards">{render_cards(twitter_items)}</div>
   </div>
+  {trend_html}
   {archive_html}
 </main>
 <script>{TAB_JS}</script>
@@ -437,7 +475,8 @@ def main() -> None:
 
     # Generate index.html with archive links
     daily_dates = load_daily_dates()
-    html = generate_index_html(feed, daily_dates)
+    trend_reports = load_trend_reports()
+    html = generate_index_html(feed, daily_dates, trend_reports)
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)

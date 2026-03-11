@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-03</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">月次レポート</span>
+    <span class="subtitle">2026-03 (2026-03-01 〜 2026-03-31)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">99</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">50</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">49</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 月次サマリー</h2>
+    <div class="summary-box">2026-03 のAIトレンドレポートです。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"></div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP10</h2>
+    <div class="articles-grid"><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://www.svd.se/a/K8nrV4/metas-ai-smart-glasses-and-data-privacy-concerns-workers-say-we-see-everything" target="_blank" class="article-link">MetaのAIスマートグラスとデータプライバシーへの懸念</a><span class="article-score">▲ 1425</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://openai.com/index/introducing-gpt-5-4/" target="_blank" class="article-link">GPT-5.4</a><span class="article-score">▲ 886</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://techcrunch.com/2026/03/04/anthropic-ceo-dario-amodei-calls-openais-messaging-around-military-deal-straight-up-lies-report-says/" target="_blank" class="article-link">Dario Amodei、OpenAIの軍事契約に関する発言を「完全な嘘」と批判</a><span class="article-score">▲ 784</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://simonwillison.net/2026/Mar/4/qwen/" target="_blank" class="article-link">Qwenの世界で何かが動いている</a><span class="article-score">▲ 774</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://acko.net/blog/the-l-in-llm-stands-for-lying/" target="_blank" class="article-link">「LLM」のLはLying（嘘）の略</a><span class="article-score">▲ 643</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://futurism.com/artificial-intelligence/ars-technica-fires-reporter-ai-quotes" target="_blank" class="article-link">Ars Technica、AI捏造引用問題でライターを解雇</a><span class="article-score">▲ 601</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://news.ycombinator.com/item?id=47282777" target="_blank" class="article-link">60歳の私に情熱を再び灯したClaude Code</a><span class="article-score">▲ 586</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://www.anthropic.com/news/mozilla-firefox-security" target="_blank" class="article-link">AnthropicのRed TeamによるFirefoxのセキュリティ強化</a><span class="article-score">▲ 580</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://writings.hongminhee.org/2026/03/legal-vs-legitimate/" target="_blank" class="article-link">合法と正当は同じか：AIによる再実装とコピーレフトの侵食</a><span class="article-score">▲ 507</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://www.wsj.com/politics/national-security/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523" target="_blank" class="article-link">国防総省、Anthropicをサプライチェーンリスクに正式認定</a><span class="article-score">▲ 412</span></div></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP10</h2>
+    <div class="articles-grid"><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://zenn.dev/hiraly/articles/3409b886607274" target="_blank" class="article-link">MCPはなぜCLIに負けたのか —— 経緯と構造を整理する</a><span class="article-score">🔖 560</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://note.com/fromdusktildawn/n/n36b18b002010" target="_blank" class="article-link">ChatGPT5.4Proに小説を書かせたら「AIが書いたにしては面白い」というレベルをはるかに超えてて、仰天した｜ふろむだ</a><span class="article-score">🔖 464</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://type.jp/et/feature/30605/" target="_blank" class="article-link">南場智子「ますます“速さ”が命題に」DeNA AI Day2026全文書き起こし - エンジニアtype | 転職type</a><span class="article-score">🔖 463</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://nyosegawa.github.io/posts/harness-engineering-best-practices-2026/" target="_blank" class="article-link">Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス</a><span class="article-score">🔖 297</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://atmarkit.itmedia.co.jp/ait/articles/2603/10/news010.html" target="_blank" class="article-link">【無料】Anthropic公式「エージェントスキル入門」講座が公開　Claude Codeでの活用法が分かる22分の動画</a><span class="article-score">🔖 256</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://www.nikkei.com/article/DGXZQOGN060800W6A300C2000000/" target="_blank" class="article-link">日本生命、米国でOpenAIを提訴　「ChatGPTが非弁行為」 - 日本経済新聞</a><span class="article-score">🔖 195</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://zenn.dev/knowledgework/articles/claude-code-organization-plan-guide" target="_blank" class="article-link">Claude Codeを組織導入するためのプラン選定ガイド</a><span class="article-score">🔖 186</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://zenn.dev/komlock_lab/articles/openai-symphony" target="_blank" class="article-link">Symphony - OpenAIが発表したチケット駆動AI開発ツールについて</a><span class="article-score">🔖 154</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://zenn.dev/mgdx_blog/articles/8f7994ad84151d" target="_blank" class="article-link">コードレビューにClaude Code subagentsを導入したら、レビューレベルが改善した話</a><span class="article-score">🔖 146</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://blog.inorinrinrin.com/entry/2026/03/07/180419" target="_blank" class="article-link">3分で学ぶ GitHub Copilot CLI の基本とベストプラクティス - プププなテクブ</a><span class="article-score">🔖 142</span></div></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box"></div>
+  </section>
+</main>
+</body>
+</html>
