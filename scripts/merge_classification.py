@@ -19,6 +19,7 @@ def main() -> None:
     if len(sys.argv) < 2 or not sys.argv[1].strip():
         print("No classification data provided, skipping AI filter")
         generate_html()
+        generate_trend_reports()
         return
 
     raw = sys.argv[1].strip()
@@ -28,6 +29,7 @@ def main() -> None:
     except json.JSONDecodeError as e:
         print(f"Warning: failed to parse classification JSON ({e}), skipping filter")
         generate_html()
+        generate_trend_reports()
         return
 
     with open(FEED_PATH, encoding="utf-8") as f:
@@ -79,6 +81,7 @@ def main() -> None:
         print(f"Updated daily file: {daily_path}")
 
     generate_html()
+    generate_trend_reports()
 
 
 def generate_html() -> None:
@@ -86,6 +89,41 @@ def generate_html() -> None:
         [sys.executable, str(ROOT / "scripts" / "generate_html.py")],
         check=True,
     )
+
+
+def generate_trend_reports() -> None:
+    """週次（毎週月曜）・月次（毎月1日）トレンドレポートを生成。ANTHROPIC_API_KEY が必要。"""
+    import os
+    from datetime import datetime, timezone
+
+    if not os.environ.get("ANTHROPIC_API_KEY"):
+        print("ANTHROPIC_API_KEY not set, skipping trend report generation")
+        return
+
+    today = datetime.now(timezone.utc).date()
+    trend_script = str(ROOT / "scripts" / "generate_trend_report.py")
+
+    # 毎週月曜（weekday=0）に週次レポートを生成
+    if today.weekday() == 0:
+        print("Monday: generating weekly trend report...")
+        result = subprocess.run(
+            [sys.executable, trend_script, "--mode", "weekly"],
+            check=False,
+        )
+        if result.returncode != 0:
+            print("Warning: weekly trend report generation failed")
+
+    # 毎月1日に月次レポートを生成（前月分）
+    if today.day == 1:
+        from datetime import timedelta
+        last_month = today - timedelta(days=1)
+        print(f"1st of month: generating monthly trend report for {last_month.strftime('%Y-%m')}...")
+        result = subprocess.run(
+            [sys.executable, trend_script, "--mode", "monthly", "--date", last_month.isoformat()],
+            check=False,
+        )
+        if result.returncode != 0:
+            print("Warning: monthly trend report generation failed")
 
 
 if __name__ == "__main__":

@@ -13,6 +13,8 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 FEED_PATH = ROOT / "docs" / "feed.json"
 DAILY_DIR = ROOT / "docs" / "daily"
+WEEKLY_DIR = ROOT / "docs" / "weekly"
+MONTHLY_DIR = ROOT / "docs" / "monthly"
 OUTPUT_PATH = ROOT / "docs" / "index.html"
 
 SOURCE_LABELS = {
@@ -268,6 +270,20 @@ def format_updated(updated_at: str) -> str:
         return updated_at
 
 
+def load_trend_reports() -> dict[str, list[str]]:
+    """週次・月次レポートのファイル名一覧を返す（新しい順）。"""
+    result = {"weekly": [], "monthly": []}
+    if WEEKLY_DIR.exists():
+        result["weekly"] = sorted(
+            [f.stem for f in WEEKLY_DIR.glob("*.html")], reverse=True
+        )
+    if MONTHLY_DIR.exists():
+        result["monthly"] = sorted(
+            [f.stem for f in MONTHLY_DIR.glob("*.html")], reverse=True
+        )
+    return result
+
+
 def load_daily_dates() -> list[tuple[str, int]]:
     """Return list of (date_str, item_count) sorted newest first."""
     if not DAILY_DIR.exists():
@@ -288,12 +304,35 @@ def load_daily_dates() -> list[tuple[str, int]]:
     return dates
 
 
-def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
+def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_reports: dict | None = None) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
     twitter_items = feed.get("twitter", [])
     all_items = hn_items + hatena_items + twitter_items
+
+    trend_html = ""
+    if trend_reports and (trend_reports.get("weekly") or trend_reports.get("monthly")):
+        trend_links = []
+        for label in trend_reports.get("weekly", [])[:4]:
+            trend_links.append(
+                f'<a href="weekly/{label}.html" class="archive-link">'
+                f'<span>&#128200; {label}</span>'
+                f'<span class="archive-count">週次レポート</span></a>'
+            )
+        for label in trend_reports.get("monthly", [])[:3]:
+            trend_links.append(
+                f'<a href="monthly/{label}.html" class="archive-link">'
+                f'<span>&#128336; {label}</span>'
+                f'<span class="archive-count">月次レポート</span></a>'
+            )
+        if trend_links:
+            trend_html = (
+                f'<div class="archive-section">'
+                f"<h2>Trend Reports</h2>"
+                f'<div class="archive-list">{"".join(trend_links)}</div>'
+                f"</div>"
+            )
 
     archive_html = ""
     if daily_dates:
@@ -352,6 +391,7 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]]) -> str:
   <div id="panel-twitter" class="panel">
     <div class="cards">{render_cards(twitter_items)}</div>
   </div>
+  {trend_html}
   {archive_html}
 </main>
 <script>{TAB_JS}</script>
@@ -435,9 +475,10 @@ def main() -> None:
                 f.write(generate_daily_html(date_str, daily_feed))
             print(f"  Generated {daily_html_path}")
 
-    # Generate index.html with archive links
+    # Generate index.html with archive links and trend report links
     daily_dates = load_daily_dates()
-    html = generate_index_html(feed, daily_dates)
+    trend_reports = load_trend_reports()
+    html = generate_index_html(feed, daily_dates, trend_reports)
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
