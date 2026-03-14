@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-03-14T07:29:40.736164+00:00",
+  "updated_at": "2026-03-14T19:21:01.372489+00:00",
   "hackernews": [
     {
       "source": "hackernews",
       "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
       "url": "https://claude.com/blog/1m-context-ga",
-      "score": 577,
-      "comments": 236,
+      "score": 1060,
+      "comments": 447,
       "hn_url": "https://news.ycombinator.com/item?id=47367129",
       "published_at": "2026-03-13T17:19:01+00:00",
       "title_ja": "Opus 4.6とSonnet 4.6で100万トークンコンテキストが一般提供開始"
@@ -15,67 +15,57 @@
       "source": "hackernews",
       "title": "Can I run AI locally?",
       "url": "https://www.canirun.ai/",
-      "score": 1158,
-      "comments": 286,
+      "score": 1369,
+      "comments": 323,
       "hn_url": "https://news.ycombinator.com/item?id=47363754",
       "published_at": "2026-03-13T12:46:10+00:00",
-      "title_ja": "AIをローカルで実行できる？"
-    },
-    {
-      "source": "hackernews",
-      "title": "Emacs and Vim in the Age of AI",
-      "url": "https://batsov.com/articles/2026/03/09/emacs-and-vim-in-the-age-of-ai/",
-      "score": 88,
-      "comments": 22,
-      "hn_url": "https://news.ycombinator.com/item?id=47319071",
-      "published_at": "2026-03-10T04:21:32+00:00",
-      "title_ja": "AI時代のEmacsとVim"
+      "title_ja": "AIをローカルで実行できるか？"
     },
     {
       "source": "hackernews",
       "title": "Elon Musk pushes out more xAI founders as AI coding effort falters",
       "url": "https://www.ft.com/content/e5fbc6c2-d5a6-4b97-a105-6a96ea849de5",
-      "score": 399,
-      "comments": 609,
+      "score": 485,
+      "comments": 756,
       "hn_url": "https://news.ycombinator.com/item?id=47366666",
       "published_at": "2026-03-13T16:40:42+00:00",
-      "title_ja": "AIコーディング事業が失速する中、Elon MuskがさらにxAI創業者を追い出す"
+      "title_ja": "AIコーディング事業の不振でElon MuskがxAIの創業者をさらに追放"
     },
     {
       "source": "hackernews",
       "title": "Launch HN: Spine Swarm (YC S23) – AI agents that collaborate on a visual canvas",
       "url": "https://www.getspine.ai/",
-      "score": 93,
-      "comments": 66,
+      "score": 105,
+      "comments": 69,
       "hn_url": "https://news.ycombinator.com/item?id=47364116",
       "published_at": "2026-03-13T13:22:40+00:00",
-      "title_ja": "Launch HN: Spine Swarm (YC S23) – ビジュアルキャンバスで協調するAIエージェント"
+      "title_ja": "Launch HN: Spine Swarm (YC S23) – ビジュアルキャンバス上で協調するAIエージェント"
     },
     {
       "source": "hackernews",
       "title": "Show HN: Context Gateway – Compress agent context before it hits the LLM",
       "url": "https://github.com/Compresr-ai/Context-Gateway",
-      "score": 73,
-      "comments": 46,
+      "score": 87,
+      "comments": 50,
       "hn_url": "https://news.ycombinator.com/item?id=47367526",
       "published_at": "2026-03-13T17:58:22+00:00",
       "title_ja": "Show HN: Context Gateway – LLMに送る前にエージェントのコンテキストを圧縮"
     },
     {
       "source": "hackernews",
-      "title": "John Carmack about open source and anti-AI activists",
-      "url": "https://twitter.com/id_aa_carmack/status/2032460578669691171",
-      "score": 297,
-      "comments": 392,
-      "hn_url": "https://news.ycombinator.com/item?id=47367463",
-      "published_at": "2026-03-13T17:51:34+00:00",
-      "title_ja": "John Carmackがオープンソースと反AI活動家について語る"
+      "title": "Emacs and Vim in the Age of AI",
+      "url": "https://batsov.com/articles/2026/03/09/emacs-and-vim-in-the-age-of-ai/",
+      "score": 192,
+      "comments": 132,
+      "hn_url": "https://news.ycombinator.com/item?id=47319071",
+      "published_at": "2026-03-10T04:21:32+00:00",
+      "title_ja": "AI時代のEmacsとVim"
     },
     {
       "source": "hackernews",
       "title": "Launch HN: Captain (YC W26) – Automated RAG for Files",
       "url": "https://www.runcaptain.com/",
-      "score": 50,
+      "score": 54,
       "comments": 35,
       "hn_url": "https://news.ycombinator.com/item?id=47366011",
       "published_at": "2026-03-13T15:45:33+00:00",
@@ -83,30 +73,30 @@
     },
     {
       "source": "hackernews",
-      "title": "Grief and the AI split",
-      "url": "https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/",
-      "score": 228,
-      "comments": 363,
-      "hn_url": "https://news.ycombinator.com/item?id=47358206",
-      "published_at": "2026-03-12T22:35:08+00:00",
-      "title_ja": "悲嘆とAIの分断"
+      "title": "John Carmack about open source and anti-AI activists",
+      "url": "https://twitter.com/id_aa_carmack/status/2032460578669691171",
+      "score": 349,
+      "comments": 459,
+      "hn_url": "https://news.ycombinator.com/item?id=47367463",
+      "published_at": "2026-03-13T17:51:34+00:00",
+      "title_ja": "John Carmackがオープンソースとアンチ AI活動家について語る"
     },
     {
       "source": "hackernews",
-      "title": "Executing programs inside transformers with exponentially faster inference",
-      "url": "https://www.percepta.ai/blog/can-llms-be-computers",
-      "score": 303,
-      "comments": 116,
-      "hn_url": "https://news.ycombinator.com/item?id=47348275",
-      "published_at": "2026-03-12T09:17:56+00:00",
-      "title_ja": "Transformerの内部でプログラムを実行し、推論を指数関数的に高速化する"
+      "title": "Grief and the AI split",
+      "url": "https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/",
+      "score": 233,
+      "comments": 373,
+      "hn_url": "https://news.ycombinator.com/item?id=47358206",
+      "published_at": "2026-03-12T22:35:08+00:00",
+      "title_ja": "悲嘆とAIをめぐる分断"
     },
     {
       "source": "hackernews",
       "title": "Are LLM merge rates not getting better?",
       "url": "https://entropicthoughts.com/no-swe-bench-improvement",
-      "score": 164,
-      "comments": 155,
+      "score": 167,
+      "comments": 156,
       "hn_url": "https://news.ycombinator.com/item?id=47349334",
       "published_at": "2026-03-12T11:49:05+00:00",
       "title_ja": "LLMのマージ率は改善していないのか？"
@@ -115,68 +105,88 @@
       "source": "hackernews",
       "title": "Show HN: Axe – A 12MB binary that replaces your AI framework",
       "url": "https://github.com/jrswab/axe",
-      "score": 212,
-      "comments": 118,
+      "score": 219,
+      "comments": 122,
       "hn_url": "https://news.ycombinator.com/item?id=47350516",
       "published_at": "2026-03-12T13:49:12+00:00",
       "title_ja": "Show HN: Axe – AIフレームワークを置き換える12MBのバイナリ"
     },
     {
       "source": "hackernews",
+      "title": "Executing programs inside transformers with exponentially faster inference",
+      "url": "https://www.percepta.ai/blog/can-llms-be-computers",
+      "score": 309,
+      "comments": 123,
+      "hn_url": "https://news.ycombinator.com/item?id=47348275",
+      "published_at": "2026-03-12T09:17:56+00:00",
+      "title_ja": "トランスフォーマー内でプログラムを実行し推論を指数関数的に高速化"
+    },
+    {
+      "source": "hackernews",
       "title": "Innocent woman jailed after being misidentified using AI facial recognition",
       "url": "https://www.grandforksherald.com/news/north-dakota/ai-error-jails-innocent-grandmother-for-months-in-north-dakota-fraud-case",
-      "score": 724,
-      "comments": 374,
+      "score": 741,
+      "comments": 384,
       "hn_url": "https://news.ycombinator.com/item?id=47356968",
       "published_at": "2026-03-12T20:55:51+00:00",
-      "title_ja": "AI顔認識の誤認識により無実の女性が投獄される"
+      "title_ja": "AI顔認識の誤認識で無実の女性が投獄される"
+    },
+    {
+      "source": "hackernews",
+      "title": "AI didn't simplify software engineering: It just made bad engineering easier",
+      "url": "https://robenglander.com/writing/ai-did-not-simplify/",
+      "score": 101,
+      "comments": 90,
+      "hn_url": "https://news.ycombinator.com/item?id=47377262",
+      "published_at": "2026-03-14T14:49:15+00:00",
+      "title_ja": "AIはソフトウェアエンジニアリングを簡略化しなかった：ダメなエンジニアリングを容易にしただけ"
     },
     {
       "source": "hackernews",
       "title": "Launch HN: IonRouter (YC W26) – High-throughput, low-cost inference",
       "url": "https://ionrouter.io",
       "score": 69,
-      "comments": 35,
+      "comments": 37,
       "hn_url": "https://news.ycombinator.com/item?id=47355410",
       "published_at": "2026-03-12T18:52:36+00:00",
-      "title_ja": "Launch HN: IonRouter (YC W26) – 高スループット・低コストの推論"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: OneCLI – Vault for AI Agents in Rust",
-      "url": "https://github.com/onecli/onecli",
-      "score": 156,
-      "comments": 49,
-      "hn_url": "https://news.ycombinator.com/item?id=47353558",
-      "published_at": "2026-03-12T16:41:06+00:00",
-      "title_ja": "Show HN: OneCLI – RustによるAIエージェント向けクレデンシャルVault"
+      "title_ja": "Launch HN: IonRouter (YC W26) – 高スループット・低コストのAI推論"
     },
     {
       "source": "hackernews",
       "title": "Personal Computer by Perplexity",
       "url": "https://www.perplexity.ai/personal-computer-waitlist",
-      "score": 218,
+      "score": 219,
       "comments": 172,
       "hn_url": "https://news.ycombinator.com/item?id=47339223",
       "published_at": "2026-03-11T18:22:21+00:00",
-      "title_ja": "PerplexityによるパーソナルPC"
+      "title_ja": "PerplexityによるパーソナルコンピュータPC"
     },
     {
       "source": "hackernews",
       "title": "How we hacked McKinsey's AI platform",
       "url": "https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform",
-      "score": 497,
+      "score": 499,
       "comments": 195,
       "hn_url": "https://news.ycombinator.com/item?id=47333627",
       "published_at": "2026-03-11T09:59:03+00:00",
-      "title_ja": "McKinseyのAIプラットフォームをハッキングした方法"
+      "title_ja": "McKinseyのAIプラットフォームをハックした方法"
+    },
+    {
+      "source": "hackernews",
+      "title": "Show HN: OneCLI – Vault for AI Agents in Rust",
+      "url": "https://github.com/onecli/onecli",
+      "score": 159,
+      "comments": 50,
+      "hn_url": "https://news.ycombinator.com/item?id=47353558",
+      "published_at": "2026-03-12T16:41:06+00:00",
+      "title_ja": "Show HN: OneCLI – RustによるAIエージェント向けVault"
     },
     {
       "source": "hackernews",
       "title": "Document poisoning in RAG systems: How attackers corrupt AI's sources",
       "url": "https://aminrj.com/posts/rag-document-poisoning/",
-      "score": 150,
-      "comments": 59,
+      "score": 154,
+      "comments": 65,
       "hn_url": "https://news.ycombinator.com/item?id=47350407",
       "published_at": "2026-03-12T13:40:36+00:00",
       "title_ja": "RAGシステムにおけるドキュメントポイズニング：攻撃者がAIのソースを汚染する方法"
@@ -186,57 +196,57 @@
       "title": "Show HN: Rudel – Claude Code Session Analytics",
       "url": "https://github.com/obsessiondb/rudel",
       "score": 141,
-      "comments": 83,
+      "comments": 84,
       "hn_url": "https://news.ycombinator.com/item?id=47350416",
       "published_at": "2026-03-12T13:41:12+00:00",
       "title_ja": "Show HN: Rudel – Claude Codeセッション分析ツール"
     },
     {
       "source": "hackernews",
-      "title": "Claude now creates interactive charts, diagrams and visualizations",
-      "url": "https://claude.com/blog/claude-builds-visuals",
-      "score": 218,
-      "comments": 111,
-      "hn_url": "https://news.ycombinator.com/item?id=47352751",
-      "published_at": "2026-03-12T15:59:00+00:00",
-      "title_ja": "Claudeがインタラクティブなチャート・図・ビジュアライゼーションを生成できるようになった"
+      "title": "I was interviewed by an AI bot for a job",
+      "url": "https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job",
+      "score": 417,
+      "comments": 458,
+      "hn_url": "https://news.ycombinator.com/item?id=47339164",
+      "published_at": "2026-03-11T18:17:30+00:00",
+      "title_ja": "AIボットに就職面接を受けてみた"
     },
     {
       "source": "hackernews",
       "title": "Kotlin creator's new language: talk to LLMs in specs, not English",
       "url": "https://codespeak.dev/",
-      "score": 310,
-      "comments": 278,
+      "score": 313,
+      "comments": 279,
       "hn_url": "https://news.ycombinator.com/item?id=47350931",
       "published_at": "2026-03-12T14:22:43+00:00",
-      "title_ja": "Kotlin作者の新言語：英語ではなく仕様でLLMと対話する"
+      "title_ja": "Kotlin作者の新言語：英語ではなくスペックでLLMと対話"
     },
     {
       "source": "hackernews",
-      "title": "I was interviewed by an AI bot for a job",
-      "url": "https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job",
-      "score": 416,
-      "comments": 458,
-      "hn_url": "https://news.ycombinator.com/item?id=47339164",
-      "published_at": "2026-03-11T18:17:30+00:00",
-      "title_ja": "AIボットに就職面接された"
+      "title": "Claude now creates interactive charts, diagrams and visualizations",
+      "url": "https://claude.com/blog/claude-builds-visuals",
+      "score": 221,
+      "comments": 111,
+      "hn_url": "https://news.ycombinator.com/item?id=47352751",
+      "published_at": "2026-03-12T15:59:00+00:00",
+      "title_ja": "Claudeがインタラクティブなチャート・図・可視化を生成できるようになった"
     },
     {
       "source": "hackernews",
       "title": "Reliable Software in the LLM Era",
       "url": "https://quint-lang.org/posts/llm_era",
       "score": 108,
-      "comments": 34,
+      "comments": 35,
       "hn_url": "https://news.ycombinator.com/item?id=47347901",
       "published_at": "2026-03-12T08:19:46+00:00",
-      "title_ja": "LLM時代における信頼性の高いソフトウェア"
+      "title_ja": "LLM時代における信頼できるソフトウェア"
     },
     {
       "source": "hackernews",
       "title": "Show HN: Open-source browser for AI agents",
       "url": "https://github.com/theredsix/agent-browser-protocol",
       "score": 154,
-      "comments": 52,
+      "comments": 53,
       "hn_url": "https://news.ycombinator.com/item?id=47336171",
       "published_at": "2026-03-11T14:39:30+00:00",
       "title_ja": "Show HN: AIエージェント向けオープンソースブラウザ"
@@ -253,151 +263,113 @@
     },
     {
       "source": "hackernews",
-      "title": "Don't post generated/AI-edited comments. HN is for conversation between humans",
-      "url": "https://news.ycombinator.com/newsguidelines.html#generated",
-      "score": 4185,
-      "comments": 1651,
-      "hn_url": "https://news.ycombinator.com/item?id=47340079",
-      "published_at": "2026-03-11T19:29:29+00:00",
-      "title_ja": "AI生成・AI編集コメントを投稿しないでください。HNは人間同士の会話の場です"
-    },
-    {
-      "source": "hackernews",
       "title": "Yann LeCun raises $1B to build AI that understands the physical world",
       "url": "https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/",
       "score": 611,
-      "comments": 500,
+      "comments": 504,
       "hn_url": "https://news.ycombinator.com/item?id=47320600",
       "published_at": "2026-03-10T08:46:53+00:00",
-      "title_ja": "Yann LeCunが物理世界を理解するAIの構築に10億ドルを調達"
+      "title_ja": "Yann LeCunが物理世界を理解するAI構築のために10億ドルを調達"
     },
     {
       "source": "hackernews",
-      "title": "Amazon Employees Say AI Is Just Increasing Workload",
-      "url": "https://gizmodo.com/amazon-employees-say-ai-is-just-increasing-workload-a-new-study-confirms-their-suspicions-2000732794",
-      "score": 111,
-      "comments": 37,
-      "hn_url": "https://news.ycombinator.com/item?id=47356223",
-      "published_at": "2026-03-12T19:57:16+00:00",
-      "title_ja": "Amazon従業員、AIは単に作業量を増やしているだけと主張"
-    },
-    {
-      "source": "hackernews",
-      "title": "The Emotional Labor Behind AI Intimacy (2025) [pdf]",
-      "url": "https://data-workers.org/wp-content/uploads/2025/12/The-Emotional-Labor-Behind-AI-Intimacy-1.pdf",
-      "score": 69,
-      "comments": 18,
-      "hn_url": "https://news.ycombinator.com/item?id=47353019",
-      "published_at": "2026-03-12T16:12:04+00:00",
-      "title_ja": "AI親密性の背後にある感情労働（2025年）[PDF]"
-    },
-    {
-      "source": "hackernews",
-      "title": "No, it doesn't cost Anthropic $5k per Claude Code user",
-      "url": "https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/",
-      "score": 479,
-      "comments": 349,
-      "hn_url": "https://news.ycombinator.com/item?id=47317132",
-      "published_at": "2026-03-09T23:22:06+00:00",
-      "title_ja": "AnthropicがClaude Codeユーザー1人あたり5,000ドルを負担しているわけではない"
+      "title": "Don't post generated/AI-edited comments. HN is for conversation between humans",
+      "url": "https://news.ycombinator.com/newsguidelines.html#generated",
+      "score": 4195,
+      "comments": 1653,
+      "hn_url": "https://news.ycombinator.com/item?id=47340079",
+      "published_at": "2026-03-11T19:29:29+00:00",
+      "title_ja": "AI生成・AI編集コメントの投稿禁止：HNは人間同士の会話の場"
     }
   ],
   "hatena": [
     {
       "source": "hatena",
-      "title": "米国で話題のRAGのセキュリティ脅威についてまとめてみた - Qiita",
-      "url": "https://qiita.com/miruky/items/3c98999786c7dbd2b26a",
-      "description": "はじめに こんばんは、mirukyです。 前回の記事「コーディングが楽になったからこそ気をつけるべきセキュリティ」では、AIコーディング時代のセキュリティリスクについてまとめました。 今回は、あの記事の中では深く触れられなかったRAG（Retrieval-Augmented Generation）システムのセキュリティ脅威に焦点を当てます...",
-      "bookmarks": 147,
-      "published_at": "2026-03-13T10:05:15Z"
+      "title": "Claude Codeのエージェントチームを使うだけで大抵のことが出来るようになった",
+      "url": "https://zenn.dev/n314/articles/e06f189f093902",
+      "description": "エージェントチームでClaude Codeが賢くなった Claude CodeにAgent teamsが実装されてから、ずっと使っている。 複雑な要求も簡単な指示でこなせるようになってきた。 ドキュメント、コード、DBを網羅的に検索しながら実装案を考えても性能が落ちなくなった。 アップデートによってもっと良い方法が見つかったりするかも...",
+      "bookmarks": 103,
+      "published_at": "2026-03-13T07:06:52Z"
+    },
+    {
+      "source": "hatena",
+      "title": "たった200行の純粋なPythonコードだけで構成されGPTの学習と推論を実行できる「MicroGPT」をインタラクティブに解説",
+      "url": "https://gigazine.net/news/20260314-microgpt-explained-interactively/",
+      "description": "MicroGPTは作者のAndrej Karpathy氏によるとLLMをどこまで簡素化できるのかを10年にわたり追求した集大成とのことで、依存関係のない純粋なPythonで書かれた200行の単一ファイルのみであるにもかかわらずGPTに学習と推論を行わせることができます。動作原理についてはAndrej氏のブログで説明されていますが、より初心者...",
+      "bookmarks": 141,
+      "published_at": "2026-03-14T09:08:33Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Coding Agent時代の開発ワークフローについてのまとめ",
+      "url": "https://nyosegawa.github.io/posts/coding-agent-workflow-2026/",
+      "description": "こんにちは！逆瀬川ちゃん (@gyakuse) です！ 今日はCoding Agent時代の開発ワークフローについて、みんながやっているものからわたしがやっている手法までまとめて紹介していきたいと思います。 前回の記事 Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス では、LinterやHook...",
+      "bookmarks": 63,
+      "published_at": "2026-03-14T13:01:21Z"
+    },
+    {
+      "source": "hatena",
+      "title": "MacBookで動くし、ぶっ壊れ性能。いま最強のローカルLLM｢Qwen3.5｣を解説しちゃう",
+      "url": "https://www.gizmodo.jp/2026/03/qwen_3_5_9b_4b.html",
+      "description": "MacBookで動くし、ぶっ壊れ性能。いま最強のローカルLLM｢Qwen3.5｣を解説しちゃう2026.03.14 21:008,159 かみやまたくみ とりあえずこれでいいやつ（令和最新版）。 2026年2月末〜3月上旬にかけてアリババがリリースしたオープンウェイトの大規模言語モデル（ローカルLLM）｢Qwen3.5｣シリーズが話題です。 実際触ってみた...",
+      "bookmarks": 29,
+      "published_at": "2026-03-14T12:12:44Z"
+    },
+    {
+      "source": "hatena",
+      "title": "MicroGPT explained interactively",
+      "url": "https://growingswe.com/blog/microgpt",
+      "description": "MicroGPT explained interactively Trying my best to visualize it. I'm a n00b at machine learning though Andrej Karpathy wrote a 200-line Python script that trains and runs a GPT from scratch, with no l",
+      "bookmarks": 25,
+      "published_at": "2026-03-14T11:18:38Z"
     },
     {
       "source": "hatena",
       "title": "Playwright + OWASP ZAP + Claude Code で E2E テストから脆弱性診断まで一気通貫でできるかやってみた",
       "url": "https://zenn.dev/rescuenow/articles/7192f8ca6ebe48",
       "description": "はじめに 最近、他チームのエンジニアが「Playwright で書いた E2E テストを OWASP ZAP に通して脆弱性診断をやってみた」という話を聞きました。 「E2E のシナリオってそのまま脆弱性診断にも使えるの？」 気になったので自分でも試してみました。その記録です。 やったこと（全体像） シンプルな Todo アプリを題材に...",
-      "bookmarks": 48,
+      "bookmarks": 145,
       "published_at": "2026-03-13T14:29:04Z"
     },
     {
       "source": "hatena",
-      "title": "Claude CodeやCodexのスキルの管理を楽にするツール「faceted-prompting」",
-      "url": "https://zenn.dev/nrs/articles/88f158aca0505b",
-      "description": "はじめに プロンプトが長く、そして増えてくると、どんどんと保守性が下がってきます。 役割、ルール、知識、作業指示、出力形式。 最初はひとつのファイルに入っていても困りません。 ところが運用を続けると、一部だけ差し替えたい、同じルールを別のスキルでも使いたい、Claude Code と Codex の両方で使いたい、とい...",
-      "bookmarks": 76,
-      "published_at": "2026-03-12T15:42:28Z"
+      "title": "企業が採用現場で導入し始めている「AI面接官」と実際に面接してみるとどんな感じなのか？",
+      "url": "https://gigazine.net/news/20260313-job-interviewed-by-ai-bot/",
+      "description": "近年は採用面接を人間ではなくAIが行う「AI面接官」が実用化されており、実際にいくつかの企業は採用現場で導入を勧めています。テクノロジー系メディアのThe VergeでAIレポーターを務めるハイデン・フィールド氏が、実際にAI面接官による採用面接を受けてみた様子について動画で報告しました。 An AI bot interviewed m...",
+      "bookmarks": 6,
+      "published_at": "2026-03-13T03:04:20Z"
     },
     {
       "source": "hatena",
-      "title": "「ジブリ風」も生成NG　著作権守る技術、ソニーGが開発 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUC1125A0R10C26A3000000/",
-      "description": "ソニーグループの人工知能（AI）研究開発部門であるソニーAIが、生成AIがつくる音楽や映像の著作権侵害を防ぎ、創作者が対価を得られる仕組みにつながる技術を開発した。まだ研究開発段階のため「社内の事業への応用は未定」（ソニーG）としている。ソニーGの機械学習分野のDistinguished Engineer、光藤祐基氏は「コン...",
-      "bookmarks": 26,
-      "published_at": "2026-03-13T23:46:31Z"
+      "title": "VitePressを用いてContext EngineeringとDocument Hostingを両立する - プププなテクブ",
+      "url": "https://blog.inorinrinrin.com/entry/2026/03/14/180826",
+      "description": "Coding Agent全盛の今、Docs as Code*1を用いたContext Engineeringが本格化しています。 最近OpenAIによって提唱された新たな概念・Herness Engineeringにおいても、もはやAIへ与えられる設計ドキュメント(コンテキスト)は前提として語られているほどです。 openai.com またエムスリー様においても、Docs as Codeの取り..",
+      "bookmarks": 11,
+      "published_at": "2026-03-14T09:15:09Z"
     },
     {
       "source": "hatena",
-      "title": "[PDF] The Complete Guide to Building Skills for Claude",
-      "url": "https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf",
-      "description": "",
-      "bookmarks": 48,
-      "published_at": "2026-02-14T20:30:46Z"
+      "title": "米国で話題のRAGのセキュリティ脅威についてまとめてみた - Qiita",
+      "url": "https://qiita.com/miruky/items/3c98999786c7dbd2b26a",
+      "description": "はじめに こんばんは、mirukyです。 前回の記事「コーディングが楽になったからこそ気をつけるべきセキュリティ」では、AIコーディング時代のセキュリティリスクについてまとめました。 今回は、あの記事の中では深く触れられなかったRAG（Retrieval-Augmented Generation）システムのセキュリティ脅威に焦点を当てます...",
+      "bookmarks": 262,
+      "published_at": "2026-03-13T10:05:15Z"
     },
     {
       "source": "hatena",
-      "title": "「Claude」に新機能、AIが描いた図をクリックしつつ知識を深掘り ～無料プランでも利用可能／ベータ版として提供中",
-      "url": "https://forest.watch.impress.co.jp/docs/news/2093113.html",
-      "description": "",
-      "bookmarks": 21,
-      "published_at": "2026-03-13T01:42:21Z"
+      "title": "Tennessee grandmother jailed after AI facial recognition error links her to fraud",
+      "url": "https://www.theguardian.com/us-news/2026/mar/12/tennessee-grandmother-ai-fraud",
+      "description": "In July, US marshals arrested Lipps at her Tennessee home while she was babysitting four children. She said she was taken away at gunpoint and booked into a county jail as a fugitive from justice from",
+      "bookmarks": 6,
+      "published_at": "2026-03-14T02:04:33Z"
     },
     {
       "source": "hatena",
-      "title": "スタートアップのマーケターがClaude Codeを使い倒したら、事業が4ヶ月で300%成長した話｜tsukky",
-      "url": "https://note.com/tsukky739/n/n40f4ec2b506a",
-      "description": "このnoteに書いたこと✍️ ①毎日の定型作業が、会話1回で完了した話 ②戦略策定もデータ分析も、AIに委託した話 ③画像も動画も、マーケター1人で外注ゼロで作れるようになった話 ④AIを「自分専用」に育てる設定ファイルの中身 はじめにスマートバンクで、「個人事業主向けの金融サービス」を新規事業として立ち上げ、マーケ...",
-      "bookmarks": 281,
-      "published_at": "2026-03-13T03:31:22Z"
-    },
-    {
-      "source": "hatena",
-      "title": "GitHub - onecli/onecli: Open-source credential vault, give your AI agents access to services without exposing keys.",
-      "url": "https://github.com/onecli/onecli",
-      "description": "OneCLI is an open-source gateway that sits between your AI agents and the services they call. Instead of baking API keys into every agent, you store credentials once in OneCLI and the gateway injects ",
-      "bookmarks": 10,
-      "published_at": "2026-03-12T21:59:44Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Googleが都市型洪水の予測マップを公開、GoogleマップとGeminiを用いた災害予測データセット構築手法「Groundsource」を活用",
-      "url": "https://gigazine.net/news/20260313-google-groundsource-gemini-crisis-prediction/",
-      "description": "Googleが災害予測AIを開発するためのデータセット構築手法「Groundsource」を開発しました。既にGroundsourceを用いた洪水予測AIが開発されており、洪水予測マップ「Flood Hub」も公開されています。 Boosting disaster resilience with Google's Groundsource https://blog.google/innovatio",
-      "bookmarks": 13,
-      "published_at": "2026-03-13T03:57:07Z"
-    },
-    {
-      "source": "hatena",
-      "title": "GitHub - jrswab/axe: A ligthweight cli for running single-purpose AI agents. Define focused agents in TOML, trigger them from anywhere; pipes, git hooks, cron, or the terminal.",
-      "url": "https://github.com/jrswab/axe",
-      "description": "Multi-provider support — Anthropic, OpenAI, and Ollama (local models) TOML-based agent configuration — declarative, version-controllable agent definitions Sub-agent delegation — agents can call other ",
-      "bookmarks": 7,
-      "published_at": "2026-03-12T14:33:39Z"
-    },
-    {
-      "source": "hatena",
-      "title": "顔認識AIの誤検知のせいで約半年も無実の罪で勾留され家も車も愛犬も失ってしまった女性",
-      "url": "https://gigazine.net/news/20260313-ai-error-jails-innocent-grandmother/",
-      "description": "アメリカ・テネシー州在住の50歳の女性が、顔認識AIの誤検知のせいで行ったこともない州で起きた銀行詐欺事件の犯人と誤認されてしまい、約半年にわたって無実の罪で勾留されてしまったという恐ろしい事例が報じられました。 AI error jails innocent grandmother for months in North Dakota fraud case - Grand Forks ...",
-      "bookmarks": 98,
-      "published_at": "2016-02-17T14:49:28Z"
-    },
-    {
-      "source": "hatena",
-      "title": "「AIの説明は文章だらけで分かりにくい」という問題を解消するアップデートがClaudeに登場、会話中にインタラクティブな図を生成して分かりやすくしてくれる",
-      "url": "https://gigazine.net/news/20260313-claude-interactive-visual/",
-      "description": "チャットAIのClaudeに「会話中にインタラクティブな図を生成する機能」が追加されました。ユーザーはClaudeに元素周期表などの作成を頼むことが可能で、文章の説明だけでは分かりにくい事柄が理解しやすくなります。 Claude builds interactive visuals right in your conversation | Claude https://claude.com/blo",
-      "bookmarks": 27,
-      "published_at": "2026-03-13T03:29:00Z"
+      "title": "【2026年3月最新版】コーディングが楽になったからこそ気をつけるべきセキュリティ - Qiita",
+      "url": "https://qiita.com/miruky/items/dfb3509ade7d4ad67b90",
+      "description": "はじめに こんばんは、mirukyです。 今回はいつものAWSシリーズとは少し毛色を変えて、AIコーディング時代のセキュリティについて書きます。 2025年から2026年にかけて、GitHub Copilot、Claude Code、Cursor、Cline、Amazon Q DeveloperなどのAIコーディングツールが急速に普及しました。コードを書くハードルが劇的に...",
+      "bookmarks": 9,
+      "published_at": "2026-03-11T15:06:46Z"
     }
   ],
   "twitter": []
