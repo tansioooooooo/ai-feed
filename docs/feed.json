@@ -1,329 +1,341 @@
 {
-  "updated_at": "2026-03-15T07:39:16.281541+00:00",
+  "updated_at": "2026-03-15T19:22:20.376367+00:00",
   "hackernews": [
+    {
+      "source": "hackernews",
+      "title": "A Visual Introduction to Machine Learning (2015)",
+      "url": "https://r2d3.us/visual-intro-to-machine-learning-part-1/",
+      "score": 262,
+      "comments": 24,
+      "hn_url": "https://news.ycombinator.com/item?id=47386116",
+      "published_at": "2026-03-15T10:47:35+00:00",
+      "title_ja": "機械学習の視覚的入門 (2015)"
+    },
+    {
+      "source": "hackernews",
+      "title": "The Appalling Stupidity of Spotify's AI DJ",
+      "url": "https://www.charlespetzold.com/blog/2026/02/The-Appalling-Stupidity-of-Spotifys-AI-DJ.html",
+      "score": 340,
+      "comments": 269,
+      "hn_url": "https://news.ycombinator.com/item?id=47385272",
+      "published_at": "2026-03-15T08:04:55+00:00",
+      "title_ja": "SpotifyのAI DJの驚くべき愚かさ"
+    },
     {
       "source": "hackernews",
       "title": "Tree Search Distillation for Language Models Using PPO",
       "url": "https://ayushtambde.com/blog/tree-search-distillation-for-language-models-using-ppo/",
-      "score": 52,
-      "comments": 3,
+      "score": 81,
+      "comments": 9,
       "hn_url": "https://news.ycombinator.com/item?id=47383059",
       "published_at": "2026-03-15T00:51:55+00:00",
-      "title_ja": "PPOを使った言語モデルのツリー探索蒸留"
-    },
-    {
-      "source": "hackernews",
-      "title": "Launching the Claude Partner Network",
-      "url": "https://www.anthropic.com/news/claude-partner-network",
-      "score": 130,
-      "comments": 62,
-      "hn_url": "https://news.ycombinator.com/item?id=47381340",
-      "published_at": "2026-03-14T21:23:42+00:00",
-      "title_ja": "Claudeパートナーネットワークの発足"
+      "title_ja": "PPOを用いた言語モデルのツリー探索蒸留"
     },
     {
       "source": "hackernews",
       "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6",
       "url": "https://claude.com/blog/1m-context-ga",
-      "score": 1152,
-      "comments": 489,
+      "score": 1179,
+      "comments": 502,
       "hn_url": "https://news.ycombinator.com/item?id=47367129",
       "published_at": "2026-03-13T17:19:01+00:00",
-      "title_ja": "Opus 4.6とSonnet 4.6で100万トークンコンテキストが一般提供開始"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: GitAgent – An open standard that turns any Git repo into an AI agent",
-      "url": "https://www.gitagent.sh/",
-      "score": 110,
-      "comments": 18,
-      "hn_url": "https://news.ycombinator.com/item?id=47376584",
-      "published_at": "2026-03-14T13:41:25+00:00",
-      "title_ja": "GitAgent – 任意のGitリポジトリをAIエージェントに変えるオープン標準"
+      "title_ja": "Opus 4.6とSonnet 4.6で100万トークンコンテキストが一般公開"
     },
     {
       "source": "hackernews",
       "title": "Can I run AI locally?",
       "url": "https://www.canirun.ai/",
-      "score": 1419,
-      "comments": 339,
+      "score": 1452,
+      "comments": 345,
       "hn_url": "https://news.ycombinator.com/item?id=47363754",
       "published_at": "2026-03-13T12:46:10+00:00",
-      "title_ja": "AIをローカルで実行できる？"
+      "title_ja": "AIをローカルで動かせる？"
     },
     {
       "source": "hackernews",
-      "title": "Claude March 2026 usage promotion",
-      "url": "https://support.claude.com/en/articles/14063676-claude-march-2026-usage-promotion",
-      "score": 228,
-      "comments": 138,
-      "hn_url": "https://news.ycombinator.com/item?id=47380647",
-      "published_at": "2026-03-14T20:08:54+00:00",
-      "title_ja": "Claude 2026年3月利用促進キャンペーン"
+      "title": "Show HN: GitAgent – An open standard that turns any Git repo into an AI agent",
+      "url": "https://www.gitagent.sh/",
+      "score": 126,
+      "comments": 32,
+      "hn_url": "https://news.ycombinator.com/item?id=47376584",
+      "published_at": "2026-03-14T13:41:25+00:00",
+      "title_ja": "Show HN: GitAgent – あらゆるGitリポジトリをAIエージェントに変えるオープン標準"
     },
     {
       "source": "hackernews",
-      "title": "Elon Musk pushes out more xAI founders as AI coding effort falters",
-      "url": "https://www.ft.com/content/e5fbc6c2-d5a6-4b97-a105-6a96ea849de5",
-      "score": 502,
-      "comments": 794,
-      "hn_url": "https://news.ycombinator.com/item?id=47366666",
-      "published_at": "2026-03-13T16:40:42+00:00",
-      "title_ja": "AIコーディング事業が失速する中、Elon MuskがxAI創業者をさらに追い出す"
+      "title": "I'm 60 years old. Claude Code killed a passion",
+      "url": "https://news.ycombinator.com/item?id=47386813",
+      "score": 169,
+      "comments": 126,
+      "hn_url": "https://news.ycombinator.com/item?id=47386813",
+      "published_at": "2026-03-15T12:35:22+00:00",
+      "title_ja": "私は60歳。Claude Codeが情熱を奪った"
+    },
+    {
+      "source": "hackernews",
+      "title": "Launching the Claude Partner Network",
+      "url": "https://www.anthropic.com/news/claude-partner-network",
+      "score": 155,
+      "comments": 95,
+      "hn_url": "https://news.ycombinator.com/item?id=47381340",
+      "published_at": "2026-03-14T21:23:42+00:00",
+      "title_ja": "Claudeパートナーネットワークの立ち上げ"
     },
     {
       "source": "hackernews",
       "title": "Launch HN: Spine Swarm (YC S23) – AI agents that collaborate on a visual canvas",
       "url": "https://www.getspine.ai/",
-      "score": 106,
+      "score": 107,
       "comments": 69,
       "hn_url": "https://news.ycombinator.com/item?id=47364116",
       "published_at": "2026-03-13T13:22:40+00:00",
-      "title_ja": "Spine Swarm (YC S23) – ビジュアルキャンバス上で協調するAIエージェント"
+      "title_ja": "Launch HN: Spine Swarm (YC S23) – ビジュアルキャンバスで協働するAIエージェント"
+    },
+    {
+      "source": "hackernews",
+      "title": "Elon Musk pushes out more xAI founders as AI coding effort falters",
+      "url": "https://www.ft.com/content/e5fbc6c2-d5a6-4b97-a105-6a96ea849de5",
+      "score": 515,
+      "comments": 805,
+      "hn_url": "https://news.ycombinator.com/item?id=47366666",
+      "published_at": "2026-03-13T16:40:42+00:00",
+      "title_ja": "イーロン・マスク、AIコーディング事業の低迷でさらにxAI創業者を追い出す"
     },
     {
       "source": "hackernews",
       "title": "Show HN: Context Gateway – Compress agent context before it hits the LLM",
       "url": "https://github.com/Compresr-ai/Context-Gateway",
-      "score": 89,
-      "comments": 54,
+      "score": 92,
+      "comments": 56,
       "hn_url": "https://news.ycombinator.com/item?id=47367526",
       "published_at": "2026-03-13T17:58:22+00:00",
-      "title_ja": "Context Gateway – LLMに届く前にエージェントのコンテキストを圧縮"
+      "title_ja": "Show HN: Context Gateway – LLMに到達する前にエージェントのコンテキストを圧縮"
     },
     {
       "source": "hackernews",
-      "title": "Launch HN: Captain (YC W26) – Automated RAG for Files",
-      "url": "https://www.runcaptain.com/",
-      "score": 54,
-      "comments": 35,
-      "hn_url": "https://news.ycombinator.com/item?id=47366011",
-      "published_at": "2026-03-13T15:45:33+00:00",
-      "title_ja": "Captain (YC W26) – ファイル向け自動化RAG"
-    },
-    {
-      "source": "hackernews",
-      "title": "John Carmack about open source and anti-AI activists",
-      "url": "https://twitter.com/id_aa_carmack/status/2032460578669691171",
-      "score": 358,
-      "comments": 473,
-      "hn_url": "https://news.ycombinator.com/item?id=47367463",
-      "published_at": "2026-03-13T17:51:34+00:00",
-      "title_ja": "John CarmackがオープンソースとAI反対活動家について語る"
+      "title": "Ask HN: How is AI-assisted coding going for you professionally?",
+      "url": "https://news.ycombinator.com/item?id=47388646",
+      "score": 50,
+      "comments": 57,
+      "hn_url": "https://news.ycombinator.com/item?id=47388646",
+      "published_at": "2026-03-15T15:58:23+00:00",
+      "title_ja": "Ask HN: AIアシスト開発は実際の仕事でどう活用できていますか？"
     },
     {
       "source": "hackernews",
       "title": "Are LLM merge rates not getting better?",
       "url": "https://entropicthoughts.com/no-swe-bench-improvement",
-      "score": 170,
+      "score": 172,
       "comments": 157,
       "hn_url": "https://news.ycombinator.com/item?id=47349334",
       "published_at": "2026-03-12T11:49:05+00:00",
-      "title_ja": "LLMのマージ成功率は改善していないのか？"
+      "title_ja": "LLMのマージ率は改善していないのか？"
+    },
+    {
+      "source": "hackernews",
+      "title": "Claude March 2026 usage promotion",
+      "url": "https://support.claude.com/en/articles/14063676-claude-march-2026-usage-promotion",
+      "score": 240,
+      "comments": 143,
+      "hn_url": "https://news.ycombinator.com/item?id=47380647",
+      "published_at": "2026-03-14T20:08:54+00:00",
+      "title_ja": "Claude 2026年3月の利用プロモーション"
+    },
+    {
+      "source": "hackernews",
+      "title": "Launch HN: Captain (YC W26) – Automated RAG for Files",
+      "url": "https://www.runcaptain.com/",
+      "score": 57,
+      "comments": 36,
+      "hn_url": "https://news.ycombinator.com/item?id=47366011",
+      "published_at": "2026-03-13T15:45:33+00:00",
+      "title_ja": "Launch HN: Captain (YC W26) – ファイル向け自動化RAG"
     },
     {
       "source": "hackernews",
       "title": "Grief and the AI split",
       "url": "https://blog.lmorchard.com/2026/03/11/grief-and-the-ai-split/",
-      "score": 236,
-      "comments": 373,
+      "score": 241,
+      "comments": 374,
       "hn_url": "https://news.ycombinator.com/item?id=47358206",
       "published_at": "2026-03-12T22:35:08+00:00",
-      "title_ja": "悲嘆とAI分断"
+      "title_ja": "悲嘆とAIをめぐる分断"
+    },
+    {
+      "source": "hackernews",
+      "title": "John Carmack about open source and anti-AI activists",
+      "url": "https://twitter.com/id_aa_carmack/status/2032460578669691171",
+      "score": 366,
+      "comments": 479,
+      "hn_url": "https://news.ycombinator.com/item?id=47367463",
+      "published_at": "2026-03-13T17:51:34+00:00",
+      "title_ja": "John Carmackがオープンソースとアンチ派AI活動家について語る"
     },
     {
       "source": "hackernews",
       "title": "Show HN: Axe – A 12MB binary that replaces your AI framework",
       "url": "https://github.com/jrswab/axe",
-      "score": 219,
+      "score": 223,
       "comments": 122,
       "hn_url": "https://news.ycombinator.com/item?id=47350516",
       "published_at": "2026-03-12T13:49:12+00:00",
-      "title_ja": "Axe – AIフレームワークを置き換える12MBのバイナリ"
+      "title_ja": "Show HN: Axe – AIフレームワークを置き換える12MBのバイナリ"
     },
     {
       "source": "hackernews",
       "title": "Personal Computer by Perplexity",
       "url": "https://www.perplexity.ai/personal-computer-waitlist",
-      "score": 221,
+      "score": 223,
       "comments": 172,
       "hn_url": "https://news.ycombinator.com/item?id=47339223",
       "published_at": "2026-03-11T18:22:21+00:00",
-      "title_ja": "PerplexityによるパーソナルPC"
-    },
-    {
-      "source": "hackernews",
-      "title": "Executing programs inside transformers with exponentially faster inference",
-      "url": "https://www.percepta.ai/blog/can-llms-be-computers",
-      "score": 315,
-      "comments": 123,
-      "hn_url": "https://news.ycombinator.com/item?id=47348275",
-      "published_at": "2026-03-12T09:17:56+00:00",
-      "title_ja": "Transformerの内部でプログラムを実行し推論を指数関数的に高速化"
+      "title_ja": "PerplexityのパーソナルPC"
     },
     {
       "source": "hackernews",
       "title": "How we hacked McKinsey's AI platform",
       "url": "https://codewall.ai/blog/how-we-hacked-mckinseys-ai-platform",
-      "score": 500,
+      "score": 503,
       "comments": 195,
       "hn_url": "https://news.ycombinator.com/item?id=47333627",
       "published_at": "2026-03-11T09:59:03+00:00",
-      "title_ja": "McKinseyのAIプラットフォームをハックした方法"
+      "title_ja": "マッキンゼーのAIプラットフォームをハッキングした方法"
     },
     {
       "source": "hackernews",
       "title": "Innocent woman jailed after being misidentified using AI facial recognition",
       "url": "https://www.grandforksherald.com/news/north-dakota/ai-error-jails-innocent-grandmother-for-months-in-north-dakota-fraud-case",
-      "score": 745,
+      "score": 751,
       "comments": 384,
       "hn_url": "https://news.ycombinator.com/item?id=47356968",
       "published_at": "2026-03-12T20:55:51+00:00",
-      "title_ja": "AI顔認識による誤認逮捕で無実の女性が拘束される"
+      "title_ja": "AIの顔認証で誤認逮捕された無実の女性が収監される"
+    },
+    {
+      "source": "hackernews",
+      "title": "Executing programs inside transformers with exponentially faster inference",
+      "url": "https://www.percepta.ai/blog/can-llms-be-computers",
+      "score": 316,
+      "comments": 123,
+      "hn_url": "https://news.ycombinator.com/item?id=47348275",
+      "published_at": "2026-03-12T09:17:56+00:00",
+      "title_ja": "トランスフォーマー内でプログラムを実行し、推論を指数関数的に高速化する"
     },
     {
       "source": "hackernews",
       "title": "Launch HN: IonRouter (YC W26) – High-throughput, low-cost inference",
       "url": "https://ionrouter.io",
       "score": 70,
-      "comments": 37,
+      "comments": 36,
       "hn_url": "https://news.ycombinator.com/item?id=47355410",
       "published_at": "2026-03-12T18:52:36+00:00",
-      "title_ja": "IonRouter (YC W26) – 高スループット・低コストの推論"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: OneCLI – Vault for AI Agents in Rust",
-      "url": "https://github.com/onecli/onecli",
-      "score": 160,
-      "comments": 50,
-      "hn_url": "https://news.ycombinator.com/item?id=47353558",
-      "published_at": "2026-03-12T16:41:06+00:00",
-      "title_ja": "OneCLI – RustによるAIエージェント向けVault"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: Rudel – Claude Code Session Analytics",
-      "url": "https://github.com/obsessiondb/rudel",
-      "score": 143,
-      "comments": 84,
-      "hn_url": "https://news.ycombinator.com/item?id=47350416",
-      "published_at": "2026-03-12T13:41:12+00:00",
-      "title_ja": "Rudel – Claude Codeセッション分析ツール"
-    },
-    {
-      "source": "hackernews",
-      "title": "I was interviewed by an AI bot for a job",
-      "url": "https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job",
-      "score": 419,
-      "comments": 460,
-      "hn_url": "https://news.ycombinator.com/item?id=47339164",
-      "published_at": "2026-03-11T18:17:30+00:00",
-      "title_ja": "AIボットに就職面接を受けた"
-    },
-    {
-      "source": "hackernews",
-      "title": "Kotlin creator's new language: talk to LLMs in specs, not English",
-      "url": "https://codespeak.dev/",
-      "score": 313,
-      "comments": 280,
-      "hn_url": "https://news.ycombinator.com/item?id=47350931",
-      "published_at": "2026-03-12T14:22:43+00:00",
-      "title_ja": "Kotlin作者の新言語：英語ではなく仕様でLLMと対話する"
-    },
-    {
-      "source": "hackernews",
-      "title": "Claude now creates interactive charts, diagrams and visualizations",
-      "url": "https://claude.com/blog/claude-builds-visuals",
-      "score": 221,
-      "comments": 111,
-      "hn_url": "https://news.ycombinator.com/item?id=47352751",
-      "published_at": "2026-03-12T15:59:00+00:00",
-      "title_ja": "Claudeがインタラクティブなチャート・図・ビジュアライゼーションを生成できるようになった"
-    },
-    {
-      "source": "hackernews",
-      "title": "Show HN: Open-source browser for AI agents",
-      "url": "https://github.com/theredsix/agent-browser-protocol",
-      "score": 154,
-      "comments": 53,
-      "hn_url": "https://news.ycombinator.com/item?id=47336171",
-      "published_at": "2026-03-11T14:39:30+00:00",
-      "title_ja": "AIエージェント向けオープンソースブラウザ"
+      "title_ja": "Launch HN: IonRouter (YC W26) – 高スループット・低コストの推論"
     }
   ],
   "hatena": [
     {
       "source": "hatena",
-      "title": "【入門記事】ClaudeCodeの中級者になりたい人は集合してください - Qiita",
-      "url": "https://qiita.com/K5K/items/72cc4282819ace823524",
-      "description": "Deleted articles cannot be recovered. Draft of this article would be also deleted. Are you sure you want to delete this article? みなさん、ClaudeCodeを使っていますか？ (「バチバチ使いこなしているぜ！」という方は読んでも意味ないので、この記事は閉じてください！",
-      "bookmarks": 811,
-      "published_at": "2026-03-13T13:42:52Z"
+      "title": "Claude Code to Figmaを試して、UI/UXデザイナーの役割について考えたこと｜ミテ",
+      "url": "https://note.com/miteo/n/n91b288c75214",
+      "description": "Claude Codeが目まぐるしいですね…！ 今回はClaude Code to Figmaによるデザイン制作をしてみての感想や今後のUI/UXデザイナーの役割を考えてみたいと思います。 Claude Code to Figmaでやったこと今回試したフローはざっくりこんな感じです。 セットアップ：Claude CodeにFigma MCPを接続する デザインシステムの用意：...",
+      "bookmarks": 165,
+      "published_at": "2026-03-15T06:01:57Z"
+    },
+    {
+      "source": "hatena",
+      "title": "【Claude Code完全入門】買ったばかりのPCから、仕事を自動化するまで｜KAWAI",
+      "url": "https://note.com/kawaidesign/n/n79c7af8fff45",
+      "description": "ターミナルとは、PCに文字で指示を出す黒い画面のこと。 「黒い画面」と聞くとエンジニア向けに思えますが、やることは日本語を打ち込むだけです。 必要なものMac または Windows PC（Macを推奨） インターネット接続 Anthropicのアカウント 料金プラン（後述） 料金プランの選び方 Claude Codeを使うには、以下のどちら...",
+      "bookmarks": 67,
+      "published_at": "2026-03-15T02:08:12Z"
+    },
+    {
+      "source": "hatena",
+      "title": "GreenBoost──12GBのGPUで32GBのAIモデルを動かす挑戦｜情報の灯台",
+      "url": "https://note.com/joho_no_todai/n/nf0c0f3aed7a9",
+      "description": "VRAMが足りない。ローカルAIを触ったことがある人なら、一度はぶつかる壁だ。その壁に、一人の開発者がカーネルモジュールで穴を開けた。 「買い替えろ」以外の選択肢RTX 5070のVRAMは12GB。一方、ローカルで動かしたいLLMは膨らみ続けている。たとえばglm-4.7-flashのq8_0量子化モデルは31.8GB。どう計算しても収まらな...",
+      "bookmarks": 39,
+      "published_at": "2026-03-15T09:46:35Z"
     },
     {
       "source": "hatena",
       "title": "【2026年最新版】Claude Codeで行うべきセキュリティ設定 10選 - Qiita",
       "url": "https://qiita.com/miruky/items/51db293a7a7d0d277a5d",
       "description": "Deleted articles cannot be recovered. Draft of this article would be also deleted. Are you sure you want to delete this article?",
-      "bookmarks": 284,
+      "bookmarks": 548,
       "published_at": "2026-03-14T14:41:28Z"
+    },
+    {
+      "source": "hatena",
+      "title": "【入門記事】ClaudeCodeの中級者になりたい人は集合してください - Qiita",
+      "url": "https://qiita.com/K5K/items/72cc4282819ace823524",
+      "description": "Deleted articles cannot be recovered. Draft of this article would be also deleted. Are you sure you want to delete this article? みなさん、ClaudeCodeを使っていますか？ (「バチバチ使いこなしているぜ！」という方は読んでも意味ないので、この記事は閉じてください！",
+      "bookmarks": 1081,
+      "published_at": "2026-03-13T13:42:52Z"
+    },
+    {
+      "source": "hatena",
+      "title": "簡単コピペでClaude Codeに144種類のエージェントチームを作成 ── agency-agentsという40Kスター超のAIエージェント集を使いこなす - Qiita",
+      "url": "https://qiita.com/nogataka/items/5b5747f619e6eb745436",
+      "description": "agency-agentsとは何か agency-agentsは、144個のAIエージェント定義をMarkdownファイルで提供するOSSです。Claude Code、Copilot、Cursor、Gemini CLIなど10以上のツールに対応しています。 「開発者として機能して」のような汎用プロンプトとの違いは、専門領域ごとの知識体系が構造化されている点です。Frontend Deve...",
+      "bookmarks": 5,
+      "published_at": "2026-03-15T02:09:31Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Metaは従業員の最大20％の解雇を計画、AIコスト増大を受け",
+      "url": "https://gigazine.net/news/20260315-meta-plan-sweeping-layoffs-ai-costs-mount/",
+      "description": "FacebookやInstagramの運営元として知られるMetaが、AIへの投資を進めるために全従業員の20％に相当する1万5800人を解雇することを計画していると報じられました。 Exclusive: Meta planning sweeping layoffs as AI costs mount | Reuters https://www.reuters.com/business/world",
+      "bookmarks": 16,
+      "published_at": "2026-03-15T04:00:44Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Claude Code Skills 完全活用ガイド 2026 — 個人最適化からチーム展開まで - Qiita",
+      "url": "https://qiita.com/nogataka/items/ad9995fb1b3db7055740",
+      "description": "はじめに 2026年3月現在、Claude Code Skillsに関するはてなブックマークが爆発的に伸びている。クラスメソッドの入門記事が783users、Anthropic公式講座の解説が763users、チーム展開の課題に関する記事が74users——Skillsは今週最も注目された開発トピックである。 本記事では、公式ドキュメントや公開されている実践記...",
+      "bookmarks": 21,
+      "published_at": "2026-03-13T07:11:07Z"
+    },
+    {
+      "source": "hatena",
+      "title": "無料＆広告なしで音声をテキストに変換できるアプリ「Notely Voice」レビュー、ネット接続不要でスマホのみでWhisperを実行して長文メモを簡単に作れる",
+      "url": "https://gigazine.net/news/20260315-notely-voice-ai-transcription/",
+      "description": "「Notely Voice」はAndroidとiOSに対応した文字起こしメモアプリです。文字起こし処理はOpenAIの文字起こしAI「Whisper」を用いてローカルで実行される仕組みで、インターネットに接続せずともスマートフォン単体で処理を完結することが可能。長文メモをポチポチ入力する手間が省けて便利そうだったので、実際に使ってみ...",
+      "bookmarks": 15,
+      "published_at": "2026-03-15T11:04:50Z"
+    },
+    {
+      "source": "hatena",
+      "title": "CodeSpeak: Software Engineering with AI",
+      "url": "https://codespeak.dev/",
+      "description": "AI Language Built for Humans Shrink your codebase 5-10xCodeSpeak is a next-generation programming language powered by LLMs",
+      "bookmarks": 7,
+      "published_at": "2026-02-13T09:25:01Z"
+    },
+    {
+      "source": "hatena",
+      "title": "DataPilot/AItuber-Personas-Japan · Datasets at Hugging Face",
+      "url": "https://huggingface.co/datasets/DataPilot/AItuber-Personas-Japan",
+      "description": "**悲しい**：「…星の輝きが、曇ってしまったのだ」（目を伏せてケープの裾を握る）<br>**照れ**：「ボ、ボクは星の子であるから、そういう感情は…！（顔を赤くして視線を逸らす）貴様…いや、キミ、その言葉を撤回するのだ…」<br>**怒り**：「その行為、銀河法違反であるぞ」（真顔で指をさす。ただしすぐ「…冗談だ、許す...",
+      "bookmarks": 4,
+      "published_at": "2026-03-15T06:09:44Z"
     },
     {
       "source": "hatena",
       "title": "「いずれAIに使い潰される人」のためのAI批判ガイド » p2ptk[.]org",
       "url": "https://p2ptk.org/ai/5439",
       "description": "以下の文章は、2025年12月5日付けのコリイ・ドクトロウの「The Reverse Centaur’s Guide to Criticizing AI」という記事を翻訳したものである。 Pluralistic 昨夜、ワシントン大学計算神経科学センターが主催する「神経科学・AI・社会」講演シリーズで講演を行った。タイトルは「逆ケンタウロスのためのAI批判ガイド」で...",
-      "bookmarks": 167,
+      "bookmarks": 266,
       "published_at": "2026-03-14T19:04:38Z"
     },
     {
       "source": "hatena",
-      "title": "“AIの知ったかぶり”相次ぐ 営業被害やひぼう中傷のリスクも | NHKニュース",
-      "url": "https://news.web.nhk/newsweb/na/na-k10015074431000",
-      "description": "「AIさん？その記事の加藤諒は僕ではありません。事実無根です」 今年2月、俳優の加藤諒さんがXで投稿したのは「AI」による被害の告発でした。 検索サイトやSNSで調べものをするとき、AIが要約した…",
-      "bookmarks": 104,
-      "published_at": "2026-03-14T14:50:53Z"
-    },
-    {
-      "source": "hatena",
-      "title": "MacBookで動くし、ぶっ壊れ性能。いま最強のローカルLLM｢Qwen3.5｣を解説しちゃう",
-      "url": "https://www.gizmodo.jp/2026/03/qwen_3_5_9b_4b.html",
-      "description": "MacBookで動くし、ぶっ壊れ性能。いま最強のローカルLLM｢Qwen3.5｣を解説しちゃう2026.03.14 21:0035,475 かみやまたくみ とりあえずこれでいいやつ（令和最新版）。 2026年2月末〜3月上旬にかけてアリババがリリースしたオープンウェイトの大規模言語モデル（ローカルLLM）｢Qwen3.5｣シリーズが話題です。 実際触ってみた...",
-      "bookmarks": 335,
-      "published_at": "2026-03-14T12:12:44Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Coding Agent時代の開発ワークフローについてのまとめ",
-      "url": "https://nyosegawa.github.io/posts/coding-agent-workflow-2026/",
-      "description": "こんにちは！逆瀬川ちゃん (@gyakuse) です！ 今日はCoding Agent時代の開発ワークフローについて、みんながやっているものからわたしがやっている手法までまとめて紹介していきたいと思います。 前回の記事 Claude Code / Codex ユーザーのための誰でもわかるHarness Engineeringベストプラクティス では、LinterやHook...",
-      "bookmarks": 278,
-      "published_at": "2026-03-14T13:01:21Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Codeのエージェントチームを使うだけで大抵のことが出来るようになった",
-      "url": "https://zenn.dev/n314/articles/e06f189f093902",
-      "description": "エージェントチームでClaude Codeが賢くなった Claude CodeにAgent teamsが実装されてから、ずっと使っている。 複雑な要求も簡単な指示でこなせるようになってきた。 ドキュメント、コード、DBを網羅的に検索しながら実装案を考えても性能が落ちなくなった。 アップデートによってもっと良い方法が見つかったりするかも...",
-      "bookmarks": 355,
-      "published_at": "2026-03-13T07:06:52Z"
-    },
-    {
-      "source": "hatena",
-      "title": "MicroGPT explained interactively",
-      "url": "https://growingswe.com/blog/microgpt",
-      "description": "MicroGPT explained interactively Trying my best to visualize it. I'm a n00b at machine learning though Andrej Karpathy wrote a 200-line Python script that trains and runs a GPT from scratch, with no l",
-      "bookmarks": 48,
-      "published_at": "2026-03-14T11:18:38Z"
-    },
-    {
-      "source": "hatena",
-      "title": "たった200行の純粋なPythonコードだけで構成されGPTの学習と推論を実行できる「MicroGPT」をインタラクティブに解説",
-      "url": "https://gigazine.net/news/20260314-microgpt-explained-interactively/",
-      "description": "MicroGPTは作者のAndrej Karpathy氏によるとLLMをどこまで簡素化できるのかを10年にわたり追求した集大成とのことで、依存関係のない純粋なPythonで書かれた200行の単一ファイルのみであるにもかかわらずGPTに学習と推論を行わせることができます。動作原理についてはAndrej氏のブログで説明されていますが、より初心者...",
-      "bookmarks": 187,
-      "published_at": "2026-03-14T09:08:33Z"
+      "title": "【入門記事】ClaudeCodeの中級者になりたい人は集合してください - Qiita",
+      "url": "https://qiita.com/K5K/items/72cc4282819ace823524?utm_campaign=popular_items&utm_medium=twitter&utm_source=dlvr.it",
+      "description": "Deleted articles cannot be recovered. Draft of this article would be also deleted. Are you sure you want to delete this article? みなさん、ClaudeCodeを使っていますか？ (「バチバチ使いこなしているぜ！」という方は読んでも意味ないので、この記事は閉じてください！",
+      "bookmarks": 20,
+      "published_at": "2026-03-14T11:48:27Z"
     }
   ],
   "twitter": []
