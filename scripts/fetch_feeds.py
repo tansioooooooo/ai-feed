@@ -77,14 +77,30 @@ def is_ai_related(text: str) -> bool:
 def fetch_hn(min_score: int = 50) -> list[dict]:
     print("Fetching Hacker News...")
     base = "https://hacker-news.firebaseio.com/v0"
-    try:
-        top_ids = requests.get(f"{base}/topstories.json", timeout=10).json()[:200]
-    except Exception as e:
-        print(f"  HN fetch failed: {e}")
-        return []
 
+    # topstories / beststories / newstories から幅広く収集
+    all_ids: list[int] = []
+    for endpoint in ["topstories", "beststories", "newstories"]:
+        try:
+            ids = requests.get(f"{base}/{endpoint}.json", timeout=10).json()
+            all_ids.extend(ids[:200])
+            print(f"  {endpoint}: {min(len(ids), 200)} fetched")
+        except Exception as e:
+            print(f"  {endpoint} fetch failed: {e}")
+
+    # 重複IDを除去しつつ順序を維持
+    seen_ids: set[int] = set()
+    unique_ids: list[int] = []
+    for item_id in all_ids:
+        if item_id not in seen_ids:
+            seen_ids.add(item_id)
+            unique_ids.append(item_id)
+    print(f"  Unique story IDs: {len(unique_ids)}")
+
+    # newstories はスコアが低いので閾値を下げる
     items = []
-    for item_id in top_ids:
+    seen_urls: set[str] = set()
+    for item_id in unique_ids:
         try:
             item = requests.get(f"{base}/item/{item_id}.json", timeout=5).json()
             if not item or item.get("type") != "story":
@@ -93,7 +109,10 @@ def fetch_hn(min_score: int = 50) -> list[dict]:
                 continue
             title = item.get("title", "")
             url = item.get("url", f"https://news.ycombinator.com/item?id={item_id}")
+            if url in seen_urls:
+                continue
             if is_ai_related(title):
+                seen_urls.add(url)
                 items.append({
                     "source": "hackernews",
                     "title": title,
@@ -116,16 +135,39 @@ def fetch_hn(min_score: int = 50) -> list[dict]:
 # ─────────────────────────────────────────────
 # はてなブックマーク
 # ─────────────────────────────────────────────
-def fetch_hatena(feed_url: str) -> list[dict]:
-    print("Fetching Hatena Bookmark...")
-    try:
-        resp = requests.get(feed_url, timeout=10)
-        resp.raise_for_status()
-    except Exception as e:
-        print(f"  Hatena fetch failed: {e}")
-        return []
+HATENA_SEARCH_KEYWORDS = [
+    "AI", "LLM", "ChatGPT", "Claude", "生成AI", "機械学習",
+    "OpenAI", "Anthropic", "Gemini", "大規模言語モデル",
+]
 
-    root = ET.fromstring(resp.content)
+# 記事の日付フィルタに使う上限日数
+HATENA_MAX_AGE_DAYS = 3
+
+_DATE_FORMATS = [
+    "%Y-%m-%dT%H:%M:%S%z",
+    "%Y-%m-%dT%H:%M:%S.%f%z",
+    "%a, %d %b %Y %H:%M:%S %z",
+    "%a, %d %b %Y %H:%M:%S GMT",
+]
+
+
+def _is_recent(date_str: str, max_days: int = HATENA_MAX_AGE_DAYS) -> bool:
+    """日付文字列が直近 max_days 日以内なら True。パース失敗時は True（除外しない）。"""
+    if not date_str:
+        return True
+    for fmt in _DATE_FORMATS:
+        try:
+            dt = datetime.strptime(date_str.strip(), fmt)
+            age = datetime.now(timezone.utc) - dt.astimezone(timezone.utc)
+            return age.days <= max_days
+        except ValueError:
+            continue
+    return True
+
+
+def _parse_hatena_rss(content: bytes, require_ai_filter: bool) -> list[dict]:
+    """はてなRSS（RDF/RSS1.0）をパースしてアイテムリストを返す。"""
+    root = ET.fromstring(content)
     ns = {"rss": "http://purl.org/rss/1.0/",
           "dc": "http://purl.org/dc/elements/1.1/",
           "hatena": "http://www.hatena.ne.jp/info/xmlns#"}
@@ -142,18 +184,99 @@ def fetch_hatena(feed_url: str) -> list[dict]:
         except ValueError:
             bookmarks = 0
 
-        if is_ai_related(title + " " + desc):
-            items.append({
-                "source": "hatena",
-                "title": title,
-                "url": link,
-                "description": desc[:200] if desc else "",
-                "bookmarks": bookmarks,
-                "published_at": date,
-            })
+        if require_ai_filter and not is_ai_related(title + " " + desc):
+            continue
 
-    print(f"  Found {len(items)} AI-related Hatena stories")
+        items.append({
+            "source": "hatena",
+            "title": title,
+            "url": link,
+            "description": desc[:200] if desc else "",
+            "bookmarks": bookmarks,
+            "published_at": date,
+        })
     return items
+
+
+def _parse_hatena_atom(content: bytes) -> list[dict]:
+    """はてなAtomフィード（検索結果）をパースしてアイテムリストを返す。"""
+    root = ET.fromstring(content)
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
+
+    items = []
+    for entry in root.findall(".//atom:entry", ns):
+        title = entry.findtext("atom:title", "", ns)
+        link_el = entry.find("atom:link", ns)
+        link = link_el.get("href", "") if link_el is not None else ""
+        summary = entry.findtext("atom:summary", "", ns)
+        published = entry.findtext("atom:published", "", ns)
+        updated = entry.findtext("atom:updated", "", ns)
+
+        items.append({
+            "source": "hatena",
+            "title": title,
+            "url": link,
+            "description": summary[:200] if summary else "",
+            "bookmarks": 0,
+            "published_at": published or updated or "",
+        })
+    return items
+
+
+def fetch_hatena(feed_url: str, min_bookmarks: int = 20) -> list[dict]:
+    print("Fetching Hatena Bookmark...")
+    seen_urls: set[str] = set()
+    all_items: list[dict] = []
+
+    # 1. ホットエントリ（IT）— AI関連のみフィルタ（ホットエントリはブクマ閾値不要）
+    try:
+        resp = requests.get(feed_url, timeout=10)
+        resp.raise_for_status()
+        hotentry_items = _parse_hatena_rss(resp.content, require_ai_filter=True)
+        for item in hotentry_items:
+            if item["url"] not in seen_urls:
+                seen_urls.add(item["url"])
+                all_items.append(item)
+        print(f"  hotentry/it: {len(hotentry_items)} AI-related")
+    except Exception as e:
+        print(f"  hotentry/it fetch failed: {e}")
+
+    # 2. キーワード検索RSS — 検索自体がAI絞りなのでフィルタ不要
+    #    ブクマ数閾値でホットエントリ的な品質を担保
+    for keyword in HATENA_SEARCH_KEYWORDS:
+        search_url = (
+            f"https://b.hatena.ne.jp/search/text?q={keyword}"
+            f"&sort=recent&users={min_bookmarks}&mode=rss"
+        )
+        try:
+            resp = requests.get(search_url, timeout=10)
+            if resp.status_code != 200:
+                continue
+            # 検索結果はAtomかRSS1.0かレスポンスで異なる
+            content_str = resp.content[:100].decode("utf-8", errors="ignore")
+            if "<feed" in content_str:
+                search_items = _parse_hatena_atom(resp.content)
+            else:
+                search_items = _parse_hatena_rss(
+                    resp.content, require_ai_filter=False
+                )
+            new_count = 0
+            for item in search_items:
+                if item["url"] in seen_urls:
+                    continue
+                if not _is_recent(item.get("published_at", "")):
+                    continue
+                seen_urls.add(item["url"])
+                all_items.append(item)
+                new_count += 1
+            if new_count:
+                print(f"  search '{keyword}': +{new_count}")
+        except Exception as e:
+            print(f"  search '{keyword}' failed: {e}")
+        time.sleep(0.3)
+
+    print(f"  Total Hatena: {len(all_items)}")
+    return all_items
 
 
 # ─────────────────────────────────────────────
@@ -312,7 +435,10 @@ def main():
         print(f"Loaded {len(seen_urls)} URLs from past {DEDUP_DAYS} days for dedup")
 
     hn_items = fetch_hn(min_score=config.get("hn_min_score", 50))
-    hatena_items = fetch_hatena(config["hatena_feed"])
+    hatena_items = fetch_hatena(
+        config["hatena_feed"],
+        min_bookmarks=config.get("hatena_min_bookmarks", 20),
+    )
     twitter_items = fetch_twitter(
         config["twitter_accounts"],
         config["rsshub_instances"]

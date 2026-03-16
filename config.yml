@@ -30,4 +30,6 @@ rsshub_instances:
 hatena_feed: https://b.hatena.ne.jp/hotentry/it.rss
 hacker_news_api: https://hacker-news.firebaseio.com/v0
 # HNのAI関連キーワード（Claude側でさらに絞る）
-hn_min_score: 50
+hn_min_score: 30
+# はてな検索結果の最低ブクマ数（ホットエントリ的な体験にする）
+hatena_min_bookmarks: 20
