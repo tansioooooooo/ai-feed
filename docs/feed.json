@@ -1,31 +1,51 @@
 {
-  "updated_at": "2026-03-16T02:52:00.060602+00:00",
+  "updated_at": "2026-03-16T08:03:18.147683+00:00",
   "hackernews": [
     {
       "source": "hackernews",
-      "title": "LLMs can be exhausting",
-      "url": "https://tomjohnell.com/llms-can-be-absolutely-exhausting/",
-      "score": 94,
-      "comments": 74,
-      "hn_url": "https://news.ycombinator.com/item?id=47391803",
-      "published_at": "2026-03-15T20:56:21+00:00",
-      "title_ja": "LLMは疲弊させることがある"
+      "title": "How I write software with LLMs",
+      "url": "https://www.stavros.io/posts/how-i-write-software-with-llms/",
+      "score": 127,
+      "comments": 65,
+      "hn_url": "https://news.ycombinator.com/item?id=47394022",
+      "published_at": "2026-03-16T01:24:09+00:00",
+      "title_ja": "LLMを使ったソフトウェア開発の方法"
     },
     {
       "source": "hackernews",
       "title": "LLM Architecture Gallery",
       "url": "https://sebastianraschka.com/llm-architecture-gallery/",
-      "score": 265,
-      "comments": 20,
+      "score": 369,
+      "comments": 28,
       "hn_url": "https://news.ycombinator.com/item?id=47388676",
       "published_at": "2026-03-15T16:01:09+00:00",
       "title_ja": "LLMアーキテクチャギャラリー"
     },
     {
       "source": "hackernews",
+      "title": "LLMs can be exhausting",
+      "url": "https://tomjohnell.com/llms-can-be-absolutely-exhausting/",
+      "score": 187,
+      "comments": 139,
+      "hn_url": "https://news.ycombinator.com/item?id=47391803",
+      "published_at": "2026-03-15T20:56:21+00:00",
+      "title_ja": "LLMは本当に疲れる"
+    },
+    {
+      "source": "hackernews",
+      "title": "Tell HN: AI tools are making me lose interest in CS fundamentals",
+      "url": "https://news.ycombinator.com/item?id=47394291",
+      "score": 58,
+      "comments": 56,
+      "hn_url": "https://news.ycombinator.com/item?id=47394291",
+      "published_at": "2026-03-16T02:02:12+00:00",
+      "title_ja": "AIツールのせいでCS基礎への興味を失いつつある"
+    },
+    {
+      "source": "hackernews",
       "title": "Show HN: Free OpenAI API Access with ChatGPT Account",
       "url": "https://github.com/EvanZhouDev/openai-oauth",
-      "score": 36,
+      "score": 40,
       "comments": 16,
       "hn_url": "https://news.ycombinator.com/item?id=47392158",
       "published_at": "2026-03-15T21:29:52+00:00",
@@ -39,7 +59,7 @@
       "comments": 6,
       "hn_url": "https://news.ycombinator.com/item?id=47337028",
       "published_at": "2026-03-11T15:39:03+00:00",
-      "title_ja": "Ink – AIエージェントからMCPまたはSkillsでフルスタックアプリをデプロイ"
+      "title_ja": "Ink – AIエージェントからMCPまたはSkills経由でフルスタックアプリをデプロイ"
     },
     {
       "source": "hackernews",
@@ -49,7 +69,7 @@
       "comments": 26,
       "hn_url": "https://news.ycombinator.com/item?id=47378917",
       "published_at": "2026-03-14T17:24:24+00:00",
-      "title_ja": "AIの誤認識で無実の女性が6ヶ月間投獄、人生を壊された"
+      "title_ja": "AIの誤認識で無実の女性が6か月投獄、人生が台無しに"
     },
     {
       "source": "hackernews",
@@ -59,7 +79,7 @@
       "comments": 28,
       "hn_url": "https://news.ycombinator.com/item?id=47380203",
       "published_at": "2026-03-14T19:26:24+00:00",
-      "title_ja": "Claudetop – Claude CodeセッションのAI利用費をリアルタイムで確認するhtop風ツール"
+      "title_ja": "Claudetop – Claude Codeセッション用のhtop（AIコストをリアルタイム確認）"
     },
     {
       "source": "hackernews",
@@ -69,17 +89,17 @@
       "comments": 12,
       "hn_url": "https://news.ycombinator.com/item?id=47386868",
       "published_at": "2026-03-15T12:43:28+00:00",
-      "title_ja": "注意: Claude CodeのGoogle上位検索結果が悪意のあるものだった"
+      "title_ja": "注意：Claude Codeの上位Google検索結果が悪意あるサイト"
     },
     {
       "source": "hackernews",
       "title": "Tech companies defeat bill as AI drains local water supplies",
       "url": "https://www.theolympus.net/13531/",
       "score": 38,
-      "comments": 23,
+      "comments": 24,
       "hn_url": "https://news.ycombinator.com/item?id=47389858",
       "published_at": "2026-03-15T17:49:54+00:00",
-      "title_ja": "AIが地域の水資源を枯渇させる中、テック企業が関連法案を阻止"
+      "title_ja": "AIによる地域水資源枯渇の中、テック企業が規制法案を阻止"
     },
     {
       "source": "hackernews",
@@ -89,7 +109,7 @@
       "comments": 10,
       "hn_url": "https://news.ycombinator.com/item?id=47380290",
       "published_at": "2026-03-14T19:35:27+00:00",
-      "title_ja": "Claude 2026年3月利用プロモーション"
+      "title_ja": "Claude 2026年3月利用促進キャンペーン"
     },
     {
       "source": "hackernews",
@@ -99,88 +119,120 @@
       "comments": 0,
       "hn_url": "https://news.ycombinator.com/item?id=47376907",
       "published_at": "2026-03-14T14:12:47+00:00",
-      "title_ja": "テック企業幹部がAIとChatGPTで余命わずかな愛犬のがんワクチンを開発"
+      "title_ja": "テック企業幹部がAIとChatGPTを使って瀕死の愛犬のがんワクチンを作成"
     }
   ],
   "hatena": [
     {
       "source": "hatena",
-      "title": "課題ベースで学ぶClaude Code便利機能",
-      "url": "https://zenn.dev/hsaki/articles/why-claude-code-function",
-      "description": "この記事について 「とりあえずClaude Codeを入れてみたけど、なんか使いこなせていない気がする」「あの機能の存在は知っているけど、自分には関係ないと思っていた」という方はいませんか？ 本記事では、Claude Codeを使いはじめた人が日々の作業の中で感じるよくある「つまずき」や「不満」を出発点に、それを解消す...",
-      "bookmarks": 80,
-      "published_at": "2026-03-15T13:52:07Z"
-    },
-    {
-      "source": "hatena",
       "title": "コードを書くのをやめた。Claude Codeに月商300万のSaaSの全コードを書かせ、完全ソロ運用しているという話。",
       "url": "https://zenn.dev/nnze/articles/e3f648e335a947",
       "description": "コードを書くのをやめた。Claude Codeに月商300万のSaaSの全コードを書かせ、完全ソロ運用しているという話。 私は現在、B2B向けのニッチな自動化APIミドルウェアをSaaSとして完全な個人で運用し、広告費ゼロ・従業員ゼロで毎月およそ300万円ほどのMRR、定額の月次収益を生み出している。しかも実を言うと、この半年間、...",
-      "bookmarks": 17,
+      "bookmarks": 396,
       "published_at": "2026-03-15T04:55:45Z"
     },
     {
       "source": "hatena",
-      "title": "AI建設ソフトの燈、技術者の4割が東京大学卒　創業5年で価値1000億円 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUC039420T00C26A3000000/",
-      "description": "人工知能（AI）開発の燈（あかり、東京・千代田）は、建設や製造、物流など業界に特化したAIソフトウエアを手がける。野呂侑希社長（26）は東京大学在学時に起業し、200人ほどいるエンジニアの約4割が東大出身だ。1月には三菱電機と提携し、AIでロボットや機械を動かす「フィジカルAI」に本格参入する。JR御茶ノ水駅のす...",
-      "bookmarks": 20,
-      "published_at": "2026-03-15T23:36:07Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Code SkillsでRailsアップグレードを仕組み化した話 - freee Developers Hub",
-      "url": "https://developers.freee.co.jp/entry/rails-upgrade-by-claude-skills",
-      "description": "はじめに こんにちは。freee請求書チームでエンジニアをやっているnuresenです。 この記事では、Rails 7系から8.1へのアップデートを Claude Code の Skills を使って実施した記録を紹介します。 みなさん、Railsのアップデートはできていますか？ Railsは定期的に新しいバージョンがリリースされますが、大規模なプロダ...",
-      "bookmarks": 13,
-      "published_at": "2026-03-16T02:01:15Z"
-    },
-    {
-      "source": "hatena",
-      "title": "ClaudeCodeでSimulinkを操れるか",
-      "url": "https://zenn.dev/spargel/articles/20260313_simulink_claudedcode",
-      "description": "はじめに claude codeをはじめとした生成AIでプログラミングをしているというのが方々から聞こえてきますが，Simulinkはいわゆるビジュアルプログラミングであるため，無理だろうと決めつけていました． しかし，ふと考えると，Simulinkの作成ってmatlabのコマンドからできるのでclaude codeでも作成できるのではないか...",
-      "bookmarks": 36,
-      "published_at": "2026-03-14T13:54:18Z"
-    },
-    {
-      "source": "hatena",
-      "title": "OSSで世界と戦うには。ccusageの舞台裏 - Findy Media",
-      "url": "https://findy-code.io/media/articles/event-ryoppippi-260226",
-      "description": "本記事では、2026年2月26日に開催されたオンラインイベント「技術選定を突き詰める Online Conference ――逆境を乗り越える意思決定プロセス」内のセッション「OSSで世界と戦うには - ccusageの舞台裏」の内容をお届けします。 同セッションでは、Claude Codeの利用状況を可視化するCLIツール「ccusage」を題材に、個人開...",
-      "bookmarks": 18,
-      "published_at": "2026-03-15T23:35:34Z"
+      "title": "課題ベースで学ぶClaude Code便利機能",
+      "url": "https://zenn.dev/hsaki/articles/why-claude-code-function",
+      "description": "この記事について 「とりあえずClaude Codeを入れてみたけど、なんか使いこなせていない気がする」「あの機能の存在は知っているけど、自分には関係ないと思っていた」という方はいませんか？ 本記事では、Claude Codeを使いはじめた人が日々の作業の中で感じるよくある「つまずき」や「不満」を出発点に、それを解消す...",
+      "bookmarks": 175,
+      "published_at": "2026-03-15T13:52:07Z"
     },
     {
       "source": "hatena",
       "title": "Claude Code / CodexでKaggle金メダルを取った話",
       "url": "https://zenn.dev/chiman/articles/b233cc808d6af3",
       "description": "TL;DR 実装と分析をAIに任せることで、実験量が桁違いに増えた（5-Fold CV合計1,515回） 実装から解放された分、人間はアイディアとデータ観察に集中できた ただし、スコアを押し上げたアイディアのほとんどは人間発。AIの提案の打率は低かった AIに素早く実験を回させるための環境・構成づくりも重要だった この構図はK...",
-      "bookmarks": 5,
+      "bookmarks": 61,
       "published_at": "2026-03-16T01:43:18Z"
     },
     {
       "source": "hatena",
-      "title": "GitHub - msitarzewski/agency-agents: A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven delivera",
-      "url": "https://github.com/msitarzewski/agency-agents",
-      "description": "You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reloa",
+      "title": "Claude Code SkillsでRailsアップグレードを仕組み化した話 - freee Developers Hub",
+      "url": "https://developers.freee.co.jp/entry/rails-upgrade-by-claude-skills",
+      "description": "はじめに こんにちは。freee請求書チームでエンジニアをやっているnuresenです。 この記事では、Rails 7系から8.1へのアップデートを Claude Code の Skills を使って実施した記録を紹介します。 みなさん、Railsのアップデートはできていますか？ Railsは定期的に新しいバージョンがリリースされますが、大規模なプロダ...",
+      "bookmarks": 52,
+      "published_at": "2026-03-16T02:01:15Z"
+    },
+    {
+      "source": "hatena",
+      "title": "自宅で動くLLMをどこからでも呼び出せる「LM Link」、Tailscale×LM Studio連携で実現 - すまほん!!",
+      "url": "https://smhn.info/202603-lm-link-remote-llm",
+      "description": "すまほん!! » AI・人工知能 » 自宅で動くLLMをどこからでも呼び出せる「LM Link」、Tailscale×LM Studio連携で実現 自宅のGPUマシンがどこでも使えるAIサーバーに？ VPNサービスのTailscaleとローカルLLM実行アプリのLM Studioが連携し、新機能「LM Link」を発表しました。Tailscaleの公式ブログが2月25日に伝えています...",
+      "bookmarks": 18,
+      "published_at": "2026-03-16T02:08:31Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Claude、4月1日から消費税10%を徴収開始",
+      "url": "https://www.watch.impress.co.jp/docs/news/2093545.html",
+      "description": "",
+      "bookmarks": 26,
+      "published_at": "2026-03-16T01:47:19Z"
+    },
+    {
+      "source": "hatena",
+      "title": "AI建設ソフトの燈、技術者の4割が東京大学卒　創業5年で価値1000億円 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUC039420T00C26A3000000/",
+      "description": "人工知能（AI）開発の燈（あかり、東京・千代田）は、建設や製造、物流など業界に特化したAIソフトウエアを手がける。野呂侑希社長（26）は東京大学在学時に起業し、200人ほどいるエンジニアの約4割が東大出身だ。1月には三菱電機と提携し、AIでロボットや機械を動かす「フィジカルAI」に本格参入する。JR御茶ノ水駅のす...",
+      "bookmarks": 35,
+      "published_at": "2026-03-15T23:36:07Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Claude CodeのReact習熟度を測る",
+      "url": "https://zenn.dev/uhyo/articles/react-profession-bench-1",
+      "description": "皆さんこんにちは。コーディングエージェントの発展により、プログラムの多くの部分をAiが書いてくれるようになりました。 しかし、筆者が得意とするReactに関しては、動くものを作ることはできるにせよ、人間が十分に指図しなければ質のいいコードが書けないことも多いと感じています。 そこで、今回は、Claude CodeのR...",
       "bookmarks": 13,
-      "published_at": "2026-03-09T01:32:28Z"
+      "published_at": "2026-03-15T22:53:38Z"
+    },
+    {
+      "source": "hatena",
+      "title": "NVIDIAのVRAM制限を打破する「GreenBoost」が登場：システムRAMをCUDAメモリ化するLinuxモジュールの示す威力とは | XenoSpectrum",
+      "url": "https://xenospectrum.com/nvidia-greenboost-vram-expansion/",
+      "description": "NVIDIAのVRAM制限を打破する「GreenBoost」が登場：システムRAMをCUDAメモリ化するLinuxモジュールの示す威力とは 近年、オープンソースの大規模言語モデル（LLM）の性能向上は著しく、数百億から数千億パラメータクラスのモデルが次々と公開されている。しかし、これらの高度な推論能力をローカル環境で活用しようとす...",
+      "bookmarks": 6,
+      "published_at": "2026-03-15T23:53:16Z"
+    },
+    {
+      "source": "hatena",
+      "title": "「AIエージェントスマホ」熱狂から落胆までの72時間。AIによる操作を阻んだ“人間用”UIと広告 | レバテックラボ（レバテックLAB）",
+      "url": "https://levtech.jp/media/article/column/detail_828/",
+      "description": "「AIエージェントスマホ」熱狂から落胆までの72時間。AIによる操作を阻んだ“人間用”UIと広告 2026年3月16日 ITジャーナリスト 牧野 武文（まきの たけふみ） 生活とテクノロジー、ビジネスの関係を考えるITジャーナリスト、中国テックウォッチャー。著書に「Googleの正体」（マイコミ新書）、「任天堂ノスタルジー・横井...",
+      "bookmarks": 46,
+      "published_at": "2026-03-16T01:19:15Z"
+    },
+    {
+      "source": "hatena",
+      "title": "スマホもPCも「AIが先に動く」時代へ　Galaxy S26、iPhone 17e、Copilot Cowork【西田宗千佳のイマトミライ】",
+      "url": "https://www.watch.impress.co.jp/docs/series/nishida/2093542.html",
+      "description": "",
+      "bookmarks": 22,
+      "published_at": "2026-03-15T23:47:24Z"
     },
     {
       "source": "hatena",
       "title": "我々の知るコンピュータープログラミングの終焉、そしてその後コーダーはどうなるか - YAMDAS現更新履歴",
       "url": "https://yamdas.hatenablog.com/entry/20260316/coding-after-coders",
       "description": "Coding After Coders: The End of Computer Programming as We Know It - The New York Times 『Coders（コーダーズ）』（asin:4822289796）の邦訳があるテクノロジージャーナリストのクライブ・トンプソンが、いよいよ現実的になってきた「人間によるプログラミングの終焉」の話題について長文の取材記事を Ne",
-      "bookmarks": 89,
+      "bookmarks": 219,
       "published_at": "2026-03-15T22:50:57Z"
+    },
+    {
+      "source": "hatena",
+      "title": "AIインタフェースの設計 (Japanese Edition)",
+      "url": "https://www.oreilly.com/library/view/aiintahuesunoshe-ji-japanese-edition/0642572353148/",
+      "description": "",
+      "bookmarks": 25,
+      "published_at": "2026-03-15T21:25:01Z"
     },
     {
       "source": "hatena",
       "title": "無料でローカル動作するAI顧客管理ツール「DenchClaw」は自然言語でデータベースを扱えて見込み客への連絡も自動化可能",
       "url": "https://gigazine.net/news/20260315-denchclaw-local-ai-crm/",
       "description": "「顧客データはクラウドに預けたくないが、AIで整理や営業作業は自動化したい」というニーズを狙ったローカル動作型のAI CRM(顧客管理ツール)「DenchClaw」が登場しました。DenchClawはOpenClawをベースに作られた無料のAI CRMで、自然言語によるデータベース操作やLinkedIn・メールを使った見込み客への連絡の自動化に...",
-      "bookmarks": 26,
+      "bookmarks": 29,
       "published_at": "2026-03-15T13:51:39Z"
     },
     {
@@ -188,7 +240,7 @@
       "title": "世界100以上の言語のあらゆる報道やSNSを収集・分析している「GDELTプロジェクト」、AIで25年分のテレビニュース翻訳などの実験も公開",
       "url": "https://gigazine.net/news/20260315-gdelt-project/",
       "description": "「GDELTプロジェクト」は世界各国の100以上の言語で発信される放送・新聞・ウェブニュースを常に収集し、アーカイブとして記録しています。地球上のあらゆる人々、組織、場所、テーマ、ニュースソース、イベントを単一の巨大なネットワークに結び付けることで、世界中で何が起こっているのか、その背景に何があるのか、...",
-      "bookmarks": 20,
+      "bookmarks": 22,
       "published_at": "2026-03-15T07:40:28Z"
     },
     {
@@ -196,7 +248,7 @@
       "title": "生成AIでパワポを作る方法一覧【2026年3月版】",
       "url": "https://zenn.dev/ncukondo/articles/ai-generate-pptx-methods-2026",
       "description": "はじめに 生成AIを使ったスライド作成ツールの紹介記事は増えていますが、その多くはPDFやHTML出力が中心です。しかし実際の仕事では、上司や共著者が追加編集する、提出物としてパワポ形式(PPTX)が指定される、といった理由からPPTXでの出力が必要な場面が少なくありません。 本記事では、2026年3月時点で利用可能な方...",
-      "bookmarks": 476,
+      "bookmarks": 531,
       "published_at": "2026-03-15T04:43:49Z"
     },
     {
@@ -204,7 +256,7 @@
       "title": "AI時代の文学授業論─理系の大学生に文学を読ませてわかった「読書の意義」 | 生産性や効率性の外にある「読む」という営為",
       "url": "https://courrier.jp/news/archives/437279/",
       "description": "「本が読めなくなった」といわれる現代の若者だが、本当にそうなのだろうか？　米国の大学で文学を教えている筆者が、理系の大学生に難しい長編小説を読ませたところ、思いがけないことが起こった。テクノロジーに注意力を奪われ続ける現代で、読書を通じて私たちが本当に得ているものとは──。 学生たちを疑ったことを後...",
-      "bookmarks": 20,
+      "bookmarks": 26,
       "published_at": "2026-03-15T01:11:58Z"
     },
     {
@@ -212,15 +264,31 @@
       "title": "“AIの知ったかぶり”相次ぐ 営業被害やひぼう中傷のリスクも | NHKニュース",
       "url": "https://news.web.nhk/newsweb/na/na-k10015074431000",
       "description": "「AIさん？その記事の加藤諒は僕ではありません。事実無根です」 今年2月、俳優の加藤諒さんがXで投稿したのは「AI」による被害の告発でした。 検索サイトやSNSで調べものをするとき、AIが要約した…",
-      "bookmarks": 180,
+      "bookmarks": 181,
       "published_at": "2026-03-14T14:50:53Z"
+    },
+    {
+      "source": "hatena",
+      "title": "ClaudeCodeでSimulinkを操れるか",
+      "url": "https://zenn.dev/spargel/articles/20260313_simulink_claudedcode",
+      "description": "はじめに claude codeをはじめとした生成AIでプログラミングをしているというのが方々から聞こえてきますが，Simulinkはいわゆるビジュアルプログラミングであるため，無理だろうと決めつけていました． しかし，ふと考えると，Simulinkの作成ってmatlabのコマンドからできるのでclaude codeでも作成できるのではないか...",
+      "bookmarks": 43,
+      "published_at": "2026-03-14T13:54:18Z"
+    },
+    {
+      "source": "hatena",
+      "title": "乱立するAIツール、ぶっちゃけ今どれ使ってる？── 2026年3月・最前線のAIツール活用術と「マルチエージェント時代」の幕開け｜尾原 和啓 (アフターデジタル/プロセスエコノミーなど著述：おばら かずひろ）",
+      "url": "https://note.com/kazobara/n/n4c65810ef525",
+      "description": "乱立するAIツール、ぶっちゃけ今どれ使ってる？── 2026年3月・最前線のAIツール活用術と「マルチエージェント時代」の幕開け 最新AI実践につよい いけとも さんと技術史と戦略オタクの尾原のカケザンが楽しく毎週水曜朝（できたら）更新でやってます。 AI依頼で超多忙な いけともさんと 多動な尾原なのでお互い外出先か...",
+      "bookmarks": 26,
+      "published_at": "2026-03-14T12:12:39Z"
     },
     {
       "source": "hatena",
       "title": "メールやサーバ権限などを与えた自律AIによる実環境2週間の大暴走実録、「情報漏洩」「DoS状態」「リソース大量消費」など11の失態発覚。生成AI技術5つを解説（生成AIウィークリー） | テクノエッジ TechnoEdge",
       "url": "https://www.techno-edge.net/article/2026/03/14/4925.html",
       "description": "この1週間の気になる生成AI技術・研究をいくつかピックアップして解説する今回の「生成AIウィークリー」（第135回）は、AIの学習時間を2倍以上高速化させる強化学習システム「AReaL」や、1枚のH100で長尺動画を生成する140億パラメータの動画生成AI「Helios」を取り上げます。 またBlack Forest Labsが発表した効率的なA...",
-      "bookmarks": 42,
+      "bookmarks": 44,
       "published_at": "2026-03-14T03:30:38Z"
     },
     {
@@ -228,7 +296,7 @@
       "title": "AI怪談ジェネレーター",
       "url": "https://kaidan.ai.yami.net/",
       "description": "言葉を入力すると、AIがあなただけの怪談を紡ぎ出します。 目を閉じることでしか聴けない怪談ジェネレーター。 キーワードを入力します",
-      "bookmarks": 108,
+      "bookmarks": 112,
       "published_at": "2026-03-14T02:25:20Z"
     },
     {
@@ -236,56 +304,16 @@
       "title": "AIについて考えるべきは「AIをどう使うか？」ではなく「AIを使うべき場面かどうか」という点だとの主張",
       "url": "https://gigazine.net/news/20260314-using-ai-responsibly-critical-literacy/",
       "description": "AIに関するアドバイスや教材のほとんどは、より良いアウトプットを高速で得るための方法を教えています。しかし、AIを単なる生産性向上ツールとして扱うことは本質を見失っているとして、イギリスのエディンバラ・ネピア大学で創造教育学教授を務めるサム・イリングワース氏が、本当に重要なAIリテラシーについて解説し...",
-      "bookmarks": 23,
+      "bookmarks": 24,
       "published_at": "2026-03-14T02:22:51Z"
-    },
-    {
-      "source": "hatena",
-      "title": "｢人間を雇うな｣　24歳AIエージェント革命児が宣告する無人営業時代 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUC025OE0S6A300C2000000/",
-      "description": "季節外れの暖かな日差しが降り注ぐ2026年1月の米サンフランシスコ。高台の3階建てタウンハウスの玄関を開けると、階段の上から声が聞こえてきた。「ウエルカム、そのまま上がってきて！」上にいたのはすらりと背は高いけれど顔はまだあどけない金髪の青年。23年に営業AIエージェントのスタートアップ「アーティザン」を...",
-      "bookmarks": 31,
-      "published_at": "2026-03-14T00:22:58Z"
-    },
-    {
-      "source": "hatena",
-      "title": "AIボットの猛攻でソーシャルニュースサイトDiggが再起動2カ月後に「ハードリセット」",
-      "url": "https://www.itmedia.co.jp/news/articles/2603/14/news025.html",
-      "description": "米ソーシャルニュースサイトDiggは3月13日（現地時間）、サイトをいったん停止すると発表した。1月に一般公開したオープンβからわずか約2カ月での終了となる。原因は、AIによるボットや自動化アカウントの大量流入という。 Diggは2004年にケビン・ローズ氏らが創業したリンク共有型のニュースサイトで、ユーザーが投稿し...",
-      "bookmarks": 23,
-      "published_at": "2026-03-13T23:47:51Z"
-    },
-    {
-      "source": "hatena",
-      "title": "「ジブリ風」も生成NG　著作権守る技術、ソニーGが開発 - 日本経済新聞",
-      "url": "https://www.nikkei.com/article/DGXZQOUC1125A0R10C26A3000000/",
-      "description": "ソニーグループの人工知能（AI）研究開発部門であるソニーAIが、生成AIがつくる音楽や映像の著作権侵害を防ぎ、創作者が対価を得られる仕組みにつながる技術を開発した。まだ研究開発段階のため「社内の事業への応用は未定」（ソニーG）としている。ソニーGの機械学習分野のDistinguished Engineer、光藤祐基氏は「コン...",
-      "bookmarks": 58,
-      "published_at": "2026-03-13T23:46:31Z"
     },
     {
       "source": "hatena",
       "title": "OpenClawライクなソフトをまとめてみた",
       "url": "https://zenn.dev/karaage0703/articles/0e2e3484169db2",
       "description": "OpenClawが310K starsを超え、AIパーソナルアシスタント界隈が盛り上がっています。OpenClaw以外にも「Claw系」と呼ばれる派生プロジェクトや、独立系のCLIコーディングエージェントが数多く登場しています。 この記事では、OpenClaw的なソフト（パーソナルAIアシスタント＆CLIコーディングエージェント）を個人的にまと...",
-      "bookmarks": 78,
+      "bookmarks": 79,
       "published_at": "2026-03-13T14:21:06Z"
-    },
-    {
-      "source": "hatena",
-      "title": "AIでオープンソースプロジェクトをコピーせずゼロから再構築することでライセンスを独立させてしまうサービス「MALUS」",
-      "url": "https://gigazine.net/news/20260313-malus-open-source/",
-      "description": "オープンソースソフトウェアの中には「ソースコードをコピーして別のソフトウェアを作った場合、そのソフトウェアもオープンソースとしなければならない」というコピーレフト条項を含むライセンスを採用しているものが多くあります。しかし、AIの普及によって「ソースコードをコピーせずとも『ソフトウェアの動作』を指...",
-      "bookmarks": 59,
-      "published_at": "2026-03-13T13:37:50Z"
-    },
-    {
-      "source": "hatena",
-      "title": "ゲームを作る体験を作る - ABAの日誌",
-      "url": "https://aba.hatenablog.com/entry/2026/03/13/184635",
-      "description": "「ゲームは楽しいが、ゲーム作りはもっと楽しい」という話がある。遊ぶ側にいた人間が作る側に回り、ルールや手触りや演出を自分で組み立てることに別種の面白さを見出す。ゲームは完成品として面白いが、ゲーム作りはその面白さを自分で組み立てるという、さらに深い楽しさがある。 前の記事で、AIエージェントにGodot...",
-      "bookmarks": 61,
-      "published_at": "2026-03-13T09:59:06Z"
     },
     {
       "source": "hatena",
@@ -300,7 +328,7 @@
       "title": "gpt-ossの推論を6倍速に。Thinking OFF設定と、Ollamaで効かない理由 - Qiita",
       "url": "https://qiita.com/ntaka329/items/35f156dbe526121e66f5?utm_campaign=popular_items&utm_medium=twitter&utm_source=dlvr.it",
       "description": "はじめに GMOコネクトの永田です。 ローカルLLMの推論をもっと速くしたい！ LLMを利用するタスクによっては1件あたり数十秒〜かかり、処理件数が多いとかなりの処理時間になります。 gpt-ossの場合、推論時間の8割はreasoning tokens、つまりモデルが内部で生成する思考過程です。これをOFFにすればタスクによっては12秒...",
-      "bookmarks": 47,
+      "bookmarks": 46,
       "published_at": "2026-03-12T15:30:04Z"
     },
     {
@@ -318,14 +346,6 @@
       "description": "自分のPCの中で、自分専用のAIが勝手に環境を構築し、自らコードを書き換えて進化していく。 そんなSF映画のような体験が、いま現実になろうとしています。 今回は、ローカルLLM環境を全自動で構築し、自律的に成長する驚異のAIエージェント「Mubo（無貌）」についてご紹介します。 1. 魔法のコマンド一つで「完全自動セ...",
       "bookmarks": 27,
       "published_at": "2026-03-12T09:24:28Z"
-    },
-    {
-      "source": "hatena",
-      "title": "【AIエージェントの内部構造】長時間タスクを完遂させる「エージェントハーネス」の概要と設計・実装",
-      "url": "https://codezine.jp/article/detail/23340",
-      "description": "ChatGPTなどの大規模言語モデル（LLM）の進化により、AI技術は私たちの生活やビジネスに不可欠な存在となりつつあります。なかでも、人間のように自律的にタスクを遂行し、ビジネス課題の解決を可能にする「AIエージェント」が近年、大きな注目を集めています。本連載では、AIエージェントの基本概念から開発実践知、そ...",
-      "bookmarks": 91,
-      "published_at": "2026-03-12T05:21:13Z"
     },
     {
       "source": "hatena",
@@ -353,10 +373,26 @@
     },
     {
       "source": "hatena",
+      "title": "OSSで世界と戦うには。ccusageの舞台裏 - Findy Media",
+      "url": "https://findy-code.io/media/articles/event-ryoppippi-260226",
+      "description": "本記事では、2026年2月26日に開催されたオンラインイベント「技術選定を突き詰める Online Conference ――逆境を乗り越える意思決定プロセス」内のセッション「OSSで世界と戦うには - ccusageの舞台裏」の内容をお届けします。 同セッションでは、Claude Codeの利用状況を可視化するCLIツール「ccusage」を題材に、個人開...",
+      "bookmarks": 25,
+      "published_at": "2026-03-15T23:35:34Z"
+    },
+    {
+      "source": "hatena",
+      "title": "AIでオープンソースプロジェクトをコピーせずゼロから再構築することでライセンスを独立させてしまうサービス「MALUS」",
+      "url": "https://gigazine.net/news/20260313-malus-open-source/",
+      "description": "オープンソースソフトウェアの中には「ソースコードをコピーして別のソフトウェアを作った場合、そのソフトウェアもオープンソースとしなければならない」というコピーレフト条項を含むライセンスを採用しているものが多くあります。しかし、AIの普及によって「ソースコードをコピーせずとも『ソフトウェアの動作』を指...",
+      "bookmarks": 60,
+      "published_at": "2026-03-13T13:37:50Z"
+    },
+    {
+      "source": "hatena",
       "title": "ハーネスエンジニアリングを自分のプロジェクトで実装してみた - Qiita",
       "url": "https://qiita.com/nogataka/items/a8306067788798975fa7",
       "description": "ポイントは「強制力」の違いです。プロンプトでいくら「anyを使うな」と書いても、エージェントは忘れます。一方、リンターでブロックすれば物理的に使えません。 Stripe Minionsチームの言葉が本質を突いています。 優れた開発者インフラを構築せよ。エージェントは自動的にその恩恵を受ける。 エージェント専用のイン...",
-      "bookmarks": 192,
+      "bookmarks": 193,
       "published_at": "2026-03-13T05:38:21Z"
     },
     {
@@ -364,7 +400,7 @@
       "title": "仕様駆動開発はやめた方がええ",
       "url": "https://zenn.dev/simossyi/articles/309e8cd88a90c3",
       "description": "前回記事から1ヶ月くらい経ったのでその間に得られた知見からの所見を述べる。 やっぱり実装に関するドキュメントはいらん。仕様は全てコードにある。コードをSSoT(Single Source of Truth)とすべきだ。ドキュメントとコードの二重管理はコストが大きすぎる。特にドキュメント側の管理コストが大きく、どれだけagentにド...",
-      "bookmarks": 276,
+      "bookmarks": 279,
       "published_at": "2026-03-13T03:03:17Z"
     },
     {
@@ -380,56 +416,16 @@
       "title": "「わずか8GBのメモリ」MacBook Neo上に構築した完全オリジナルAIエージェントをさらに進化させる。音声対話、MVビジュアライザーを実装した（CloseBox） | テクノエッジ TechnoEdge",
       "url": "https://www.techno-edge.net/article/2026/03/13/4920.html",
       "description": "MacBook Neo上に構築したエージェンティックAI「mazzaineo」、さらに進化しています。夜中に充電して起きたら持ち出し、バッテリー駆動で使い続けております。かわいいよシトラスNeo。 ▲わかりやすいようにiBook G4と大きさ比較 それをさらに愛せるようにするため、音声機能を追加しました。 ボイスクローンによる音声合...",
-      "bookmarks": 69,
+      "bookmarks": 105,
       "published_at": "2026-03-13T01:24:07Z"
     },
     {
       "source": "hatena",
-      "title": "Claude CodeやCodexのスキルの管理を楽にするツール「faceted-prompting」",
-      "url": "https://zenn.dev/nrs/articles/88f158aca0505b",
-      "description": "はじめに プロンプトが長く、そして増えてくると、どんどんと保守性が下がってきます。 役割、ルール、知識、作業指示、出力形式。 最初はひとつのファイルに入っていても困りません。 ところが運用を続けると、一部だけ差し替えたい、同じルールを別のスキルでも使いたい、Claude Code と Codex の両方で使いたい、とい...",
-      "bookmarks": 103,
-      "published_at": "2026-03-12T15:42:28Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Codeのセッション履歴が30日で消えると知って9999日に変えた話｜cute_agapan9087",
-      "url": "https://note.com/cute_agapan9087/n/nf54c17fc5f43",
-      "description": "Claude Code使ってると「あれ、前のセッションどこ行った？」ってなることありませんか？ 実はClaude Code、デフォルトだと30日間非アクティブなセッションは起動時に自動削除されるんですよね。知らなかった…。 ってことで、設定を調べて9999日（約27年）に変更してみました。 💡 保存期間は2種類ある ここがちょっとや...",
-      "bookmarks": 299,
-      "published_at": "2026-03-12T14:12:31Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Code 2026年 最新アップデート",
-      "url": "https://speakerdeck.com/oikon48/claude-code-0312",
-      "description": "Claude Code Meetup Japan #3 (Claude Code祭り!) : https://aid.connpass.com/event/384117/ X: https://x.com/oikon48",
-      "bookmarks": 231,
-      "published_at": "2026-03-12T13:48:58Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Codeログ基盤の構築",
-      "url": "https://speakerdeck.com/giginet/claude-code-logging",
-      "description": "Claude Code Meetup Japan #3 (Claude Code祭り!) - connpass https://aid.connpass.com/event/384117/",
-      "bookmarks": 85,
-      "published_at": "2026-03-12T12:48:49Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude Code のコード品質がばらつくので AI に品質保証させる仕組みを作った話 / A story about building a mechanism to have AI ensure quality, because the code quality from Claude Code was inconsistent",
-      "url": "https://speakerdeck.com/nrslib/a-story-about-building-a-mechanism-to-have-ai-ensure-quality-because-the-code-quality-from-claude-code-was-inconsistent",
-      "description": "AI エージェントハーネスの一形態である AI コーディングエージェントのオーケストレーションツールを作った話をしています。 TAKT： https://github.com/nrslib/takt Faceted-Prompting：https://github.com/nrslib/face…",
-      "bookmarks": 163,
-      "published_at": "2026-03-12T12:41:42Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Obsidian × Claude Code — .claude/ ディレクトリ設計パターンと35個のコマンド実例 - Qiita",
-      "url": "https://qiita.com/akira_papa_AI/items/4ac1edc7e93604b0199a",
-      "description": "はじめに — Obsidian に Claude Code を入れたら、35個のコマンドが生まれた ノートは1000を超え、Daily Notes、タスクリスト、プロジェクトメモ、議事録...あらゆるものが Vault に溜まっていった。でも、不思議なことに、ノートが増えれば増えるほど 「管理する時間」も増えていく 。 毎朝のデイリーノート作成に5分。...",
-      "bookmarks": 44,
-      "published_at": "2026-03-12T08:40:06Z"
+      "title": "「ジブリ風」も生成NG　著作権守る技術、ソニーGが開発 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUC1125A0R10C26A3000000/",
+      "description": "ソニーグループの人工知能（AI）研究開発部門であるソニーAIが、生成AIがつくる音楽や映像の著作権侵害を防ぎ、創作者が対価を得られる仕組みにつながる技術を開発した。まだ研究開発段階のため「社内の事業への応用は未定」（ソニーG）としている。ソニーGの機械学習分野のDistinguished Engineer、光藤祐基氏は「コン...",
+      "bookmarks": 59,
+      "published_at": "2026-03-13T23:46:31Z"
     },
     {
       "source": "hatena",
@@ -457,35 +453,11 @@
     },
     {
       "source": "hatena",
-      "title": "AIネイティブ時代のエンジニアの市場価値を再定義〜AI駆動開発偏差値〜｜Findy AI Career",
-      "url": "https://note.com/findy_ai_career/n/n701d3dd4dc04",
-      "description": "AI駆動開発偏差値とはAI駆動開発偏差値AI駆動開発偏差値とは、エンジニアが開発でどのくらいAIを使っているかを測る指標です。GitHubの公開レポジトリで、AIへの指示テキストやAIによるコミットの多さから判定しており、AIボーナスは、AI駆動開発偏差値を基に年収増加分に換算したものです。下記のツールの利用を分析対...",
-      "bookmarks": 39,
-      "published_at": "2026-03-12T03:37:13Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Claude開発企業のAnthropicがAIの社会課題を研究する機関「Anthropic Institute」を設立",
-      "url": "https://gigazine.net/news/20260312-launching-anthropic-institute/",
-      "description": "チャットAIのClaudeを開発するAnthropicが2026年3月11日、強力なAIが社会にもたらす課題ついて追求する研究機関「Anthropic Institute」を設立すると発表しました。Anthropic InstituteはAnthropicの共同創業者であるジャック・クラーク氏によって率いられ、機械学習エンジニア・経済学者・社会科学者などの学際的なスタ...",
-      "bookmarks": 21,
-      "published_at": "2026-03-12T05:22:43Z"
-    },
-    {
-      "source": "hatena",
-      "title": "CLAUDE.mdとrulesの使い分けと各ツールの対応状況 (2026.3) — tellme.tokyo",
-      "url": "https://tellme.tokyo/post/2026/03/12/ai-coding-agent-rules/",
-      "description": "Claude Code を業務で使い込んでいくうちに、ルールファイルの設計について考えることが増えた。最初は CLAUDE.md に全部書いていたが、セッションが長くなるとルールが守られなくなる場面に何度か遭遇し、ルールの置き場所を見直す必要が出てきた。 この記事では「AI Coding Agent に渡すルールには何を書くべきか」と...",
-      "bookmarks": 34,
-      "published_at": "2026-03-12T02:58:57Z"
-    },
-    {
-      "source": "hatena",
-      "title": "Anthropic公式のClaude Code Pluginが増えてたので、改めて眺める（2026年3月） | DevelopersIO",
-      "url": "https://dev.classmethod.jp/articles/claude-plugins-official-view-2026-03/",
-      "description": "Anthropic公式のClaude Code Pluginがあります。以前に見たときから増えていたので、改めて確認してみました。 https://github.com/anthropics/claude-plugins-official 下記でも閲覧できます。適宜、フィルターを設定してください。 https://claude.com/plugins おすすめの方 Anthropic公式のClau",
-      "bookmarks": 407,
-      "published_at": "2026-03-12T08:00:19Z"
+      "title": "Claude Codeのセッション履歴が30日で消えると知って9999日に変えた話｜cute_agapan9087",
+      "url": "https://note.com/cute_agapan9087/n/nf54c17fc5f43",
+      "description": "Claude Code使ってると「あれ、前のセッションどこ行った？」ってなることありませんか？ 実はClaude Code、デフォルトだと30日間非アクティブなセッションは起動時に自動削除されるんですよね。知らなかった…。 ってことで、設定を調べて9999日（約27年）に変更してみました。 💡 保存期間は2種類ある ここがちょっとや...",
+      "bookmarks": 300,
+      "published_at": "2026-03-12T14:12:31Z"
     },
     {
       "source": "hatena",
@@ -497,27 +469,35 @@
     },
     {
       "source": "hatena",
-      "title": "Antigravity、レート制限時に“追い課金”可能に　ただし「AI Pro」ユーザーから「リミット厳しくなった？」の声も",
-      "url": "https://www.itmedia.co.jp/aiplus/articles/2603/12/news076.html",
-      "description": "Antigravity、レート制限時に“追い課金”可能に　ただし「AI Pro」ユーザーから「リミット厳しくなった？」の声も 米Googleは3月11日（現地時間）、AIエディタ「Google Antigravity」の仕様を一部変更した。有料のAI機能プラン「Google AI Pro」もしくは「Ultra」のユーザーは、AIモデルのレートリミット到達後も、追加で...",
-      "bookmarks": 22,
-      "published_at": "2026-03-12T05:13:58Z"
-    },
-    {
-      "source": "hatena",
-      "title": "夜中もOpenClawに働かせ続けよう🌜🦞",
-      "url": "https://zenn.dev/iototaku/articles/c7f87e5ba76c5f",
-      "description": "暗闇の中でロボットに仕事をさせよう 中国では夜間にも工場のロボットを稼働させるのが当たり前になってきていますが、ソフトウェア開発も同じであるべきです。 Apple Silicon Macを常時起動し、AIを稼働させておけば、我々も就寝中に開発プロジェクトを前に進めることができます。 この記事では、私が実際に回している ...",
-      "bookmarks": 36,
-      "published_at": "2026-03-12T04:56:39Z"
-    },
-    {
-      "source": "hatena",
       "title": "【実感】Copilot+ PCの目玉機能「リコール」はただのスナップショット集ではない！",
       "url": "https://forest.watch.impress.co.jp/docs/serial/usecopilotpc/2093255.html",
       "description": "",
       "bookmarks": 34,
       "published_at": "2026-03-13T07:13:49Z"
+    },
+    {
+      "source": "hatena",
+      "title": "｢人間を雇うな｣　24歳AIエージェント革命児が宣告する無人営業時代 - 日本経済新聞",
+      "url": "https://www.nikkei.com/article/DGXZQOUC025OE0S6A300C2000000/",
+      "description": "季節外れの暖かな日差しが降り注ぐ2026年1月の米サンフランシスコ。高台の3階建てタウンハウスの玄関を開けると、階段の上から声が聞こえてきた。「ウエルカム、そのまま上がってきて！」上にいたのはすらりと背は高いけれど顔はまだあどけない金髪の青年。23年に営業AIエージェントのスタートアップ「アーティザン」を...",
+      "bookmarks": 31,
+      "published_at": "2026-03-14T00:22:58Z"
+    },
+    {
+      "source": "hatena",
+      "title": "AIボットの猛攻でソーシャルニュースサイトDiggが再起動2カ月後に「ハードリセット」",
+      "url": "https://www.itmedia.co.jp/news/articles/2603/14/news025.html",
+      "description": "米ソーシャルニュースサイトDiggは3月13日（現地時間）、サイトをいったん停止すると発表した。1月に一般公開したオープンβからわずか約2カ月での終了となる。原因は、AIによるボットや自動化アカウントの大量流入という。 Diggは2004年にケビン・ローズ氏らが創業したリンク共有型のニュースサイトで、ユーザーが投稿し...",
+      "bookmarks": 23,
+      "published_at": "2026-03-13T23:47:51Z"
+    },
+    {
+      "source": "hatena",
+      "title": "ゲームを作る体験を作る - ABAの日誌",
+      "url": "https://aba.hatenablog.com/entry/2026/03/13/184635",
+      "description": "「ゲームは楽しいが、ゲーム作りはもっと楽しい」という話がある。遊ぶ側にいた人間が作る側に回り、ルールや手触りや演出を自分で組み立てることに別種の面白さを見出す。ゲームは完成品として面白いが、ゲーム作りはその面白さを自分で組み立てるという、さらに深い楽しさがある。 前の記事で、AIエージェントにGodot...",
+      "bookmarks": 61,
+      "published_at": "2026-03-13T09:59:06Z"
     },
     {
       "source": "hatena",
@@ -529,19 +509,27 @@
     },
     {
       "source": "hatena",
-      "title": "中国の国営企業や政府機関がオフィス環境でのOpenClaw利用を制限する動き、中国全土でOpenClawの利用が広がりセキュリティ上の懸念が高まっているため",
-      "url": "https://gigazine.net/news/20260312-china-limit-use-of-openclaw/",
-      "description": "AIエージェントフレームワークのOpenClawはユーザーに代わってメールの整理や報告書の作成、スライドの準備などを自律的に実行できることから、中国全土で爆発的な人気を博し、急激に普及しています。しかし、この急速な導入拡大を受け、中国当局はセキュリティやデータ漏洩のリスクを重く見ており、国家ネットワーク緊...",
-      "bookmarks": 32,
-      "published_at": "2026-03-12T07:22:32Z"
+      "title": "Claude Code のコード品質がばらつくので AI に品質保証させる仕組みを作った話 / A story about building a mechanism to have AI ensure quality, because the code quality from Claude Code was inconsistent",
+      "url": "https://speakerdeck.com/nrslib/a-story-about-building-a-mechanism-to-have-ai-ensure-quality-because-the-code-quality-from-claude-code-was-inconsistent",
+      "description": "AI エージェントハーネスの一形態である AI コーディングエージェントのオーケストレーションツールを作った話をしています。 TAKT： https://github.com/nrslib/takt Faceted-Prompting：https://github.com/nrslib/face…",
+      "bookmarks": 163,
+      "published_at": "2026-03-12T12:41:42Z"
     },
     {
       "source": "hatena",
-      "title": "チームで本格的に Docs as Code を運用しているので紹介します - エムスリーテックブログ",
-      "url": "https://www.m3tech.blog/entry/2026/03/12/115110",
-      "description": "エムスリーのソフトウェアエンジニアの伊藤です。デジスマチームのブログリレー2日目の記事です。 チームではチームリーディングとプロダクトマネジメントを主に担当しています。 はじめに コンテキスト・エンジニアリング AI Ready なコードベースにするためのドキュメント管理 プロダクト画面仕様書 ADR Design Doc AP...",
-      "bookmarks": 142,
-      "published_at": "2026-03-12T03:40:58Z"
+      "title": "Obsidian × Claude Code — .claude/ ディレクトリ設計パターンと35個のコマンド実例 - Qiita",
+      "url": "https://qiita.com/akira_papa_AI/items/4ac1edc7e93604b0199a",
+      "description": "はじめに — Obsidian に Claude Code を入れたら、35個のコマンドが生まれた ノートは1000を超え、Daily Notes、タスクリスト、プロジェクトメモ、議事録...あらゆるものが Vault に溜まっていった。でも、不思議なことに、ノートが増えれば増えるほど 「管理する時間」も増えていく 。 毎朝のデイリーノート作成に5分。...",
+      "bookmarks": 45,
+      "published_at": "2026-03-12T08:40:06Z"
+    },
+    {
+      "source": "hatena",
+      "title": "Claude CodeやCodexのスキルの管理を楽にするツール「faceted-prompting」",
+      "url": "https://zenn.dev/nrs/articles/88f158aca0505b",
+      "description": "はじめに プロンプトが長く、そして増えてくると、どんどんと保守性が下がってきます。 役割、ルール、知識、作業指示、出力形式。 最初はひとつのファイルに入っていても困りません。 ところが運用を続けると、一部だけ差し替えたい、同じルールを別のスキルでも使いたい、Claude Code と Codex の両方で使いたい、とい...",
+      "bookmarks": 103,
+      "published_at": "2026-03-12T15:42:28Z"
     }
   ]
 }
