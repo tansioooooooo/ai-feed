@@ -348,7 +348,7 @@ def main() -> None:
     parser.add_argument("analysis_json", nargs="?", default="", help="Trend analysis JSON from Claude")
     args = parser.parse_args()
 
-    ref = date.fromisoformat(args.date) if args.date else date.today()
+    ref = date.fromisoformat(args.date) if args.date else date.today() - timedelta(days=1)
 
     if args.mode == "weekly":
         start, end = get_week_range(ref)
