@@ -57,6 +57,15 @@ docs/
 - ダークテーマ、タブ切り替え（All/HN/Hatena/Twitter）
 - CSS/JS はインライン埋め込み
 
+### AI処理の方針
+
+- **Anthropic API（`anthropic` SDK）を直接叩くコードを書かない**
+- AI処理（分類・要約・翻訳等）が必要な場合は、既に利用可能な以下の手段を使う:
+  - **CI上**: Claude Code Action（`anthropics/claude-code-action@v1`）— update.yml の構造化出力パターンを参照
+  - **ローカル**: Claude Code CLI
+- APIキーの管理やコスト発生を避けるため、`import anthropic` や `requests.post("https://api.anthropic.com/...")` のようなコードは書かない
+- 新しいAI処理が必要な場合は、update.yml に Claude Code Action のステップを追加する形で対応する
+
 ### 変更時の注意
 
 - `docs/` 配下は全て生成物。手動編集しない

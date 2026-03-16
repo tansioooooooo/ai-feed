@@ -23,6 +23,9 @@ CONFIG_PATH = ROOT / "config.yml"
 OUTPUT_PATH = ROOT / "docs" / "feed.json"
 DAILY_DIR = ROOT / "docs" / "daily"
 
+# 過去何日分の既出URLを重複チェック対象にするか
+DEDUP_DAYS = 3
+
 
 def load_config():
     with open(CONFIG_PATH) as f:
@@ -258,6 +261,44 @@ def fetch_twitter(accounts: list[str], instances: list[str]) -> list[dict]:
 
 
 # ─────────────────────────────────────────────
+# 日をまたいだ重複排除
+# ─────────────────────────────────────────────
+def load_recent_urls(days: int = DEDUP_DAYS) -> set[str]:
+    """過去 N 日分の daily JSON から既出 URL を収集する。"""
+    urls: set[str] = set()
+    if not DAILY_DIR.exists():
+        return urls
+
+    today = datetime.now(timezone.utc).date()
+    for daily_json in DAILY_DIR.glob("*.json"):
+        try:
+            file_date = datetime.strptime(daily_json.stem, "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        # 当日は除外（同日内の重複排除は別ロジック）
+        if file_date >= today:
+            continue
+        if (today - file_date).days > days:
+            continue
+        try:
+            with open(daily_json, encoding="utf-8") as f:
+                data = json.load(f)
+            for key in ["hackernews", "hatena", "twitter"]:
+                for item in data.get(key, []):
+                    if item.get("url"):
+                        urls.add(item["url"])
+        except Exception:
+            continue
+
+    return urls
+
+
+def dedup_items(items: list[dict], seen_urls: set[str]) -> list[dict]:
+    """既出 URL のアイテムを除外する。"""
+    return [item for item in items if item.get("url") not in seen_urls]
+
+
+# ─────────────────────────────────────────────
 # メイン
 # ─────────────────────────────────────────────
 def main():
@@ -265,12 +306,26 @@ def main():
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     DAILY_DIR.mkdir(parents=True, exist_ok=True)
 
+    # 過去N日の既出URLを収集
+    seen_urls = load_recent_urls()
+    if seen_urls:
+        print(f"Loaded {len(seen_urls)} URLs from past {DEDUP_DAYS} days for dedup")
+
     hn_items = fetch_hn(min_score=config.get("hn_min_score", 50))
     hatena_items = fetch_hatena(config["hatena_feed"])
     twitter_items = fetch_twitter(
         config["twitter_accounts"],
         config["rsshub_instances"]
     )
+
+    # 日をまたいだ重複を除外
+    hn_before, hatena_before = len(hn_items), len(hatena_items)
+    hn_items = dedup_items(hn_items, seen_urls)
+    hatena_items = dedup_items(hatena_items, seen_urls)
+    twitter_items = dedup_items(twitter_items, seen_urls)
+    if hn_before != len(hn_items) or hatena_before != len(hatena_items):
+        print(f"Dedup: HN {hn_before}->{len(hn_items)}, "
+              f"Hatena {hatena_before}->{len(hatena_items)}")
 
     now = datetime.now(timezone.utc)
     result = {
