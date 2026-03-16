@@ -45,7 +45,6 @@ jobs:
             - 除く: 一般的なソフトウェア開発・Web技術（AI要素がないもの）・政治・スポーツ等
 
             - hackernews と hatena の各アイテムを判定する
-            - twitter は全件 true とする（監視アカウントがAI関連のため）
 
             ## タスク2: HNタイトルの日本語翻訳
 
@@ -61,9 +60,8 @@ jobs:
             ## 出力形式
             - hackernews: 各アイテムの {relevant: bool, title_ja: string} の配列
             - hatena: 各アイテムの true/false の配列
-            - twitter: 各アイテムの true/false の配列（全件 true）
           allowed_tools: "Read"
-          claude_args: "--json-schema '{\"type\":\"object\",\"properties\":{\"hackernews\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"relevant\":{\"type\":\"boolean\"},\"title_ja\":{\"type\":\"string\"}},\"required\":[\"relevant\",\"title_ja\"]}},\"hatena\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}},\"twitter\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}}},\"required\":[\"hackernews\",\"hatena\",\"twitter\"]}'"
+          claude_args: "--json-schema '{\"type\":\"object\",\"properties\":{\"hackernews\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"relevant\":{\"type\":\"boolean\"},\"title_ja\":{\"type\":\"string\"}},\"required\":[\"relevant\",\"title_ja\"]}},\"hatena\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}}},\"required\":[\"hackernews\",\"hatena\"]}'"
 
       - name: Merge classification and generate HTML
         run: |

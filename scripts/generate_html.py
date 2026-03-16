@@ -20,13 +20,11 @@ OUTPUT_PATH = ROOT / "docs" / "index.html"
 SOURCE_LABELS = {
     "hackernews": "HN",
     "hatena": "Hatena",
-    "twitter": "Twitter",
 }
 
 SOURCE_COLORS = {
     "hackernews": "#ff6600",
     "hatena": "#008fde",
-    "twitter": "#1d9bf0",
 }
 
 CSS = """\
@@ -129,7 +127,6 @@ main { padding: 16px 24px; max-width: 900px; }
   gap: 6px;
   align-items: center;
 }
-.account { color: #1d9bf0; }
 .score { color: var(--muted); }
 .comment-link {
   color: var(--accent);
@@ -213,7 +210,6 @@ def card_html(item: dict) -> str:
     url = escape(item.get("url", "#"))
     desc = escape(item.get("description", ""))
     date = format_date(item.get("published_at", ""))
-    account = escape(item.get("account", ""))
     score = item.get("score", "")
     bookmarks = item.get("bookmarks", "")
     hn_url = escape(item.get("hn_url", ""))
@@ -221,8 +217,6 @@ def card_html(item: dict) -> str:
     meta_parts = []
     if date:
         meta_parts.append(f'<span class="date">{date}</span>')
-    if account:
-        meta_parts.append(f'<span class="account">@{account}</span>')
     if score:
         meta_parts.append(f'<span class="score">&#9650; {score}</span>')
     if bookmarks:
@@ -282,7 +276,7 @@ def load_daily_dates() -> list[tuple[str, int]]:
                 data = json.load(fh)
             count = sum(
                 len(data.get(k, []))
-                for k in ["hackernews", "hatena", "twitter"]
+                for k in ["hackernews", "hatena"]
             )
             dates.append((date_str, count))
         except Exception:
@@ -306,8 +300,7 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_re
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
-    twitter_items = feed.get("twitter", [])
-    all_items = hn_items + hatena_items + twitter_items
+    all_items = hn_items + hatena_items
 
     archive_html = ""
     if daily_dates:
@@ -371,9 +364,6 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_re
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">{len(hatena_items)}</span>
     </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">{len(twitter_items)}</span>
-    </button>
   </div>
 </header>
 <main>
@@ -385,9 +375,6 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_re
   </div>
   <div id="panel-hatena" class="panel">
     <div class="cards">{render_cards(hatena_items)}</div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards">{render_cards(twitter_items)}</div>
   </div>
   {trend_html}
   {archive_html}
@@ -401,8 +388,7 @@ def generate_daily_html(date_str: str, feed: dict) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
-    twitter_items = feed.get("twitter", [])
-    all_items = hn_items + hatena_items + twitter_items
+    all_items = hn_items + hatena_items
 
     return f"""<!DOCTYPE html>
 <html lang="ja">
@@ -429,9 +415,6 @@ def generate_daily_html(date_str: str, feed: dict) -> str:
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">{len(hatena_items)}</span>
     </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">{len(twitter_items)}</span>
-    </button>
   </div>
 </header>
 <main>
@@ -444,9 +427,6 @@ def generate_daily_html(date_str: str, feed: dict) -> str:
   </div>
   <div id="panel-hatena" class="panel">
     <div class="cards">{render_cards(hatena_items)}</div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards">{render_cards(twitter_items)}</div>
   </div>
 </main>
 <script>{TAB_JS}</script>

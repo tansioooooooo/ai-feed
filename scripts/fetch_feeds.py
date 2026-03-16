@@ -3,12 +3,10 @@
 AI Feed Fetcher
 - Hacker News API からAI関連記事を取得
 - はてなブックマーク IT から取得
-- RSSHub 経由で Twitter 特定アカウントを取得
-結果を data/feed.json に保存
+結果を docs/feed.json に保存
 """
 
 import json
-import os
 import re
 import time
 import xml.etree.ElementTree as ET
@@ -49,7 +47,7 @@ AI_KEYWORDS = [
     # 製品・ツール
     "chatgpt", "copilot github", "github copilot", "cursor",
     "midjourney", "dall-e", "stable diffusion", "sora", "whisper",
-    "claude code", "devin", "codex",
+    "claude code", "devin", "codex", "openclaw", "open claw",
     # 技術用語（具体的なもの）
     "llm", "large language model", "language model",
     "foundation model", "generative ai", "gen ai",
@@ -138,6 +136,8 @@ def fetch_hn(min_score: int = 50) -> list[dict]:
 HATENA_SEARCH_KEYWORDS = [
     "AI", "LLM", "ChatGPT", "Claude", "生成AI", "機械学習",
     "OpenAI", "Anthropic", "Gemini", "大規模言語モデル",
+    "GPT", "Copilot", "エージェント AI", "ディープラーニング",
+    "Cursor", "プロンプト",
 ]
 
 # 記事の日付フィルタに使う上限日数
@@ -223,6 +223,27 @@ def _parse_hatena_atom(content: bytes) -> list[dict]:
     return items
 
 
+def _fetch_bookmark_counts(urls: list[str]) -> dict[str, int]:
+    """はてなブックマーク件数取得APIでブクマ数を一括取得（最大50件ずつ）。"""
+    counts: dict[str, int] = {}
+    batch_size = 50
+    for i in range(0, len(urls), batch_size):
+        batch = urls[i:i + batch_size]
+        params = [("url", u) for u in batch]
+        try:
+            resp = requests.get(
+                "https://bookmark.hatenaapis.com/count/entries",
+                params=params,
+                timeout=10,
+            )
+            if resp.status_code == 200:
+                counts.update(resp.json())
+        except Exception as e:
+            print(f"  bookmark count API failed: {e}")
+        time.sleep(0.3)
+    return counts
+
+
 def fetch_hatena(feed_url: str, min_bookmarks: int = 20) -> list[dict]:
     print("Fetching Hatena Bookmark...")
     seen_urls: set[str] = set()
@@ -275,111 +296,18 @@ def fetch_hatena(feed_url: str, min_bookmarks: int = 20) -> list[dict]:
             print(f"  search '{keyword}' failed: {e}")
         time.sleep(0.3)
 
+    # 3. ブクマ数が0のアイテムをAPIで補完
+    urls_need_count = [
+        item["url"] for item in all_items if not item.get("bookmarks")
+    ]
+    if urls_need_count:
+        print(f"  Fetching bookmark counts for {len(urls_need_count)} items...")
+        counts = _fetch_bookmark_counts(urls_need_count)
+        for item in all_items:
+            if not item.get("bookmarks") and item["url"] in counts:
+                item["bookmarks"] = counts[item["url"]]
+
     print(f"  Total Hatena: {len(all_items)}")
-    return all_items
-
-
-# ─────────────────────────────────────────────
-# Twitter via twikit (primary) / RSSHub (fallback)
-# ─────────────────────────────────────────────
-def _fetch_twitter_twikit(accounts: list[str]) -> list[dict]:
-    """twikit の guest モジュールで認証不要のツイート取得を試みる。"""
-    import asyncio
-
-    try:
-        from twikit.guest import GuestClient
-    except ImportError:
-        print("  twikit not installed, skipping")
-        return []
-
-    async def _fetch_all() -> list[dict]:
-        client = GuestClient()
-        await client.activate()
-        all_items: list[dict] = []
-
-        for account in accounts:
-            try:
-                user = await client.get_user_by_screen_name(account)
-                tweets = await client.get_user_tweets(user.id)
-                for tweet in list(tweets)[:10]:
-                    text = getattr(tweet, "text", "") or ""
-                    created = getattr(tweet, "created_at", "") or ""
-                    tweet_id = getattr(tweet, "id", "")
-                    url = f"https://x.com/{account}/status/{tweet_id}" if tweet_id else ""
-                    all_items.append({
-                        "source": "twitter",
-                        "account": account,
-                        "title": text[:100],
-                        "url": url,
-                        "description": text[:300],
-                        "published_at": created,
-                    })
-                print(f"  @{account}: {min(len(list(tweets)), 10)} posts (twikit)")
-            except Exception as e:
-                print(f"  @{account}: twikit failed ({e})")
-            await asyncio.sleep(0.5)
-
-        return all_items
-
-    return asyncio.run(_fetch_all())
-
-
-def _fetch_twitter_rsshub(account: str, instances: list[str]) -> list[dict]:
-    """RSSHub フォールバック: 1アカウント分のツイートを取得。"""
-    for instance in instances:
-        url = f"{instance}/twitter/user/{account}"
-        try:
-            resp = requests.get(url, timeout=15)
-            if resp.status_code != 200:
-                continue
-            root = ET.fromstring(resp.content)
-            channel = root.find("channel")
-            if channel is None:
-                continue
-
-            items = []
-            for item in channel.findall("item"):
-                title = item.findtext("title", "")
-                link = item.findtext("link", "")
-                pub_date = item.findtext("pubDate", "")
-                desc = item.findtext("description", "")
-                clean_desc = re.sub(r"<[^>]+>", "", desc).strip()
-                items.append({
-                    "source": "twitter",
-                    "account": account,
-                    "title": title,
-                    "url": link,
-                    "description": clean_desc[:300] if clean_desc else title,
-                    "published_at": pub_date,
-                })
-            return items[:10]
-        except Exception:
-            continue
-    return []
-
-
-def fetch_twitter(accounts: list[str], instances: list[str]) -> list[dict]:
-    print("Fetching Twitter...")
-
-    # twikit (guest) を最初に試す
-    try:
-        items = _fetch_twitter_twikit(accounts)
-        if items:
-            return items
-    except Exception as e:
-        print(f"  twikit failed: {e}")
-
-    # twikit が使えなかった場合は RSSHub にフォールバック
-    print("  Falling back to RSSHub...")
-    all_items: list[dict] = []
-    for account in accounts:
-        account_items = _fetch_twitter_rsshub(account, instances)
-        if account_items:
-            print(f"  @{account}: {len(account_items)} posts (rsshub)")
-        else:
-            print(f"  @{account}: all methods failed, skipping")
-        all_items.extend(account_items)
-        time.sleep(0.5)
     return all_items
 
 
@@ -406,7 +334,7 @@ def load_recent_urls(days: int = DEDUP_DAYS) -> set[str]:
         try:
             with open(daily_json, encoding="utf-8") as f:
                 data = json.load(f)
-            for key in ["hackernews", "hatena", "twitter"]:
+            for key in ["hackernews", "hatena"]:
                 for item in data.get(key, []):
                     if item.get("url"):
                         urls.add(item["url"])
@@ -439,16 +367,11 @@ def main():
         config["hatena_feed"],
         min_bookmarks=config.get("hatena_min_bookmarks", 20),
     )
-    twitter_items = fetch_twitter(
-        config["twitter_accounts"],
-        config["rsshub_instances"]
-    )
 
     # 日をまたいだ重複を除外
     hn_before, hatena_before = len(hn_items), len(hatena_items)
     hn_items = dedup_items(hn_items, seen_urls)
     hatena_items = dedup_items(hatena_items, seen_urls)
-    twitter_items = dedup_items(twitter_items, seen_urls)
     if hn_before != len(hn_items) or hatena_before != len(hatena_items):
         print(f"Dedup: HN {hn_before}->{len(hn_items)}, "
               f"Hatena {hatena_before}->{len(hatena_items)}")
@@ -458,7 +381,6 @@ def main():
         "updated_at": now.isoformat(),
         "hackernews": hn_items,
         "hatena": hatena_items,
-        "twitter": twitter_items,
     }
 
     # 最新の feed.json を保存（Claude フィルタ用）
@@ -472,11 +394,11 @@ def main():
         # 同日2回目の実行: 既存データとマージ（URL で重複排除）
         with open(daily_path, encoding="utf-8") as f:
             existing = json.load(f)
-        for key in ["hackernews", "hatena", "twitter"]:
+        for key in ["hackernews", "hatena"]:
             existing_urls = {item["url"] for item in existing.get(key, [])}
             for item in result.get(key, []):
                 if item["url"] not in existing_urls:
-                    existing[key].append(item)
+                    existing.setdefault(key, []).append(item)
         existing["updated_at"] = result["updated_at"]
         result = existing
 
@@ -484,7 +406,7 @@ def main():
         json.dump(result, f, ensure_ascii=False, indent=2)
 
     print(f"\nSaved to {OUTPUT_PATH} and {daily_path}")
-    print(f"  HN: {len(hn_items)}, Hatena: {len(hatena_items)}, Twitter: {len(twitter_items)}")
+    print(f"  HN: {len(hn_items)}, Hatena: {len(hatena_items)}")
 
 
 if __name__ == "__main__":

@@ -53,8 +53,8 @@ def main() -> None:
     else:
         print(f"  hackernews: length mismatch or empty, keeping all {len(hn_items)}")
 
-    # hatena, twitter: boolean 配列
-    for key in ["hatena", "twitter"]:
+    # hatena: boolean 配列
+    for key in ["hatena"]:
         items = feed.get(key, [])
         flags = classification.get(key, [])
         if flags and len(flags) == len(items):
