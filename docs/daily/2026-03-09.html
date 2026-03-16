@@ -103,7 +103,6 @@ main { padding: 16px 24px; max-width: 900px; }
   gap: 6px;
   align-items: center;
 }
-.account { color: #1d9bf0; }
 .score { color: var(--muted); }
 .comment-link {
   color: var(--accent);
@@ -169,9 +168,6 @@ main { padding: 16px 24px; max-width: 900px; }
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">10</span>
     </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">0</span>
-    </button>
   </div>
 </header>
 <main>
@@ -231,9 +227,6 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://zenn.dev/acntechjp/articles/c1296f425baf03" target="_blank" class="card-title">Claude Code が RAG を捨てた理由 -「Agentic Search」という選択肢</a><p class="card-desc">先日、YouTube で公開された技術チャンネル The Pragmatic Engineer のインタビュー動画（2026年3月公開）を見ていて、興味深い話を耳にしました。ゲストは Claude Code の中心的な開発者である Boris Cherny 氏。動画全体では Claude Code の開発経緯や、AI がエンジニアの働き方をどう変えるかといったテーマが語られ...</p><div class="card-meta"><span class="date">03/08 06:41</span> &middot; <span class="score">&#128278; 72</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://gigazine.net/news/20260309-anthropic-supply-chain-risk/" target="_blank" class="card-title">国防総省がサプライチェーンリスクに指定したAnthropicにGoogle・Amazon・Microsoftが防衛関連以外で協力表明、一方「なぜ指定したのか」について国防総省のAI担当者が語る</a><p class="card-desc">AIの軍事利用を巡りアメリカ国防総省と意見が対立したAnthropicが「サプライチェーンリスク」に指定された問題で、複数のテック企業がAnthropicとの提携を継続すると表明したことが分かりました。 Microsoft says Anthropic’s products remain available to customers after Pentagon blacklist https:/</p><div class="card-meta"><span class="date">03/09 05:14</span> &middot; <span class="score">&#128278; 20</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://www.businessinsider.jp/article/2603-claude-outages-anthropic-ai-software-engineers-developers-coding-dependance/" target="_blank" class="card-title">「原始人のように自分で書くしかない」…Claudeの障害でソフトウェア開発者はAIへの依存を痛感 | Business Insider Japan</a><p class="card-desc">メタ（Meta）のシニア・ソフトウェア・エンジニアであるガウレシュ・パンディット（Gauresh Pandit）は、「Claudeのようなツールはエンジニアの日常業務の中に急速に組み込まれるようになっている」とBusiness Insiderに語った。また、Claudeが停止した際には、手作業でコードを書くと時間がかかると考え、コーディング...</p><div class="card-meta"><span class="date">03/09 05:03</span> &middot; <span class="score">&#128278; 8</span></div></div></div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards"><p class="empty">No articles</p></div>
   </div>
 </main>
 <script>function switchTab(id, el) {

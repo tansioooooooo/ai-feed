@@ -103,7 +103,6 @@ main { padding: 16px 24px; max-width: 900px; }
   gap: 6px;
   align-items: center;
 }
-.account { color: #1d9bf0; }
 .score { color: var(--muted); }
 .comment-link {
   color: var(--accent);
@@ -168,9 +167,6 @@ main { padding: 16px 24px; max-width: 900px; }
     </button>
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">12</span>
-    </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">0</span>
     </button>
   </div>
 </header>
@@ -241,9 +237,6 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://zenn.dev/komlock_lab/articles/openai-symphony" target="_blank" class="card-title">Symphony - OpenAIが発表したチケット駆動AI開発ツールについて</a><p class="card-desc">こんにちは！ブロックチェーンエンジニアの山口夏生です。 ブロックチェーン×AI Agentで自律経済圏を創る開発組織Komlock labでCTOをしています。 コーディングエージェントを複数並列で自律的に回すマルチエージェント開発が、ここ数ヶ月でエンジニアの間に急速に広まっていますが、まだそれぞれ試行錯誤しているフェー...</p><div class="card-meta"><span class="date">03/06 12:00</span> &middot; <span class="score">&#128278; 154</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://www.techno-edge.net/article/2026/03/06/4899.html" target="_blank" class="card-title">家庭用PCで使える無料OCRツール「NDLOCR-Lite」を国立国会図書館が公開、生成速度が世界最速と謳う拡散型LLM「Mercury 2」など生成AI技術5つを解説（生成AIウィークリー） | テクノエッジ TechnoEdge</a><p class="card-desc">この1週間の気になる生成AI技術・研究をいくつかピックアップして解説する今回の「生成AIウィークリー」（第134回）は、GPT-5-miniを上回る「Qwen3.5」の軽量モデル群や、国立国会図書館が発表した家庭用PCで使える無料OCRツール「NDLOCR-Lite」を取り上げます。 また、生成速度が従来の5倍以上高速な拡散ベースのLLM「M...</p><div class="card-meta"><span class="date">03/06 06:42</span> &middot; <span class="score">&#128278; 39</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://zenn.dev/kmizu/articles/2026-03-ai-coding-bench-methodology" target="_blank" class="card-title">「Claude Codeに向いているプログラミング言語」ベンチマークの方法論的問題について</a><p class="card-desc">予備実験として「こういう傾向が見られた」と報告するのであれば有意義だと思います。ただ、交絡因子を分離できていない段階で「動的型付け言語が効率的」という因果的な結論まで踏み込むのは、少しミスリーディングではないかと感じました。 3. 測定しているものと結論の間にずれがある（構成概念妥当性の問題） 統計的...</p><div class="card-meta"><span class="date">03/07 02:40</span> &middot; <span class="score">&#128278; 4</span></div></div></div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards"><p class="empty">No articles</p></div>
   </div>
 </main>
 <script>function switchTab(id, el) {

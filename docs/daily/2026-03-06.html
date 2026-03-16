@@ -103,7 +103,6 @@ main { padding: 16px 24px; max-width: 900px; }
   gap: 6px;
   align-items: center;
 }
-.account { color: #1d9bf0; }
 .score { color: var(--muted); }
 .comment-link {
   color: var(--accent);
@@ -168,9 +167,6 @@ main { padding: 16px 24px; max-width: 900px; }
     </button>
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">10</span>
-    </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">0</span>
     </button>
   </div>
 </header>
@@ -243,9 +239,6 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://qiita.com/toarusyakaijin/items/3ab5caa68a8a33f5ec73" target="_blank" class="card-title">「無料でAIエージェント作れるやん」→ ローカルLLMに100回ツール呼び出しさせたら&quot;成功したはずの出力&quot;がカオスだった話 - Qiita</a><p class="card-desc">前回「MCPなんていらない」って書いた人間が、もっと手前の問題に気づいた話 先日、こんな記事を書きました。私が。 「MCPサーバー作るのもうやめていい？」〜CLIがMCPを圧倒する本当の理由〜 「MCP はトークンの無駄遣い、CLI の方が35倍効率いい！」と勢いよく書き上げて、意気揚々と投稿したわけです。 ……が、投稿ボ...</p><div class="card-meta"><span class="date">03/05 22:57</span> &middot; <span class="score">&#128278; 42</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://www.nikkei.com/article/DGXZQOGN05CGB0V00C26A3000000/" target="_blank" class="card-title">OpenAIが「GPT-5.4」提供、Excelと連携　アンソロピック上回る性能 - 日本経済新聞</a><p class="card-desc">【シリコンバレー=山田遼太郎】米オープンAIは5日、新たな人工知能（AI）モデル「GPT-5.4」の提供を始めたと発表した。「エクセル」など表計算ソフトの操作やプレゼンテーション資料の作成といった事務作業の性能を高めた。法人向けのAIに強い米新興アンソロピックに対抗する。同日から対話型AI「Chat（チャット）GPT」...</p><div class="card-meta"><span class="date">03/05 23:00</span> &middot; <span class="score">&#128278; 46</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://atmarkit.itmedia.co.jp/ait/articles/2603/06/news022.html" target="_blank" class="card-title">ChatGPTやGeminiからClaudeへカンタンに移行できる？　新しい「メモリインポート機能」を試してみた</a><p class="card-desc">どうもHPかわさきです。 今回は小ネタです（今回も？）。ChatGPTやGeminiを使っている間に蓄積されたユーザー情報（「ですます調」が好きとか、「母さんみたいにいってくれ」とか、Python Loveとか）って、普通にしていると気付きませんが、チャットボットが返す答えを考えるときに重要な役割を担っているはずです。別の...</p><div class="card-meta"><span class="date">03/06 01:43</span> &middot; <span class="score">&#128278; 12</span></div></div></div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards"><p class="empty">No articles</p></div>
   </div>
 </main>
 <script>function switchTab(id, el) {

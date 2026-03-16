@@ -103,7 +103,6 @@ main { padding: 16px 24px; max-width: 900px; }
   gap: 6px;
   align-items: center;
 }
-.account { color: #1d9bf0; }
 .score { color: var(--muted); }
 .comment-link {
   color: var(--accent);
@@ -169,9 +168,6 @@ main { padding: 16px 24px; max-width: 900px; }
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">9</span>
     </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">0</span>
-    </button>
   </div>
 </header>
 <main>
@@ -231,9 +227,6 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://pc.watch.impress.co.jp/docs/news/2092373.html" target="_blank" class="card-title">Geminiが文書も表計算もスライドも自動生成、Workspace大型刷新</a><div class="card-meta"><span class="date">03/11 04:51</span> &middot; <span class="score">&#128278; 35</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://gigazine.net/news/20260311-moltbook-agent/" target="_blank" class="card-title">MetaがAIエージェントソーシャルネットワーク「Moltbook」を買収</a><p class="card-desc">AIエージェント専用のSNS「Moltbook」をMetaが買収したことが報じられました。Moltbookの開発者であるマット・シュリヒト氏とビジネスパートナーのベン・パー氏はMetaのAI研究を率いる部門である「Meta Superintelligence Labs(MSL)」に採用される予定です。 Facebook parent Meta acquires Moltbook, an AI ag</p><div class="card-meta"><span class="date">03/11 04:56</span> &middot; <span class="score">&#128278; 6</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://llmock.copilotkit.dev/" target="_blank" class="card-title">llmock — Deterministic mock LLM server for testing</a><p class="card-desc">{ &quot;fixtures&quot;: [ { &quot;match&quot;: { &quot;userMessage&quot;: &quot;capital of France&quot; }, &quot;response&quot;: { &quot;content&quot;: &quot;The capital of France is Paris.&quot; } } ] } Why llmock Stop paying for flaky tests Tests that hit real LLM API</p><div class="card-meta"><span class="date">03/11 03:32</span> &middot; <span class="score">&#128278; 5</span></div></div></div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards"><p class="empty">No articles</p></div>
   </div>
 </main>
 <script>function switchTab(id, el) {

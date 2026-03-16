@@ -103,7 +103,6 @@ main { padding: 16px 24px; max-width: 900px; }
   gap: 6px;
   align-items: center;
 }
-.account { color: #1d9bf0; }
 .score { color: var(--muted); }
 .comment-link {
   color: var(--accent);
@@ -168,9 +167,6 @@ main { padding: 16px 24px; max-width: 900px; }
     </button>
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">8</span>
-    </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">0</span>
     </button>
   </div>
 </header>
@@ -239,9 +235,6 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://speakerdeck.com/kenichiota0711/claudecodedemaketanoke-ti-wojie-jue-suru" target="_blank" class="card-title">ClaudeCodeでマーケターの課題を解決する</a><p class="card-desc">Claude Codeを活用してマーケターの方の課題を解決するエピソードをまとめました。 事業会社のデザイナーやマーケターの方に読んでいただきたいです。 ＜主な内容＞ ・自社課題、AI技術、構想の接続 ・AIツール選定 ・3つの構造について ・SKILLの活用と拡充サイクル 引き続…</p><div class="card-meta"><span class="date">03/08 01:34</span> &middot; <span class="score">&#128278; 21</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://blog.inorinrinrin.com/entry/2026/03/07/180419" target="_blank" class="card-title">3分で学ぶ GitHub Copilot CLI の基本とベストプラクティス - プププなテクブ</a><p class="card-desc">2026年2月25日、GitHub Copilot CLIがついにGAされました。 github.blog そこで今回はまだGitHub Copilot CLIをまだ見てない/触ってない という人向けに、ざっくりと使い勝手やベストプラクティスを3分で知ってもらえるような記事を書いてみました。 検証のコンテキスト 突然ですが、openapi-zod-clientというライブラリ...</p><div class="card-meta"><span class="date">03/07 09:47</span> &middot; <span class="score">&#128278; 142</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://dev.classmethod.jp/articles/gemini-workspace-search-instead-of-rag/" target="_blank" class="card-title">RAGを構築しなくてもGeminiのGoogle Workspace連携で社内ドキュメント検索が実現できた話 | DevelopersIO</a><p class="card-desc">はじめに 社内ドキュメントをAIで検索・活用したいとき、まず思い浮かぶのがRAG（Retrieval-Augmented Generation）の構築ではないでしょうか。ベクトルDBを用意して、ドキュメントをチャンク分割して、埋め込みを生成して…と、それなりの開発・運用コストがかかります。 しかし、もし社内ドキュメントがGoogle Drive上...</p><div class="card-meta"><span class="date">03/05 07:52</span> &middot; <span class="score">&#128278; 16</span></div></div></div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards"><p class="empty">No articles</p></div>
   </div>
 </main>
 <script>function switchTab(id, el) {

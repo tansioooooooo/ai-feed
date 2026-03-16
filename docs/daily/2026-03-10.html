@@ -103,7 +103,6 @@ main { padding: 16px 24px; max-width: 900px; }
   gap: 6px;
   align-items: center;
 }
-.account { color: #1d9bf0; }
 .score { color: var(--muted); }
 .comment-link {
   color: var(--accent);
@@ -169,9 +168,6 @@ main { padding: 16px 24px; max-width: 900px; }
     <button class="tab" onclick="switchTab('hatena', this)">
       Hatena <span class="count">10</span>
     </button>
-    <button class="tab" onclick="switchTab('twitter', this)">
-      Twitter <span class="count">0</span>
-    </button>
   </div>
 </header>
 <main>
@@ -235,9 +231,6 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://agent-safehouse.dev/" target="_blank" class="card-title">Agent Safehouse</a><p class="card-desc">Go full --yolo. We&#x27;ve got you.macOS-native sandboxing for local agents. Move fast, break nothing. LLMs are probabilistic - 1% chance of disaster makes it a matter of when, not if.</p><div class="card-meta"><span class="date">03/08 21:05</span> &middot; <span class="score">&#128278; 8</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://nowokay.hatenablog.com/entry/2026/03/08/205807" target="_blank" class="card-title">Qwen3.5の中規模モデル(122B/35B/27B/9B)をコーディングエージェントで試してみる - きしだのHatena</a><p class="card-desc">Qwen3.5の中規模モデル(122B/35B/27B/9B)をコーディングエージェントで試してみます。 結論としては、122Bは使える、27Bはなんとか、35Bはストレスに耐えながら、9Bは全然むり、という感じ。 27Bは修正で関係ないところを壊す、35Bは修正として関係ない作業をする、9Bはコンパイル通るコードを書けなかった。 Qwen3.5シ...</p><div class="card-meta"><span class="date">03/08 12:34</span> &middot; <span class="score">&#128278; 12</span></div></div>
 <div class="card" data-source="hatena"><div class="card-source" style="color:#008fde">Hatena</div><a href="https://p2ptk.org/copyright/5449" target="_blank" class="card-title">米最高裁、AIからクリエイターを救う » p2ptk[.]org</a><p class="card-desc">以下の文章は、コリイ・ドクトロウの「Supreme Court saves artists from AI」という記事を翻訳したものである。 Pluralistic 最高裁判所は、AI生成物には著作権が認められないとした判決に対する上告審の申立てを棄却した。この棄却により、最高裁はクリエイティブワーカーの利益を守るうえで、極めて重大な一歩を記し...</p><div class="card-meta"><span class="date">03/07 00:14</span> &middot; <span class="score">&#128278; 10</span></div></div></div>
-  </div>
-  <div id="panel-twitter" class="panel">
-    <div class="cards"><p class="empty">No articles</p></div>
   </div>
 </main>
 <script>function switchTab(id, el) {
