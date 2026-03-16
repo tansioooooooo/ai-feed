@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W12</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W12 (2026-03-16 〜 2026-03-22)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">65</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">10</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">55</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年3月10〜16日の1週間は、Claude CodeをはじめとするAIコーディングツールへの関心が日本・海外ともに爆発的に高まった週だった。Anthropicの1Mトークンコンテキスト一般公開、Claude Code Meetup Japan #3の開催、企業の全社導入事例が相次ぎ、エコシステムが急速に成熟。一方でAI顔認識誤認逮捕・自律AIの暴走・大規模レイオフなど、AIリスクと雇用への社会的懸念も強く表れた週だった。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">Claude Code エコシステムの爆発的成熟</div><div class="trend-desc">Claude Code Meetup Japan #3 開催、Anthropic公式Pluginカタログ急増（407ブックマーク）、Skills完全活用ガイド、ログ基盤・品質保証・セッション分析ツール(Rudel/claudetop/ccusage)などの周辺ツールが一斉に登場。月商300万円のSaaSをClaude Code単独で運用する個人開発者事例も話題を呼んだ。</div></div>
+<div class="trend-item"><div class="trend-title">1Mトークンコンテキストウィンドウの一般公開</div><div class="trend-desc">Opus 4.6・Sonnet 4.6で100万トークンのコンテキストウィンドウが一般提供開始（HNスコア1179、コメント502）。長文ドキュメント処理・巨大コードベース対応の実用性が大きく向上し、RAGに頼らないアーキテクチャへの関心が高まった。</div></div>
+<div class="trend-item"><div class="trend-title">ローカルLLM・エッジAI推論への高い関心</div><div class="trend-desc">「Can I run AI locally?」がHNスコア1452を記録。Qwen3.5のローカル実行、BitNet（1ビットLLM）、RunAnywhere（Apple Silicon高速化）、GreenBoost（12GBのGPUで32GBモデルを動かす手法）など、クラウド依存を減らす取り組みが各所で活発化。</div></div>
+<div class="trend-item"><div class="trend-title">AIエージェントハーネスとコンテキストエンジニアリングの台頭</div><div class="trend-desc">「ハーネスエンジニアリング」の概念が流行し、エージェントに強制力のある制約（Linter・Hook）を与える設計パターンが注目（192ブックマーク）。OpenClaw/Claude Code向けにDocs as Code・faceted-prompting・Agent Teamsを組み合わせた実装事例が相次いで公開された。</div></div>
+<div class="trend-item"><div class="trend-title">AI倫理・リスク・社会問題の顕在化</div><div class="trend-desc">AI顔認識の誤認識で無実の女性が半年拘禁された事件がHN・はてな双方で大きく話題に（HNスコア751）。自律AIエージェントの2週間の「大暴走」実録（情報漏洩・DoS・リソース大量消費）、AIチャットボットの暴力助長調査、AIの知ったかぶりによる名誉毀損問題なども報道された。</div></div>
+<div class="trend-item"><div class="trend-title">AI導入と雇用・開発者アイデンティティの揺らぎ</div><div class="trend-desc">Atlassian 1600人解雇・Meta 20%削減計画・AmazonのAlexa部門 847人→23人など大規模レイオフが相次ぐ。HNでは「60歳の私はClaude Codeで情熱を失った」「AIは悪いエンジニアリングを容易にしただけ」「人間によるプログラミングの終焉」など、開発者コミュニティで深い葛藤が生まれた。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Claude Code</span><span class="keyword">1Mコンテキスト</span><span class="keyword">ローカルLLM</span><span class="keyword">AIエージェント</span><span class="keyword">ハーネスエンジニアリング</span><span class="keyword">Qwen3.5</span><span class="keyword">MCP（Model Context Protocol）</span><span class="keyword">コンテキストエンジニアリング</span><span class="keyword">AI顔認識誤認</span><span class="keyword">AI雇用</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP5</h2>
+    <div class="articles-grid"><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://sebastianraschka.com/llm-architecture-gallery/" target="_blank" class="article-link">LLMアーキテクチャギャラリー</a><span class="article-score">▲ 265</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://tomjohnell.com/llms-can-be-absolutely-exhausting/" target="_blank" class="article-link">LLMは疲弊させることがある</a><span class="article-score">▲ 94</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://www.youtube.com/watch?v=mzS7dmCUzcQ" target="_blank" class="article-link">AIの誤認識で無実の女性が6ヶ月間投獄、人生を壊された</a><span class="article-score">▲ 75</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://github.com/liorwn/claudetop" target="_blank" class="article-link">Claudetop – Claude CodeセッションのAI利用費をリアルタイムで確認するhtop風ツール</a><span class="article-score">▲ 51</span></div><div class="article-item"><span class="article-source" style="color:#ff6600">HN</span><a href="https://onemillionwords.substack.com/p/top-google-result-for-claude-code" target="_blank" class="article-link">注意: Claude CodeのGoogle上位検索結果が悪意のあるものだった</a><span class="article-score">▲ 44</span></div></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP5</h2>
+    <div class="articles-grid"><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://zenn.dev/ncukondo/articles/ai-generate-pptx-methods-2026" target="_blank" class="article-link">生成AIでパワポを作る方法一覧【2026年3月版】</a><span class="article-score">🔖 476</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://dev.classmethod.jp/articles/claude-plugins-official-view-2026-03/" target="_blank" class="article-link">Anthropic公式のClaude Code Pluginが増えてたので、改めて眺める（2026年3月） | DevelopersIO</a><span class="article-score">🔖 407</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://note.com/cute_agapan9087/n/nf54c17fc5f43" target="_blank" class="article-link">Claude Codeのセッション履歴が30日で消えると知って9999日に変えた話｜cute_agapan9087</a><span class="article-score">🔖 299</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://zenn.dev/simossyi/articles/309e8cd88a90c3" target="_blank" class="article-link">仕様駆動開発はやめた方がええ</a><span class="article-score">🔖 276</span></div><div class="article-item"><span class="article-source" style="color:#008fde">Hatena</span><a href="https://speakerdeck.com/oikon48/claude-code-0312" target="_blank" class="article-link">Claude Code 2026年 最新アップデート</a><span class="article-score">🔖 231</span></div></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">Claude Code Skillsとエージェントハーネス設計の実践知が蓄積されており、来週以降は企業規模での生産性指標や品質管理手法の議論がさらに深まる見込み。一方でAI顔認識・自律エージェントのリスク規制議論も加速し、AIガバナンスと安全設計が開発現場の主要テーマになると予想される。</div>
+  </section>
+</main>
+</body>
+</html>
