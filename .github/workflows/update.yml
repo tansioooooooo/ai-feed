@@ -64,7 +64,7 @@ jobs:
             - hackernews: 各アイテムの {category: string, title_ja: string} の配列
             - hatena: 各アイテムの category string の配列
           allowed_tools: "Read"
-          claude_args: "--json-schema '{\"type\":\"object\",\"properties\":{\"hackernews\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"relevant\":{\"type\":\"boolean\"},\"title_ja\":{\"type\":\"string\"}},\"required\":[\"relevant\",\"title_ja\"]}},\"hatena\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}}},\"required\":[\"hackernews\",\"hatena\"]}'"
+          claude_args: "--json-schema '{\"type\":\"object\",\"properties\":{\"hackernews\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"category\":{\"type\":\"string\",\"enum\":[\"ai\",\"tech\",\"column\",\"politics\",\"fun\"]},\"title_ja\":{\"type\":\"string\"}},\"required\":[\"category\",\"title_ja\"]}},\"hatena\":{\"type\":\"array\",\"items\":{\"type\":\"string\",\"enum\":[\"ai\",\"tech\",\"column\",\"politics\",\"fun\"]}}},\"required\":[\"hackernews\",\"hatena\"]}'"
 
       - name: Merge classification and generate HTML
         run: |
