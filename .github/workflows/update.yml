@@ -37,29 +37,32 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: |
             docs/feed.json を読んで、以下の2つのタスクを実行してください。
-
-            ## タスク1: AI関連性の判定
-
-            判定基準:
-            - 含める: LLM/生成AI/機械学習モデル/AIツール/AI企業動向/AI研究
-            - 除く: 一般的なソフトウェア開発・Web技術（AI要素がないもの）・政治・スポーツ等
-
-            - hackernews と hatena の各アイテムを判定する
-
+          
+            ## タスク1: カテゴリ分類
+          
+            各記事を以下の5カテゴリのいずれかに分類してください:
+            - "ai": LLM/生成AI/機械学習/AIツール/AI企業動向/AI研究
+            - "tech": 一般的なソフトウェア開発・Web技術・セキュリティ・クラウド等
+            - "column": 考察・意見・キャリア・文化・社会全般
+            - "politics": 政治・経済・規制・政策
+            - "fun": ネタ・エンタメ・ゲーム・おもしろ系
+          
+            - hackernews と hatena の各アイテムをカテゴリ分類する
+          
             ## タスク2: HNタイトルの日本語翻訳
-
+          
             hackernews の各アイテムの title を自然な日本語に翻訳してください。
             - 技術用語・固有名詞はそのまま残す（例: "GPT-4", "OpenAI", "LLM"）
             - 簡潔で読みやすい日本語にする
-
+          
             ## 手順
             1. docs/feed.json を Read tool で読み込む
-            2. 判定と翻訳を行う
+            2. 分類と翻訳を行う
             3. ファイルを変更しないでください。結果を構造化出力として返してください。
-
+          
             ## 出力形式
-            - hackernews: 各アイテムの {relevant: bool, title_ja: string} の配列
-            - hatena: 各アイテムの true/false の配列
+            - hackernews: 各アイテムの {category: string, title_ja: string} の配列
+            - hatena: 各アイテムの category string の配列
           allowed_tools: "Read"
           claude_args: "--json-schema '{\"type\":\"object\",\"properties\":{\"hackernews\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"relevant\":{\"type\":\"boolean\"},\"title_ja\":{\"type\":\"string\"}},\"required\":[\"relevant\",\"title_ja\"]}},\"hatena\":{\"type\":\"array\",\"items\":{\"type\":\"boolean\"}}},\"required\":[\"hackernews\",\"hatena\"]}'"
 
