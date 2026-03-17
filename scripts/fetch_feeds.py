@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-AI Feed Fetcher
-- Hacker News API からAI関連記事を取得
+Feed Fetcher
+- Hacker News API から記事を取得
 - はてなブックマーク IT から取得
 結果を docs/feed.json に保存
 """
 
 import json
-import re
 import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -33,45 +32,6 @@ def load_config():
 # ─────────────────────────────────────────────
 # Hacker News
 # ─────────────────────────────────────────────
-# 具体的なモデル名・企業名・製品名で一次フィルタ
-AI_KEYWORDS = [
-    # モデル名
-    "gpt-4", "gpt-5", "gpt4", "gpt5", "o1", "o3", "o4",
-    "claude", "sonnet", "opus", "haiku",
-    "gemini", "gemma",
-    "llama", "mistral", "mixtral", "phi-4", "phi-3",
-    "grok", "deepseek", "qwen", "command r",
-    # 企業・研究機関
-    "openai", "anthropic", "deepmind", "google ai", "meta ai", "xai",
-    "hugging face", "huggingface", "stability ai", "cohere", "perplexity",
-    # 製品・ツール
-    "chatgpt", "copilot github", "github copilot", "cursor",
-    "midjourney", "dall-e", "stable diffusion", "sora", "whisper",
-    "claude code", "devin", "codex", "openclaw", "open claw",
-    # 技術用語（具体的なもの）
-    "llm", "large language model", "language model",
-    "foundation model", "generative ai", "gen ai",
-    "fine-tuning", "fine tuning", "rlhf", "rag",
-    "transformer", "diffusion model",
-    "machine learning", "deep learning", "neural network",
-    "artificial intelligence",
-    "multimodal", "text-to-image", "text-to-video",
-    "embedding", "vector database", "token", "context window",
-    "inference", "training run", "gpu cluster",
-    "reinforcement learning",
-]
-
-# 正規表現パターン: 単語境界付きで "AI" を検出（"MAIL" 等を除外）
-_AI_WORD_RE = re.compile(r"\bAI\b")
-
-
-def is_ai_related(text: str) -> bool:
-    if _AI_WORD_RE.search(text):
-        return True
-    t = text.lower()
-    return any(kw in t for kw in AI_KEYWORDS)
-
-
 def fetch_hn(min_score: int = 50) -> list[dict]:
     print("Fetching Hacker News...")
     base = "https://hacker-news.firebaseio.com/v0"
@@ -109,36 +69,29 @@ def fetch_hn(min_score: int = 50) -> list[dict]:
             url = item.get("url", f"https://news.ycombinator.com/item?id={item_id}")
             if url in seen_urls:
                 continue
-            if is_ai_related(title):
-                seen_urls.add(url)
-                items.append({
-                    "source": "hackernews",
-                    "title": title,
-                    "url": url,
-                    "score": item.get("score", 0),
-                    "comments": item.get("descendants", 0),
-                    "hn_url": f"https://news.ycombinator.com/item?id={item_id}",
-                    "published_at": datetime.fromtimestamp(
-                        item.get("time", 0), tz=timezone.utc
-                    ).isoformat(),
-                })
+            seen_urls.add(url)
+            items.append({
+                "source": "hackernews",
+                "title": title,
+                "url": url,
+                "score": item.get("score", 0),
+                "comments": item.get("descendants", 0),
+                "hn_url": f"https://news.ycombinator.com/item?id={item_id}",
+                "published_at": datetime.fromtimestamp(
+                    item.get("time", 0), tz=timezone.utc
+                ).isoformat(),
+            })
         except Exception:
             continue
         time.sleep(0.05)
 
-    print(f"  Found {len(items)} AI-related HN stories")
+    print(f"  Found {len(items)} HN stories")
     return items
 
 
 # ─────────────────────────────────────────────
 # はてなブックマーク
 # ─────────────────────────────────────────────
-HATENA_SEARCH_KEYWORDS = [
-    "AI", "LLM", "ChatGPT", "Claude", "生成AI", "機械学習",
-    "OpenAI", "Anthropic", "Gemini", "大規模言語モデル",
-    "GPT", "Copilot", "エージェント AI", "ディープラーニング",
-    "Cursor", "プロンプト",
-]
 
 # 記事の日付フィルタに使う上限日数
 HATENA_MAX_AGE_DAYS = 3
@@ -249,54 +202,20 @@ def fetch_hatena(feed_url: str, min_bookmarks: int = 20) -> list[dict]:
     seen_urls: set[str] = set()
     all_items: list[dict] = []
 
-    # 1. ホットエントリ（IT）— AI関連のみフィルタ（ホットエントリはブクマ閾値不要）
+    # ホットエントリ（IT）— フィルタなし全記事取得
     try:
         resp = requests.get(feed_url, timeout=10)
         resp.raise_for_status()
-        hotentry_items = _parse_hatena_rss(resp.content, require_ai_filter=True)
+        hotentry_items = _parse_hatena_rss(resp.content, require_ai_filter=False)
         for item in hotentry_items:
             if item["url"] not in seen_urls:
                 seen_urls.add(item["url"])
                 all_items.append(item)
-        print(f"  hotentry/it: {len(hotentry_items)} AI-related")
+        print(f"  hotentry/it: {len(hotentry_items)} items")
     except Exception as e:
         print(f"  hotentry/it fetch failed: {e}")
 
-    # 2. キーワード検索RSS — 検索自体がAI絞りなのでフィルタ不要
-    #    ブクマ数閾値でホットエントリ的な品質を担保
-    for keyword in HATENA_SEARCH_KEYWORDS:
-        search_url = (
-            f"https://b.hatena.ne.jp/search/text?q={keyword}"
-            f"&sort=recent&users={min_bookmarks}&mode=rss"
-        )
-        try:
-            resp = requests.get(search_url, timeout=10)
-            if resp.status_code != 200:
-                continue
-            # 検索結果はAtomかRSS1.0かレスポンスで異なる
-            content_str = resp.content[:100].decode("utf-8", errors="ignore")
-            if "<feed" in content_str:
-                search_items = _parse_hatena_atom(resp.content)
-            else:
-                search_items = _parse_hatena_rss(
-                    resp.content, require_ai_filter=False
-                )
-            new_count = 0
-            for item in search_items:
-                if item["url"] in seen_urls:
-                    continue
-                if not _is_recent(item.get("published_at", "")):
-                    continue
-                seen_urls.add(item["url"])
-                all_items.append(item)
-                new_count += 1
-            if new_count:
-                print(f"  search '{keyword}': +{new_count}")
-        except Exception as e:
-            print(f"  search '{keyword}' failed: {e}")
-        time.sleep(0.3)
-
-    # 3. ブクマ数が0のアイテムをAPIで補完
+    # ブクマ数が0のアイテムをAPIで補完
     urls_need_count = [
         item["url"] for item in all_items if not item.get("bookmarks")
     ]

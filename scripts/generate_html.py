@@ -27,6 +27,31 @@ SOURCE_COLORS = {
     "hatena": "#008fde",
 }
 
+CATEGORIES = [
+    ("all", "All"),
+    ("ai", "AI"),
+    ("tech", "テクノロジー"),
+    ("column", "コラム"),
+    ("politics", "政治"),
+    ("neta", "ネタ系"),
+]
+
+CATEGORY_TO_ID = {
+    "AI": "ai",
+    "テクノロジー": "tech",
+    "コラム": "column",
+    "政治": "politics",
+    "ネタ系": "neta",
+}
+
+CATEGORY_COLORS = {
+    "AI": "#7c6af7",
+    "テクノロジー": "#4a9eff",
+    "コラム": "#4acd8d",
+    "政治": "#f76a6a",
+    "ネタ系": "#f7a94a",
+}
+
 CSS = """\
 :root {
   --bg: #0f0f13;
@@ -213,6 +238,8 @@ def card_html(item: dict) -> str:
     score = item.get("score", "")
     bookmarks = item.get("bookmarks", "")
     hn_url = escape(item.get("hn_url", ""))
+    category = item.get("category", "テクノロジー")
+    cat_color = CATEGORY_COLORS.get(category, "#888")
 
     meta_parts = []
     if date:
@@ -240,9 +267,12 @@ def card_html(item: dict) -> str:
     else:
         title_html = f'<a href="{url}" target="_blank" class="card-title">{title}</a>'
 
+    cat_id = CATEGORY_TO_ID.get(category, "tech")
     return (
-        f'<div class="card" data-source="{source}">'
-        f'<div class="card-source" style="color:{color}">{label}</div>'
+        f'<div class="card" data-source="{source}" data-category="{cat_id}">'
+        f'<div class="card-source" style="color:{color}">{label}'
+        f'<span style="color:{cat_color};margin-left:8px;font-weight:600">{category}</span>'
+        f'</div>'
         f"{title_html}"
         f"{desc_html}"
         f'<div class="card-meta">{meta_html}</div>'
@@ -296,11 +326,48 @@ def load_trend_reports() -> dict[str, list[str]]:
     return result
 
 
+def build_category_panels(all_items: list[dict]) -> tuple[str, str]:
+    """カテゴリタブとパネルHTMLを生成する。"""
+    category_items: dict[str, list[dict]] = {
+        cat_id: [] for cat_id, _ in CATEGORIES if cat_id != "all"
+    }
+    for item in all_items:
+        cat_id = CATEGORY_TO_ID.get(item.get("category", "テクノロジー"), "tech")
+        if cat_id in category_items:
+            category_items[cat_id].append(item)
+
+    tab_parts = []
+    panel_parts = []
+    for i, (cat_id, label) in enumerate(CATEGORIES):
+        if cat_id == "all":
+            count = len(all_items)
+            active = " active"
+        else:
+            count = len(category_items.get(cat_id, []))
+            active = ""
+        tab_parts.append(
+            f'<button class="tab{active}" onclick="switchTab(\'{cat_id}\', this)">'
+            f'{label} <span class="count">{count}</span>'
+            f'</button>'
+        )
+        items = all_items if cat_id == "all" else category_items.get(cat_id, [])
+        panel_active = " active" if cat_id == "all" else ""
+        panel_parts.append(
+            f'<div id="panel-{cat_id}" class="panel{panel_active}">'
+            f'<div class="cards">{render_cards(items)}</div>'
+            f'</div>'
+        )
+
+    return "\n".join(tab_parts), "\n".join(panel_parts)
+
+
 def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_reports: dict | None = None) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
     all_items = hn_items + hatena_items
+
+    tabs_html, panels_html = build_category_panels(all_items)
 
     archive_html = ""
     if daily_dates:
@@ -345,37 +412,21 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_re
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Feed</title>
+<title>Tech Feed</title>
 <style>{CSS}</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>AI Feed</h1>
+    <h1>Tech Feed</h1>
     <span class="updated">{updated_str}</span>
   </div>
   <div class="tabs">
-    <button class="tab active" onclick="switchTab('all', this)">
-      All <span class="count">{len(all_items)}</span>
-    </button>
-    <button class="tab" onclick="switchTab('hn', this)">
-      HN <span class="count">{len(hn_items)}</span>
-    </button>
-    <button class="tab" onclick="switchTab('hatena', this)">
-      Hatena <span class="count">{len(hatena_items)}</span>
-    </button>
+    {tabs_html}
   </div>
 </header>
 <main>
-  <div id="panel-all" class="panel active">
-    <div class="cards">{render_cards(all_items)}</div>
-  </div>
-  <div id="panel-hn" class="panel">
-    <div class="cards">{render_cards(hn_items)}</div>
-  </div>
-  <div id="panel-hatena" class="panel">
-    <div class="cards">{render_cards(hatena_items)}</div>
-  </div>
+  {panels_html}
   {trend_html}
   {archive_html}
 </main>
@@ -390,44 +441,30 @@ def generate_daily_html(date_str: str, feed: dict) -> str:
     hatena_items = feed.get("hatena", [])
     all_items = hn_items + hatena_items
 
+    tabs_html, panels_html = build_category_panels(all_items)
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Feed - {date_str}</title>
+<title>Tech Feed - {date_str}</title>
 <style>{CSS}</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1><a href="../index.html">AI Feed</a></h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
     <span class="subtitle">{date_str}</span>
     <span class="updated">{updated_str}</span>
   </div>
   <div class="tabs">
-    <button class="tab active" onclick="switchTab('all', this)">
-      All <span class="count">{len(all_items)}</span>
-    </button>
-    <button class="tab" onclick="switchTab('hn', this)">
-      HN <span class="count">{len(hn_items)}</span>
-    </button>
-    <button class="tab" onclick="switchTab('hatena', this)">
-      Hatena <span class="count">{len(hatena_items)}</span>
-    </button>
+    {tabs_html}
   </div>
 </header>
 <main>
   <a href="../index.html" class="back-link">&larr; Latest</a>
-  <div id="panel-all" class="panel active">
-    <div class="cards">{render_cards(all_items)}</div>
-  </div>
-  <div id="panel-hn" class="panel">
-    <div class="cards">{render_cards(hn_items)}</div>
-  </div>
-  <div id="panel-hatena" class="panel">
-    <div class="cards">{render_cards(hatena_items)}</div>
-  </div>
+  {panels_html}
 </main>
 <script>{TAB_JS}</script>
 </body>
