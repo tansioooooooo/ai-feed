@@ -52,8 +52,18 @@ COLUMN_KEYWORDS = [
 ]
 
 
+# Claude の出力カテゴリ → 表示用カテゴリ
+_CLAUDE_CATEGORY_MAP: dict[str, str] = {
+    "ai": "AI",
+    "tech": "テクノロジー",
+    "column": "コラム",
+    "politics": "政治",
+    "fun": "ネタ系",
+}
+
+
 def categorize_item(item: dict) -> str:
-    """キーワードマッチングでカテゴリを判定する。"""
+    """キーワードマッチングでカテゴリを判定する（フォールバック用）。"""
     text = " ".join([
         item.get("title", ""),
         item.get("title_ja", ""),
@@ -125,19 +135,51 @@ def main() -> None:
     with open(FEED_PATH, encoding="utf-8") as f:
         feed = json.load(f)
 
-    # hackernews: title_ja を適用（relevant は使わず全記事保持）
+    # hackernews: title_ja + category を適用
     hn_items = feed.get("hackernews", [])
     hn_flags = classification.get("hackernews", [])
     if hn_flags and len(hn_flags) == len(hn_items):
         for item, flag in zip(hn_items, hn_flags):
-            if isinstance(flag, dict) and flag.get("title_ja"):
-                item["title_ja"] = flag["title_ja"]
-        print(f"  hackernews: applied title_ja for {len(hn_items)} items")
+            if isinstance(flag, dict):
+                if flag.get("title_ja"):
+                    item["title_ja"] = flag["title_ja"]
+                claude_cat = _CLAUDE_CATEGORY_MAP.get(flag.get("category", ""))
+                if claude_cat:
+                    item["category"] = claude_cat
+        print(f"  hackernews: applied title_ja + category for {len(hn_items)} items")
     else:
-        print(f"  hackernews: length mismatch or empty ({len(hn_flags)} vs {len(hn_items)}), skipping title_ja")
+        print(f"  hackernews: length mismatch or empty ({len(hn_flags)} vs {len(hn_items)}), skipping")
 
-    # カテゴリを全アイテムに付与
-    apply_categories(feed)
+    # hatena: category を適用
+    hatena_items = feed.get("hatena", [])
+    hatena_cats = classification.get("hatena", [])
+    if hatena_cats and len(hatena_cats) == len(hatena_items):
+        for item, cat_str in zip(hatena_items, hatena_cats):
+            claude_cat = _CLAUDE_CATEGORY_MAP.get(cat_str, "")
+            if claude_cat:
+                item["category"] = claude_cat
+        print(f"  hatena: applied category for {len(hatena_items)} items")
+    else:
+        print(f"  hatena: length mismatch or empty ({len(hatena_cats)} vs {len(hatena_items)}), skipping")
+
+    # Claude分類が付かなかったアイテムにキーワードフォールバック
+    fallback_count = 0
+    for key in ["hackernews", "hatena"]:
+        for item in feed.get(key, []):
+            if not item.get("category"):
+                item["category"] = categorize_item(item)
+                fallback_count += 1
+    if fallback_count:
+        print(f"  Keyword fallback applied to {fallback_count} items")
+
+    # カテゴリ集計
+    category_counts: dict[str, int] = {}
+    for key in ["hackernews", "hatena"]:
+        for item in feed.get(key, []):
+            cat = item["category"]
+            category_counts[cat] = category_counts.get(cat, 0) + 1
+    print(f"  Categories: {category_counts}")
+
     save_feed(feed)
     generate_html()
 

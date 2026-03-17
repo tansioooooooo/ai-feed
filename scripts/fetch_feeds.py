@@ -32,13 +32,13 @@ def load_config():
 # ─────────────────────────────────────────────
 # Hacker News
 # ─────────────────────────────────────────────
-def fetch_hn(min_score: int = 50) -> list[dict]:
-    print("Fetching Hacker News...")
+def fetch_hn(min_score: int = 100, max_items: int = 50) -> list[dict]:
+    print(f"Fetching Hacker News (min_score={min_score}, max_items={max_items})...")
     base = "https://hacker-news.firebaseio.com/v0"
 
-    # topstories / beststories / newstories から幅広く収集
+    # topstories / beststories から収集（newstories は低スコアが多いため除外）
     all_ids: list[int] = []
-    for endpoint in ["topstories", "beststories", "newstories"]:
+    for endpoint in ["topstories", "beststories"]:
         try:
             ids = requests.get(f"{base}/{endpoint}.json", timeout=10).json()
             all_ids.extend(ids[:200])
@@ -55,7 +55,6 @@ def fetch_hn(min_score: int = 50) -> list[dict]:
             unique_ids.append(item_id)
     print(f"  Unique story IDs: {len(unique_ids)}")
 
-    # newstories はスコアが低いので閾値を下げる
     items = []
     seen_urls: set[str] = set()
     for item_id in unique_ids:
@@ -84,6 +83,12 @@ def fetch_hn(min_score: int = 50) -> list[dict]:
         except Exception:
             continue
         time.sleep(0.05)
+
+    # スコア順でソートし、上限を適用
+    items.sort(key=lambda x: x["score"], reverse=True)
+    if len(items) > max_items:
+        print(f"  Trimmed from {len(items)} to {max_items} items")
+        items = items[:max_items]
 
     print(f"  Found {len(items)} HN stories")
     return items
@@ -281,7 +286,10 @@ def main():
     if seen_urls:
         print(f"Loaded {len(seen_urls)} URLs from past {DEDUP_DAYS} days for dedup")
 
-    hn_items = fetch_hn(min_score=config.get("hn_min_score", 50))
+    hn_items = fetch_hn(
+        min_score=config.get("hn_min_score", 100),
+        max_items=config.get("hn_max_items", 50),
+    )
     hatena_items = fetch_hatena(
         config["hatena_feed"],
         min_bookmarks=config.get("hatena_min_bookmarks", 20),
