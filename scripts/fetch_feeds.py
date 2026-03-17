@@ -13,7 +13,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import requests
+import trafilatura
 import yaml
+
+# trafilatura のタイムアウトを10秒に制限
+trafilatura.settings.DEFAULT_CONFIG.set('DEFAULT', 'download_timeout', '10')
 
 ROOT = Path(__file__).parent.parent
 CONFIG_PATH = ROOT / "config.yml"
@@ -274,6 +278,63 @@ def dedup_items(items: list[dict], seen_urls: set[str]) -> list[dict]:
 
 
 # ─────────────────────────────────────────────
+# フルテキスト取得
+# ─────────────────────────────────────────────
+FULLTEXT_MAX_CHARS = 5000
+FULLTEXT_MAX_ITEMS = 20
+
+
+def fetch_fulltext(url: str) -> str:
+    """記事URLからフルテキストを取得する。失敗時は空文字を返す。"""
+    try:
+        downloaded = trafilatura.fetch_url(url)
+        if not downloaded:
+            return ""
+        text = trafilatura.extract(
+            downloaded,
+            include_comments=False,
+            include_tables=False,
+            no_fallback=False,
+        )
+        if not text:
+            return ""
+        # 文字数制限
+        return text[:FULLTEXT_MAX_CHARS]
+    except Exception as e:
+        print(f"  fulltext fetch failed for {url}: {e}")
+        return ""
+
+
+def enrich_fulltext(feed: dict) -> None:
+    """スコア/ブクマ数上位の記事にフルテキストを付与する。"""
+    # HN: score上位20件
+    hn_items = feed.get("hackernews", [])
+    hn_targets = sorted(hn_items, key=lambda x: x.get("score", 0), reverse=True)[:FULLTEXT_MAX_ITEMS]
+    hn_target_urls = {item["url"] for item in hn_targets}
+
+    # はてな: bookmarks上位20件
+    hatena_items = feed.get("hatena", [])
+    hatena_targets = sorted(hatena_items, key=lambda x: x.get("bookmarks", 0), reverse=True)[:FULLTEXT_MAX_ITEMS]
+    hatena_target_urls = {item["url"] for item in hatena_targets}
+
+    target_urls = hn_target_urls | hatena_target_urls
+    print(f"Fetching fulltext for {len(target_urls)} articles...")
+
+    fetched = 0
+    for items in [hn_items, hatena_items]:
+        for item in items:
+            if item["url"] in target_urls:
+                text = fetch_fulltext(item["url"])
+                item["full_text"] = text
+                if text:
+                    fetched += 1
+            else:
+                item["full_text"] = ""
+
+    print(f"  Fulltext fetched: {fetched}/{len(target_urls)} articles")
+
+
+# ─────────────────────────────────────────────
 # メイン
 # ─────────────────────────────────────────────
 def main():
@@ -302,6 +363,10 @@ def main():
     if hn_before != len(hn_items) or hatena_before != len(hatena_items):
         print(f"Dedup: HN {hn_before}->{len(hn_items)}, "
               f"Hatena {hatena_before}->{len(hatena_items)}")
+
+    # スコア/ブクマ数上位の記事にフルテキストを付与
+    pre_enrich_feed = {"hackernews": hn_items, "hatena": hatena_items}
+    enrich_fulltext(pre_enrich_feed)
 
     now = datetime.now(timezone.utc)
     result = {

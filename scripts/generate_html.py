@@ -259,6 +259,33 @@ def card_html(item: dict) -> str:
     if desc and desc != title:
         desc_html = f'<p class="card-desc">{desc}</p>'
 
+    # AI要約
+    summary_ja = escape(item.get("summary_ja", ""))
+    summary_html = ""
+    if summary_ja:
+        summary_html = (
+            '<p style="color:var(--text);font-size:12px;line-height:1.7;'
+            'margin-bottom:6px;padding:6px 10px;background:rgba(124,106,247,0.08);'
+            'border-left:2px solid var(--accent);border-radius:4px">'
+            f'\U0001f916 {summary_ja}</p>'
+        )
+
+    # フルテキスト（アコーディオン展開）
+    full_text = item.get("full_text", "")
+    fulltext_html = ""
+    if full_text:
+        full_text_escaped = escape(full_text).replace("\n", "<br>")
+        fulltext_html = (
+            '<details style="margin-top:10px">'
+            '<summary style="cursor:pointer;color:var(--accent);font-size:12px;'
+            'user-select:none">\U0001f4c4 \u672c\u6587\u3092\u8aad\u3080</summary>'
+            '<div style="margin-top:10px;line-height:1.85;font-size:13px;'
+            'color:var(--text);border-top:1px solid var(--border);padding-top:10px">'
+            f'{full_text_escaped}'
+            '</div>'
+            '</details>'
+        )
+
     if title_ja:
         title_html = (
             f'<a href="{url}" target="_blank" class="card-title">{title_ja}</a>'
@@ -275,7 +302,9 @@ def card_html(item: dict) -> str:
         f'</div>'
         f"{title_html}"
         f"{desc_html}"
+        f"{summary_html}"
         f'<div class="card-meta">{meta_html}</div>'
+        f"{fulltext_html}"
         f"</div>"
     )
 

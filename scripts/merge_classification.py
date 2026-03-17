@@ -143,6 +143,8 @@ def main() -> None:
             if isinstance(flag, dict):
                 if flag.get("title_ja"):
                     item["title_ja"] = flag["title_ja"]
+                if flag.get("summary_ja"):
+                    item["summary_ja"] = flag["summary_ja"]
                 claude_cat = _CLAUDE_CATEGORY_MAP.get(flag.get("category", ""))
                 if claude_cat:
                     item["category"] = claude_cat
@@ -150,15 +152,23 @@ def main() -> None:
     else:
         print(f"  hackernews: length mismatch or empty ({len(hn_flags)} vs {len(hn_items)}), skipping")
 
-    # hatena: category を適用
+    # hatena: category + summary_ja を適用
     hatena_items = feed.get("hatena", [])
     hatena_cats = classification.get("hatena", [])
     if hatena_cats and len(hatena_cats) == len(hatena_items):
-        for item, cat_str in zip(hatena_items, hatena_cats):
-            claude_cat = _CLAUDE_CATEGORY_MAP.get(cat_str, "")
-            if claude_cat:
-                item["category"] = claude_cat
-        print(f"  hatena: applied category for {len(hatena_items)} items")
+        for item, cat_data in zip(hatena_items, hatena_cats):
+            # dict形式（category + summary_ja）と文字列形式（categoryのみ）の両方に対応
+            if isinstance(cat_data, dict):
+                claude_cat = _CLAUDE_CATEGORY_MAP.get(cat_data.get("category", ""), "")
+                if claude_cat:
+                    item["category"] = claude_cat
+                if cat_data.get("summary_ja"):
+                    item["summary_ja"] = cat_data["summary_ja"]
+            else:
+                claude_cat = _CLAUDE_CATEGORY_MAP.get(cat_data, "")
+                if claude_cat:
+                    item["category"] = claude_cat
+        print(f"  hatena: applied category + summary_ja for {len(hatena_items)} items")
     else:
         print(f"  hatena: length mismatch or empty ({len(hatena_cats)} vs {len(hatena_items)}), skipping")
 
