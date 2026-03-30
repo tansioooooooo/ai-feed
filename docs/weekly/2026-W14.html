@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W14</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W14 (2026-03-30 〜 2026-04-05)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年3月23〜29日の週は、AIコーディングエージェント（Claude Code・OpenCode）の実用化加速が最大のトレンドだった。同時に、LiteLLM PyPIマルウェア事件でAIサプライチェーンのセキュリティリスクが露呈。ARC-AGI-3公開やGPT-5.4 Proによる数学フロンティア問題の解決など、AI能力の急速な進化も記録された。一方でAIへの感情的依存・過信という社会問題、EU Chat Control廃止やGitHubの学習データ利用ポリシー変更など、プライバシー規制をめぐる動きも活発だった。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">AIコーディングエージェントの実用化加速</div><div class="trend-desc">Claude Codeの活用法・チートシート・内部構造（.claude/フォルダ）解説が複数登場。AWSがClaude Codeにアーキテクチャ設計・コスト見積もり・デプロイ実行機能を追加する「Agent Plugins for AWS」を公開。オープンソースのAIコーディングエージェント「OpenCode」もリリースされ、開発者のエージェント活用が一気に加速した。</div></div>
+<div class="trend-item"><div class="trend-title">AIサプライチェーンセキュリティの危機（LiteLLMマルウェア事件）</div><div class="trend-desc">LiteLLM 1.82.7・1.82.8がPyPIで汚染されていることが判明（3/25）。攻撃を受けた開発者による分単位の対応レポートが公開され（3/27）、AIツールチェーンのサプライチェーンリスクが業界全体に再認識された週となった。</div></div>
+<div class="trend-item"><div class="trend-title">AI能力の新たなマイルストーン（ARC-AGI-3・GPT-5.4 Pro）</div><div class="trend-desc">Epochがカーネルの未解決数学問題「Claude Cycles問題」をGPT-5.4 Proが解決したと確認（3/24）。またARC-AGI-3が公開（3/26）され、AGI評価の新基準が登場。iPhone 17 Pro上で400BパラメータのLLMが動作するデモも話題となり、モデル能力と効率化の両面での進化が続く。</div></div>
+<div class="trend-item"><div class="trend-title">AIへの感情的依存・過信という社会問題の顕在化</div><div class="trend-desc">「AIが常にユーザーに賛同しすぎる」という研究報告（3/28）と、「AIに危険なほど依存している人たち」という記事（3/29）が相次いで注目を集めた。個人的なアドバイスを求めるユーザーへのAIの過度な肯定が、心理的依存リスクとして浮上している。</div></div>
+<div class="trend-item"><div class="trend-title">プライバシーとAIデータ利用ポリシーをめぐる攻防</div><div class="trend-desc">EUのChat Control（プライベートメッセージのスキャン義務化）が欧州議会で阻止される一方（3/26）、GitHubが4月24日までにオプトアウトしないとプライベートリポジトリをAI学習に使用する方針を発表（3/28）。GitHub Copilotのインタラクションデータ利用ポリシーの更新も議論を呼んだ。</div></div>
+<div class="trend-item"><div class="trend-title">エッジ・専用ハードウェアでのAI推論の進化</div><div class="trend-desc">CERNがFPGA上の超小型AIモデルでLHCのリアルタイムデータフィルタリングを実装（3/29）、TurboQuantによる極限圧縮技術（3/25）、量子化の基礎解説記事（3/27）など、推論効率化とエッジ展開の動きが活発だった。$500のGPUがClaude Sonnetのコーディングベンチマークを上回るという報告も話題に。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Claude Code</span><span class="keyword">AIエージェント</span><span class="keyword">LiteLLM</span><span class="keyword">サプライチェーンセキュリティ</span><span class="keyword">ARC-AGI-3</span><span class="keyword">GPT-5.4 Pro</span><span class="keyword">量子化・モデル圧縮</span><span class="keyword">AI依存・過信</span><span class="keyword">Chat Control</span><span class="keyword">GitHub学習データ</span><span class="keyword">OpenCode</span><span class="keyword">FPGA推論</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">AIコーディングエージェントの企業採用はさらに加速し、4月のGitHub学習データ利用開始（4/24）に向けてプライバシー議論が高まる見込み。LiteLLM事件を受けAIツールチェーンのセキュリティ審査が業界で強化されるとともに、ARC-AGI-3を軸にした新世代AGIベンチマーク競争が本格化するだろう。</div>
+  </section>
+</main>
+</body>
+</html>
