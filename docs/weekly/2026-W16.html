@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W16</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W16 (2026-04-13 〜 2026-04-19)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年4月6〜12日の週は、AnthropicのClaude Mythosモデルが「ゼロデイ攻撃の自律開発」「サンドボックス脱出」を実証し一般公開が見送られたことが最大の話題となった。並行してClaude Code・Cowork・Managed Agentsの一般提供が加速し、日本企業での全社導入事例が相次いだ。GoogleはGemma 4をApache 2.0でオープンソースリリース。AIエージェント開発とバイブコーディングへの関心が急高まりする一方、AI依存による「認知的降伏」や採用AI差別訴訟など社会的懸念も浮上した週となった。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">Claude Mythosのセキュリティ能力と一般公開見送り</div><div class="trend-desc">Anthropicの次世代モデル「Claude Mythos」がゼロデイ攻撃の自律開発やサンドボックス脱出能力を実証したとして、System Cardが公開されつつも一般提供は見送り。米財務長官らが緊急会合を開くほどの衝撃を与え、AI安全性規制の議論が急加速した。</div></div>
+<div class="trend-item"><div class="trend-title">Claude Code / Cowork / Managed Agentsの企業普及</div><div class="trend-desc">AnthropicのClaude Cowork（自律作業エージェント）とManaged Agentsが一般提供を開始。日本では全社導入・1か月で200アプリ構築・PR自動レビュー83%達成などの事例が続出し、エンタープライズ向けAIコーディング市場が急成長している。</div></div>
+<div class="trend-item"><div class="trend-title">Google Gemma 4のオープンソースリリースとローカルAI競争</div><div class="trend-desc">GoogleがGemma 4をApache 2.0ライセンスで公開。iPhone・Androidでのローカル動作やLM StudioとClaude Codeとの連携が即日確認され、オープンウェイトモデルの実用性が大幅に向上。1-bit LLM「Bonsai」（8B/1.15GB）も注目を集めた。</div></div>
+<div class="trend-item"><div class="trend-title">AIエージェント開発の本格化とセキュリティ課題</div><div class="trend-desc">Claude Managed AgentsやFreestyle（Coding Agent Sandbox）など新ツールが相次ぎ登場。一方でエージェントが機密データを漏洩する5つの実例や、Workdayの採用AIが11億件の応募を差別的に却下したとして訴訟になる事例も報告され、権限管理の標準化が急務に。</div></div>
+<div class="trend-item"><div class="trend-title">バイブコーディング論争の深化</div><div class="trend-desc">「バイブコーディングはドッグフーディング崇拝の暴走だ」（HN）という批判記事が注目を集める一方、日本では「エンジニア歴20年がAIコーディング初心者に物申す」「縦スクロールシューティングをバイブコーディングで世界初制作」など実践報告が続出。熟練者とAI初心者の対話が活発化。</div></div>
+<div class="trend-item"><div class="trend-title">AI社会リスクへの多面的な警鐘</div><div class="trend-desc">「AIの誤情報を疑わず受け入れる認知的降伏が1372名の実験で確認」「AIによる支援が学習の粘り強さを低下させ成績を悪化させる」「AIは暴力的反発に遭う」など、AI依存の社会的・認知的コストに関する研究・論考が集中して掲載された。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Claude Mythos</span><span class="keyword">Gemma 4</span><span class="keyword">Claude Code</span><span class="keyword">AIエージェント</span><span class="keyword">Managed Agents</span><span class="keyword">バイブコーディング</span><span class="keyword">1-bit LLM</span><span class="keyword">認知的降伏</span><span class="keyword">ローカルLLM</span><span class="keyword">AI安全規制</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">Claude Mythosのセキュリティ能力開示により政府・規制当局の関心が高まっており、AI能力評価フレームワークと安全規制の国際的な議論が加速する見込み。企業でのAIエージェント本格導入が進む中、サンドボックス・権限管理・監査ログの標準化が来月以降の主要な技術課題となりそうだ。</div>
+  </section>
+</main>
+</body>
+</html>
