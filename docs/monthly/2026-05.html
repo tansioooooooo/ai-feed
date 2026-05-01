@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-05</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">月次レポート</span>
+    <span class="subtitle">2026-05 (2026-05-01 〜 2026-05-31)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 月次サマリー</h2>
+    <div class="summary-box">2026年4月のAIフィードは540件以上の記事をカバー。Claude Codeを中心としたAIコーディングツールの急速普及と品質・著作権をめぐる激しい議論が最大の話題となった。同時にGemma 4・Qwen3.6・Kimi K2.6といったオープンモデルの台頭でローカルLLM環境が大幅に改善。一方でAI生成コンテンツへの社会的反発・業界への不信感が高まり、「AI抵抗運動」や「AIまみれの世界への疲弊」を訴える声が増加。OpenAI 8,520億ドル評価・AnthropicへのAmazon 50億ドル投資など巨額マネーは流れ続けた。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">Claude Codeの急拡大と品質・著作権問題</div><div class="trend-desc">Claude Codeのソースコード流出（偽ツール・フラストレーション検出正規表現・潜入モードの存在が判明）、品質低下報告、利用制限への早期到達、生成コードの著作権帰属など多角的な問題が噴出。OpenClaw（非公式CLI）をめぐるAnthropicの対応も話題を集め、AIコーディングツールのガバナンス整備が急務となっていることを示した。Cursor 3リリースやSpaceXによるCursor買収（600億ドル）報道も市場の熱狂を反映。</div></div>
+<div class="trend-item"><div class="trend-title">オープンモデルの急進化：Gemma 4・Qwen3.6・Kimi K2.6</div><div class="trend-desc">GoogleがGemma 4をリリースし、iPhoneでのフルオフライン推論が実現。Qwen3.6シリーズ（27B Dense・Max-Preview・Plus）が「フラッグシップ水準のコーディング性能」を小型モデルで達成。AMD製Lemonade・LM Studio HeadlessなどローカルLLMインフラも充実し、クラウドAPI依存からの脱却が加速。SWE-bench Verifiedがフロンティアモデルの能力を測定できなくなったと報告され、ベンチマーク飽和が深刻化。</div></div>
+<div class="trend-item"><div class="trend-title">AI社会への反発・疲弊感の拡大</div><div class="trend-desc">「AIまみれの世界にうんざりしている」「AI業界は大衆に嫌われていることに気づき始めている」「AI抵抗運動」「辞めた。AIに負けた」など反AI感情を示す記事が急増。Deezerが毎日アップロード楽曲の44%がAI生成と報告。スタンフォード報告書がAI関係者と一般市民の認識格差拡大を指摘。バイブコーディングへの批判（「ドッグフーディングが暴走した結果」）も目立ち、業界側と利用者側の乖離が明確に。</div></div>
+<div class="trend-item"><div class="trend-title">AIによるセキュリティ攻撃・脆弱性発見の双方向化</div><div class="trend-desc">Claude CodeがLinux 23年潜伏の脆弱性を発見、ClaudeがFreeBSD RCEエクスプロイトを完全記述、Mythosが小規模モデルでも検出可能な脆弱性を発見するなどAIの防御活用が進展。一方でAIエージェントが本番DBを削除する事故、主要なAIエージェントベンチマークの悪用手法の公開など攻撃面の懸念も浮上。NPM Axios・Bitwarden CLIへのサプライチェーン攻撃も発生。</div></div>
+<div class="trend-item"><div class="trend-title">AI巨大投資継続とビジネスモデルの変容</div><div class="trend-desc">OpenAIが8,520億ドル評価で資金調達完了、Anthropicがアマゾンから50億ドル調達（見返りに1,000億ドルのクラウド支出を約束）、GoogleがAnthropicに最大400億ドル投資計画。MicrosoftとOpenAIの独占的収益分配契約終了など業界再編も進行。GitHub Copilotが使用量ベース課金へ移行するなど、AIツールのマネタイズモデルが従量課金に収斂しつつある。</div></div>
+<div class="trend-item"><div class="trend-title">プライバシー・監視・データ利用問題の深刻化</div><div class="trend-desc">AtlassianがAI学習用データ収集をデフォルト有効化、MetaがAI学習用にマウス操作・キーストロークの収集開始、OkCupidが300万件の写真を顔認識会社に提供（FTC発表）など企業による個人データの無断AI活用が相次いで発覚。NSAがブラックリストにもかかわらずAnthropicのMythosを使用している報告も波紋を呼んだ。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Claude Code</span><span class="keyword">Gemma 4</span><span class="keyword">AIエージェント</span><span class="keyword">ローカルLLM</span><span class="keyword">Qwen3.6</span><span class="keyword">バイブコーディング</span><span class="keyword">AI抵抗運動</span><span class="keyword">サプライチェーン攻撃</span><span class="keyword">OpenAI資金調達</span><span class="keyword">MCP</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">ローカルLLM環境の整備とオープンモデルの高品質化が続き、クラウドAI一辺倒から分散化が進む見通し。Claude Codeなどコーディングエージェントは品質・コスト問題の対応が焦点となり、サービス改善か代替ツールへの移行が加速する公算。AI反発感情は引き続き高まり、規制・ガバナンス議論が欧米で本格化する可能性が高い。</div>
+  </section>
+</main>
+</body>
+</html>
