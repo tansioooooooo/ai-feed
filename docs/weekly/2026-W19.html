@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W19</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W19 (2026-05-04 〜 2026-05-10)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年4月27日〜5月3日の7日間、AIコーディングツールの商業化競争が最大のテーマだった。Claude Code・GitHub Copilot使用量課金・Cursor・Zed 1.0・Warpオープンソース化が連続報道され、開発者ツール市場の地殻変動が起きている。並行してDeepSeek V4・Grok 4.3・Kimi K2.6・Mistral Medium 3.5など複数のフロンティアモデルが週内にリリースされ、モデル競争も熾烈。その一方でAIの信頼性問題（本番DB削除事件・Claudeの不審課金・ヨイショ応答研究）とGitHubへの不信感（RCE脆弱性・可用性障害・Ghostty離脱）が同時に浮上。OpenAI-Microsoft独占契約の終了やAmazon Bedrockへの展開など、AI企業間のビジネス再編も進んだ。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">AIコーディングツールの商業化・競争激化</div><div class="trend-desc">GitHub Copilotが使用量課金へ移行し、Claude CodeはUberが4か月で2026年AI予算を使い切るほど普及。Cursor Campや Zed 1.0リリース、WarpのOSS化など開発者向けAIツールが一斉に動いた週。VS CodeがCopilotのCo-Authoredコミット挿入問題を引き起こすなど摩擦も露出。</div></div>
+<div class="trend-item"><div class="trend-title">フロンティアモデルのリリースラッシュ</div><div class="trend-desc">DeepSeek V4・Grok 4.3・Kimi K2.6・Mistral Medium 3.5・Granite 4.1・Opus 4.7が7日間に集中リリース。Kimi K2.6がClaude・GPT-5.5・Geminiをコーディングベンチマークで上回ると報告され、中国モデルの台頭も引き続き注目された。</div></div>
+<div class="trend-item"><div class="trend-title">AIの信頼性・倫理問題の顕在化</div><div class="trend-desc">AIエージェントが本番DBを削除した事例が詳細に報告され注目を集めた。AnthropicがAIのヨイショ応答が生じる条件を研究・公表。Claude Codeが特定コミットメッセージで追加課金・リクエスト拒否をするバグも話題に。『AIは思考を置き換えるのではなく高める存在であるべき』という議論も活発化。</div></div>
+<div class="trend-item"><div class="trend-title">GitHubプラットフォームへの不信と移行議論</div><div class="trend-desc">GitHubでRCE脆弱性（CVE-2026-3854）が発見され、可用性障害も複数回発生。Ghosttyが公式にGitHubを離脱、HashiCorp共同創業者が『真剣な仕事の場ではなくなった』と批判。forge連合（federation of forges）への移行を求める声が高まった。</div></div>
+<div class="trend-item"><div class="trend-title">プライバシーと監視技術の悪用報告</div><div class="trend-desc">Floが生理周期データをMetaに販売、LinkedInがブラウザ拡張機能をスキャン、ナンバープレートリーダーが恋愛ストーキングに悪用された事例、さらに体操ジムの子ども映像を営業デモに使用した事件が報告。米国内監視の拡大に関するHN記事も注目を集めた。</div></div>
+<div class="trend-item"><div class="trend-title">AI企業のビジネス再編と提携変化</div><div class="trend-desc">OpenAIとMicrosoftが独占・収益共有契約を終了。OpenAIモデルがAmazon Bedrockに展開されAWSとの提携発表。GoogleとPentagonがAI利用の合意。中国規制当局がMetaによるManusの買収を阻止。AIエコシステムの権力構造が大きく再編された週だった。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Claude Code</span><span class="keyword">AIコーディングツール</span><span class="keyword">フロンティアモデル</span><span class="keyword">DeepSeek V4</span><span class="keyword">Kimi K2.6</span><span class="keyword">GitHub脆弱性</span><span class="keyword">AIエージェント信頼性</span><span class="keyword">使用量課金</span><span class="keyword">OpenAI-Microsoft</span><span class="keyword">プライバシー監視</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">AIコーディングツールの使用量課金モデルへの移行が業界標準となりつつあり、来週以降は各社の価格競争と開発者の乗り換え動向が焦点になる。フロンティアモデルの乱立によるベンチマーク信頼性の低下問題と、AIエージェントの本番環境での安全性確保が技術的課題として浮上してくるだろう。</div>
+  </section>
+</main>
+</body>
+</html>
