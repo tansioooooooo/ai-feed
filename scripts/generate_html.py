@@ -464,7 +464,7 @@ def generate_index_html(feed: dict, daily_dates: list[tuple[str, int]], trend_re
 </html>"""
 
 
-def generate_daily_html(date_str: str, feed: dict) -> str:
+def generate_daily_html(date_str: str, feed: dict, daily_dates: list[tuple[str, int]] | None = None) -> str:
     updated_str = format_updated(feed.get("updated_at", ""))
     hn_items = feed.get("hackernews", [])
     hatena_items = feed.get("hatena", [])
@@ -472,13 +472,30 @@ def generate_daily_html(date_str: str, feed: dict) -> str:
 
     tabs_html, panels_html = build_category_panels(all_items)
 
+    index_html = ""
+    if daily_dates:
+        links = "\n".join(
+            f'<a href="{d}.html" class="archive-link{" active-date" if d == date_str else ""}">'
+            f"<span>{d}</span>"
+            f'<span class="archive-count">{c} articles</span></a>'
+            for d, c in daily_dates
+        )
+        index_html = (
+            f'<div class="archive-section">'
+            f"<h2>Archive</h2>"
+            f'<div class="archive-list">{links}</div>'
+            f"</div>"
+        )
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tech Feed - {date_str}</title>
-<style>{CSS}</style>
+<style>{CSS}
+.active-date {{ border-color: var(--accent); color: var(--accent); }}
+</style>
 </head>
 <body>
 <header>
@@ -494,6 +511,7 @@ def generate_daily_html(date_str: str, feed: dict) -> str:
 <main>
   <a href="../index.html" class="back-link">&larr; Latest</a>
   {panels_html}
+  {index_html}
 </main>
 <script>{TAB_JS}</script>
 </body>
@@ -509,6 +527,7 @@ def main() -> None:
         feed = json.load(f)
 
     # Generate daily HTML pages
+    daily_dates = load_daily_dates()
     if DAILY_DIR.exists():
         for daily_json in DAILY_DIR.glob("*.json"):
             date_str = daily_json.stem
@@ -516,11 +535,10 @@ def main() -> None:
                 daily_feed = json.load(f)
             daily_html_path = DAILY_DIR / f"{date_str}.html"
             with open(daily_html_path, "w", encoding="utf-8") as f:
-                f.write(generate_daily_html(date_str, daily_feed))
+                f.write(generate_daily_html(date_str, daily_feed, daily_dates))
             print(f"  Generated {daily_html_path}")
 
     # Generate index.html with archive links
-    daily_dates = load_daily_dates()
     trend_reports = load_trend_reports()
     html = generate_index_html(feed, daily_dates, trend_reports)
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
