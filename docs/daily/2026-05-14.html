@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-05-14</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-05-14</span>
     <span class="updated">2026/05/14 09:26 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://grapheneos.social/@GrapheneOS/116550899908879585" target="_blank" class="card-title">ハードウェア証明書が独占を助長する仕組み</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Hardware Attestation as Monopoly Enabler</span><div class="card-meta"><span class="date">05/10 17:54</span> &middot; <span class="score">&#9650; 2170</span> &middot; <a href="https://news.ycombinator.com/item?id=48086190" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">To use the Mastodon web application, please enable JavaScript. Alternatively, try one of the<br>native apps<br>for Mastodon for your platform.</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://www.xda-developers.com/linux-gaming-is-getting-faster-because-windows-apis-are-becoming-linux-kernel-features/" target="_blank" class="card-title">WindowsのAPIがLinuxカーネル機能になり、Linuxゲーミングが高速化</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Linux gaming is faster because Windows APIs are becoming Linux kernel features</span><div class="card-meta"><span class="date">05/10 20:54</span> &middot; <span class="score">&#9650; 716</span> &middot; <a href="https://news.ycombinator.com/item?id=48087887" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">In March 2026, Linux crossed five percent of Steam&#x27;s user base for the first time, an all-time high for an operating system that spent two decades as a novelty when it came to any kind of gaming. Microsoft&#x27;s end-of-support deadline for Windows 10 last October pushed many users to look at alternatives, and the Steam Deck has quietly turned millions of people into Linux gamers without them really thinking about it, leading to more widespread adoption on desktop machines.<br>Most of that progress used to happen inside a piece of software called Wine, the translation layer that convinces Windows games they&#x27;re running on Windows. Valve&#x27;s tuned version of Wine, called Proton, is what makes Steam Play and the Steam Deck work. For years, every meaningful improvement to Linux gaming came from changes to Wine and Proton themselves. That&#x27;s still true, but increasingly the most important changes are happening one layer deeper, inside the Linux kernel. The latest example of that is something called NTSYNC, a kernel-level driver that has offered great performance gains over previous versions of Wine, and is loaded by default on every Steam Deck that&#x27;s up-to-date.<br>Wine 11 rewrites how Linux runs Windows games at the kernel level, and the speed gains are massive<br>Wine 11 is the biggest jump for Linux gaming in years.<br>What NTSYNC actually is<br>An additional piece of the performance puzzle<br>NTSYNC is a small piece of driver added directly to the Linux kernel that gives it a native implementation of a set of Windows-specific tools that games depend on to coordinate themselves.<br>Modern games juggle dozens of things at once. While you&#x27;re playing, your CPU manages the rendering pipeline, loading assets, running physics, processing audio, handling AI NPC routines, and tracking inputs, all in parallel across multiple cores. All those jobs constantly have to coordinate so they don&#x27;t trip over each other.<br>The history of Linux<br>Trivia challenge<br>From a Finnish student&#x27;s side project to powering the world — how well do you know the story of Linux?<br>In what year did Linus Torvalds first announce the Linux kernel to the world?<br>Which university was Linus Torvalds attending when he created the first version of the Linux kernel?<br>What operating system primarily inspired Linus Torvalds to create the Linux kernel?<br>What was the version number of the first publicly released Linux kernel in 1991?<br>Which Linux distribution, first released in 1993, is one of the oldest still actively maintained today?<br>The GNU Project, which provided many tools that paired with the Linux kernel, was founded by which developer?<br>Which company released a landmark commercial Linux distribution in 1994, helping bring Linux into the enterprise world?<br>Ubuntu Linux, one of the most popular desktop distributions, is based on which other Linux distribution?<br>Your Score<br>Thanks for playing!<br>Windows handles this coordination by using a specific set of mechanisms, and before NTSYNC, Wine had to mimic these mechanisms using things like esync and fsync, which both worked, but didn&#x27;t always match Windows exactly. NTSYNC builds these mechanisms straight into the Linux kernel for the first time, and it means Wine doesn&#x27;t have to emulate anything anymore. The developer-facing API calls don&#x27;t actually change, Linux just knows how to answer them natively.<br>Wine has been translating Windows games to Linux since 1993, but Proton is what made it effortless<br>Wine is the foundation that makes gaming on Linux possible.<br>NTSYNC is part of a growing pattern<br>Not the first time Linux has inherited features because of Windows<br>NTSYNC isn&#x27;t the first time Linux has gained a new feature specifically because Windows games needed it. A few years back, Linux added a way for software to wait on several events at once, which is something Windows had built in for decades, but Linux didn&#x27;t. Wine had been working around the gap with awkward tricks until the kernel finally got native support.<br>This work is driven by Valve, by CodeWeavers (the company that employs many of the core Wine developers, including NTSYNC&#x27;s author Elizabeth Figura), and by a steady stream of contributors who want Linux to be a real gaming platform without depending on out-of-ecosystem patches forever.<br>Valve isn&#x27;t ditching Windows or x86, but it&#x27;s quietly making both optional<br>Valve wants to make it possible for gamers to play anywhere.<br>These aren&#x27;t magical performance gains<br>fsync was already pretty good<br>The headline performance gains look great, but they need some context. The eye-catching 40 to 200 percent FPS gains cited in NTSYNC&#x27;s original benchmarks were measured against unmodified upstream Wine, which almost nobody uses to play games on Linux anymore. Most Linux gamers, including every Steam Deck owner, use Proton, which already has fsync. Compared to fsync, NTSYNC&#x27;s performance gains are far more modest. The games that benefit most from the change to NTSYNC are games that were really struggling before. Anything that was running at decent framera</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://arstechnica.com/tech-policy/2026/05/drop-database-what-not-to-do-after-losing-an-it-job/" target="_blank" class="card-title">双子の兄弟、解雇直後に政府データベース96件を削除</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Twin brothers wipe 96 government databases minutes after being fired</span><div class="card-meta"><span class="date">05/12 22:28</span> &middot; <span class="score">&#9650; 425</span> &middot; <a href="https://news.ycombinator.com/item?id=48115438" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">In the US, fired and laid-off workers often have their digital credentials deactivated before they learn about the loss of their jobs; indeed, the inability to log in to a corporate system may be the first an employee knows of the situation.<br>Although not a generous or humane approach to staff reduction, it does follow from the simple fact that a fired employee with access to company systems is a security risk.<br>Just ask the Akhter twin brothers, accused of wiping out 96 databases hosting US government information in the minutes after both were fired last year from their shared employer.<br>DROP DATABASE<br>Muneeb and Sohaib Akhter, now both 34, had been in trouble before. Back in 2015, the brothers pled guilty in Virginia to a scheme involving wire fraud and computers. Muneeb was sentenced to three years in prison, while Sohaib got two.<br>After their stints in jail, the brothers worked their way back into the tech world. In 2023, Muneeb got a job with a Washington, DC, firm that sold software and services to 45 federal clients; Sohaib got a job at the same company a year later.<br>According to the government, however, the two couldn’t stay out of trouble. For instance:<br>On Feb. 1, 2025, Muneeb Akhter asked Sohaib Akhter for the plaintext password of an individual who submitted a complaint to the Equal Employment Opportunity Commission’s Public Portal, which was maintained by the Akhters’ employer. Sohaib Akhter conducted a database query on the EEOC database and then provided the password to Muneeb Akhter. That password was subsequently used to access that individual’s email account without authorization.<br>This was not a one-off. Muneeb had been assembling usernames and passwords—5,400 of them taken from his own company’s network data. He then built custom Python scripts to try these logins against common websites; for instance, his “marriott_checker.py” application tested the logins against Marriott’s hotel chains. Muneeb managed to log in successfully hundreds of times, including to DocuSign and airline accounts. Sometimes, if victims had airline miles stored, Muneeb would book travel for himself.</div></details></div>
@@ -243,83 +247,72 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://k-tai.watch.impress.co.jp/docs/news/2108578.html" target="_blank" class="card-title">LINEヤフー、カカクコムに1株3232円で買収再提案　欧EQTに対抗</a><div class="card-meta"><span class="date">05/14 05:20</span> &middot; <span class="score">&#128278; 12</span></div></div></div></div>
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.itmedia.co.jp/news/articles/2605/14/news117.html" target="_blank" class="card-title">「世界サーバ投げ選手権」2026年のチャンピオンはSAP従業員</a><p class="card-desc">ドイツで3月25～28日（現地時間）に開催された技術イベント「CloudFest」で、サーバを人力で投げ、その飛距離を競う大会「World Server Throwing Championship 2026」が併催された。CloudFest公式Facebookアカウントの投稿によれば、女子トーナメントの優勝者は独SAPの従業員というサラ・クレマーさん。男子トーナメント...</p><div class="card-meta"><span class="date">05/14 07:39</span> &middot; <span class="score">&#128278; 22</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">ドイツで3月25〜28日（現地時間）に開催された技術イベント「CloudFest」で、サーバを人力で投げ、その飛距離を競う大会「World Server Throwing Championship 2026」が併催された。CloudFest公式Facebookアカウントの投稿によれば、女子トーナメントの優勝者は独SAPの従業員というサラ・クレマーさん。男子トーナメントでは米IT機器販売代理店Core 4 Solutionsに務めるジョン・エガースさんが優勝した。<br>競技は一人につき2回までサーバを投げ、最も遠くに投げた人が勝ちというルール。まず現地で予選が行われ、男女ともに上位3人が決勝へ進出。決勝では、スペインやオランダで行われた現地予選の上位者や、2025年大会の優勝者も参加し、飛距離を競った。クレマーさんの記録は11.44m、エッガースさんの飛距離は11.25mで、2人には優勝の証として賞品が贈られた。<br>イベント公式ブログによれば、サーバを投げる競技は10年以上の歴史があるという。当時の映像もYouTubeで公開しており「インターネットインフラストラクチャ業界で最もオタク的でエキサイティングなスポーツ」と紹介している。<br>参考記事：「世界サーバ投げ選手権」今年もドイツで開催 「インフラ業界で最もオタク的でエキサイティング」<br>Copyright © ITmedia, Inc. All Rights Reserved.<br>Special<br>PR</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.itmedia.co.jp/news/articles/2605/14/news100.html" target="_blank" class="card-title">「『妖怪ウォッチ2』Unityで作り直した」非公式リメイク報告、海外で拡散　レベルファイブ「厳正に対処」</a><p class="card-desc">5月10日にXで、「妖怪ウォッチ2」をUnityで再構築し、「PC、モバイル、Switch、VRで利用可能にした」と主張するスペイン語の投稿と、スクリーンショットが公開されていた。 レベルファイブが13日、声明を発表した後、関連投稿は削除されている。 同社の声明では、「許諾なくゲームソフトを複製・改変・編集する行為と、...</p><div class="card-meta"><span class="date">05/14 06:01</span> &middot; <span class="score">&#128278; 12</span></div></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W14.html" class="archive-link"><span>&#128202; 2026-W14</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W13.html" class="archive-link"><span>&#128202; 2026-W13</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">38 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-05-14.html" class="archive-link active-date"><span>2026-05-14</span><span class="archive-count">38 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
