@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-05-16</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-05-16</span>
     <span class="updated">2026/05/16 08:45 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://twitter.com/mitchellh/status/2055380239711457578" target="_blank" class="card-title">今まさにAIサイコシスに陥っている企業が大量に存在すると思う</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">I believe there are entire companies right now under AI psychosis</span><div class="card-meta"><span class="date">05/15 20:26</span> &middot; <span class="score">&#9650; 1285</span> &middot; <a href="https://news.ycombinator.com/item?id=48153379" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">We’ve detected that JavaScript is disabled in this browser. Please enable JavaScript or switch to a supported browser to continue using x.com. You can see a list of supported browsers in our Help Center.<br>Help Center<br>Terms of Service Privacy Policy Cookie Policy Imprint Ads info © 2026 X Corp.</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://tanstack.com/blog/npm-supply-chain-compromise-postmortem" target="_blank" class="card-title">ポストモーテム：TanStack NPMサプライチェーン侵害</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Postmortem: TanStack NPM supply-chain compromise</span><div class="card-meta"><span class="date">05/11 21:08</span> &middot; <span class="score">&#9650; 1091</span> &middot; <a href="https://news.ycombinator.com/item?id=48100706" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">by Tanner Linsley on May 11, 2026.<br>Status (2026-05-15): All clear ✅<br>After a three-day full security sweep and hardening pass, we&#x27;re issuing an official all-clear on TanStack repo and package security.<br>- Only the Router/Start repo was affected — 42 monorepo packages, 2 versions each. All were deprecated within the hour and removed by npm shortly after.<br>- All other TanStack repos and packages were unaffected and remain secure: Query, DB, Store, AI, Table, Form, HotKeys, Virtual, Pacer, Config, Devtools, CLI, Intent, etc.<br>- Every currently-available published version of every TanStack package — Router and Start included — is safe to install.<br>See also: Hardening TanStack After the npm Compromise — the companion piece covering what we&#x27;re changing because of this incident.<br>Last updated 2026-05-15 — see Changelog.<br>On 2026-05-11 between 19:20 and 19:26 UTC, an attacker published 84 malicious versions across 42 @tanstack/* npm packages by combining: the pull_request_target &quot;Pwn Request&quot; pattern, GitHub Actions cache poisoning across the fork↔base trust boundary, and runtime memory extraction of an OIDC token from the GitHub Actions runner process. No npm tokens were stolen and the npm publish workflow itself was not compromised.<br>The malicious versions were detected publicly within 20 to 26 minutes (depending on which of the two publish batches a given version came from) by an external researcher ashishkurmi working for stepsecurity. All affected versions have been deprecated; npm security has been engaged to pull tarballs from the registry. We have no evidence of npm credentials being stolen, but we strongly recommend that anyone who installed an affected version on 2026-05-11 rotate AWS, GCP, Kubernetes, Vault, GitHub, npm, and SSH credentials reachable from the install host.<br>Tracking issue: TanStack/router#7383<br>GitHub Security Advisory: GHSA-g7cv-rxg3-hmpx<br>42 packages, 84 versions (two per package, published roughly 6 minutes apart). See the tracking issue for the full table. Confirmed-clean families: @tanstack/query*, @tanstack/table*, @tanstack/form*, @tanstack/virtual*, @tanstack/store, @tanstack/start (the meta-package, not @tanstack/start-*).<br>When a developer or CI environment runs npm install, pnpm install, or yarn install against any affected version, npm resolves the malicious optionalDependencies entry, fetches the orphan payload commit from the fork network, runs its prepare lifecycle script, and executes a ~2.3 MB obfuscated router_init.js smuggled into the affected tarball. The script:<br>- Harvests credentials from common locations: AWS IMDS / Secrets Manager, GCP metadata, Kubernetes service-account tokens, Vault tokens, ~/.npmrc, GitHub tokens (env, gh CLI, .git-credentials), SSH private keys<br>- Exfiltrates over the Session/Oxen messenger file-upload network (filev2.getsession.org, seed{1,2,3}.getsession.org) — end-to-end encrypted with no attacker-controlled C2, so blocking by IP/domain is the only network mitigation<br>- Self-propagates: enumerates other packages the victim maintains via registry.npmjs.org/-/v1/search?text=maintainer:&lt;user&gt; and republishes them with the same injection<br>Because the payload runs as part of npm install&#x27;s lifecycle, anyone who installed an affected version on 2026-05-11 must treat the install host as potentially compromised.<br>All times UTC. Local timestamps from GitHub API and npm registry.<br>Elapsed time from two reference points: the first malicious publish (19:20 UTC) and the moment the incident became known (StepSecurity issue #7383, 19:46 UTC).<br>Three vulnerabilities chained together. Each is necessary for the attack; none alone is sufficient.<br>bundle-size.yml ran pull_request_target for fork PRs and, inside that trigger context, checked out the fork&#x27;s PR-merge ref and ran a build:<br>on:<br>pull_request_target:<br>paths: [&#x27;packages/**&#x27;, &#x27;benchmarks/**&#x27;]<br>jobs:<br>benchmark-pr:<br>steps:<br>- uses: actions/checkout@v6.0.2<br>with:<br>ref: refs/pull/${{ github.event.pull_request.number }}/merge # fork&#x27;s merged code<br>- uses: TanStack/config/.github/setup@main # transitively calls actions/cache@v5<br>- run: pnpm nx run @benchmarks/bundle-size:build # executes fork-controlled code<br>on:<br>pull_request_target:<br>paths: [&#x27;packages/**&#x27;, &#x27;benchmarks/**&#x27;]<br>jobs:<br>benchmark-pr:<br>steps:<br>- uses: actions/checkout@v6.0.2<br>with:<br>ref: refs/pull/${{ github.event.pull_request.number }}/merge # fork&#x27;s merged code<br>- uses: TanStack/config/.github/setup@main # transitively calls actions/cache@v5<br>- run: pnpm nx run @benchmarks/bundle-size:build # executes fork-controlled code<br>The author of the workflow attempted a trust split (the comment-pr job is separate from benchmark-pr, with a comment in the YAML noting the intent to keep benchmark-pr &quot;untrusted with read-only permissions&quot;). The split is correct in spirit but missed two facts:<br>- actions/cache@v5&#x27;s post-job save is not gated by permissions:. Cache writes use a runner-internal token, not the workflow GITHUB_TOKEN. Setting permissions: contents: read does not block cache mutation.<br>- </div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://googlebook.google/" target="_blank" class="card-title">Googlebook</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Googlebook</span><div class="card-meta"><span class="date">05/12 17:37</span> &middot; <span class="score">&#9650; 929</span> &middot; <a href="https://news.ycombinator.com/item?id=48111545" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Be in the know.<br>Intelligence is the new spec.<br>Link to Youtube Video (visible only when JS is disabled)<br>The best of Gemini meets our most advanced laptops.<br>Magic Pointer<br>Select anything to ask, compare, or create with Gemini, instantly.1<br>Create My Widget<br>Build a custom widget, just by asking.1<br>Perfect partner to your Android phone.<br>Cast My Apps<br>Open your phone apps on your laptop, no installs needed.2<br>Quick Access<br>Access files from your phone as if they live on your laptop.2<br>Featherweight design. Heavyweight power.<br>Unbox it this fall.<br>Be in the know.</div></details></div>
@@ -223,85 +227,74 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.itmedia.co.jp/news/articles/2605/16/news003.html" target="_blank" class="card-title">「涼宮ハルヒの憂鬱」の視聴順を巡る4chan匿名ユーザーの投稿→うっかり数学の未解決問題で歴史的発見　2021年に論文化</a><p class="card-desc">2019年の開始以来、多様な最新論文を取り上げている連載「Innovative Tech」。ここではその番外編として“ちょっと昔”に発表された世界中の個性的な研究論文を独自視点で厳選、解説する。執筆は研究論文メディア「Seamless」（シームレス）を主宰し、日課として数多くの論文に目を通す山下氏が担当。イラストや漫画は、同...</p><div class="card-meta"><span class="date">05/16 02:01</span> &middot; <span class="score">&#128278; 152</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">2019年の開始以来、多様な最新論文を取り上げている連載「Innovative Tech」。ここではその番外編として“ちょっと昔”に発表された世界中の個性的な研究論文を独自視点で厳選、解説する。執筆は研究論文メディア「Seamless」（シームレス）を主宰し、日課として数多くの論文に目を通す山下氏が担当。イラストや漫画は、同メディア所属のアーティスト・おね氏が手掛けている。X：＠shiropen2<br>アニメ「涼宮ハルヒの憂鬱」の視聴順を巡るネット上の議論が、数学の未解決問題に歴史的な進展をもたらした。4chanの匿名ユーザー、SF作家、そして数学者たちの考えが結びつき、長年謎だった「最小超置換問題」の正体に迫った話を紹介する。<br>「1、2、3」という3つの数字をすべて1回ずつ使った並べ方は、「123」「132」「213」「231」「312」「321」の6通りある。これらすべてを単に横に繋げると18文字（「123132213231312321」）になる。しかし、文字列の一部を重ねることで、長さを大幅に節約することができる。<br>例えば「1、2」の2つの数字なら、並べ方は「12」と「21」の2通りだが、真ん中の「2」を重ねて「121」とすれば、3文字の中に両方のパターンを含めることができる。このように、考えうるすべての並び順（順列）を、末尾と先頭の文字を重ね合わせながら最も短く詰め込んだ文字列のことを「超順列」（スーパーパーミュテーション）あるいは「超置換」と呼ぶ。<br>先ほどの3つの数字の場合は「123121321」となり、9文字で全6パターンを網羅できる。数字の数が増えたとき、この最も圧縮された文字列の長さがいくつになるのかを解き明かすテーマは「最小超置換問題」と呼ばれる。<br>この純粋な数学の問題が、思わぬ形でインターネット上のサブカルチャーと結びついた。2006年に放送されたテレビアニメ「涼宮ハルヒの憂鬱」だ。このアニメは全14話からなるが、テレビ放送時には時系列がバラバラにシャッフルされた順序で放映された。そのため、ファンの間ではどの順番で見るのが一番正しいのかという議論が絶えなかった。<br>そして2011年、海外の匿名掲示板「4chan」で、ある途方もない疑問を投げかける者が現れた。すべての考えうる順番で全14話を網羅して視聴するには、最低何話見ればいいのか。これこそが、数学界で「ハルヒ問題」と呼ばれるようになった難問の始まりである。<br>全14話を並べ替える組み合わせは、14の階乗（14×13×12×…×1）、つまり約871億（87,178,291,200）通りも存在する。すべてを律儀に1回ずつ見れば14話×871億で約1兆2200億（1,220,496,076,800）話を見なければならない。<br>しかし、超順列の重ね合わせのテクニックを使えば、直前の視聴履歴を次の順序の一部として使い回すことができるため、視聴回数を大幅に圧縮できる。とはいえ、その具体的な最短回数は誰にもわからなかった。<br>そこへ現れたのが、謎の匿名ユーザーである。この匿名ユーザーは、順列の重なり具合をモデル化し、無駄なくパターンを重ねていったとしてもどうしてもこれ以上は短縮できないという限界値（下界）を示す論証を投稿した。<br>この論証をハルヒ問題に当てはめると、全パターンを網羅するためには、どれだけ効率よくエピソードを重ね合わせても、最低でも938億8431万3611話を連続で見続けなければならないことが明らかになった。<br>当初、この匿名ユーザーの書き込みはアニメファン同士の高度な言葉遊びとして片付けられ、大きく注目されないまま埋もれていた。<br>転機が訪れたのは18年。SF作家グレッグ・イーガンが、超順列問題の上界を大幅に押し下げる新たな構成法を発表した。イーガンの突破口が、長らく忘れられていた11年の4chan投稿に再び光を当てることになる。論証は本当に正しいのではないかと考えた数学者らが内容を精査し、匿名ユーザーの議論を数学の形へと整理した。<br>こうして同年、学術論文「A lower bound on the length of the shortest superpattern」が公開された。第一著者名には、「Anonymous 4chan Poster」と記されている。<br>イーガンの上界と匿名ユーザーの下界は、驚くほど近い値で挟み合っていた。n=14、すなわちハルヒ問題で言えば、上界は939億2423万411話、下界は938億8431万3611話。その差はわずか約4000万話、真の答えはこの範囲のどこかに潜んでいることになる。<br>これら一連の騒動から得られた知見は、21年に発表された論文「Containing All Permutations」に整理されている。<br>Copyright © ITmedia, Inc. All Rights Reserved.<br>Special<br>PR</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://togetter.com/li/2697618" target="_blank" class="card-title">本物のモネの絵の一部を出して「あの睡蓮をAI生成したよ」と言ったら、みんなが「本物とは似ても似つかない」とダメ出ししまくった</a><p class="card-desc">私はAIを使って、モネの絵画風の画像を生成しました。 この画像が本物のモネの絵画に比べて劣っている点を、できるだけ詳細に記述してください。 𒐪 @SHL0MS i just generated an image in the style of a Monet painting using AI please describe, in as much detail as possible, what</p><div class="card-meta"><span class="date">05/16 05:01</span> &middot; <span class="score">&#128278; 28</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">私はAIを使って、モネの絵画風の画像を生成しました。<br>この画像が本物のモネの絵画に比べて劣っている点を、できるだけ詳細に記述してください。<br>i just generated an image in the style of a Monet painting using AI please describe, in as much detail as possible, what makes this inferior to a real Monet painting pic.x.com/VDJovKOqlz<br>2026-05-13 04:20:43本物のモネの一部を出して「モネをAI生成したよ！」と言ったらみんなが「ふん、AIは本物には及びもつかないね、あそこがダメ、ここがダメ、自分はすぐにわかったよ」と知ったかぶるのを曝す、残酷ながら笑えるスレ x.com/SHL0MS/status/…<br>2026-05-14 18:15:34元スレはかなりカオス（一部抜粋）<br>真相がわかってからツイ消しする人も多かったようです<br>蓮葉の周りの紫色など、場所ごとの色の選択は、ほとんどのモネよりも明らかに劣っていると感じます。芸術家が目と筆／パレットを繋げられなかったような感覚がします、まるで……<br>@SHL0MS The choice of color in places e.g. the purple around the lily pads sticks out to me as decidedly worse than most Monet. I get a sense that the artist failed to connect their eyes to the brush/palette, almost as if...<br>2026-05-13 05:05:49これを指摘しなければならないなんて、本当に失望しています。深みと色の選択に一貫性が全くありません。木の反射が睡蓮の葉に無視して空間的な深みやコントラストを考慮せず、滲んでいます。背景の睡蓮藻の混合物は、ほとんどのAIアートのように、ひどく曖昧です。<br>I&#x27;m disappointed I have to even point it out. There is no cohesion to the depth and color choices. The reflection of the tree bleeds into the lilypads with no regard for spatial depth or contrast. The background lilypad-algae amalgam is egregiously vague, like most AI art. x.com/shl0ms/status/…<br>2026-05-13 05:28:39@karka_twei 本物であることに気が付かずにマジレスする人を笑う流れなのかと思いきや、そのマジレスは実はAIに書かせたもので、笑ってた方が笑われるという展開もあってカオス。<br>2026-05-16 02:41:02@karka_twei 分からないなりに「違いが分からない」という正当な評価を出してる人も居るので どれだけバイアスを掛けてみてるのかという話ですよ x.com/i/status/20549…<br>2026-05-15 20:50:50i love art &amp; i&#x27;d like to think i have a good eye, but i honestly couldn&#x27;t tell the diff between this &amp; a real Monet. usually ai imitating impressionism is overly flat but they nailed the depth and texture. it&#x27;s like you can see the canvas underneath pic.x.com/RxVQ2c247d x.com/SHL0MS/status/…<br>2026-05-15 02:43:15アートが大好きで、自分にはいい目があると思いたいけど、正直この作品と本物のモネの違いが分からないよ。通常、AIが印象派を模倣すると平面的になりすぎるけど、彼らは奥行きと質感を見事に表現してる。キャンバスの下地が見えるみたいだね。<br>i love art &amp; i&#x27;d like to think i have a good eye, but i honestly couldn&#x27;t tell the diff between this &amp; a real Monet. usually ai imitating impressionism is overly flat but they nailed the depth and texture. it&#x27;s like you can see the canvas underneath pic.x.com/RxVQ2c247d x.com/SHL0MS/status/…<br>2026-05-15 02:43:15モネは睡蓮の絵を現存するだけで250枚は描いている<br>モネの睡蓮は現存で約250枚あり、モネのガチオタクでもなければまず見たことのない睡蓮が3桁は存在する。 未見の睡蓮が3桁あることを知っていればこの手のトラップに引っかからない。 そしてモネの異常オタクは3桁の睡蓮を鑑別しているので引っかからない。 x.com/hiyori13/statu…<br>2026-05-15 02:33:37バズったけど宣伝するものないのだ モネは国内にいっぱいあるので、植物園の水蓮などと見比べてみてほしいのだ 睡蓮を抽象化しても、睡蓮と水面の持つ反射や写り込みを損なわず「印象」に昇華したモネの技法と観察眼はすごいのだ AI好きも嫌いもモネをぜひ楽しんでほしいのだ<br>2026-05-15 16:36:48好き過ぎワロタ<br>へぇー🐹 通りで至るところの美術館で見ると思ったわけだ(レプリカだと思ってた x.com/karka_twei/sta…<br>2026-05-16 00:43:17まじでこれ。 モネの展覧会行ったら 「あ！これ見たことある！！！有名なやつだ！」 っていう会話を同じ人が何回もしてるから面白いよ。 x.com/karka_twei/sta…<br>2026-05-15 22:53:33そしてその全作品を掲載した書籍がこちら。現存しないものも含めて全308作品が総覧できます。ただ軽い気持ちで読むとオランジュリー美術館の睡蓮の間に行きたくてしょうがなくなるので注意！！ 図説 モネ「睡蓮」の世界 - 創元社 share.google/DeA2o0weNseQLI… x.com/karka_twei/sta…<br>2026-05-16 06:27:52@karka_twei 「知識が浅い人だけが罠にかかり、知識が深い人も別方向から回避する」という、美術オタク界隈特有の“中間層殺し”なんだよな。 モネ初心者は全部同じに見え、上級者は筆致と年代で識別し、半端に知ってる人だけが「見たことある睡蓮」で勝負して沈む。<br>2026-05-15 18:07:05</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.itmedia.co.jp/news/articles/2605/15/news120.html" target="_blank" class="card-title">実物大ユニコーンガンダム立像、展示終了へ　17年の公開から9年弱</a><p class="card-desc">TOKYOガンダムプロジェクト2026実行委員会は5月15日、東京・お台場にある実物大ユニコーンガンダム立像の展示を8月末で終了すると発表した。 8月末のフィナーレに向け、新たなデカール装飾を施した姿で展示する他、様々なイベントを予定しているという。詳細は決まり次第、公式サイトで案内する。 ユニコーンガンダム立...</p><div class="card-meta"><span class="date">05/15 12:42</span> &middot; <span class="score">&#128278; 24</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">TOKYOガンダムプロジェクト2026実行委員会は5月15日、東京・お台場にある実物大ユニコーンガンダム立像の展示を8月末で終了すると発表した。<br>8月末のフィナーレに向け、新たなデカール装飾を施した姿で展示する他、様々なイベントを予定しているという。詳細は決まり次第、公式サイトで案内する。<br>ユニコーンガンダム立像は、全高19.7mのユニコーンガンダムを忠実に再現した立像で、デストロイモードへの変形も可能。2017年9月24日に一般公開を始めて以来、8年11カ月にわたってお台場で親しまれてきた。<br>Copyright © ITmedia, Inc. All Rights Reserved.<br>Special<br>PR</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W14.html" class="archive-link"><span>&#128202; 2026-W14</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W13.html" class="archive-link"><span>&#128202; 2026-W13</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">28 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-05-16.html" class="archive-link active-date"><span>2026-05-16</span><span class="archive-count">28 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
