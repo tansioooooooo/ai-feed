@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W21</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W21 (2026-05-18 〜 2026-05-24)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年5月11〜17日は、Claude Mythosによるセキュリティ脆弱性発見や金融機関活用が大きな話題となり、AIの社会実装リスクへの議論が官民で本格化した週だった。並行してClaude Codeを中心とするAIコーディングエージェントの実務定着が急速に進み、社内導入・ガイドライン整備の記事が連日登場。ローカルLLMへのシフト志向も強まり、APIコスト回避を背景にDwarfStar 4やGemma 4への注目が急上昇した。AIが職業・雇用に与える変化への議論も活発で、「SIerの死」「エンジニアのアイデンティティ再定義」を問う声が目立った。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">Claude Mythos がセキュリティ領域で社会問題化</div><div class="trend-desc">Claude Mythosによるcurl脆弱性発見・Appleメモリ保護突破・Firefoxセキュリティ強化など、最先端AIのセキュリティ応用が連日報道。3メガバンク活用・NHKニュースでの取り上げ・政府の対策検討と、官民両面での議論が一気に加速した。悪用リスクへの懸念と合わせて、AIセキュリティは社会インフラ課題へと格上げされた週となった。</div></div>
+<div class="trend-item"><div class="trend-title">AIコーディングエージェントの実務定着フェーズへ移行</div><div class="trend-desc">Claude Code の大規模コードベース活用ベストプラクティス・agent view・社内ガイドライン・AWS権限設計・1000セッション分析など、実務運用に関する記事が爆発的に増加。CodexがChatGPTモバイルに搭載され、Zerostack（Rust製コーディングエージェント）など新参も登場。「使い始める」フェーズから「安全に組織で使いこなす」フェーズへの移行が明確になった。</div></div>
+<div class="trend-item"><div class="trend-title">ローカルLLMへのシフト志向が急上昇</div><div class="trend-desc">「ローカルAIが標準になるべき理由」が複数日で取り上げられ、Gemma 4によるAPIコスト回避・M4 MacでのLLM実行・DwarfStar 4（CUDA対応）・DeepSeek-V4-Flashへの関心が高まった。クラウドAPI依存からの脱却を模索する開発者層の動きが顕在化している。</div></div>
+<div class="trend-item"><div class="trend-title">マルチエージェント設計パターンの実践事例が急増</div><div class="trend-desc">AnthropicのマルチエージェントAWSパターン5選・SlackでのインフラトラブルシューティングAgent・DevOps Agent×Aurora MySQL・製造業の暗黙知継承AIエージェントなど、アーキテクチャ議論から具体的実装事例へと成熟が進んだ。「Zero（エージェント向けプログラミング言語）」のような専用インフラも注目された。</div></div>
+<div class="trend-item"><div class="trend-title">AI×職業変化への議論が激化</div><div class="trend-desc">「SIerの死」「コードを書かなくなった我々は何者か」「AI活用を強制されたAmazon社員が架空タスクを捏造」「AIにできない仕事はUber Eatsの配達員のような仕事になる」など、AIが雇用・職業アイデンティティに与える影響についての根本的な議論が週を通じて続いた。</div></div>
+<div class="trend-item"><div class="trend-title">AIのエンタープライズ・政府導入が一気に拡大</div><div class="trend-desc">中小企業向けClaudeのリリース・Anthropicのサブスク刷新（エージェント利用別枠化）・OpenAIとマルタ政府の全市民ChatGPT Plus提供・Genspark日本2500社導入・LiteLLM Proxyの社内マルチプロバイダ基盤化など、AI活用の法人・行政への浸透が顕著だった週。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Claude Mythos</span><span class="keyword">Claude Code</span><span class="keyword">ローカルLLM</span><span class="keyword">AIコーディングエージェント</span><span class="keyword">マルチエージェント</span><span class="keyword">AIセキュリティ</span><span class="keyword">Anthropic</span><span class="keyword">エンジニア雇用</span><span class="keyword">Gemma 4</span><span class="keyword">LLM蒸留</span><span class="keyword">エンタープライズAI</span><span class="keyword">AIエージェント設計</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">Claude Mythosの悪用リスクを巡る規制・法整備の動きが続くと見られ、政府・金融機関でのAIセキュリティ活用ルール整備が来月の焦点となる見込み。AIコーディングエージェントは「組織標準化」と「権限・情報管理」の整備競争へ移行し、ローカルLLM対クラウドAPIの棲み分け議論がさらに深まるだろう。</div>
+  </section>
+</main>
+</body>
+</html>
