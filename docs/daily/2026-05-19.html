@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-05-19</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-05-19</span>
     <span class="updated">2026/05/19 10:32 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="column"><div class="card-source" style="color:#ff6600">HN<span style="color:#4acd8d;margin-left:8px;font-weight:600">コラム</span></div><a href="https://www.gutenberg.org/" target="_blank" class="card-title">Project Gutenberg – ますます良くなっている</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Project Gutenberg – keeps getting better</span><div class="card-meta"><span class="date">05/15 16:15</span> &middot; <span class="score">&#9650; 1224</span> &middot; <a href="https://news.ycombinator.com/item?id=48150431" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Project Gutenberg is a library of over 75,000 free eBooks<br>Choose among free epub and Kindle eBooks, download them or read them online. You will find the world&#x27;s great literature here, with focus on older works for which U.S. copyright has expired. Thousands of volunteers digitized and diligently proofread the eBooks, for you to enjoy.<br>Project Gutenberg<br>- ✓ 100% Free - No fees, no registration, completely free<br>- ✓ No Apps Required - only regular Web browsers or eBook readers needed<br>- ✓ 50+ Years - Pioneering free eBooks since 1971<br>- ✓ Volunteer-based - hundreds of volunteers have contributed over the years<br>- ✓ Read about our late CEO, Dr. Greg Newby.<br>- Consider a small donation to help us digitize more books: donate<br>Get Help<br>How to Help<br>- Distributed Proofreaders welcomes new volunteers. This is the main source of new Project Gutenberg eBooks. Getting started is easy, and just a page a day will help!<br>- Fix and improve Project Gutenberg by reporting errors, bugs, typos, and suggesting changes.<br>- Record audiobooks with our friends at LibriVox.<br>Audio Books<br>Audio books are a great way to enjoy literature. We recommend the following sources. All of them are digitizations of Project Gutenberg texts. They are freely available and in the public domain in the US.<br>Our Social Media<br>News Feeds of new eBooks</div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://simonwillison.net/2026/May/19/5-minute-llms/" target="_blank" class="card-title">LLMの最近6ヶ月を5分で振り返る</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">The last six months in LLMs in five minutes</span><div class="card-meta"><span class="date">05/19 01:30</span> &middot; <span class="score">&#9650; 464</span> &middot; <a href="https://news.ycombinator.com/item?id=48188183" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">The last six months in LLMs in five minutes<br>19th May 2026<br>I put together these annotated slides from my five minute lightning talk at PyCon US 2026, using the latest iteration of my annotated presentation tool.<br>I presented this lightning talk at PyCon US 2026, attempting to summarize the last six months of developments in LLMs in five minutes.<br>Six months is a pretty convenient time period to cover, because it captures what I’ve been calling the November 2025 inflection point. November was a critical month in LLMs, especially for coding.<br>For one thing, the supposedly “best” model (depending mostly on vibes) changed hands five times between the three big providers.<br>As always, I’m using my Generate an SVG of a pelican riding a bicycle test to help illustrate the differences between the models.<br>Why this test? Because pelicans are hard to draw, bicycles are hard to draw, pelicans can’t ride bicycles... and there’s zero chance any AI lab would train a model for such a ridiculous task.<br>At the start of November the widely acknowledged “best” model was Claude Sonnet 4.5, released on 29th September. It drew me this pelican.<br>In November it was overtaken by GPT-5.1, then Gemini 3, then GPT-5.1 Codex Max, and then Anthropic took the crown back again with Claude Opus 4.5.<br>I think Gemini 3 drew the best pelican out of this lot, but pelicans aren’t everything. Most practitioners will agree that Opus 4.5 held the crown for the next couple of months.<br>It took a little while for this to become clear, but the real news from November was that the coding agents got good.<br>OpenAI and Anthropic had spent most of 2025 running Reinforcement Learning from Verifiable Rewards to increase the quality of code written by their models, especially when paired up with their Codex and Claude Code agent harnesses.<br>In November the results of this work became apparent. Coding agents went from often-work to mostly-work, crossing a quality barrier where you could use them as a daily-driver to get real work done, without needing to spend most of your time fixing their stupid mistakes.<br>Also in November, this happened—the first commit to an obscure (back then) repo called “Warelay” by some guy called Pete.<br>Over the holiday period, from December to January, a whole lot of us took advantage of the break to have a poke at these new models and coding agents and see what they could do.<br>They could do a lot! Some of us got a little bit over-excited. I had my own short-lived bout of a form of LLM psychosis as I started spinning up wildly ambitious projects to see how far I could push them.<br>One of my projects was a vibe-coded implementation of JavaScript in Python—a loose port of MicroQuickJS—which I called micro-javascript. You can try it out in your browser in this playground.<br>That playground demo shows JavaScript code run using my micro-javascript library, in Python, running inside Pyodide, running in WebAssembly, running in JavaScript, running in a browser!<br>It’s pretty cool! But did anyone out there need a buggy, slow, insecure half-baked implementation of JavaScript in Python?<br>They did not. I have quite a few other projects from that holiday period that I have since quietly retired!<br>On to February. Remember that Warelay project that had its first commit at the end of November?<br>In December and January it had gone through quite a few name changes... and by February it was taking the world by storm under its final name, OpenClaw.<br>The amount of attention it got is pretty astonishing for a project that was less than three months old.<br>OpenClaw is a “personal AI assistant”, and we actually got a generic term for these, based on NanoClaw and ZeroClaw and suchlike... they’re called Claws.<br>Mac Minis started to sell out around Silicon Valley, because people were buying them to run their Claws.<br>Drew Breunig joked to me that this is because they’re the new digital pets, and a Mac Mini is the perfect aquarium for your Claw.<br>My favourite metaphor for Claws is Alfred Molina’s Doc Ock in the 2004 movie Spider-Man 2. His claws were powered by AI, and were perfectly safe provided nothing damaged his inhibitor chip... after which they turned evil and took over.<br>Also in February: Gemini 3.1 Pro came out, and drew me a really good pelican riding a bicycle. Look at this! It’s even got a fish in its basket.<br>And then Google’s Jeff Dean tweeted this video of an animated pelican riding a bicycle, plus a frog on a penny-farthing and a giraffe driving a tiny car and an ostrich on roller skates and a turtle kickflipping a skateboard and a dachshund driving a stretch limousine.<br>So maybe the AI labs have been paying attention after all!<br>A lot of stuff happened just in the past month.<br>GLM-5.1 drew me this very competent pelican on a bicycle.<br>... though when it tried to animate it the bicycle bounced off into the top and the bicycle got warped.<br>Charles on Bluesky suggested I try it with a North Virginia Opossum on an E-scooter<br>And it did this! I’ve tried this on other models and they don’t</div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://www.anthropic.com/news/anthropic-acquires-stainless" target="_blank" class="card-title">AnthropicがStainlessを買収</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Anthropic acquires Stainless</span><div class="card-meta"><span class="date">05/18 17:01</span> &middot; <span class="score">&#9650; 455</span> &middot; <a href="https://news.ycombinator.com/item?id=48182281" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Anthropic acquires Stainless<br>The frontier of AI is shifting from models that answer to agents that act—and agents are only as capable as the systems they can reach. Today, Anthropic is acquiring Stainless, a leader in SDKs and MCP server tooling, to extend that reach even further.<br>Founded in 2022, Stainless has powered the generation of every official Anthropic SDK since the earliest days of our API. Hundreds of companies rely on Stainless to generate SDKs, CLIs, and MCP servers—the libraries, command-line tools, and connectors that let developers and agents use an API. Stainless turns an API spec into SDKs across TypeScript, Python, Go, Java, Kotlin, and more. Each one is fast, reliable, and built to feel native in its language.<br>“Stainless has shaped how developers experience the Claude API since the start, and it’s been great to work with them on that,” said Katelyn Lesse, Head of Platform Engineering at Anthropic. “Agents are only as useful as what they can connect to. We’re excited to bring the Stainless team into Anthropic to advance Claude’s ability to connect to data and tools.”<br>“I started Stainless because SDKs deserve as much care as the APIs they wrap. Anthropic was one of the first teams to bet on this with us,” said Alex Rattray, Founder and CEO of Stainless. “We have been watching what developers have built on Claude over the last few years, which made bringing our teams together an easy decision. The team gets to keep doing the work we love, on the platform where it matters most.”<br>Anthropic created MCP to make agent connectivity possible. By bringing together the Stainless and Anthropic teams, the Claude Platform continues to push the frontier of developer experience and agent connectivity.<br>Related content<br>PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients<br>PwC will roll out Claude Code and Cowork starting with U.S. teams and expanding toward a global workforce of hundreds of thousands of professionals, establish a joint Center of Excellence, and train and certify 30,000 PwC professionals on Claude.<br>Read moreAnthropic forms $200 million partnership with the Gates Foundation<br>Read moreIntroducing Claude for Small Business<br>We&#x27;re launching Claude for Small Business, a package of connectors and ready-to-run workflows that put Claude inside the tools small businesses use every day.<br>Read more</div></details></div>
@@ -259,88 +263,77 @@ main { padding: 16px 24px; max-width: 900px; }
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://clickclickclick.click/" target="_blank" class="card-title">Click (2016)</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Click (2016)</span><div class="card-meta"><span class="date">05/18 23:03</span> &middot; <span class="score">&#9650; 309</span> &middot; <a href="https://news.ycombinator.com/item?id=48187054" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.airships.net/hindenburg-smoking-room/" target="_blank" class="card-title">ヒンデンブルク号の喫煙室</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Hindenburg’s Smoking Room</span><div class="card-meta"><span class="date">05/14 20:08</span> &middot; <span class="score">&#9650; 229</span> &middot; <a href="https://news.ycombinator.com/item?id=48140556" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Yes, there really was a smoking room on the Hindenburg… even though the zeppelin was inflated with 7 million cubic feet of highly flammable hydrogen gas.<br>The smoking room was kept at a higher pressure than the rest of the ship so that no leaking hydrogen could enter the room, and the smoking room was separated from the rest of the passenger section by a double-door airlock.<br>The smoking room was closely monitored at all times by a member of the zeppelin’s staff, and only one electric lighter was provided; no matches, lighters, or other open flames were allowed anywhere on the airship.<br>In reality, the pressurization of the smoking room may have been as much for public relations as for safety. The smoking room was located on B Deck, at the bottom of the ship, and since hydrogen is lighter than air any leaking gas would have escaped upward. (It would have been very unlikely that free hydrogen could have settled downward to the level of the smoking room, and only a leak at the very bottom of the cell adjoining the smoking room in Bay 12 would have posed any significant risk.)<br>The real danger of allowing smoking on a hydrogen airship — and the reason it was strictly confined to the closely monitored smoking room — was the risk of a fire; had even the smallest fire started in the passenger section, it could easily have spread to the gas cells above, destroying the ship.<br>The smoking room was perhaps the most popular room on the ship, which is not surprising at a time when so many people smoked, but its popularity was no doubt enhanced because it was also the location of the Hindenburg’s bar.</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://togetter.com/li/2698735" target="_blank" class="card-title">駅で女から「スマホの充電が切れちゃってモバイルバッテリー借りたいんですけど、お金渡すので出していただけませんか」と頼まれ対応したが、1日経っても返却通知が来ない</a><p class="card-desc">まんまるなれんまる@社畜人 @Renma_Robolove 注意喚起 今回完全にこちらの自業自得なのですが、被害を減らす為に言わせていただきます。 昨日18時40分頃、上野駅改札内にて｢すみませんスマホの充電が切れちゃってレンタルモバイルバッテリー借りたいんですけどお金渡すので出していただきませんか｣みたいなことを女に言...</p><div class="card-meta"><span class="date">05/18 22:50</span> &middot; <span class="score">&#128278; 138</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">注意喚起 今回完全にこちらの自業自得なのですが、被害を減らす為に言わせていただきます。 昨日18時40分頃、上野駅改札内にて｢すみませんスマホの充電が切れちゃってレンタルモバイルバッテリー借りたいんですけどお金渡すので出していただきませんか｣みたいなことを女に言われました。 ↓<br>2026-05-18 18:24:27その時から既に怪しく自分が持っているモバイルバッテリーを貸して自分で借りさせるように促したのですが自分の帰りの電車の時間もあったので渋々レンタル その後、レンタル分400円だけ貰い相手とは解散。(繋がりもなんもないです。) そして今の時間まで返却通知無し、完全にやられたと思いました。<br>2026-05-18 18:24:28この場合、返却期限までに返却されないとモバイルバッテリーをレンタルした本人がそのモバイルバッテリーを買取するという形になるので自分が支払う形になるそうです。 相手をもっと怪しむべきだと今更後悔しても遅いと思っています。けれどこういうことが平気でされる世の中なので言わせてください。<br>2026-05-18 18:24:28あと法律に詳しい方に教えて頂きたいのですが、レンタルモバイルバッテリーを他者に貸した場合、犯罪になるのでしょうか…？このツイートが目に留まる？可能性は低いですが、もし見つけてくださったら教えて頂きたいてます…<br>2026-05-18 18:24:29投稿者による状況の補足<br>@Renma_Robolove 法律に詳しくないので云々は言えませんが… 注意喚起、Twitterでして広めるのも判りますが買取になりそう(返却永遠にしなくて)なら警察に言えば良いかと 被害届出せるなら(一応、被害かなと)駅構内の防犯カメラで追えるのでは…？<br>2026-05-18 23:54:07@kyochis7 警察には先程電話したのですが、そのレンタルモバイルバッテリーの会社にお問い合わせをして事実を言ってからまた連絡してくださいとのことでしたね<br>2026-05-19 00:28:13@Renma_Robolove え、そもそも自分でレンタルするんじゃダメだったの？<br>2026-05-18 18:55:21@greenriver526 ｢スマホの充電がきれちゃってレンタルモバイルバッテリー借りたいんですけど｣ って会話した<br>2026-05-18 18:56:21@Renma_Robolove ああ、そうかレンタルモバ充って現金無理なのか 使ったことないからわかんなかった<br>2026-05-18 18:58:28@Renma_Robolove でも変な話だよなスマホの充電切れちゃった時にこそ使いたいのにスマホが使えないと借りれないなんて<br>2026-05-18 19:01:17@Renma_Robolove いやSuicaもスマホに入れてる人居るから、クレカが使えるといい<br>2026-05-18 19:05:48流行ってるのか？<br>これ昨日新橋でやられたわ、断ったけど PayPayで代金送るわ〜って言われたけどじゃあその金でコンビニでレンタルじゃなくて買えば？と思うなど なんか流行ってんのかこれ？ x.com/renma_robolove…<br>2026-05-19 00:42:21うわ、これ、私も今月、上野動物園行った時声かけられた。お断りした。 元ポストの方は上野駅構内で声かけられてるし、近辺行かれる方、気をつけて。私の時は外国人の中年女性だった。 身なりは小綺麗なので一瞬揺らいだけど… x.com/renma_robolove…<br>2026-05-18 23:57:39本当に困ってる人だったのかもしれないけど、最悪のパターン（レンタルモババ持ち逃げ）を想定した時、それでもなお、助けてあげたいと思うか？って自問自答してNoだったので断ったんだけど、正解だったのかもなあ<br>2026-05-19 00:54:12@Blackhotcook 同じような事例がやはりあるのですね… 私の時は日本人の身なりは20代くらいの女性の方でしたね<br>2026-05-19 00:29:56寸借詐欺っぽいけど女側のメリットってなんだ？？ レンタルモバイルバッテリーってそんな高く転売できるもんか？？ x.com/renma_robolove…<br>2026-05-19 00:07:08まぁスルーが無難だよなぁ<br>俺なら「よくわかんないんで、他をあたってください」って馬鹿なふりして逃げるなぁ🙄 x.com/Renma_Robolove…<br>2026-05-18 23:51:07</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W14.html" class="archive-link"><span>&#128202; 2026-W14</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-05-19.html" class="archive-link active-date"><span>2026-05-19</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
