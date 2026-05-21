@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-05-21</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-05-21</span>
     <span class="updated">2026/05/21 10:30 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/" target="_blank" class="card-title">GitHubが悪意あるVSCode拡張による3,800リポジトリへの侵害を確認</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">GitHub confirms breach of 3,800 repos via malicious VSCode extension</span><div class="card-meta"><span class="date">05/20 13:43</span> &middot; <span class="score">&#9650; 854</span> &middot; <a href="https://news.ycombinator.com/item?id=48207660" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">GitHub has confirmed that roughly 3,800 internal repositories were breached after one of its employees installed a malicious VS Code extension.<br>The company has since removed the unnamed trojanized extension from the VS Code marketplace and has secured the compromised device.<br>&quot;Yesterday we detected and contained a compromise of an employee device involving a poisoned VS Code extension. We removed the malicious extension version, isolated the endpoint, and began incident response immediately,&quot; the company said.<br>&quot;Our current assessment is that the activity involved exfiltration of GitHub-internal repositories only. The attacker&#x27;s current claims of ~3,800 repositories are directionally consistent with our investigation so far.&quot;<br>This comes after GitHub told BleepingComputer on Tuesday evening that it was investigating claims of unauthorized access to its internal repositories and added that it has no evidence that customer data stored outside the affected repos has been affected.<br>While GitHub has yet to attribute the breach, the TeamPCP hacker group claimed access to GitHub source code and &quot;~4,000 repos of private code&quot; on the Breached cybercrime forum on Tuesday, asking for at least $50,000 for the stolen data.<br>&quot;As always this is not a ransom, We do not care about extorting Github, 1 buyer and we shred the data on our end, it looks like our retirement is soon so if no buyer is found we will leak it free,&quot; the cybercriminals said. &quot;If you are interested. Send your offers to the communications below, we are not interested in under 50k, the best offer will get it.&quot;<br>TeamPCP was previously linked to massive supply chain attacks targeting developer code platforms, including GitHub, PyPI, NPM, and Docker, and, more recently, to the &quot;Mini Shai-Hulud&quot; supply chain campaign(which also impacted two OpenAI employees).<br>VS Code extensions are plugins that can be installed from the VS Code Marketplace (the official store for add-ons for Microsoft&#x27;s code editor) to add features or integrate tools into the editor.<br>This isn&#x27;t the first time a trojanized VS Code extension has been spotted on the marketplace, as multiple other malicious extensions with millions of installs have been used to steal developer credentials and other sensitive data over the last several years.<br>For instance, last year, VSCode extensions with 9 million installs were pulled over security risks, and 10 more, posing as legitimate development tools, infected users with the XMRig cryptominer.<br>Later in the year, a malicious extension with basic ransomware capabilities snuck onto the VS Code marketplace after a threat actor named WhiteCobra flooded it with 24 crypto-stealing extensions.<br>More recently, in January, two malicious extensions advertised as AI-based coding assistants with 1.5 million installs exfiltrated data from compromised developer systems to servers in China.<br>GitHub&#x27;s cloud-based platform is now used by over 4 million organizations (including 90% of the Fortune 100) and more than 180 million developers who contribute to over 420 million code repositories.<br>The Validation Gap: Automated Pentesting Answers One Question. You Need Six.<br>Automated pentesting tools deliver real value, but they were built to answer one question: can an attacker move through the network? They were not built to test whether your controls block threats, your detection rules fire, or your cloud configs hold.<br>This guide covers the 6 surfaces you actually need to validate.<br>Download Now</div></details></div>
 <div class="card" data-source="hackernews" data-category="column"><div class="card-source" style="color:#ff6600">HN<span style="color:#4acd8d;margin-left:8px;font-weight:600">コラム</span></div><a href="https://tante.cc/2026/05/20/on-google-declaring-war-on-the-web/" target="_blank" class="card-title">GoogleがWebに宣戦布告</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Google Declaring War on the Web</span><div class="card-meta"><span class="date">05/20 21:33</span> &middot; <span class="score">&#9650; 526</span> &middot; <a href="https://news.ycombinator.com/item?id=48214449" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">In Yesterday’s IO Keynote Google declared war on the remnants of the Web. (See longer description on their website.) TL;DR: They are pushing Search more into the “here’s your processed answer” direction that “AI Overviews” have established (you know, those AI snippets in current Search that are wrong about 10% of the time). So they are mostly giving up on the paradigm of providing links to information.<br>While they packaged it as a lot of “AI” talk and “agentic” and whatnot, what their whole approach of decontextualizing information, of taking away links to sources and instead producing some LLM generated response means is that they want to establish a new abstraction layer on the web. Where Zuckerberg with his Metaverse failed Google is starting the next attack: Your website, your work no longer matters. The web is being fully hidden behind a Google-controlled surface. And I am not even talking about their browser monopoly.<br>Your work, your writing or art do matter a bit still: As (unpaid) raw material for their synthetic text extruders. You get to work for free so Google can have tight control on the flow of information and make sure that the responses people get are in line with what they need them to be. But your work is no longer seen as an important cultural artifact you can share with others.<br>This is a literal revolution but one against the participatory web, against us: The goal is to take away the web and guide people into Google’s abstraction on top of it. An abstraction they control and moderate. It’s about monopolizing access to information. A true Metaverse unbound by open standards and your ability to build your own corner of the web according to your needs and desires. Which – given how strong Google’s influence is on web standards – will change the shape of the standards for the technological landscape we are building the web on.<br>The next step will be Google or other companies in that space developing and deploying a new derogatory term for the web marking it as unclean, unruly, dangerous, bad (similar to “the Dark Web”) and making their abstraction the “safe” web.<br>If you do care about the web, about people’s ability to participate in it as more than mere passive consumers, this needs to be taken seriously. De-googlifying your mental apparatus becomes more urgent today. Find other search engines, don’t use the Chrome browser. Or wake up in a slopified AOL kind of environment where your access to information is limited to what Google’s synthetic text extruders deem relevant.<br>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://mikeveerman.github.io/tokenspeed/" target="_blank" class="card-title">1秒あたりNトークンは実際どれくらい速いのか？</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">How fast is N tokens per second really?</span><div class="card-meta"><span class="date">05/18 02:04</span> &middot; <span class="score">&#9650; 419</span> &middot; <a href="https://news.ycombinator.com/item?id=48174920" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Every local-LLM benchmark reports throughput: &quot;47 tok/s on an M3,&quot; &quot;180 tok/s on a 4090,&quot; &quot;500 tok/s on Groq.&quot; Unless you&#x27;ve actually watched tokens stream at those rates, the numbers are hard to internalize. This is the rendering.<br>Four modes<br>- code — syntax-highlighted pseudo-code, the most common thing you watch stream out of an LLM.<br>- text — lorem ipsum prose, for the chat/answer case.<br>- think — dim-italic reasoning sentences alternating with code, mimicking a reasoning model thinking out loud.<br>- agent — alternating tool calls and code generation with processing pauses, simulating an AI coding agent.<br>What to try<br>Start at the default 30 and read along. Then hit 1 (5 tok/s — Raspberry-Pi-class local model), 5 (60 tok/s — typical hosted Claude or GPT), 7 (200 tok/s — Groq territory), 9 (800 tok/s — Cerebras-class, where the bottleneck is your eyeballs).<br>Now switch between c and t at the same rate. The difference is striking — and intentional.<br>What counts as a token<br>This approximates BPE-style tokenization, not any vendor-specific encoder<br>(tiktoken<br>, Claude&#x27;s tokenizer, etc. — those disagree in the<br>details anyway).<br>Short words are often one token; longer identifiers split into chunks<br>(processUserInput<br>→ process<br>+ User<br>+ Input<br>);<br>punctuation and operators usually count too.<br>Code is more token-dense than prose, so the same tok/s can feel very different depending on what&#x27;s streaming. The benchmark number is honest; the perceptual effect varies a lot by content type — which is the gap this tool exists to expose.<br>English prose averages ~1.3 tokens per word, so 30 tok/s ≈ 23 words/s.</div></details></div>
@@ -241,90 +245,79 @@ main { padding: 16px 24px; max-width: 900px; }
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.itmedia.co.jp/mobile/articles/2605/21/news064.html" target="_blank" class="card-title">3850円なのに「神アイテム」「スマホっぽい」――3COINSの「ビデオトランシーバー」がネットで話題</a><p class="card-desc">生活雑貨ブランドの「3COINS」が販売している新商品「ビデオトランシーバー／KIDS外遊び（品番2613-ITOKS01-00）」が、ネット上で大きな反響を呼んでいる。同ブランドの公式Xアカウントで商品が披露されると、時代を反映した多機能なおもちゃとして瞬く間に話題となった。価格は3850円。対象年齢は6歳以上だ。 離れた相...</p><div class="card-meta"><span class="date">05/21 01:02</span> &middot; <span class="score">&#128278; 26</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">生活雑貨ブランドの「3COINS」が販売している新商品「ビデオトランシーバー／KIDS外遊び（品番2613-ITOKS01-00）」が、ネット上で大きな反響を呼んでいる。同ブランドの公式Xアカウントで商品が披露されると、時代を反映した多機能なおもちゃとして瞬く間に話題となった。価格は3850円。対象年齢は6歳以上だ。<br>離れた相手の顔を見ながらリアルタイムで会話できる「トーク」モード、絵文字や音声、画像を送受信する「チャット」モード、写真を撮影する「カメラ」モード、撮影した写真を見返す「アルバム」モードの4つの機能を搭載している。本体には最大50枚の写真を保存することが可能だ。スマートフォンのような楽しさを手軽に味わえる新しいコミュニケーションツールとして人気を集めている。<br>公式Xアカウントの投稿に対して、ネット上では驚きと称賛の声があった。「神アイテム」や「スマホっぽい」との驚きや、楽しそうで普通にほしいと大人までもが欲しくなるようなコメントが目立っている。また、子どもの携帯電話を持つ前の練習として良いかもと、本格的なスマートフォンを持たせる前のステップとして注目する声も寄せられている。<br>公式通販サイトの購入者レビューでも高い評価を得ている。実際に購入したユーザーからは、この金額でこのクオリティーはすごい、顔もしっかり映ると、価格以上の性能に驚く声が上がっている。通信の実用性についても、家の1階と2階で通話できたという報告があり、室内での具体的な使用感が報告されている。<br>さらに親目線での評価も高く、行動範囲も広がって来て姿も見えなくなるのが不安に感じていたタイミングでちょうど欲しかったアイテムだという声がある。携帯電話感覚で楽しく使えて最高だという評価もあり、子どもの外遊びに重宝されている様子が伺える。声が変えられて面白いと大人も一緒に楽しんでいる様子や、キャンプ用としてアウトドアで活用するユーザーも見受けられる。<br>SNS上の意見は、文脈の変わらない範囲で体裁を整えています。<br>Copyright © ITmedia, Inc. All Rights Reserved.</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://togetter.com/li/2699497" target="_blank" class="card-title">友達に「塩取ってくれ」と言われたので「お前今お塩って言ったか？」と返したら「あ」と返された→VRChat上のネットスラングらしい</a><p class="card-desc">Togetter編集部 X（旧Twitter）に日々流れる情報の中から、編集部がさまざまなポストを選び出し、わかりやすい形でお届けすることを大切にしています。新たな視点や世間の反応を添えることで、読者の皆様にとって安心・安全で価値あるコンテンツとすることを目指しています。詳しくは編集方針をご覧ください。</p><div class="card-meta"><span class="date">05/21 01:38</span> &middot; <span class="score">&#128278; 33</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">いちじくん@VRChat<br>@ichiziku_VRC<br>昨日の会話 友「塩取ってくれ」 俺「は？お前今お塩って言ったか？」 友「あ」 pic.x.com/86H7XWBiGS<br>2026-05-18 19:35:45困惑する反応続々と<br>ぼるぼっくす<br>@wotbuKj73265855<br>@ichiziku_VRC 友「塩(しお)取ってくれ」 理系学生「は？お前今お塩っていったか？ 塩( えん)だろ！！」 友「あ」<br>2026-05-19 18:42:04「お塩」とは<br>なこたわ<br>@watanab55221301<br>@sharu_0726 @ichiziku_VRC VRChatっていうVRのメタバース内のネットカップルが別れたことを指します<br>2026-05-19 18:22:42<br>いちじくん@VRChat<br>@ichiziku_VRC<br>何のことかわからない人向け ただの食塩の塩に過剰反応してるというネタツイートになります。 pic.x.com/ESreddlENz<br>2026-05-20 00:42:23山盛りポテトを頼む人が三人いることへ驚きも<br>萌<br>@uccuq5<br>昨日高校のマブと居酒屋で偶然同じポテト頼んで神回だった、こういう価値観の合う友達は一生大切にした方がいいよ x.com/comp__rorz/sta…<br>2026-05-20 15:27:46</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://togetter.com/li/2699526" target="_blank" class="card-title">「日進月歩」 養殖ウナギの完全養殖について、10年前に4万円だったコストが技術の進歩で1800円まで減っていたことに驚きの声が</a><p class="card-desc">猪原賽 @iharadaisuke 完全養殖言ってもコストがねぇ、数万とか言ってたよね当時……って、え？ 【２０１６年度段階の１尾当たり４万円のコストは、技術の進歩で１８００円まで減っている】ってマジで！？ 完全養殖ウナギに舌鼓　「人生トップ３に入る味」―鈴木農水相：時事ドットコム jiji.com/jc/article?k=2… 2026-05-2...</p><div class="card-meta"><span class="date">05/21 03:21</span> &middot; <span class="score">&#128278; 26</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">完全養殖言ってもコストがねぇ、数万とか言ってたよね当時……って、え？ 【２０１６年度段階の１尾当たり４万円のコストは、技術の進歩で１８００円まで減っている】ってマジで！？ 完全養殖ウナギに舌鼓 「人生トップ３に入る味」―鈴木農水相：時事ドットコム jiji.com/jc/article?k=2…<br>2026-05-20 18:13:53コストが安い<br>@iharadaisuke 稚魚時代の餌がネックで、最初はサメ卵等から懸濁餌を作成して与えていたのですが、まあ貴重、 なんだかんだあって酵素処理魚粉と乳タンパクと食用増粘剤でうなぎの稚魚の食いがよく、今までより安い飼料で育てられるようになったようです。 他にも水槽の水循環の工夫でのコストダウン等、非常に多くの工夫が積み重ねられた結果、今の価格まで値段を下げることが出来たようです。<br>2026-05-20 21:45:48@iharadaisuke とは言え天然シラスウナギが1匹800円なので未だ二倍強位みたいですが後もう一息って雰囲気なって来ましたよね。<br>2026-05-21 09:25:16@iharadaisuke おそらく牛丼屋で1000円くらいで売っている鰻丼に乗っている鰻は一尾の1/8位だろうから、そのうち純国産完全養殖ものの鰻丼が600円とかで食べられる様になるのかな？<br>2026-05-21 03:27:55@iharadaisuke @fluor_doublet 稚魚の餌に試行錯誤してたのをテレビで見た事ある その時は鶏卵始めあれこれやった中で｢深海鮫の卵｣だけ食い付いた、て まさかダメだったはずの鶏卵でイケるとはね、という感想<br>2026-05-20 23:09:39@iharadaisuke 更に半分になれば(大変だと思うが)現在の養殖物と価格面で張り合えるのか。 若しくは養殖物すら値上がりするとか。<br>2026-05-21 02:57:30鈴木農水相が細いんで、 石麻呂に我れ物申す夏痩せによしといふものぞ鰻捕り食せ （萬葉集巻第一六 三八五三） を、失礼ながら思い出してしまった。 x.com/iharadaisuke/s…<br>2026-05-21 08:05:17だからコストかかるといっても、メタンハイグレードなんかもやったほうが良いんよな、やっていったらコストかからない方法にもたどり着くわけで。 x.com/iharadaisuke/s…<br>2026-05-21 02:42:15養殖マグロはコストが合わなくて止めたみたいだけどウナギは上手く行きそうね x.com/iharadaisuke/s…<br>2026-05-21 09:01:46完全養殖ウナギの技術は転用すればアナゴも生シラス丼も罪悪感なくいただけるようになるかなあ……… x.com/iharadaisuke/s…<br>2026-05-21 09:28:12</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W14.html" class="archive-link"><span>&#128202; 2026-W14</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-05-21.html" class="archive-link active-date"><span>2026-05-21</span><span class="archive-count">37 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
