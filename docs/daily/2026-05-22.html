@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-05-22</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-05-22</span>
     <span class="updated">2026/05/22 10:16 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://valhovey.github.io/gaia-mary/" target="_blank" class="card-title">「プロジェクト・ヘイル・メアリー」恒星航法チャート</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Project Hail Mary – Stellar Navigation Chart</span><div class="card-meta"><span class="date">05/21 16:23</span> &middot; <span class="score">&#9650; 927</span> &middot; <a href="https://news.ycombinator.com/item?id=48225297" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://rosmine.ai/2026/05/13/was-my-48k-gpu-worth-it/" target="_blank" class="card-title">4万8000ドルのGPUサーバーは元が取れたのか？</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Was my $48K GPU server worth it?</span><div class="card-meta"><span class="date">05/18 19:33</span> &middot; <span class="score">&#9650; 457</span> &middot; <a href="https://news.ycombinator.com/item?id=48184402" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">In 2024 I quit my FAANG job to become an independent researcher. To do this I needed GPUs, so I built “grumbl”, a 6x 6000 Ada GPU server.<br>This blog describes the build, some of the issues I faced, and answers the question “was it worth it to build the server myself, or should I have rented cloud GPUs?”<br>(It’s called “grumbl” because apparently I cannot spell “GPUs”)<br>GPUs as an investment<br>This rig cost me $48K. That sounds expensive, but it’s way less expensive than quitting my job. Because of the loss of income, if more powerful GPUs could help me make my work be successful just 2 months earlier than I would have with a smaller machine, then buying a more powerful server would be worth it. So I decided to buy the most powerful server that I could run in my apartment.<br>Choosing the GPUs<br>I found Tim Dettmers’ guide to choosing a GPU helpful. From that I narrowed it down to A100’s, H100’s or RTX 6000 Ada. A100’s don’t support FP8 and have slower inference performance than the newer GPUs, and I’m going to be doing a lot of inference (RL), so narrowed it down to 6000 Ada vs H100. Looking at the price/throughput ratios of 6000 Ada vs H100 vs A100, I went with the 6000 Ada GPUs.<br>Power Constraints<br>I live in an apartment and don’t have the option to upgrade my electrical circuits to support standard datacenter servers. 6 GPUs requires too much power for a single apartment circuit to handle, so I had to get 2 power supplies, and plug the power supplies into 2 outlets in separate circuits.<br>If you google “plugging a PC into multiple outlets”, you get lots of warnings that if you even consider such a setup you will instantly burst into flames. So I hired a professional PC builder make sure it was safe. This is more expensive than doing everything myself, but it’s less expensive than doing something wrong and burning down my apartment.<br>Ironically, after designing the entire build around apartment power constraints, I ended up moving grumbl to my parents’ basement, where I could upgrade the circuits anyway.<br>Building my own GPU server vs. using a Cloud Provider<br>Is it better to buy my own GPUs or should I have rented from a cloud provider? I decided to measure this by calculating how much I used the GPUs, and comparing that to how much it would’ve cost to rent equivalent compute in the cloud.<br>In 2024 I calculated at the then current GPU rental rates, it would take me about a year of close to 85%+ utilization to match cloud rental rates. That should be easy to do, but for a full analysis, I need to also account for electricity and the fact that as more powerful GPUs become available, the cost to rent equivalent compute will decrease.<br>To be thorough, I wrote a script that would log the usage of each gpu every minute. I also logged the power usage in watts so I could calculate how much I spent on electricity.<br>In this analysis, I only compared against on-demand pricing. There are also payment plans where you reserve the instance for 6-12 months, but those seemed not worth it to me, since they were only a little cheaper than buying the server itself, and this way I got to keep the gpus.<br>GPU usage over time graph<br>To measure GPU usage, for each GPU I counted the number of hours each day where I used that GPU at least once. This seemed a fair comparison against rental since I wouldn’t stop and restart a cloud server if it was only going to be idle for less than an hour.<br>This comparison is generous to cloud renting, because it assumes I could stop and start each GPU independently. Much of the idle time I had was when I was running multiple experiments in parallel, and one finished/failed but the others kept going, and I wouldn’t have stopped the server if I was renting<br>Note: This is meant to be a measure of how much I use the gpus, not training efficiency, so a GPU with 10% utilization would still count as active for the hour. (My code would be equally inefficient running in the cloud)<br>Here is the graph of use over time:<br>You can see 3 separate times the server was down for maintenance. This is quite stressful because you don’t know if the server isn’t booting because a single PCIe riser failed, or because something went catastrophically wrong and fried all the GPUs.<br>In June 2025 you can see a clear increase in usage, before that I was doing smaller experiments where dev time was comparable to experiment time, so there was more down time between experiments when implementing. After June 2025, I had a project that required more compute, so I always had most GPUs continuously running experiments, and only 1-2 GPUs for dev.<br>From the graph, the total average use was 76%. If you calculate since 1/1/25, utilization is 85%. I have to admit, I’m a little disappointed in that. I’m running experiments 24/7, and always have a queue of more experiments to run once they finish. I thought it would easily be 95+%<br>Final Calculation<br>To calculate money saved, the first step is to use the rental price for each day, and multiply that by the number of GPU </div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://blog.simbastack.com/indexed-a-year-of-video-locally/" target="_blank" class="card-title">Gemma4-31Bを使って2021年製MacBookで1年分の動画をローカルインデックス化（50GBスワップ使用）</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Indexing a year of video locally on a 2021 MacBook with Gemma4-31B (50GB swap)</span><div class="card-meta"><span class="date">05/21 14:01</span> &middot; <span class="score">&#9650; 384</span> &middot; <a href="https://news.ycombinator.com/item?id=48222733" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">While I slept, my 5-year-old MacBook ran Gemma 4 locally and indexed a year of video<br>I&#x27;m in the Maasai Mara about half the year, in three-month stretches. Animals out the front of the lodge, motorcycles, friends in the Maasai villages, kids who think a drone is the funniest thing they have ever seen. That&#x27;s one half of my year. The other half is sixteen-hour days in front of a terminal, Silicon Valley hacker brain on Africa time. Both real, both consuming attention.<br>The first half is a constant flood of footage from the iPhone, the DJI Pocket, the drone, the Nikon Z8, and lately the Ray-Ban Metas too. There&#x27;s always something being recorded. Every photographer or videographer I know is sitting on the same problem: an archive that grows faster than they can edit it. The second half is why mine never gets touched.<br>Airport security somewhere between Nairobi and Spain. Two trays of cameras, headphones, drone bits, batteries, SSDs, more cables than anyone needs. Most of it records something. Almost none of what they record gets touched again any time soon.<br>Three months ago the lodge&#x27;s social channels went dark. Not for lack of content; the lodge has years of raw footage across multiple SSDs. The bottleneck was editing time, and my time disappeared. Claude Code with Opus 4.5 (and then 4.6) hit the point in February where you could leave agents running for hours and come back to merged PRs. KaribuKit was going live with its first paying property in the same window. I stopped sleeping properly, started running three or four agents in parallel in the background, and the months when I would have cut reels turned into months when I shipped software instead.<br>So one weekend I sat down to fix it. The first thing I tried was wrong.<br>The wrong layer<br>The initial pitch (to myself, after about an hour of research) was a SaaS stack: Eddie AI for iterative editing, Higgsfield MCP for generative B-roll, Submagic for captions, Buffer for cross-posting. About $140 a month, slick on paper.<br>Two problems showed up before I ran any of it.<br>First, generative AI video has no place on a real travel brand. Guests pay $300 a night and up to see the actual place, and mislabeled AI shots equals TripAdvisor crucifixion. Higgsfield out.<br>Second, 3-5 posts a week was aggressive for me, and the realistic floor was more like 2-3. The pitch was optimistic in a way that would have me failing by week two.<br>Then I remembered I already own DaVinci Resolve Studio, and Resolve 21 ships IntelliSearch (semantic clip search), Smart Bins (auto-organizing folders), and Voice to Subtitle that produces 90-95% accurate captions on the timeline. That&#x27;s roughly 70% of what Eddie sells, so Eddie was out too.<br>What I was left with was Claude Code driving Resolve via the open-source DaVinci Resolve MCP, with ElevenLabs handling voiceover on informational clips where it earned its place, and the cost had dropped from $140 a month to $22.<br>But the deeper thing only landed once I tried to actually use any of this. Every AI video editor on the market assumes your footage is already labeled. Mine is IMG_*.mov<br>and DJI_*.mp4<br>across folders with names like Mara june 2024 backup final FINAL<br>. Eddie can search by transcript, but none of these tools can find &quot;the elephant on the hill at golden hour&quot; against an unlabeled archive.<br>The AI editor is solving the wrong problem. Or more precisely, it&#x27;s solving the second problem; the first problem is the index.<br>The question<br>I asked it out loud: how does the agent know what&#x27;s in each clip?<br>There&#x27;s no answer for an unlabeled archive. You can throw transcripts at it, GPS coordinates, filenames, parent folders. None of that gives you &quot;the wide shot at sunrise with the giraffe in the frame&quot; unless something has actually looked at the pixels.<br>The leverage is upstream. Build the index first, make the archive queryable in English, and the editor on top becomes a thin layer doing what it was designed to do.<br>So I built the index, locally.<br>The build<br>This is the kind of AI-native build I do for clients at SimbaStack, except I was both the client and the engineer this time, which made the decision tree a lot shorter.<br>Four constraints set the shape:<br>- It had to be local-first. The Mara Hilltop archive lives on physical SSDs and most of the personal stuff is on my laptop, and uploading thousands of multi-gigabyte clips to the cloud made no sense on cost, never mind as a way to hand the entire visual record of my life to a third party.<br>- I wanted sidecars rather than a central database: a<br>.description.md<br>per clip, living right next to it, plain text and grep-able. It survives if my indexer breaks tomorrow, and it travels with the data when files move between drives. - One vision call had to capture everything, because the vision pass over the extracted frames is the expensive operation. Anything I might want to know about a clip later has to come out of that one call, so the schema is exhaustive on day one: rating, technical quality, lighting, time of day</div></details></div>
@@ -239,91 +243,80 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://www.fsa.go.jp/news/r7/sonota/20260522-5/20260522.html" target="_blank" class="card-title">「フロンティアAIによる脅威変化を踏まえた金融機関等の短期的な対応」に係る要請について</a><p class="card-desc">「フロンティアAIによる脅威変化を踏まえた金融機関等の短期的な対応」に係る要請について 令和８年５月22日、金融庁は日本銀行と連名で、金融機関等に対し、「フロンティアAIによる脅威変化を踏まえた金融機関等の短期的な対応」について、以下のとおり要請しました。 「フロンティアAIによる脅威変化を踏まえた金融機...</p><div class="card-meta"><span class="date">05/22 05:11</span> &middot; <span class="score">&#128278; 4</span></div></div></div></div>
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://valhovey.github.io/gaia-mary/" target="_blank" class="card-title">「プロジェクト・ヘイル・メアリー」恒星航法チャート</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Project Hail Mary – Stellar Navigation Chart</span><div class="card-meta"><span class="date">05/21 16:23</span> &middot; <span class="score">&#9650; 927</span> &middot; <a href="https://news.ycombinator.com/item?id=48225297" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://pc.watch.impress.co.jp/docs/news/yajiuma/2110963.html" target="_blank" class="card-title">【やじうまPC Watch】 ワークステーションのタコ足配線で危うく火事に。アプライドが注意喚起</a><div class="card-meta"><span class="date">05/22 06:58</span> &middot; <span class="score">&#128278; 7</span></div></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W14.html" class="archive-link"><span>&#128202; 2026-W14</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-05-22.html" class="archive-link active-date"><span>2026-05-22</span><span class="archive-count">36 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
