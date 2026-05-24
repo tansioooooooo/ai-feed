@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-05-24</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-05-24</span>
     <span class="updated">2026/05/24 09:14 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/" target="_blank" class="card-title">OpenAIのモデル、離散幾何学の中心的予想を反証</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">An OpenAI model has disproved a central conjecture in discrete geometry</span><div class="card-meta"><span class="date">05/20 19:05</span> &middot; <span class="score">&#9650; 1418</span> &middot; <a href="https://news.ycombinator.com/item?id=48212493" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">An OpenAI model has disproved a central conjecture in discrete geometry<br>For nearly 80 years, mathematicians have studied a deceptively simple question: if you place points in the plane, how many pairs of points can be exactly distance apart?<br>This is the planar unit distance problem, first posed by Paul Erdős in 1946. It is one of the best-known questions in combinatorial geometry, easy to state and remarkably difficult to resolve. The 2005 book Research Problems in Discrete Geometry, by Brass, Moser, and Pach, calls it “possibly the best known (and simplest to explain) problem in combinatorial geometry.” Noga Alon, a leading combinatorialist at Princeton, describes it as “one of Erdős’ favorite problems.” Erdős even offered a monetary prize for resolving this problem.<br>Today, we share a breakthrough on the unit distance problem. Since Erdős’s original work, the prevailing belief has been that the “square grid” constructions depicted further below were essentially optimal for maximizing the number of unit-distance pairs. An internal OpenAI model has disproved this longstanding conjecture, providing an infinite family of examples that yield a polynomial improvement. The proof has been checked by a group of external mathematicians. They have also written a companion paper explaining the argument and providing further background and context for the significance of the result.<br>The result is also notable for how it was found. The proof came from a new general-purpose reasoning model, rather than from a system trained specifically for mathematics, scaffolded to search through proof strategies, or targeted at the unit distance problem in particular. As part of a broader effort to test whether advanced models can contribute to frontier research, we evaluated it on a collection of Erdős problems. In this case, it produced a proof resolving the open problem.<br>This proof is an important milestone for the math and AI communities. It marks the first time that a prominent open problem, central to a subfield of mathematics, has been solved autonomously by AI. It also demonstrates the depth of reasoning these systems now support. Mathematics provides a particularly clear testbed for reasoning: the problems are precise, potential proofs can be checked, and a long argument only works if the reasoning holds together from beginning to end. The method by which the problem was solved is also notable. The proof brings unexpected, sophisticated ideas from algebraic number theory to bear on an elementary geometric question.<br>Fields medalist Tim Gowers, writing in the companion paper, calls the result “a milestone in AI mathematics.” According to leading number theorist Arul Shankar, “In my opinion this paper demonstrates that current AI models go beyond just helpers to human mathematicians – they are capable of having original ingenious ideas, and then carrying them out to fruition”.<br>The proof is available here(opens in a new window). The companion paper by leading external mathematicians is available here(opens in a new window). You can find an abridged version of the model’s chain of thought here(opens in a new window).<br>Let be the largest possible number of unit-distance pairs among points in the plane. Examples attaining linear growth rate are easy to construct: placing points in a line gives pairs, while a square grid gives about pairs. The previously best known construction, coming from a rescaled square grid, turns out to give even more: for a constant . Since tends to infinity with , the additional term in the exponent tends to , meaning these constructions achieve growth only slightly faster than linear. For decades, it was widely believed that this rate was essentially the best possible, and no construction could improve significantly over the square grid. In technical terms, Erdős conjectured an upper bound of in which the additional indicates a term tending to with .<br>Our new result disproves this conjecture. More precisely, for infinitely many values of , the proof constructs configurations of points with at least unit-distance pairs, for some fixed exponent . (The original AI proof does not give an explicit , but a forthcoming refinement due to Princeton mathematics professor Will Sawin has shown one can take .)<br>The history of the problem helps to see why the result is surprising. The best known lower bound had been essentially unchanged since Erdős’s original 1946 construction. The best upper bound, , dates to work by Spencer, Szemerédi, and Trotter in 1984, and despite later refinements and related structural work by Székely, Katz and Silier, Pach, Raz, and Solymosi and by others, the upper bound has remained essentially unchanged. As evidence in favor of the conjecture, Matoušek and Alon-Bucić-Sauermann studied the problem with non-Euclidean distances in the plane, and proved that &quot;most&quot; of these non-Euclidean distances obey the conjecture in some sense.<br>Surprisingly, the key ingredients of the construction come from a v</div></details></div>
 <div class="card" data-source="hackernews" data-category="politics"><div class="card-source" style="color:#ff6600">HN<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://www.alqst.org/ar/posts/1190" target="_blank" class="card-title">MetaがサウジアラビアとUAEで人権アカウントのリーチを制限</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Meta blocks human rights accounts from reaching audiences in Saudi Arabia, UAE</span><div class="card-meta"><span class="date">05/20 12:43</span> &middot; <span class="score">&#9650; 1077</span> &middot; <a href="https://news.ycombinator.com/item?id=48206768" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">The undersigned organisations condemn Meta’s recent decision to restrict the Facebook and Instagram accounts of independent NGOs, researchers, and civil society figures from reaching audiences in Saudi Arabia and the United Arab Emirates (UAE). This is the latest in a pattern of major technology companies, including Meta, acting as enforcement arms for repressive governments in the Gulf. We call on Meta to uphold its human rights responsibilities and ensure that users’ content is not arbitrarily restricted.<br>Since 30 April 2026, Gulf-focused NGOs ALQST for Human Rights and Democratic Diwan, as well as Saudi researcher Abdullah Alaoudh and human rights defender Yahya Assiri, have had their Facebook accounts rendered “unavailable” in Saudi Arabia at the request of the Saudi government, in a form of “geo-blocking”. Similar restrictions have been imposed in the UAE, including against an academic. According to Meta&#x27;s publicly available content restriction reports, over 100 Facebook pages and Instagram accounts have been restricted since March 2026. This follows a similar pattern on X (formerly Twitter). Most recently, the Saudi government requested that a number of X accounts belonging to prominent Saudi activists be geo-blocked. As of the publication date (20 May), X had not complied.<br>The undersigned organisations consider these measures arbitrary, discriminatory, and a direct violation of the right to freedom of expression and access to information. Affected users were notified that Meta acted in response to a “local legal requirement” or a “request from a government” (i.e. Saudi Arabia and the UAE), demonstrating the company’s willingness to comply with demands from state authorities that routinely suppress, surveil, and criminalise online expression.<br>Meta’s notifications cite compliance with “local laws”, and its reports specify the cybercrime laws of Saudi Arabia and the UAE. Authorities in Saudi Arabia and the UAE have long relied on draconian cybercrime and counterterrorism legislation to silence dissent and restrict freedom of expression online. Countless activists and peaceful critics have been arrested, tried and sentenced for expressing critical opinions in online publications or on social media, including Facebook and X.<br>The reports further cite that the content allegedly violating cybercrime laws includes “reporting on regional geopolitical conflicts and security developments.&quot; Since the United States and Israel launched strikes on Iran on 28 February 2026, Gulf governments have moved swiftly to tighten the information environment even further, controlling what their populations can see, say, and share about the attacks unfolding in their countries.<br>Meta claims to conduct human rights due diligence reviews before complying with government requests. We ask Meta to disclose what that review looked like for ALQST&#x27;s page (and other affected accounts), who conducted it, what standards were applied, and how the company concluded that restricting a human rights organisation at the request of a government that imprisons people for social media posts is compatible with its own stated commitments.<br>Meanwhile, authorities in both countries exert near total control over online information, and routinely block websites and internet accounts that might be of public interest, such as the websites of ALQST (blocked in Saudi Arabia since 2015), the Gulf Centre for Human Rights (blocked in Saudi Arabia and the UAE since 2015) and others that might contain content critical of the government or that advocate for human rights and democracy in the country. In this highly repressive context, Meta has a heightened responsibility to uphold freedom of expression and protect human rights defenders, especially from “censorship demands from governments or their proxies” as Meta publicly states in its human rights policy. Instead of preserving the free flow of information, Meta has further restricted access to it.<br>Ironically, Meta’s notifications state that the company conducted legal assessments beforehand and “took into account human rights implications.” Given the well-documented pattern of digital repression by Saudi and UAE authorities, such claims are difficult to reconcile. The UN Guiding Principles on Business and Human Rights expect companies to assess whether government requests are consistent with international human rights standards before complying and to be transparent about how they reached their conclusions. The undersigned organisations therefore call on Meta to:<br>- Publish the full legal requests received from Saudi and UAE authorities along with the human rights assessments Meta claims to have conducted;<br>- Restore full access to all affected accounts immediately;<br>- Commit to notifying affected users with specific details about which content triggered the restriction and under which law; and<br>- Explain what role, if any, Meta&#x27;s regional offices in the Gulf played in processing these requests.<br>Signatories:<br>- Access </div></details></div>
 <div class="card" data-source="hackernews" data-category="politics"><div class="card-source" style="color:#ff6600">HN<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://www.nytimes.com/2026/05/22/us/politics/green-card-changes-trump.html" target="_blank" class="card-title">グリーンカード申請者は出国して申請が必要、トランプ政権が表明</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Green card seekers must leave U.S. to apply, Trump administration says</span><div class="card-meta"><span class="date">05/22 21:27</span> &middot; <span class="score">&#9650; 860</span> &middot; <a href="https://news.ycombinator.com/item?id=48241890" target="_blank" class="comment-link">comments &rarr;</a></div></div>
@@ -234,93 +238,82 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hackernews" data-category="politics"><div class="card-source" style="color:#ff6600">HN<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://reclaimthenet.org/texas-woman-arrested-for-facebook-post-about-town-water-quality" target="_blank" class="card-title">テキサス州の女性、市の水質に関するFacebook投稿で逮捕</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Texas woman arrested for Facebook post about town water quality</span><div class="card-meta"><span class="date">05/23 18:02</span> &middot; <span class="score">&#9650; 709</span> &middot; <a href="https://news.ycombinator.com/item?id=48249747" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://forbesjapan.com/articles/detail/97943" target="_blank" class="card-title">ウクライナの長距離ドローン、ロケット弾を発射し始める　ロシア軍防空チームを圧迫 | Forbes JAPAN 公式サイト（フォーブス ジャパン）</a><p class="card-desc">(c) linkties Co., Ltd. Under license from Forbes.com LLC™ All rights reserved.</p><div class="card-meta"><span class="date">05/23 02:42</span> &middot; <span class="score">&#128278; 130</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">ロシア軍の部隊によって5月12日ごろに投稿された動画には、ウクライナのファイア・ポイント製FP-1長距離攻撃ドローンが、ロシア側の対ドローン機動火力グループに向けてロケット弾を発射したとみられる様子が映っている。ドローンによるロケット弾攻撃が確認されたのは初めてであり、それは攻撃ドローンの自然な進化であると同時に、航空戦の重要な新展開でもある。<br>🚀Ukrainian FP-1/FP-2 strike drone launching an unguided air-to-surface rocket at a Russian mobile air defense group during the overnight raid on Crimea.<br>— Special Kherson Cat 🐈🇺🇦 (@bayraktar_1love) May 12, 2026<br>The first known use of unguided air-to-surface rockets from Ukrainian aerial drones. pic.twitter.com/kpiiRbaLno<br>FP-1はウクライナがよく用いている長距離ドローンのひとつで、使われたとみられるロケット弾には非常に長い歴史がある。これら2つを組み合わせることで、ロシア側の防空能力を著しく弱体化させるとともにドローンの突破数を増やせる可能性がある。<br>対ドローン防衛を担う機動火力グループ<br>FP-1やロシアのシャヘド型のような長距離攻撃ドローンは、性能的には第一次世界大戦期の航空機に近い。これらを地対空ミサイルで撃墜するのは現実的ではない。あまりに数が多いため、1発数百万ドルのミサイルは1機5万ドル（約800万円）程度のドローンを相手に急速に消耗してしまうからだ。<br>そこで、ロシアに先んじてウクライナが配備したのが機動防空部隊だった。機関砲や対空機関銃で武装したこれらのチームは、ドローン攻撃の脅威が迫る場所に迅速に移動し、有効な近距離防空を提供する。たいていのドローンは低い高度をせいぜい190kmかそこらの速度で直線的に飛んでくるので、第一次世界大戦期にさかのぼる古いマキシム機関銃を含め、簡素な兵器でも撃墜可能だ。<br>❗️A 🇺🇦Ukrainian mobile air defense group shoots down a 🇷🇺Russian Shahed kamikaze drone using a paired &quot;Maxim&quot; machine gun mount. pic.twitter.com/inhGP9eDxx<br>— 🪖MilitaryNewsUA🇺🇦 (@front_ukrainian) April 7, 2026<br>ロシア側もウクライナを模倣し、ソ連時代の対空兵器を装備させた小規模な部隊に多くの施設を防衛させるようになっている。これらの機動火力グループのモチベーションを高めるべく、ドローンを撃墜する戦果をあげれば報奨金を出すようにもしている（それが裏目に出て、報奨金目当てに味方のドローンを撃墜する事例も起こっている）。たしかに、ウクライナ側に比べると、ロシア側はドローンを落とすのに相当てこずっているように見える。多くの動画では、ウクライナのドローンは妨害を受ける様子もなく目標に向かって飛んでいき、そのまま突入している。それでも、ロシアの機動防空チームもある程度の有効性を示しているのは確かだ。<br>そのため、これらの部隊自体もウクライナ側の攻撃目標になっている。</div></details></div></div></div>
 <div id="panel-neta" class="panel"><div class="cards"><p class="empty">No articles</p></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W14.html" class="archive-link"><span>&#128202; 2026-W14</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">33 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-05-24.html" class="archive-link active-date"><span>2026-05-24</span><span class="archive-count">33 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
