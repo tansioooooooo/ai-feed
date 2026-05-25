@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W22</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W22 (2026-05-25 〜 2026-05-31)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年5月18〜24日の週は、AIエージェントの実用化が本格的な加速段階に入った週。Googleが25年ぶりに検索UIを全面刷新してAIエージェント機能を展開し、Gemini 3.5 Flashをリリース。AnthropicはProject GlasswingでMythos Previewが1万件超の重大脆弱性を発見したと公表し、AIのセキュリティ活用が新局面へ。OpenAIのモデルが80年来の離散幾何学の予想を自律的に反証するという数学的快挙も達成。一方でマスクのOpenAI訴訟敗訴・Karpathyのanthropic入社・MicrosoftのClaude Codeライセンス縮小など、業界再編の動きも相次いだ。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">AIコーディングエージェントの実用化・成熟</div><div class="trend-desc">2025年11月にコーディングエージェントが「動くこともある」から「ほぼ確実に動く」水準を超えたとSimon Willisonが総括。Forgeがガードレールにより8Bモデルのエージェントタスク成功率を53%→99%に改善、SembleがgrepよりトークンをSkip 98%削減するエージェント向けコード検索を公開。AnthropicはStainless（SDK/MCPサーバーツール）を買収し、Claude APIのエコシステムを強化した。</div></div>
+<div class="trend-item"><div class="trend-title">AI検索の大変革（Google I/O 2026）</div><div class="trend-desc">GoogleがAI Modeの月間ユーザー10億人突破を背景に、25年ぶりとなる検索ボックスの全面刷新を発表。情報エージェントが24時間バックグラウンドで動作しプッシュ通知を送る「Search agents」を導入。Gemini 3.5 FLashを全デフォルトモデルに採用。一方でウェブコンテンツの脱リンク化・AI生成レスポンス化を「Webへの宣戦布告」と批判する声も強まった。</div></div>
+<div class="trend-item"><div class="trend-title">AIによる科学・数学の自律的突破</div><div class="trend-desc">OpenAIのモデルが1946年にErdősが提起した離散幾何学の予想（平面単位距離問題）を自律的に反証。Fields賞受賞者Tim Gowersが「AIによる数学のマイルストーン」と評価した。外部数学者によって証明が検証済みであり、AI単独で著名な未解決問題を解決した初の事例として注目される。</div></div>
+<div class="trend-item"><div class="trend-title">AIセキュリティ能力の急加速：Project Glasswing</div><div class="trend-desc">AnthropicがProject Glasswingの初期成果を公表。Claude Mythos Previewが約50のパートナー企業と共同で1,000以上のOSSプロジェクトをスキャンし、高・重大度の脆弱性を1万件以上発見。CloudflareはFirefox 150で271件（Firefox 148の10倍以上）の脆弱性を発見。AIが脆弱性の発見・実証・エクスプロイトチェーン構築まで自律的に行う能力を持つことが実証された。</div></div>
+<div class="trend-item"><div class="trend-title">主要LLMのリリースと価格競争</div><div class="trend-desc">Google Gemini 3.5 Flash（エージェント特化、4倍高速）、Qwen3.7-Max、DeepSeek V4 Proの恒久75%値下げが相次いだ。Simon Willisonによると6ヶ月でモデル首位が5回交代する激戦状態。ローカルLLMも進展し、80ドルのAndroidタブレット上でQwen3推論やGemma4-31Bによる動画インデックス化が実現。</div></div>
+<div class="trend-item"><div class="trend-title">AI業界の大規模再編と法的・組織的動向</div><div class="trend-desc">イーロン・マスクによるOpenAI訴訟がカリフォルニア州陪審員の全員一致で敗訴。Andrej KarpathyがAnthropicへの入社を発表。MicrosoftがClaude Codeライセンスを大量削減しGitHub Copilot CLIへ移行方針を発表。KPMG・PwCがClaudeとの大規模企業アライアンスを締結するなど、エンタープライズAI市場の構造変化が加速。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">LLMエージェント</span><span class="keyword">Gemini 3.5 Flash</span><span class="keyword">Project Glasswing</span><span class="keyword">Mythos Preview</span><span class="keyword">AIコーディング</span><span class="keyword">MCP（Model Context Protocol）</span><span class="keyword">AI検索</span><span class="keyword">数学的定理証明</span><span class="keyword">サイバーセキュリティ</span><span class="keyword">DeepSeek</span><span class="keyword">Stainless買収</span><span class="keyword">Karpathy</span><span class="keyword">ローカルLLM推論</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">Gemini 3.5 Proが来月リリース予定でさらなるエージェント性能向上が見込まれる。Project Glasswingの成果公開が続き、AIによる自動セキュリティ修正が業界標準になりつつある。AI数学研究の快挙が続けば、知識労働者の役割再定義が本格的な社会議論になる可能性が高い。</div>
+  </section>
+</main>
+</body>
+</html>
