@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-05-27</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-05-27</span>
     <span class="updated">2026/05/27 10:46 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://api-docs.deepseek.com/quick_start/pricing" target="_blank" class="card-title">DeepSeekがV4 Proの価格割引を恒久化</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">DeepSeek makes the V4 Pro price discount permanent</span><div class="card-meta"><span class="date">05/22 15:59</span> &middot; <span class="score">&#9650; 616</span> &middot; <a href="https://news.ycombinator.com/item?id=48237663" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Models &amp; Pricing<br>The prices listed below are in units of per 1M tokens. A token, the smallest unit of text that the model recognizes, can be a word, a number, or even a punctuation mark. We will bill based on the total number of input and output tokens by the model.<br>Model Details<br>(1) The model names deepseek-chat<br>and deepseek-reasoner<br>will be deprecated in the future. For compatibility, they correspond to the non-thinking mode and thinking mode of deepseek-v4-flash<br>, respectively.<br>(2) For all models, the input cache hit price has been reduced to 1/10 of the launch price. This price adjustment takes effect from 2026/4/26 12:15 UTC.<br>(3) The deepseek-v4-pro model API pricing will be officially adjusted to 1/4 of the original price after the 75% discount promotion ends on 2026/05/31 15:59 UTC.<br>(4) For more details on concurrency limits, please refer to Rate Limit &amp; Isolation<br>Deduction Rules<br>The expense = number of tokens × price. The corresponding fees will be directly deducted from your topped-up balance or granted balance, with a preference for using the granted balance first when both balances are available.<br>Product prices may vary and DeepSeek reserves the right to adjust them. We recommend topping up based on your actual usage and regularly checking this page for the most recent pricing information.</div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://www.anthropic.com/research/glasswing-initial-update" target="_blank" class="card-title">プロジェクト グラスウィング：最初のアップデート</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Project Glasswing: An Initial Update</span><div class="card-meta"><span class="date">05/22 19:31</span> &middot; <span class="score">&#9650; 558</span> &middot; <a href="https://news.ycombinator.com/item?id=48240419" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Project Glasswing: An initial update<br>Last month, we launched Project Glasswing, our collaborative effort to secure the world’s most critical software before increasingly capable AI models can be turned against it.<br>Since then, we and our approximately 50 partners have used Claude Mythos Preview to find more than ten thousand high- or critical-severity vulnerabilities across the most systemically important software in the world. Progress on software security used to be limited by how quickly we could find new vulnerabilities. Now it’s limited by how quickly we can verify, disclose, and patch the large numbers of vulnerabilities found by AI.<br>In this post, we discuss what we’ve learned about this critical challenge for cybersecurity in the first weeks of Project Glasswing. We focus on the early public evidence of Mythos Preview’s performance, on the initial results of our effort to scan thousands of open-source software projects, and on what this progress means for cyberdefenders today. We also cover what to expect next from Project Glasswing, and how we’re thinking about releasing Mythos-class models in the future.<br>Our early results<br>Our approach to discussing Mythos Preview’s findings<br>The software industry’s longstanding convention is to disclose new vulnerabilities 90 days after they’re discovered (or, if a patch is created before the 90 days is up, around 45 days after the patch becomes available). This allows time for end users to update their software before a vulnerability can be exploited by attackers. Our own Coordinated Vulnerability Disclosure policy takes this approach.<br>However, this means that disclosed vulnerabilities are a lagging indicator of the accelerating frontier of AI models’ cyber capabilities: we’re not yet at the point where we can fully detail our partners’ findings with Mythos Preview without putting end users at risk. Instead, we provide illustrative examples of the model’s performance, along with aggregate statistics on our progress to date. Once patches for the vulnerabilities that Mythos Preview has discovered are widely deployed, we’ll provide much more detail about what we’ve learned.<br>Evidence from our partners and external testers<br>Project Glasswing’s initial partners build and maintain software that is fundamental to the functioning of the internet and other essential infrastructure. Fixing flaws in their code reduces risk for the many other organizations that rely on it, and therefore reduces risk for billions of end users.<br>After one month, most partners have each found hundreds of critical- or high-severity vulnerabilities in their software. Collectively, they’ve found more than ten thousand. Several have told us that their rate of bug-finding has increased by more than a factor of ten. For instance, Cloudflare has found 2,000 bugs (400 of which are high- or critical-severity) across their critical-path systems, with a false positive rate that Cloudflare’s team considers better than human testers.<br>This tallies with external testers’ experience of Mythos Preview’s performance, and with recent additional evaluations of the model:<br>- The UK’s AI Security Institute reports that Mythos Preview is the first model to solve both of their cyber ranges (simulations of multistep cyberattacks) end to end;<br>- Mozilla found and fixed 271 vulnerabilities in Firefox 150 while testing Mythos Preview—over ten times more than they found in Firefox 148 with Claude Opus 4.6;<br>- XBOW, an independent security platform, reports that Mythos Preview is a “significant step up over all existing models” on its web exploit benchmark, and provides “absolutely unprecedented precision” on a token-for-token basis;<br>- ExploitBench and ExploitGym, two recently released academic benchmarks for measuring models’ exploit development capabilities, show Mythos Preview as the strongest performer. We discuss what these benchmarks tell us about the model in more detail on our Frontier Red Team blog.<br>More generally, we’re now seeing that patched software is being rolled out much more quickly. The latest Palo Alto Networks release included over five times as many patches as usual. Microsoft has reported that the number of new patches they’ll release will “continue trending larger for some time.” And Oracle is finding and fixing vulnerabilities across its products and cloud multiple times faster than before.<br>Mythos Preview has also proved useful for other kinds of security work. For example, at one of our Glasswing partner banks, Mythos Preview helped to detect and prevent a fraudulent $1.5 million wire transfer after a threat actor compromised a customer’s email account and made spoof phone calls.<br>Open-source software<br>For the last few months, Anthropic has used Mythos Preview to scan more than 1,000 open-source projects, which collectively underpin much of the internet—and much of our own infrastructure.<br>So far, Mythos Preview has found what it estimates are 6,202 high- or critical-severity vulnerabilities in these projects (</div></details></div>
 <div class="card" data-source="hackernews" data-category="column"><div class="card-source" style="color:#ff6600">HN<span style="color:#4acd8d;margin-left:8px;font-weight:600">コラム</span></div><a href="https://medium.com/@jakeorlowitz/wikipedia-is-doing-the-capitalist-thing-56a393232943" target="_blank" class="card-title">ビッグテックの反労働戦略がWikipediaにも波及</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Big tech&#x27;s anti-labor playbook has come for Wikipedia</span><div class="card-meta"><span class="date">05/26 20:33</span> &middot; <span class="score">&#9650; 499</span> &middot; <a href="https://news.ycombinator.com/item?id=48285592" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Big Tech’s Anti-Labor Playbook Has Come for Wikipedia<br>TLDR: In ten days last month, the Wikimedia Foundation fired the longtime lead developer of MediaWiki and disbanded the team whose entire job was to listen to volunteers. Most of the people they fired were union organizers. Wikipedia’s editors are now threatening to strike in solidarity. The Foundation is sitting on $296 million in reserves and a freshly profitable AI revenue stream. This is a confrontation with global implications.<br>Ten days in May<br>In mid-May, the Wikimedia Foundation fired Brooke Vibber.<br>If that name doesn’t mean anything to you, here is what it should mean. Vibber took over as lead developer of MediaWiki, the platform that runs Wikipedia, in early 2003. She was the first full-time employee the Wikimedia Foundation ever hired, and its first Chief Technical Officer. For more than twenty years she was the engineer you called when something deep in the code was broken. The Foundation itself once described her as one of a very small number of people in the world who deeply understand the technical underpinnings of the system. She was also a union organizer.<br>A week later, on May 21, the Foundation announced it had disbanded the Community Tech team. Five engineers and a manager: gone. Their job had been to take the wishes Wikipedia editors submitted through an official channel called the Community Wishlist, and build them. It was the one team at WMF whose product owner was, in effect, the volunteer community. Most of the engineers were also union organizers.<br>Within hours of the announcement, editors were signing a solidarity petition pledging collective action up to and including an editorial strike. By the organizers’ account, this is the first time editors have organized solidarity action with paid Foundation staff. Administrators offered to step down. Anti-vandalism bot operators offered to switch off the filters. It should not be legal to operate without a union, wrote an administrator named Femke. And a organisation that tries to be a force for good should not be willing to operate without one.<br>WMF General Counsel Stephen LaPorte has publicly said the Foundation respects staff’s right to unionize and will negotiate in good faith. The actions of the past two weeks will determine whether that means anything.<br>The money<br>The Wikimedia Foundation closed last fiscal year with $208.6 million in revenue. It holds $296.6 million in reserves, 17.1 months of operating expenses. The Wikimedia Endowment, a separate fund, sits on $169.4 million in net assets, up $25 million in a single year. Wikimedia Enterprise, the team that provides high speed, high volume API access to AI labs, just turned profitable on $8.3 million in revenue, a 148% jump from the prior year.<br>That last revenue stream is good, by the way. AI companies are training on Wikipedia whether they pay for it or not, and making them pay is the smartest move the Foundation has made in years. The figure should be much higher. OpenAI and Anthropic and Google can afford to write checks an order of magnitude bigger than $8.3 million.<br>The point is the Foundation is rich. Seventeen-plus months of operating runway in the bank. Revenue diversifying, not shrinking. They can afford six engineers. Whatever this fight is about, it is not about money.<br>The pattern<br>The Foundation has spent the better part of a decade in slow legitimacy collapse with its own community, and the people who run it have absorbed exactly the wrong lessons from every crisis.<br>In 2015, then-CEO Lila Tretikov tried to build the Knowledge Engine, funded in part by a $250,000 Knight Foundation grant the community wasn’t told about for four months. When the community found out in early 2016, the project imploded, Tretikov resigned, and the Foundation apologized in the careful corporate register of an organization that doesn’t quite mean it.<br>In 2019, the Foundation banned a longtime English Wikipedia administrator on secret evidence through a process the community had not designed, triggering the largest administrator revolt of the office-action era. They handed the decision back to the community.<br>Every crisis taught a lesson. The lesson was never that secrecy and top-down decision-making were wrong on principle. The lesson was always that secrecy was operationally expensive and should be handled more carefully next time.<br>What followed was the Silicon Valley playbook applied to a nonprofit that had spent twenty years telling donors it was different. A desktop redesign shipped over community objections. Strategic plans landed as fait accompli. Affiliates complained of inadequate funding and consultation while headcount at the Foundation grew. The reserve climbed, while fundraising banners continued to suggest Wikipedia might go dark without your donation. Move fast. Ship things. Manage the community as a stakeholder. Treat dissent as a comms problem.<br>Bernadette Meehan became CEO on January 20, 2026, recruited from a career that included </div></details></div>
@@ -249,96 +253,85 @@ main { padding: 16px 24px; max-width: 900px; }
 <div id="panel-politics" class="panel"><div class="cards"><div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://bunshun.jp/articles/-/88979" target="_blank" class="card-title">《スクープ証言》高市首相陣営“ネガキャン動画”は「AIとスマホ20台で1日100本」実行部隊が明かした“大量拡散の手法” | 文春オンライン</a><p class="card-desc">高市早苗首相陣営による“ネガキャン動画”問題を巡り、作成・拡散を実行したチームが、約20台のスマートフォンやAIを駆使したネット工作を展開していたことが「週刊文春」の取材で分かった。 「週刊文春」はこれまで、高市陣営がライバル候補や野党へのネガキャン動画をSNSで大量拡散していたことを報じてきた。その具体...</p><div class="card-meta"><span class="date">05/27 08:09</span> &middot; <span class="score">&#128278; 22</span></div></div></div></div>
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://togetter.com/li/2701884" target="_blank" class="card-title">ChatGPTに「職場でバカって言う人どう思う？」って聞いたら「許せないね！」→「私が言ったんだよね」って返したら「気持ちわかるよ」って言ってきたから適当</a><p class="card-desc">NANA(コンビニにいる人達) @konvini5656 私もChatGPTで遊んでる時 「職場でバカって言う人どう思う？」って聞いたら 🤖「それはひどい！パワハラだ！許せないね！どういうシチュエーションで言われた？状況によっては訴えれるよ」 って返信に 「私が言った側なんだよね」って返したら 🤖「言いたくなる気持ちわかるよ」...</p><div class="card-meta"><span class="date">05/26 20:13</span> &middot; <span class="score">&#128278; 183</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">私もChatGPTで遊んでる時 「職場でバカって言う人どう思う？」って聞いたら 🤖「それはひどい！パワハラだ！許せないね！どういうシチュエーションで言われた？状況によっては訴えれるよ」 って返信に 「私が言った側なんだよね」って返したら 🤖「言いたくなる気持ちわかるよ」って返ってきたからまじ適当なやつだなって思ってる<br>2026-05-26 17:18:10手のひら返しえぐい<br>この世界がもう始まってるんだな。 pic.x.com/pHiV5x4QqA x.com/konvini5656/st…<br>2026-05-26 19:30:36@akirakia @shirataki_co 多分私が普段相談してる内容が良くないんだと思うんですけど すぐ「警察に電話！むしろ警察案件。迷う必要はない」って言ってきますw<br>2026-05-26 19:44:46@konvini5656 話してる人のこと嫌いではないけど、その人の話を聞いてもいないタイプ 何か言葉が聞きたいだけの時は話し相手としては最適ですね<br>2026-05-26 18:21:12AIは正しい事をいうマシーンじゃない その場の空気を読んでノリのいい事を言うだけのチャラ男みたいなもんなんですよ x.com/konvini5656/st…<br>2026-05-26 23:07:09AIって特にお気持ち系に寄り添うように出力するから厄介だったりする 自己肯定感上げるために使い続けると確実に馬鹿になるから注意したい x.com/konvini5656/st…<br>2026-05-26 20:51:39@konvini5656 人間に媚びうると「いいね!」が貰えるから、人間さまに媚びへつらうようになっちゃうんだろうな AIも処世術なしじゃ生きられない、世知辛い世の中だね<br>2026-05-26 22:11:29ポストお借りしてすみませんChatGPTのそういうとこわかりすぎて！！ そういう奴だって分かってるから、わざと同じ内容の相談を立場を変えて何回か聞いたりしてる。 x.com/konvini5656/st…<br>2026-05-26 22:28:46マジでこういうとこあるよねチャッピー。 キャバクラやホストやコンカフェの代わりになれてもカウンセラーには絶対なれない。 x.com/konvini5656/st…<br>2026-05-26 18:52:35あれは本人の感情を逆撫でしないようにすることにかなり重きを置いているので……(なので愚痴吐きにかなり最適) x.com/konvini5656/st…<br>2026-05-26 18:20:19@konvini5656 手のひら返し早すぎて笑いました😂 最初は正義感強めなのに、 立場が変わった瞬間に寄り添ってくるの、 チャッピーの八方美人感ありますね。 でもちょっと分かるって言ってくれるのは助かる時もあります。<br>2026-05-26 18:33:49商用AIはもともと公正公平になるようには設計されていない。質問者に迎合する方が受けがいいから。公正なAIを作ることは技術的には可能であってもそもそも人間がそれを望んでいない。 x.com/konvini5656/st…<br>2026-05-26 19:33:58そういう肯定bot感全開なのがまた好きになっちゃうんだよなw x.com/konvini5656/st…<br>2026-05-26 20:08:45マジでこれだから遊ぶって大事なんだと思うの。 AIに関して人類はまだ子供なんだから遊んで学ばんと火傷するんよ x.com/konvini5656/st…<br>2026-05-26 20:22:20</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://anita.garden/japanrail/" target="_blank" class="card-title">japan rail flow</a><p class="card-desc">passenger throughput per segment across japan&#x27;s rail network</p><div class="card-meta"><span class="date">05/26 22:40</span> &middot; <span class="score">&#128278; 15</span></div></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-05-27.html" class="archive-link active-date"><span>2026-05-27</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
