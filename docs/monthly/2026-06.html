@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-06</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">月次レポート</span>
+    <span class="subtitle">2026-06 (2026-06-01 〜 2026-06-30)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 月次サマリー</h2>
+    <div class="summary-box">2026年5月のAIトレンドは、Anthropicの650億ドル調達（評価額965億ドル）に象徴される産業の超高速成長と、「バイブコーディング」品質論争・AI労働代替への社会的反省が同時進行した月だった。Claude Opus 4.8・Claude for Small Businessなど製品展開が加速する一方、教皇レオ14世の回勅「Magnifica Humanitas」がHNトップ記事になるなど、AI倫理・人間の尊厳をめぐる哲学的問いが技術コミュニティでも真剣に語られた。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">AI企業の超大型資金調達ラッシュ</div><div class="trend-desc">AnthropicがシリーズHで650億ドルを調達し評価額965億ドルでOpenAIを超えて世界最高評価のAIスタートアップに。年収は47億ドル規模。AIルーティング基盤のOpenRouterも1.13億ドルのシリーズBを週25兆トークン処理の成長とともに発表。AI投資競争はさらに激化している。</div></div>
+<div class="trend-item"><div class="trend-title">バイブコーディング論争：品質か速度か</div><div class="trend-desc">「AIを使ってゆっくり良いコードを書く」「Please Do Not Vibe Fuck Up This Software」など、AIで量を産むスタイルへの批判的議論が活発化。AIはコードの生成ではなく品質検証に使うべきという「スローバイブコーディング」の考え方が支持を集めた。Zerostack（Rust製コーディングエージェント）など代替ツールの登場も相次いだ。</div></div>
+<div class="trend-item"><div class="trend-title">MCPの限界とCLI回帰論</div><div class="trend-desc">MCP（Model Context Protocol）がコンテキストを大量消費（Linear単体で1.2万トークン超）・信頼性が低い・既存CLIと重複するとして「MCP is dead?」の議論が起こった。Claude CodeのTool Search Deferred Loadingが文脈消費を85%削減と報告され、MCPとCLI/Skillsの棲み分けが整理されつつある。</div></div>
+<div class="trend-item"><div class="trend-title">AI労働代替への深刻な社会的警告</div><div class="trend-desc">「デッドエコノミー理論」がHN上位記事に。AIが労働を代替すると消費者（元労働者）の購買力も消え市場が死ぬという循環論。教皇レオ14世の回勅「Magnifica Humanitas」はAI時代における人間の尊厳・民主主義・労働価値を神学的に論じ技術コミュニティで大きな反響を呼んだ。「ドメイン専門知識こそ真の参入障壁」論もトレンド入り。</div></div>
+<div class="trend-item"><div class="trend-title">AIインフラのエッジ・中小向け展開</div><div class="trend-desc">Claude for Small Businessがローンチ（QuickBooks・PayPal・HubSpot等と連携）。Geminiのツールコール能力を26Mパラメーターモデルに蒸留した「Needle」が登場。エンタープライズ大企業だけでなく、小規模事業者・エッジデバイス向けのAI普及が本格化してきた。</div></div>
+<div class="trend-item"><div class="trend-title">AI関連サプライチェーン攻撃の激化</div><div class="trend-desc">悪意ある偽VSCode拡張機能によりGitHub社内3,800リポジトリが侵害される大規模インシデントが発生（TeamPCPグループ）。AI系コーディングアシスタントを装った拡張機能が多用され、AI普及がサプライチェーン攻撃の新たな攻撃面になっていることが浮き彫りになった。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Anthropic</span><span class="keyword">バイブコーディング</span><span class="keyword">MCP</span><span class="keyword">Claude Opus 4.8</span><span class="keyword">OpenRouter</span><span class="keyword">AI倫理</span><span class="keyword">労働代替</span><span class="keyword">ドメイン専門知識</span><span class="keyword">サプライチェーン攻撃</span><span class="keyword">モデル蒸留</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">Anthropic IPO検討・超大型調達を背景にAIエンタープライズ展開はさらに加速する見込み。Claude Opus 4.8のリリースと競合モデル群の競争から、6月はモデル品質・エージェント信頼性が主要論点になるとみられる。バイブコーディング批判の高まりを受け「AI+人間の協調品質管理」フレームワークの整備が急務となり、MCP vs CLIの棲み分け議論も一段落つきそうだ。</div>
+  </section>
+</main>
+</body>
+</html>
