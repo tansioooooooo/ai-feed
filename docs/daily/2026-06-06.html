@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-06-06</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-06-06</span>
     <span class="updated">2026/06/06 09:17 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://www.0xsid.com/blog/meta-account-takeover-fiasco" target="_blank" class="card-title">Instagramの最新「エクスプロイト」は今まで見た中で最もお粗末なものだ</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">The newest Instagram “exploit” is the goofiest I&#x27;ve seen</span><div class="card-meta"><span class="date">06/01 16:31</span> &middot; <span class="score">&#9650; 2195</span> &middot; <a href="https://news.ycombinator.com/item?id=48359102" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Yesterday, a slew of Instagram accounts, including some high profile ones like the Obama White House account, seemingly got hacked.<br>Look, I’m no spring chicken. I’ve spent almost a decade and a half identifying vulnerabilities and exploits at unicorn scale, but this is hands down the most unserious, &quot;almost too stupid to be true&quot; of them all.<br>The Takeover Flow<br>Step 01: Faking the Location &amp; Initiating Support<br>All the attacker needs to kick this off is your account username. Then, they hop on a VPN or proxy close to your city so Instagram&#x27;s security algorithms don&#x27;t suspect a thing. (You can quite easily get this from your public profile or &quot;About&quot; section or a hundred other ways.) Once it looks like the request is coming from the correct region, they tell the Meta support AI that the account is hacked and ask it to send the verification codes to an arbitrary email address they control.Step 02: That&#x27;s It<br>Really, that&#x27;s it. The first proper zero auth password reset I&#x27;ve seen in production. There appears to be no additional check as to whether the email being given is actually something the user has used before. Once the AI sends the security code to the attacker&#x27;s email, the attacker passes it right back to complete the verification. The platform hands over a fresh password reset link, granting full ownership to the attacker.<br>Instagram&#x27;s AI may or may not ask the attacker for a video selfie to prove identity. It&#x27;s not particularly discerning at the moment, so something as simple as an AI animated public photo from the target&#x27;s feed has been widely reported to work.<br>2FA Doesn&#x27;t Help<br>In case you&#x27;re wondering, because the system treats this high-privilege recovery flow as a total account reset by the &quot;true&quot; owner, the original 2FA gets thoroughly bypassed in the process.<br>Existing sessions are revoked and the password changed with no email, text, or push notification. The actual owner can&#x27;t initiate recovery because the email and phone numbers now map to the attacker. There&#x27;s no human to escalate to, it&#x27;s just you arguing with a chat hoping to take control back while praying they don&#x27;t do it again.<br>And if you&#x27;re part of the A/B tested accounts on which the AI support option is active, tough luck, you can&#x27;t even turn it off.<br>Black Markets Galore<br>Multiple black market Telegram groups have sprung up offering &quot;account takeover&quot; services at steep rates and quick turnaround times. Considering short handles are worth hundreds of thousands to even millions of dollars, it&#x27;s not a surprise, really.<br>Accounts have been flipped, like hey<br>, or been used for propaganda, like obamawhitehouse<br>or ocmssf<br>, the account of the Chief Master Sergeant of the U.S. Space Force.<br>Patched Now<br>All the Telegram groups have quieted down as Meta seems to have patched it already, but it appears this particular method was active for weeks, if not months.<br>The very fact that a $1.5 trillion company lacks robust guard rails and their support AI will just change anyone&#x27;s linked email if you ask it nicely enough is so terrifying, if it weren&#x27;t so funny.<br>If you&#x27;ve reached this far, thank you for reading! :)<br>I thought multiple exits and retiring in my mid 30s would be fun but I&#x27;ve just been bored and depressed without morning Slacks and emails to wake up to. If you’re building something interesting and could use an extra set of hands to ship, or just want to say hi, feel free to reach out. My inbox is open.</div></details></div>
 <div class="card" data-source="hackernews" data-category="politics"><div class="card-source" style="color:#ff6600">HN<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://www.bloomberg.com/news/articles/2026-06-04/s-p-dow-jones-keeps-megacap-ipo-rules-as-is-after-consultation" target="_blank" class="card-title">SpaceXなど大型IPO、S&amp;Pから株価指数への優先入替を拒否される</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">SpaceX, Other Mega IPOs Denied Fast Index Entry by S&amp;P</span><div class="card-meta"><span class="date">06/04 22:48</span> &middot; <span class="score">&#9650; 993</span> &middot; <a href="https://news.ycombinator.com/item?id=48405718" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://ladybird.org/posts/changing-how-we-develop-ladybird/" target="_blank" class="card-title">Ladybirdの開発方式を変更する</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Changing how we develop Ladybird</span><div class="card-meta"><span class="date">06/05 07:26</span> &middot; <span class="score">&#9650; 835</span> &middot; <a href="https://news.ycombinator.com/item?id=48409191" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Today we’re changing how code enters the Ladybird project.<br>We will no longer accept public pull requests. From now on, code changes to the Ladybird codebase will only be introduced by project maintainers.<br>Ladybird is moving into a new phase. As we work toward our first alpha release, the project needs a tighter development process, a clearer security model, and a smaller set of people responsible for the code that enters the browser.<br>This is not a change we make lightly. Many valuable contributions have come from outside the maintainer group over the years, and we are grateful for them. Many of us also came up through open source by sending patches to projects we cared about.<br>For decades, code contributions have been how open source projects learned who to trust. People would show up, do the work, take responsibility for their changes, and stick around. Over time, trust emerged from the work itself.<br>AI tools have changed the economics of this very quickly. We use them ourselves every day, but a pull request no longer tells us as much as it used to about the person submitting it. A substantial patch used to imply substantial effort, and that effort was a reasonable proxy for good faith. That assumption no longer holds.<br>For a browser, this matters. A browser runs untrusted input from the entire internet on the user’s machine, and one well-disguised vulnerability is all an attacker needs. We have already seen patient, well-resourced campaigns in open source to earn maintainer trust and abuse it. What has changed is how much faster and cheaper it has become to produce work that looks like a serious contribution.<br>At the same time, every change that enters Ladybird becomes our responsibility. It has to fit the architecture, survive future refactoring, interact correctly with the rest of the browser, and be understood by the people maintaining it.<br>Whether code was typed by hand is beside the point. What matters is who is responsible for it once it enters the browser. Ladybird is becoming a browser for real users. The people introducing changes to it must be the people who decide those changes belong in the project, and who will answer for the consequences.<br>As part of this change, we will close all currently open public pull requests. We are grateful for the work people put into them, but keeping the existing queue open would keep that contribution path open in practice. There is no perfect time to make this change, so we are making it now. Going forward, pull requests will only be available to project maintainers.<br>There will not be a separate process for submitting patches by other means. We do not want to create a shadow contribution system through issues, comments, email, or forks. External code can of course exist under the terms of the license, but we will not treat forks or patch dumps as a review queue for upstream Ladybird.<br>Ladybird remains open source. The source code will continue to be publicly available under an open source license. Outside involvement still matters: clear bug reports, reductions, website testing, standards discussion, design discussion, security reports, and technical feedback all help move the project forward.<br>This is the right change for Ladybird now. We are preparing to ship a browser to real users, and our development process has to match that responsibility.</div></details></div>
@@ -301,106 +305,94 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://handwritten.danieljanus.pl/2026-06-01-edsger.html" target="_blank" class="card-title">Show HN：Edsger – reMarkable 2向け手書きClojure REPL</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Show HN: Edsger – A handwritten Clojure REPL for the reMarkable 2</span><div class="card-meta"><span class="date">06/02 18:52</span> &middot; <span class="score">&#9650; 258</span> &middot; <a href="https://news.ycombinator.com/item?id=48374552" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://automaton-media.com/articles/newsjp/20260605-447381/" target="_blank" class="card-title">新たなRPG開発ツール「RPG-Cobo」発表。ベテラン開発者のノウハウ結集、プログラミングの知識不要で3D RPGを制作できる - AUTOMATON</a><p class="card-desc">株式会社スーパーシャークは6月5日、RPG開発ツール「RPG-Cobo」を発表した。本日よりベータテストが開始され、誰でも無料で参加可能。 本製品は、誰でも直感的に3D RPGを制作できるよう設計されたというRPG開発プラットフォームだ。RPG制作に必要な機能をワンパッケージで提供するとのこと。 「RPG-Cobo」では、PBRレン...</p><div class="card-meta"><span class="date">06/05 09:37</span> &middot; <span class="score">&#128278; 41</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Global Sites<br>新たなRPG開発ツール「RPG-Cobo」発表。ベテラン開発者のノウハウ結集、プログラミングの知識不要で3D RPGを制作できる<br>株式会社スーパーシャークは6月5日、RPG開発ツール「RPG-Cobo」を発表した。<br>株式会社スーパーシャークは6月5日、RPG開発ツール「RPG-Cobo」を発表した。本日よりベータテストが開始され、誰でも無料で参加可能。<br>本製品は、誰でも直感的に3D RPGを制作できるよう設計されたというRPG開発プラットフォームだ。RPG制作に必要な機能をワンパッケージで提供するとのこと。<br>「RPG-Cobo」では、PBRレンダリング、GI、ポストエフェクトなど、現代的なグラフィックス環境が標準搭載。高解像度ボクセル表現と最新レンダリング技術を軸とし、従来のRPG開発ツールでは難しかった、立体的で緻密な世界表現を実現できるという。また、初心者でも扱いやすいUI/UXが採用され、上級者は高速に制作できるそうだ。<br>本製品でのRPG開発ではプログラミングの知識は不要で、イベントエディターでコマンドを並べていくだけで、ゲームの仕掛けや物語を制作可能。RPGに必要なコマンドが豊富に用意され、設定項目の多いコマンドでも、直観的な設定パネルで簡単に編集できるという。<br>マップエディターでは、収録された数百種類以上のボクセル素材などを使い、ブロックを組み立てるようにしてマップを制作可能。HD-2D風のマップも作れるそうだ。地形ブロックや建築ブロックには、周りのブロックにあわせて有機的につながる仕組みが採用。また、開閉できるドアブロックや、昇り降りできるハシゴブロックなど、特定の機能が備わったブロックも用意される。<br>このほか、リソースの追加や管理に便利な機能が多数搭載され、ボクセルベースのキャラクターやマップのオブジェクトの改造、エフェクトの作成などにも対応。ゲームに登場するキャラやアイテム、ルールなどを視覚的に編集できるデータベース機能や、AIによる多言語翻訳機能も提供される。<br>完成したRPG作品は、Windows/ウェブブラウザ（WebGL）/iOS/Android向けに書き出し可能。無料の「Free ライセンス」ではWebGLへの書き出しのみに対応し、有料の「Indie ライセンス」ではWindows向けにも対応。同じく有料の「Pro ライセンス」ではさらにモバイル向けにも対応し、加えてSteam用の拡張機能も提供される。なお有料ライセンスの価格は今後発表予定だ。<br>本日6月5日に開始されたベータテストは、本製品のアーリーアクセスが開始される今年秋まで実施予定。誰でも無料で参加でき、バグ報告や要望など、開発へのフィードバックは公式Discordサーバーにて送ることができる。また、ベータテスト参加者を対象にした、賞金や特典付きの作品コンテストが現在企画中で、詳細は後日発表されるそうだ。ベータテスト参加の詳細は特設サイトを確認してほしい。<br>本製品を手がけるスーパーシャークは、サイバーステップの創業メンバーで、役員や開発総責任者を務めた大和田豊氏が代表取締役を務める企業だ。同氏は、サイバーステップにて『ゲットアンプド』や『鬼斬』『TERAVIT（テラビット）』などを手がけ、2024年に退職。その後、これまでの開発で培ったノウハウを結集して「RPG-Cobo」を開発しているという。本製品では、世界規模のRPG体験を創り出すための最高のツールへと成長させることを目指しているとのこと。<br>「RPG-Cobo」は、今年秋にアーリーアクセスが開始予定。そしてβテストは現在実施中だ。製品の詳細は公式サイトを確認してほしい。<br>この記事にはアフィリエイトリンクが含まれる場合があります。</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://gigazine.net/news/20260605-steam-machine-frame-2026-summer-release/" target="_blank" class="card-title">ValveがゲーミングPC「Steam Machine」とVRヘッドセット「Steam Frame」の2026年夏発売を発表</a><p class="card-desc">2026年6月4日、ValveがSteam Deckで快適に動作するゲームを評価する「Verifiedプログラム」を、Steam MachineおよびSteam Frameに拡大すると発表しました。また、Steam MachineおよびSteam Frameの発売時期は「2026年」となっていたのですが、2026年夏に決定しています。 Steam :: Steamworks Development</p><div class="card-meta"><span class="date">06/05 03:51</span> &middot; <span class="score">&#128278; 7</span></div></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-06-06.html" class="archive-link active-date"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
