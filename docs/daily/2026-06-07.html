@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-06-07</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-06-07</span>
     <span class="updated">2026/06/07 09:56 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/" target="_blank" class="card-title">Gemma 4 12B: 統合型・エンコーダなしのマルチモーダルモデル</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Gemma 4 12B: A unified, encoder-free multimodal model</span><div class="card-meta"><span class="date">06/03 16:04</span> &middot; <span class="score">&#9650; 1051</span> &middot; <a href="https://news.ycombinator.com/item?id=48385906" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Introducing Gemma 4 12B: a unified, encoder-free multimodal model<br>Today, we are introducing Gemma 4 12B, our latest model designed to bring agentic multimodal intelligence directly to laptops. Bridging the gap between our edge-friendly E4B and our more advanced 26B Mixture of Experts (MoE), Gemma 4 12B packages powerful capabilities inside a reduced memory footprint. It is also our first mid-sized model to feature native audio inputs.<br>Thanks to the developer community, Gemma 4 models have now crossed 150 million downloads. You’ve built everything from wearable robotic arms for physical assistance to enterprise-grade AI security. We&#x27;re excited to see what you build with this latest addition.<br>Here’s an overview of what makes Gemma 4 12B unique:<br>- Novel unified architecture: No multimodal encoders. The vision and audio inputs flow directly into the LLM backbone.<br>- Advanced reasoning: Benchmark performance nearing our 26B model, unlocking powerful multi-step reasoning and agentic workflows.<br>- Laptop ready: Small enough to run locally with just 16GB of VRAM or unified memory.<br>- Open and accessible: Released under an Apache 2.0 license with support across the developer ecosystem.<br>- Drafter-ready: Gemma 4 12B comes equipped with Multi-Token Prediction (MTP) drafters to reduce latency.<br>Together, these features bring advanced multimodal capabilities to everyday hardware without sacrificing speed or reasoning. Let&#x27;s now take a closer look at how Gemma 4 12B achieves this.<br>Run state-of-the-art agents locally<br>Gemma 4 12B delivers performance nearing our larger 26B MoE model on standard benchmarks, but at less than half the total memory footprint. Small enough to run locally on consumer laptops with 16GB of RAM, it unlocks powerful multimodal and agentic experiences right on your machine.<br>Experience a uniquely efficient, unified architecture<br>What makes Gemma 4 12B stand out is its streamlined approach to processing visual and audio inputs. Traditional multimodal models typically rely on separate encoders to translate images and audio before passing those representations to the language model. Because these split encoders add latency and increase memory usage, we trained Gemma 4 12B with an encoder-free architecture to integrate audio and vision input directly.<br>Here is how Gemma 4 12B processes multimodal inputs natively:<br>- Vision: We replaced Gemma 4’s vision encoder with a lightweight embedding module consisting of a single matrix multiplication, positional embedding and normalizations. This allows the LLM backbone to take over visual processing.<br>- Audio: We simplified audio processing even further. We removed the audio encoder entirely and projected the raw audio signal into the same dimensional space as text tokens.<br>For developers who want a breakdown, head over to our companion Gemma 4 12B Developer Guide.<br>Get started today<br>- Try it yourself: Experiment with a couple of clicks in LM Studio, Ollama, Google AI Edge Gallery App, the Google AI Edge Eloquent app and the LiteRT-LM CLI<br>- Download the weights: Download the pre-trained and instruction-tuned checkpoints directly from Hugging Face and Kaggle.<br>- Integrate &amp; learn: Review the developer documentation and the quick start notebook.<br>- Use your favorite development tools: Implement local inference pipelines with Hugging Face Transformers, llama.cpp, MLX, SGLang, and vLLM, or fine-tune with efficiency using Unsloth.<br>- Unlock Agentic Development with Gemma Skills: To support agents to build with the latest Gemma advancements, we are releasing our official Skills Repository. This is a library of skills designed specifically to enable agents to build with Gemma models.<br>- Deploy your way: Spin up endpoints in production using Google Cloud. Deploy your way through Gemini Enterprise Agent Platform Model Garden, Cloud Run and GKE.</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://elixir-lang.org/blog/2026/06/03/elixir-v1-20-0-released/" target="_blank" class="card-title">Elixir v1.20: 段階的型付き言語へ</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Elixir v1.20: Now a gradually typed language</span><div class="card-meta"><span class="date">06/03 19:02</span> &middot; <span class="score">&#9650; 987</span> &middot; <a href="https://news.ycombinator.com/item?id=48388324" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Elixir v1.20 released: now a gradually typed language<br>In 2022, we announced the effort to add set-theoretic types to Elixir. In June 2023, we published an award winning paper on Elixir’s type system design and said our work was transitioning from research to development.<br>With Elixir v1.20, we have completed our first development milestone which is to perform type inference and gradually type check every Elixir program, without introducing type annotations. This means Elixir increasingly reports dead code and verified bugs: typing violations that are guaranteed to fail at runtime if executed. Elixir can find verified bugs in existing programs efficiently, without introducing developer overhead, and with an extremely low false positives rate.<br>In this announcement, we will break down the type system goals, what the dynamic()<br>type means in Elixir, and how it finds verified bugs. In particular, our implementation performs well in the “If T: Benchmark for Type Narrowing” benchmark. Elixir passes 12 of the 13 categories, showing that it can recover precise type information from ordinary Elixir code, which we use to find verified bugs in dynamically typed programs.<br>The type system was made possible thanks to a partnership between CNRS and Remote. The development work is currently sponsored by Fresha, and Tidewave.<br>Types, in my Elixir?<br>Our goal is to introduce a type system which is:<br>-<br>sound - the types inferred and assigned by the type system align with the behaviour of the program<br>-<br>gradual - Elixir’s type system includes the<br>dynamic()<br>type, which can be used when the type of a variable or expression is checked at runtime. In the absence ofdynamic()<br>, Elixir’s type system behaves as a static one -<br>developer friendly - the types are described, implemented, and composed using basic set operations: unions, intersections, and negations (hence it is a set-theoretic type system), with clear error messages<br>Introducing a type system into an existing language is a complex change. For this reason, our first milestone was to implement the type system without introducing typing annotations but still have it provide value to developers by finding dead code and verified bugs. This is done through the dynamic()<br>type, which in Elixir is quite different from other gradually typed languages. Let’s break it down.<br>The dynamic()<br>type<br>Many gradual type systems have the any()<br>type, which, from the point of view of the type system, often means “anything goes” and no type violations are reported. On the other hand, Elixir’s gradual type is called dynamic()<br>and it has two important properties: compatibility and narrowing.<br>In static type systems, when you have a type of shape integer() or binary()<br>and you invoke a function, said function must accept both types. However, because type systems cannot capture the intention of all of our programs with precision, this may lead to false positives. For example, take the simple code below:<br>def percentage_or_error(value) when is_integer(value) do<br>value_or_error =<br>if value &gt; 1 do<br>value<br>else<br>&quot;not well&quot;<br>end<br># ... more code ...<br>if value &gt; 1 do<br>value_or_error / 100<br>else<br>String.upcase(value_or_error)<br>end<br>end<br>Although value_or_error<br>has type integer() or binary()<br>, the operator /<br>accepts only numbers, and String.upcase<br>accepts only binaries/strings, the program above is valid and emits no exceptions at runtime. However, a type system would still report two violations, because the types supplied to /<br>and String.upcase<br>are not a subtype of the accepted types.<br>While the program above could be better written to have no typing violations, type systems will always reject valid programs, and if Elixir were to introduce too many false positives in existing codebases, it would quickly erode the trust in the type system. Therefore, Elixir’s gradual type system tags the value_or_error<br>variable above with the type dynamic(integer() or binary())<br>, which means the type is either integer() or binary()<br>at runtime.<br>When calling a function with a dynamic()<br>type, Elixir will only emit a typing violation if the supplied types and the accepted types are disjoint. In the program above, even though /<br>expects only numbers, dynamic(integer() or binary())<br>can be an integer()<br>and given the accepted and supplied types are not disjoint, there are no typing violations. However, if we were to change the program to this:<br>value_or_error =<br>if value &gt; 1 do<br>value<br>else<br>&quot;not well&quot;<br>end<br>Map.fetch!(value_or_error, :some_key)<br>Because Map.fetch!<br>expects a map data structure, and value_or_error<br>can only be integer or binary at runtime, the accepted and supplied types are disjoint, which turns into a violation. This is known as the compatibility property and it explains how Elixir reports only verified bugs.<br>However, reporting only verified bugs would not be useful if we can’t find many bugs in the first place. We addressed this problem by making sure Elixir’s dynamic type can be narrowed. Take this code:<br>def add_a_and_b(data) do<br>data.a + data.b<br>end<br>I</div></details></div>
 <div class="card" data-source="hackernews" data-category="column"><div class="card-source" style="color:#ff6600">HN<span style="color:#4acd8d;margin-left:8px;font-weight:600">コラム</span></div><a href="https://www.bbc.com/news/articles/c93x0k194yno" target="_blank" class="card-title">Metaの従業員、職場でのトラッキングを30分単位でオプトアウト可能に</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Meta workers can opt out of being tracked at work up to 30 min</span><div class="card-meta"><span class="date">06/03 12:42</span> &middot; <span class="score">&#9650; 769</span> &middot; <a href="https://news.ycombinator.com/item?id=48383220" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Meta workers can opt out of being tracked at work - but only for half an hour at a time<br>Meta is scaling back its plan to start tracking its employees&#x27; computer activity, according to an internal memo sent on Tuesday.<br>In April the company received criticism from its own staff after it announced a new tool would log their keystrokes and mouse clicks to train its AI models.<br>Now, according to Reuters, new controls will allow employees to pause the data collection for &quot;up to 30 minutes at a time&quot; as well as request exemptions from the initiative altogether.<br>Meta declined to comment on the record.<br>It follows weeks of backlash from employees, including some who started a petition against the move which now has more than 1,500 signatures.<br>During the initial announcement of the tool, called the Model Capability Initiative (MCI), Meta told the BBC: &quot;If we&#x27;re building agents to help people complete everyday tasks using computers, our models need real examples of how people actually use them.&quot;<br>It added that the data was &quot;not used for any other purpose,&quot; and the tool had &quot;safeguards in place to protect sensitive content&quot;.<br>But workers were not impressed, with one Meta employee, who asked not to be identified, telling the BBC that having their actions train AI models felt &quot;very dystopian&quot; - as workers expected a slew of additional job cuts.<br>Meta has laid off around 2,000 employees this year. In April the company told employees it planned to cut 10% of its workforce - roughly 8,000 staff.<br>Another person who recently left the company told the BBC the tracking tool was &quot;just the latest way they&#x27;re shoving AI down everyone&#x27;s throat&quot;.<br>An internal memo - seen by Reuters - was reportedly authored by Stephane Kasriel, a vice president in Meta&#x27;s Superintelligence Labs unit.<br>In it, he said the team behind the MCI had introduced &quot;several optimizations&quot; to reduce its impact on laptop battery life.<br>This change came after reports that employees were finding the tool consumed so much data it was causing their internet usage to surge when working from home.<br>&quot;While we remain confident in the privacy protections we put in place at launch, which went through several layers of risk review, we have heard your concerns about personal data on work devices, battery life, and wanting more control over when capturing happens,&quot; Kasriel said in the memo.<br>Sign up for our Tech Decoded newsletter to follow the world&#x27;s top tech stories and trends. Outside the UK? Sign up here.</div></details></div>
@@ -241,107 +245,95 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://pokeemerald.com/" target="_blank" class="card-title">ポケモンエメラルドをWebAssemblyに移植（100k FPS達成）</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Pokemon Emerald Ported to WebAssembly (100k FPS)</span><div class="card-meta"><span class="date">06/06 11:12</span> &middot; <span class="score">&#9650; 320</span> &middot; <a href="https://news.ycombinator.com/item?id=48423762" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">pokeemerald-wasm<br>tripplyons<br>loading wasm…<br>↑<br>←<br>→<br>↓<br>B<br>A<br>SELECT<br>START<br>Speed<br>1x<br>Keyboard: arrows, Z=A, X=B, Enter=Start, Shift=Select.</div></details></div>
 <div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://salvagedcircuitry.com/sigma-45mm.html" target="_blank" class="card-title">現代のカメラレンズ修理の細部（2024年）</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">The intracies of modern camera lens repair (2024)</span><div class="card-meta"><span class="date">06/06 00:33</span> &middot; <span class="score">&#9650; 249</span> &middot; <a href="https://news.ycombinator.com/item?id=48420148" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://togetter.com/li/2706463" target="_blank" class="card-title">立て続けに高額なハイスペックPCを何度も売りに来るお客さん...念のためにPCを解析してみたら不正なツールで巧妙に表示を偽装していた</a><p class="card-desc">株式会社リバーズエコ 小川凌 @RiversecoOgawa 【注意喚起】RTX5080搭載の高規格ゲーミングPCを買取希望で持ち込まれたのですが、なんと表記偽装の詐欺PCでした。 表向きの表示を【GeForce RTX5080】と表示させる不正なツールを使用し、高規格に偽装して売りに来るという巧妙な詐欺です。 リバエコショップに立て続けに...</p><div class="card-meta"><span class="date">06/07 05:54</span> &middot; <span class="score">&#128278; 41</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">ゲーミングPCを買い取ろうとしたら...<br>【注意喚起】RTX5080搭載の高規格ゲーミングPCを買取希望で持ち込まれたのですが、なんと表記偽装の詐欺PCでした。 表向きの表示を【GeForce RTX5080】と表示させる不正なツールを使用し、高規格に偽装して売りに来るという巧妙な詐欺です。 リバエコショップに立て続けにハイスペックPCを売りに来た為、念のため詳細に確認したところまさかの不正偽装が発覚しました。 意図的に製品名を高規格モデルに偽造し、相手を騙して不正な契約を結び不正に金銭を得る行為は詐欺罪となります。 タスクマネージャーだけでなく、ベンチマーク、CPU-Zでも偽装表示(RTX5080)になっていました。 今後、こういう類の詐欺が増える可能性があるので、画像のみで判断せざるを得ないフリマサイト等でゲーミングPCを購入される方は本当に気をつけてください。 何かあった時に、しっかり対応してくれる企業からPCを購入するようにしてください。 #リバーズエコ #ゲーミングPC<br>2026-06-06 21:21:02まさかの表示偽装<br>使っていない周辺機器をPC上で表示させることが可能なんだな。偽装して持ち込むとか嫌な時代になったものだ.... x.com/RiversecoOgawa…<br>2026-06-07 07:33:14流石に価格差がありすぎてエグい…とんでもない事する人がいたもんだ💦 x.com/riversecoogawa…<br>2026-06-07 08:07:36めちゃくちゃ悪質だな～。 幸いリバエコは騙されなかったとはいえ、わざわざ偽装して高額買取狙いとか…折角の知識をこんな使い方して哀しくならんのか。 x.com/RiversecoOgawa…<br>2026-06-07 00:08:39表示はRTX5080なのにVRAMが12GしかないおかしなPCを持ち込みで中古屋に売りに来たものがいると 4070 SUPERを5080に偽装してるっぽい さて、このPCの偽装はそこだけか？ pic.x.com/SUbXW6oqpn x.com/RiversecoOgawa…<br>2026-06-07 07:46:16コア抜きGPU、リマークCPU、メモリ偽装とか詐欺にも色々あるけどこれはキツいな… 個人間取引のメルカリとかでやられたらまず見抜けないだろうし、この手の偽装ハイスペPCは既に流通してると考えた方が良いわね。 x.com/RiversecoOgawa…<br>2026-06-07 09:12:27これグラボとかどうなってるんだろ？ 中開けて確認と思ったけど、グラボまで精巧に作られてたら騙されちゃうな x.com/RiversecoOgawa…<br>2026-06-07 11:28:41これはひどいなぁ…。 極端に性能が低いGPUじゃなくて4070S使ってワンチャンバレへんやろって言う部分が輪をかけて酷い。というか、小賢しい。 x.com/RiversecoOgawa…<br>2026-06-07 01:04:04大胆にも持ち込みで...<br>持ち込みならこれやられてもそうそう疑わないだろうしなあ… 詐欺のやり口が巧妙で大胆になってて恐ろしい x.com/RiversecoOgawa…<br>2026-06-07 10:02:06@usagikkonano 直接お呼びして、色々とお話をお伺いさせて頂きました。詳細は伏せますが、この類の闇バイトなるものが存在するなら厄介ですね。<br>2026-06-06 23:55:48@RiversecoOgawa 買取って免許証とか本人確認しますよね？コピーも取られた記憶があります。 pc開けたらGPU違うって分かるのにバレないと思ってるのもやばい。<br>2026-06-07 00:06:34@neko_smg はい、その通りです。こういう詐欺を堂々と持ち込みでやってくるのはある意味で想定外ですが、例えばこれをメルカリやヤフオクでされて購入者がいたとすると、泣き寝入りになる可能性が高いです。<br>2026-06-07 00:11:14メルカリなどでやられたら<br>これは厳しいな... ショップなら持ち込まれたその場で確認のしようもあるのかもしれないけど、個人販売だとどうにもならないような。 送られていざ起動して性能チェックして明らかにおかしいことがわかったときには逃げられてそうだ。 x.com/RiversecoOgawa…<br>2026-06-06 23:27:43うっわ、持ち込みの買取だと身分証提示必須だけど、これメルカリでやられたら泣き寝入りコースだよね…… x.com/riversecoogawa…<br>2026-06-07 00:18:56逆に偽装したものを売られる可能性もありという事か…。 x.com/RiversecoOgawa…<br>2026-06-07 00:27:00</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W16.html" class="archive-link"><span>&#128202; 2026-W16</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W15.html" class="archive-link"><span>&#128202; 2026-W15</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-06-07.html" class="archive-link active-date"><span>2026-06-07</span><span class="archive-count">37 articles</span></a>
+<a href="2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
