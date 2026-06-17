@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-06-17</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-06-17</span>
     <span class="updated">2026/06/17 11:27 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://opencv.org/opencv-5/" target="_blank" class="card-title">OpenCV 5登場、コンピュータビジョン分野における近年最大の飛躍</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">OpenCV 5 Is Here: The Biggest Leap in Years for Computer Vision</span><div class="card-meta"><span class="date">06/06 06:02</span> &middot; <span class="score">&#9650; 863</span> &middot; <a href="https://news.ycombinator.com/item?id=48421858" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">OpenCV 5 is one of the most important releases in the history of OpenCV.<br>For more than two decades, OpenCV has been the foundation for computer vision research, robotics, embedded vision, AI applications, industrial inspection, AR/VR, medical imaging, and countless production systems. Today, the library has more than 86,000 GitHub stars, more than a million installs per day, and one of the largest collections of computer vision algorithms in the world.<br>OpenCV 5 builds on that foundation with a major modernization of the library. It brings a new DNN engine, stronger ONNX support, hardware acceleration improvements, better Python integration, new data types, expanded 3D vision capabilities, improved documentation, and a cleaner architecture for the future.<br>This is not just another incremental release. OpenCV 5 is a major step forward.<br>Why OpenCV 5<br>Computer vision has changed dramatically since OpenCV 4.<br>Modern applications now combine classical vision, deep learning, transformers, large vision models, edge deployment, heterogeneous hardware, and Python-first workflows. Developers expect the same code to run efficiently across laptops, servers, embedded devices, ARM chips, Snapdragon platforms, and specialized accelerators.<br>OpenCV 5 was designed to meet that reality.<br>The goals were clear: make the core faster and smaller, improve language support, clean up old APIs, modernize the DNN engine, support new hardware acceleration paths, improve 3D vision tooling, and make the documentation easier to use.<br>If you have shipped anything with OpenCV in the last few years, you know the feeling. The library does almost everything, but the deep learning side always felt a step behind the models people were really using. You would export a new model to ONNX, point OpenCV’s DNN module at it, and cross your fingers. Sometimes it worked. Sometimes it threw an error about an operator it had never heard of.<br>In this post we will walk through what is new, why it matters in practice, and what it changes for the code you write. You do not need to know the library’s internals. If you have ever written cv2.imread, you are in the right place.<br>The pip version of OpenCV5 will be released on 8th June.<br>Table of contents<br>- Why OpenCV 5<br>- Where OpenCV Stands Today<br>- What OpenCV 5 Set Out to Fix<br>- The Headline: A Brand-New DNN Engine<br>- Three Engines, One API<br>- How Fast Is It? OpenCV 5 vs ONNX Runtime<br>- Models That Run Out of the Box<br>- LLMs and VLMs, Running Inside OpenCV<br>- Inpainting and Diffusion with LaMa<br>- Modern Feature Matching, the Deep Learning Way<br>- A Faster, Leaner, More Modern Core<br>- Hardware Acceleration You Get for Free<br>- Better 3D Vision<br>- Documentation That Doesn’t Fight You<br>- What OpenCV 5.0 Ships With<br>- What’s Next: GPU in the DNN Engine and a Non-CPU HAL<br>- Try It and Get Involved<br>- Conclusion<br>Where OpenCV Stands Today<br>Before we get into what changed, it helps to remember how widely used OpenCV is. This is not a niche research tool. It is plumbing for a huge slice of the computer vision world.<br>When a library is this deeply embedded in production systems, every change has to be made carefully. That is part of why a major version takes time, and why it is a big deal when one finally arrives.<br>It also helps to know who builds it. OpenCV is stewarded by the non-profit OpenCV.org, with development and support coming from Big Vision (which supports the library, OpenCV University, and content like this blog), OpenCV China (a major force behind RISC-V and embedded work) and OpenCV.ai.<br>What OpenCV 5 Set Out to Fix<br>The team started OpenCV 5 with a clear list of pain points. If you have used OpenCV for a while, you will recognize most of them:<br>- Better language support: modern Python, refreshed bindings, and named arguments instead of guessing parameter order.<br>- A faster, smaller core: tighter code, the legacy C API retired, and leaner builds.<br>- A cleaner hardware acceleration layer, so vendors can plug in optimized kernels without a tangle of #ifdefs.<br>- A cleaner API: proper 0D/1D tensors, native FP16/BF16, and real logging.<br>- A next-generation DNN engine: graph-based, with fusions, broad ONNX support, transformers, and VLM/LLMs.<br>- Better 3D vision: ChArUco, multi-camera calibration, and visualization.<br>- Better documentation: modern, navigable, and pleasant to read.<br>The rest of this post is that list, made real. We will start with the change that affects the most people.<br>The Headline: A Brand-New DNN Engine<br>The single most important number in this release is coverage. OpenCV’s ONNX operator support jumped from roughly 22% in the 4.x days to over 80% in OpenCV 5.<br>If you have ever fought with OpenCV refusing to load a modern model, that number is the fix. The reason behind it is more interesting than the number itself.<br>The old 4.x engine imported a small fraction of the ONNX operator set and struggled with anything that had dynamic shapes, which covers most interesting models these days. The 5.x engine was rebuilt around a typed operation </div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://discuss.grapheneos.org/d/36469-grapheneos-has-been-ported-to-android-17-and-official-releases-are-coming-soon" target="_blank" class="card-title">GrapheneOS、Android 17への移植が完了</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">GrapheneOS has been ported to Android 17</span><div class="card-meta"><span class="date">06/16 20:34</span> &middot; <span class="score">&#9650; 809</span> &middot; <a href="https://news.ycombinator.com/item?id=48561654" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Today is the official release day for Android 17. We&#x27;ve already fully ported GrapheneOS to Android 17 and are in the process of pushing the code to our public repositories. We&#x27;re building a final official release based on Android 16 QPR2 today and we&#x27;ll do an initial Android 17 release tomorrow.<br>We&#x27;ve already tested the Android 17 port of GrapheneOS on the Pixel 6a, 7, 7a, 8, 10a, 10 and 10 Pro Fold. It will be possible for people to start building and testing it themselves later today once we finish pushing the code. We&#x27;ll start the process of public testing for official releases tomorrow.<br>To clarify the 2nd paragraph, we&#x27;ve ported GrapheneOS to Android 17 for all of the supported devices. That&#x27;s a list of the devices we already built and tested it. Our initial public release will be available for all the supported devices and we&#x27;ll have tested it on each by then.</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://www.renaultgroup.com/en/magazine/energy-and-powertrains/all-about-electric-motors-with-no-rare-earths/" target="_blank" class="card-title">レアアース不要の電気モーター</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Electric motors with no rare earths</span><div class="card-meta"><span class="date">06/12 22:08</span> &middot; <span class="score">&#9650; 711</span> &middot; <a href="https://news.ycombinator.com/item?id=48510010" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">All about electric motors with no rare earths<br>Published on<br>A historical pioneer in the complex technology of electric motors without magnets, i.e. with no rare earths, Renault Group is continuing to set itself apart on a market where 90% of electric cars have motors with magnets. Discover the range of electric motors by Renault Group.<br>The different types of electric motor<br>Requiring no piston or cylinders, an electric car motor converts electrical energy from the battery into mechanical energy through a magnetic field generated by the current on the stationary component of the system [stator]. This sets the rotating component [rotor] in motion in order to drive the vehicle&#x27;s wheels.<br>We can make a distinction between three main families of electric motors, with significant technical differences:<br>- permanent-magnet synchronous motors, made with rare earths. This is the dominant technology in the automotive market today. It combines high levels of efficiency with an optimised space requirement.<br>- asynchronous motors (ASM) also referred to as asynchronous induction motors (IM). Owing to its lower level of efficiency, this technology is now generally used for secondary motors on the front axle.<br>- electrically excited synchronous motors (EESM). These slightly bigger motors deliver high levels of efficiency without a magnet. These electric motors use no rare earths.<br>In 2012, Renault Group began the mass selling of EESM electric motors (for Electrically Excited Synchronous Motors) . The result of this unique expertise is a competitive range of electric motors.<br>Renault Group&#x27;s range of all-electric motors<br>A pioneer in electric cars since 2011, Renault Group has made the bold and visionary choice to mass-market EESM technology.<br>The very first generation of motors was found under the bonnet of Renault Kangoo Z.E in 2011 and Renault Zoe in 2012. Carrying the part reference 5A, it had output ranging from 57 to 100 kW.<br>In 2020, the final upgrade of this powertrain arrived on Twingo Electric with the reference 5AL and output of 60 kW.<br>Renault Group&#x27;s second-generation EESM motor came into production in 2021 with the reference 6A. Renault Megane E-Tech electric was the first model to ship with the new motor (reference 6AM), which was smaller, lighter and more powerful (up to 160 kW), in early 2022. It was followed by the Car of the Year 2024, Renault Scenic E-Tech Electric and most recently the first all-electric Alpine, Alpine A290.<br>Launched in October 2024 and Car of the Year 2025 Renault 5 E-Tech electric ships with a 6AK electric motor with output of 110 kW, as does Renault 4 E-Tech electric, available to order since March 2025. Alpine A390 features a totally innovative powertrain, unveiled in September 2025. It features a 6AM electric motor on the front axle (like Alpine 290) and a new twin-motor set-up on the rear axle. These three electric motors, all manufactured at Cléon have an estimated combined output of around 345 kw (approx. 470 ch).<br>The next generation of all-electric EESM motors in 2027<br>In 2021, Renault Group engineers began working on the third generation of EESM-type electric motors called E7A. Although the development phase is still under way, the specifications are already frozen:<br>- output of 200 kW, or around 270 hp, for torque of 400 Nm<br>- a motor that is 30% smaller than previous-generation motors, with its all-in-one architecture<br>- carbon impact reduced by 30%<br>- efficiency of around 92%<br>This electric motor will also cut charging times since the system voltage will be increased to 800 volts, compared with the 400 volt architecture that is currently standard in the Renault range.<br>A motor with no rare earths: a challenge that is even more strategic than before<br>By opting for a wound rotor rather than permanent magnets, Renault Group is seeking to avoid reliance on the countries that produce rare earths and magnets.<br>The presence or absence of rare earths in an electric motor is not a detail but a strategic issue. China produces 85% of the purified light rare earths used worldwide, and 100% of the heavy rare earths. Today, China rarely offers these raw materials for sale. It gives priority to its domestic market and products of higher added value, such as permanent magnets. As a result, it has an almost total monopoly: over 90% of global production comes from China.<br>At the same time, China is also the world&#x27;s leading producer of electric cars...<br>Cléon, the Group&#x27;s electric motor plant<br>The Cléon plant has built Renault Group powertrains since 2015. This was when it began making the electric motors for Renault Zoe, Twingo ZE, Kangoo ZE and Master ZE. The motors for Megane E-Tech electric, Scenic E-Tech electric, Alpine A290, Renault 5 E-Tech electric and Renault 4 E-Tech electric are all produced here. From 2027, the Cléon plant will build the new-generation 200 kW electric motor.</div></details></div>
@@ -241,114 +245,102 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://news.yahoo.co.jp/expert/articles/f76e747817ec867cbe0dd20d45ca4df75c2fce4d" target="_blank" class="card-title">高市陣営のAI中傷動画、共同通信と文春が相次ぎ訂正。矛盾した証拠をもとに国会で議論するのは正しいのか #エキスパートトピ（篠原修司） - エキスパート - Yahoo!ニュース</a><p class="card-desc">高市早苗首相の陣営が、2025年10月の総裁選と2026年2月の衆院選で対立候補を中傷するAI動画を作成したと週刊文春が4月29日に報じ、共同通信も続報を伝えました。高市首相は一貫して関与を否定しています。 しかし、その後に公開された証拠の動画に時系列上の矛盾が見つかり、共同通信は動画のキャプチャ4枚を削除して記...</p><div class="card-meta"><span class="date">06/17 00:24</span> &middot; <span class="score">&#128278; 31</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">高市陣営のAI中傷動画、共同通信と文春が相次ぎ訂正。矛盾した証拠をもとに国会で議論するのは正しいのか #エキスパートトピ<br>高市早苗首相の陣営が、2025年10月の総裁選と2026年2月の衆院選で対立候補を中傷するAI動画を作成したと週刊文春が4月29日に報じ、共同通信も続報を伝えました。高市首相は一貫して関与を否定しています。<br>しかし、その後に公開された証拠の動画に時系列上の矛盾が見つかり、共同通信は動画のキャプチャ4枚を削除して記事を訂正、文春も一部の動画の公開を一時停止しました。<br>深刻なのは文春が公開した動画の方で、衆院選が終わった後の写真が利用されていました。これは明らかな矛盾であり、証拠の信頼性を揺るがすものです。<br>ココがポイント<br>エキスパートの補足・見解<br>筆者の記事で取り上げましたが、文春が「総裁選で流した」とする小泉進次郎氏への中傷動画には、フィリピンで2026年2月25日に撮影された写真が使われていました。<br>これは総裁選も衆院選も終わったあとです。選挙中に対立候補を中傷するための動画であれば、選挙後の写真が入ることはありえません。<br>共同通信の件でも、同様に総裁選の動画に衆院選期間中の写真が使われていましたが、こちらは「動画を取り違えた」と説明できなくはありませんでした。しかし、文春の件は選挙後に作られたことが明らかであり、問題の性質がまったく異なります。<br>たしかにAI中傷動画は存在しています。しかし、これが、いつ、何のために作られたのかは、もはや提供者である松井氏にしか分かりません。同氏から納得できる説明がないかぎり、証拠として使えるものではないと考えます。<br>もちろん、この1点だけで高市陣営の関与が否定されるわけではありません。<br>しかし、このような明らかな矛盾を抱えた資料があるのに、その真偽を国会で議論するのは順序がおかしいのではないでしょうか？ まず行うべきは資料の検証です。そして現時点では、検証できる材料を国民も議員も持っていません。</div></details></div>
 <div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://www.itmedia.co.jp/business/articles/2606/17/news021.html" target="_blank" class="card-title">政府クラウド、AWSが8割超を独占　デジタル庁が答えた「特定企業推奨」の可能性</a><p class="card-desc">デジタル庁が主導する行政機関向けクラウド環境「ガバメントクラウド」（政府クラウド）の利用が広がっている。「行政データの保管場所」「公共SaaSのシステム基盤」といった用途を想定し、政府や自治体が共用することで「運用コスト削減」「セキュリティ強化」などを狙っている。 6月16日現在、5つのクラウドサービス――...</p><div class="card-meta"><span class="date">06/17 02:05</span> &middot; <span class="score">&#128278; 9</span></div></div></div></div>
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://internet.watch.impress.co.jp/docs/yajiuma/2117758.html" target="_blank" class="card-title">Gmail利用者の約20％、受信トレイのメールは「0」──衝撃的なアンケート結果が話題に【やじうまWatch】</a><div class="card-meta"><span class="date">06/17 03:07</span> &middot; <span class="score">&#128278; 6</span></div></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W25.html" class="archive-link"><span>&#128202; 2026-W25</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W24.html" class="archive-link"><span>&#128202; 2026-W24</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W18.html" class="archive-link"><span>&#128202; 2026-W18</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W17.html" class="archive-link"><span>&#128202; 2026-W17</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
-<a href="daily/2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
-<a href="daily/2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-06-17.html" class="archive-link active-date"><span>2026-06-17</span><span class="archive-count">37 articles</span></a>
+<a href="2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
+<a href="2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
+<a href="2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
+<a href="2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
+<a href="2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
