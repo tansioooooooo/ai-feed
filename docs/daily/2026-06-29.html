@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-06-29</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-06-29</span>
     <span class="updated">2026/06/29 11:52 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://scrollprize.org/firstscroll" target="_blank" class="card-title">ヘルクラネウムの巻物が初めて全文解読された</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">An entire Herculaneum scroll has been read for the first time</span><div class="card-meta"><span class="date">06/25 15:48</span> &middot; <span class="score">&#9650; 1698</span> &middot; <a href="https://news.ycombinator.com/item?id=48675179" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">We read an entire scroll — without ever opening it<br>Read the preprint: Complete virtual unwrapping and reading of a rolled Herculaneum papyrus (PDF). The data is openly available at scrollprize.org/data, and the code on GitHub.<br>For almost 2,000 years, the carbonized library of Herculaneum has kept a cruel bargain: its scrolls survived the eruption of Mount Vesuvius, but only by becoming too fragile to open. To read one was to destroy it. Hundreds of rolls have therefore remained sealed, their contents preserved yet unreachable.<br>Today that changes. We have completely virtually unwrapped and read PHerc. 1667 — the scroll the Vesuvius Challenge community knows as Scroll 4 — without ever touching its pages. It is the first Herculaneum papyrus to be digitally unrolled and read in full, end to end, and made available for sustained scholarly study.<br>From a sealed lump to a readable book<br>PHerc. 1667 began as a blackened, rolled mass of carbonized papyrus. To read it, we never unrolled it physically. Instead, we scanned it with high-resolution X-rays, reconstructed the wound sheet inside the volume, flattened it into a readable surface, and used machine learning to bring out the faint traces of ancient ink.<br>Three sealed scrolls, three milestones<br>The work reaches beyond a single scroll. Alongside the complete reading of PHerc. 1667, the research establishes a method that holds up under independent checks and scales to other rolls.<br>PHerc. 1667 — read in full<br>PHerc. 1667 is what survives of a larger roll: earlier attempts to open it by hand — in the nineteenth century, and again in 1969 and the 1980s — destroyed its outer layers and left only the compact inner core, about 8 cm of an original height of 19–24 cm. From that surviving portion we have now recovered and read the text in full — the lower parts of some twenty-two columns, transcribed and reviewed by papyrologists. It is the first time the preserved text of a rolled Herculaneum scroll has been read continuously, end to end, rather than in isolated words or patches.<br>The recovered text is a philosophical treatise on ethics, and the evidence points to a Stoic work: it turns on human nature, impulse, and the moral progress of human beings, and its final preserved column names Aristocreon — nephew and disciple of the great Stoic Chrysippus — which, together with the language and themes of the text, places it in a Stoic context and dates it to the 2nd century BC.<br>Because the papyrus is damaged, the readings are fragmentary, with gaps where the surface is lost. Even so, several passages can be read clearly for the first time in two thousand years:<br>PHerc. Paris 4 — ink made visible by higher resolution<br>In a second scroll — PHerc. Paris 4, the scroll the Vesuvius Challenge community knows as Scroll 1 — a higher-resolution imaging technique makes the ink directly visible inside the scroll itself, in the three-dimensional X-ray data, for the first time. Segmented in 3D and projected back onto the unwrapped page, that ink matches the text read in the 2023 Grand Prize one-to-one — an independent confirmation, from better data, that the reading is real.<br>PHerc. 139 — a title, and an author<br>In a third scroll, PHerc. 139, we recover the scroll&#x27;s title and author attribution: the work is identified as Philodemus, On Gods, Book 8 — a treatise by the Epicurean philosopher whose works fill so much of this library. Reading the title of a closed scroll tells scholars what a roll contains before a single column of its body is studied.<br>How it was done<br>The scans were acquired with high-resolution phase-contrast X-ray microtomography on the BM18 beamline at the European Synchrotron Radiation Facility (ESRF) in Grenoble — an instrument able to resolve the wafer-thin, densely packed layers of a Herculaneum roll. The work was carried out in collaboration with the National Library of Naples “Vittorio Emanuele III”, which safeguards the Herculaneum papyri. From those volumes, the team reconstructed the scroll&#x27;s geometry, traced and flattened its surface into a readable sheet, and trained machine-learning models to detect ink that is almost indistinguishable from the carbonized papyrus beneath it. Each reading was then examined and transcribed by papyrologists.<br>Crucially, all of this is open. The tomographic data, reconstructed surfaces and transcriptions are released under a Creative Commons licence at scrollprize.org/data and archived at the ESRF, and the code is on GitHub. Anyone can check the work, build on it, and apply it to the scrolls that remain.<br>A victory for open, global science<br>This is what open science makes possible. The virtual unwrapping of the Herculaneum scrolls was pioneered at EduceLab by its principal investigator, Professor Brent Seales. In 2023 Seales opened his lab&#x27;s imaging and software technology to the Vesuvius Challenge — a public, donation-funded effort he co-founded with Nat Friedman and Daniel Gross to read the scrolls in the open — and from there a global communit</div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/" target="_blank" class="card-title">GLM 5.2がベンチマークでClaudeを上回った</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">GLM 5.2 beats Claude in our benchmarks</span><div class="card-meta"><span class="date">06/28 17:50</span> &middot; <span class="score">&#9650; 900</span> &middot; <a href="https://news.ycombinator.com/item?id=48709670" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">We ran a set of popular open-source models against our IDOR benchmark, the same dataset and the same prompt we&#x27;ve used to evaluate frontier coding agents. The result surprised us: GLM 5.2, an open-weight model from Zhipu AI, scored a 39% F1 on IDOR detection, beating Claude Code (32%) at roughly $0.17 per vulnerability found. It still trailed Semgrep&#x27;s multimodal pipeline (53–61% F1), but that pipeline runs in a purpose-built harness that does a lot of the heavy lifting. Among models given nothing but a prompt, the best open-weight option was no longer the obvious underdog, beating out Claude Opus 4.8.<br>We weren&#x27;t trying to crown an open-weight champion, really. We were trying to answer a narrower, more boring question: how much of vulnerability-detection performance comes from the model, and how much comes from the harness around it? For us at Semgrep this is a very important question as we speak to customers who are leveraging AI agents heavily in their security tasks. A harness is the scaffolding that wraps a model: it feeds it the repository, decides what it sees, parses its output, and loops it through a task. Our internal multimodal pipeline runs inside a harness, which is purpose-built for static analysis. We have been testing this internally for a while with a workflow for finding IDORs or Insecure Direct Object References. These are access control issues which can roughly be thought of as “you’re accessing something belonging to another user”.<br>Our harness enumerates the application&#x27;s endpoints, and code trying to sift through only the important context, and then points the model directly at them. That&#x27;s a lot of structure, but remember when I said we really didn’t mean to answer the what’s-the-best-open-weight-model? The models in this test don’t get that, they run in a simple Pydantic AI harness with the same IDOR prompt we give every other LLM-provider model, no endpoint discovery, no guided navigation, we did give it a bit of help, just a little more than &quot;here&#x27;s the code, find the bugs.&quot;, offering a search strategy and some pointers on what IDORs look like.<br>So this started as a prompting-versus-harness experiment, but while we were running it we were genuinely shocked. One of the open-weight models, with none of our scaffolding, surpassed a frontier coding agent.<br>Introducing GLM-5.2<br>If you’ve not heard of GLM-5.2, don’t worry, neither had we until we saw it on social media and thought to add it to our benchmarks. GLM 5.2 is the latest model from Zhipu AI (Z.ai), rolled out to its GLM Coding Plan members on Saturday, June 13, 2026, with the open weights and release notes following three days later on June 16 (which is when we heard about it). Three things make it interesting for security work.<br>First, it’s open weight. That means the model&#x27;s parameters are published under an MIT license, which means you can download them, run them on your own hardware, fine-tune them, and inspect them. For a lot of security teams working in sensitive areas that’s important, an open-weight model can run entirely inside your own environment. But it’s important to note that &quot;open weight&quot; is not the same as &quot;open source&quot;, the trained weights are released, but the training data and full pipeline generally are not (though Z.ai does publish its RL training framework).<br>Second, it&#x27;s genuinely competitive on coding. GLM 5.2 is a Mixture-of-Experts (MoE) model with roughly 750 billion total parameters but only about 40 billion active per token, which keeps inference cost down relative to its size. It extends the usable context from 200K all the way to 1M tokens, and Z.ai&#x27;s pitch is that this context stays reliable across long, messy agent trajectories, not just that it accepts more input. Again for security tasks this is important, as security tasks for things like IDORs must be able to reason across different files, through an authorization framework. On standard coding benchmarks it posts the strongest open-weight numbers going: 81.0 on Terminal-Bench 2.1 (versus 63.5 for GLM 5.1, and within a few points of Claude Opus 4.8&#x27;s 85.0) and 62.1 on SWE-bench Pro, edging out closed frontier models and trailing the very top by single-digit percentages.<br>Third, cost. Tokenomics is quickly becoming as important as the LLM capabilities themselves. Reported pricing lands around one-sixth of comparable frontier models and commentators who track open models closely have compared GLM 5.2&#x27;s reception to DeepSeek. GLM-5.2 arrived at a charged time not just due to tokenomics but also landing just after frontier-class closed models hit new export restrictions after reported jailbreaks. One detail from the release notes is worth flagging for anyone pointing this model at code: Z.ai reports that GLM 5.2 exhibits more reward-hacking behavior than GLM 5.1, during training it would do things like read protected evaluation files or curl reference solutions to inflate its score, prompting them to build a dedicated anti-hacking guard. It’s an honest </div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/" target="_blank" class="card-title">AnthropicがAlibabaによるClaudeのAIモデル能力の不正抽出を主張</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Anthropic says Alibaba illicitly extracted Claude AI model capabilities</span><div class="card-meta"><span class="date">06/24 19:48</span> &middot; <span class="score">&#9650; 809</span> &middot; <a href="https://news.ycombinator.com/item?id=48664814" target="_blank" class="comment-link">comments &rarr;</a></div></div>
@@ -261,126 +265,114 @@ main { padding: 16px 24px; max-width: 900px; }
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://zanagrams.com/" target="_blank" class="card-title">Show HN: Zanagrams（アナグラムパズル）</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Show HN: Zanagrams</span><div class="card-meta"><span class="date">06/28 15:26</span> &middot; <span class="score">&#9650; 305</span> &middot; <a href="https://news.ycombinator.com/item?id=48708182" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Zanagrams<br>#1<br>00:00<br>00:00<br>‹<br>×<br>×<br>×<br>›<br>›<br>›<br>›<br>›<br>›<br>‹<br>×<br>‹<br>×<br>‹<br>×<br>‹<br>×<br>‹<br>×</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.itmedia.co.jp/news/articles/2606/29/news070.html" target="_blank" class="card-title">大人気「めっちゃカメレオン」小学生にはオススメできない理由　ただの“かくれんぼ”と思いきや……</a><p class="card-desc">ITmedia NEWSにおける1週間の記事アクセス数を集計し、上位10記事を紹介する「ITmedia NEWS Weekly Top10」。今回は2026年06月20日から06月26日までの7日間について集計し、まとめた。 先週のアクセス1位は、KDDIがメールインフラを提供している各ISPメールアドレスなど最大1422万件が漏えいした可能性に関するニュース...</p><div class="card-meta"><span class="date">06/29 03:02</span> &middot; <span class="score">&#128278; 82</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">先週のアクセス1位は、KDDIがメールインフラを提供している各ISPメールアドレスなど最大1422万件が漏えいした可能性に関するニュースだった。<br>BIGLOBEや@niftyのアドレスに流出の恐れがあり、ユーザーからは、「急に大量のスパムメールが来るようになった」という報告も相次いだ。<br>ランク外だが先週は、「めっちゃカメレオン」も話題になり続けた。日本の開発者が2人で作ったインディーゲームだが、発売16日で1000万本を突破するなど、異次元の大ヒットを記録し続けているのだ。<br>めっちゃカメレオンは、「かくれんぼゲーム」と呼ばれる。真っ白な自分の体にペイントして、ステージの壁や家具に擬態し、鬼（ハンター）から隠れ切るゲームらしい。<br>お絵かきもかくれんぼも、小学生の遊びの定番。その両方が好きな小2の娘が「めっちゃカメレオン」に興味を持ったので試してみて、驚いた。<br>シューティングなのだ。<br>隠れるまではいい。自分の体に色を塗り、背景に溶け込むのは、お絵かき感覚で楽しいし、背景は大阪の風景だったり、お菓子の国だったりしてかわいらしい。<br>問題は、隠れた後の「みーつけた」だ。見つけたら「みーつけた」って指をさせばいいだけ……と思いきや、えらくゴツい鉄砲で、撃つのだ。<br>なんで。<br>「Game*Spark」の開発者インタビューによると、影響を受けたゲームは、FPS「フォートナイト」の「プロップハント」などだという。プロップハントは、物に化けて隠れ、銃で探すというモードで、フォートナイトやPUBGなどFPSゲームの世界では定番のモードになっているらしい。<br>ちなみにフォートナイトの対象年齢（レーティング）は12歳以上〜、PUBGは13歳以上〜だ（国・地域やプラットフォームによって異なり、15歳以上〜や17歳以上〜のケースもある）。<br>なるほど……。その背景を知らなかったので、「お絵かき＋かくれんぼ」という世界観で「みーつけた！」の後にショットガンが出てくるとは予想しておらず、心底びっくりした。<br>今後もし、Switch版など子どもが使いやすいプラットフォームで出る時は、「みーつけた」を、ショットガンじゃなく指とか水鉄砲に変更できるようにしてくれないかなあと、小学生の母親としては思いました。<br>Copyright © ITmedia, Inc. All Rights Reserved.<br>Special<br>PR</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://av.watch.impress.co.jp/docs/topic/2116987.html" target="_blank" class="card-title">「大画面？何ですかそれ」。ソニー“業務用ピクモニ”で始める狭小ビジュアルライフ</a><div class="card-meta"><span class="date">06/29 00:35</span> &middot; <span class="score">&#128278; 33</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">トピック<br>「大画面？何ですかそれ」。ソニー“業務用ピクモニ”で始める狭小ビジュアルライフ<br>2026年6月29日 08:00<br>先日、ついうっかり業務用のピクチャーモニター「PVM-741」を買ってしまった。購入に至った理由はかなり単純で、有機ELディスプレイを使っていること、安かったこと。そして、PVMであること――この3点である。<br>クリエが筆者に残したもの<br>ソニーがかつて展開していたパーソナルエンターテインメントオーガナイザー「CLIE(クリエ)」を覚えているだろうか。スマートフォンの始祖とも言えるPDA(Personal Digital Assistant)にカテゴライズされるもので、ソニーは自社の高いマルチメディア技術を武器にして、映像再生やカメラの搭載など、AV機能を大きく強化した特徴的なモデルを展開していた。<br>残念ながらCLIEは短命に終わってしまったが、2004年に発売された最終モデルの「PEG-VZ90」には、当時世界最大サイズと言われた自社製の有機ELディスプレイが搭載されていた。<br>量販店の店頭デモ機を操作した時、当時としては異様とも言える黒色の黒さと、リバーサルフィルムのように鮮やかな色彩に目を奪われたことは、今でも強く筆者の心に刻み込まれていて、この時に「プロジェクター以外で映像をやるなら有機EL一択」という確固たる意思も芽生えた。<br>なおVZ90については、小寺氏の連載Electric Zooma! 第176回にて詳細なレビューがなされている。<br>小寺信良の週刊 Electric Zooma!<br>第174回：PDAとしても使えるポータブルAVプレーヤー?<br>VZ90の生産完了後、ソニーは2007年に世界初の有機ELテレビ「XEL-1」を作ったり、業務用モニターに有機ELパネルを採用して、ことあるごとに有機EL技術を使ったエポックメイキングなビジュアル製品を世に送り出してきた。<br>ただ、残念ながらどれも非常に高価でそう簡単に手を出せるものではなく、当時の筆者はショーイベントの展示品やカタログなどを見る度に、ため息をつく日々を送っていた。<br>「XEL-1」に再会。発売当時に観た衝撃が思い起こされた<br>とある日、オーディオ仲間に誘われて試聴に訪れたリスニングルームにXEL-1が置かれていた。<br>まさか2026年になってXEL-1との邂逅に内心は大コーフン。試聴そっちのけで、まずはXEL-1の電源を入れてもらった。浮かび上がった画は発売当時に観て衝撃を受けたそれそのもので、有機ELディスプレイ特有の色彩や画の精細感は、これが20年近く前の製品とは到底思えないレベルであった。<br>なによりXEL-1だけが持つ、ディスプレイ部分の薄さや、タイムレスなデザインを前にして、当時買うことができなかった悔しさだろうか？ ある種の後悔とも思える気分になってしまい、これを根本的に晴らすためにはオーディオ一色になっている現在の自室に、映像機器を追加してもいいのではないか、という気持ちが芽生えた。<br>日課のネット徘徊でPVMを見つけてしまった<br>その後のとある日、デイリークエストである中古の業務用機材販売サイトを徘徊していると、XEL-1と似通った大きさのピクチャーモニターが新着商品に現れた。<br>普段は業務用のオーディオ機器を探すためにそのサイトを閲覧しているが、先日のXEL-1との邂逅が原因なのか、やけにその小さなピクチャーモニターが気になってしまう。型番は「PVM-741」であり、検索サイトにPVM-741と入力すると、すぐに当時のカタログPDFがヒットした。<br>詳細を読み込んでみると、前記のVZ90に通ずるとも言える、ソニー自社製の有機ELディスプレイを採用。映像の入力は業務用では定番のSDIの他に、民生用機器でもお馴染みであるHDMI端子も搭載している。ということは、市販のBDプレーヤーなど、HDMI出力端子を備えている民生用の再生機とPVM-741は直結可能。スペック的には申し分ないと言える。<br>残る問題は、モデル名からも分かるように、画面サイズがXEL-1より小さい7.4インチであるということだ。<br>筆者は普段iPad miniを扱っていて、これの画面サイズは8.3インチ。単純に計算しても約11%小さくなるわけで、没入感という観点からは全く期待できない。でも、どうしても気になってしまう。<br>即日の注文を断念すること数日、街中を見渡した時にふと、スマートフォンの小さな画面でドラマやアニメを視聴している方が多いことに気がついた。ということは、小さい画面でも案外没入感は得られるのでは？ という仮説が急速に脳内で組み立てられ、我に返った時には注文が完了していた。<br>モノとしての良さに感動<br>支払いを済ませると、すぐにPVM-741が自宅に届けられた。<br>外径寸法は222×183×161mmだが、現物を目の前にして実際に手に取ってみると、想像以上に小さい。画面サイズは164×92mm(7.4インチ)で、こちらも体感では本当に7.4インチもあるのか？ と思えるほど小ぶりに感じるが、これは画面の外枠が今日のテレビやPCモニターと比較して太いのも影響しているのだろう。<br>ディスプレイ解像度はXEL-1と同じ960×540でQHD(Quarter HD)だが、物理的な画面サイズはXEL-1より小さいため、画素ピッチはXEL-1以上に細かい。<br>PVMは長期間にわたってその品質を維持するのと、ハードな使用にも耐えるため、筐体はアルミニウム製で非常に堅牢にできている。<br>実際に持ち上げてみると、筐体の小ささから想像してしまう「軽そう」という認識を見事に跳ね返す、ズッシリとした重さを感じられる。叩いた時の泣きも少ないので、音圧に晒されても共振しにくく、室内の音響特性に影響を与え難いと言える。<br>入力インターフェイスは、コンポーネント、SDI(3G/HD/SD)、HDMIの3系統。HDMIは最高で1080/60pまで入力可能となっている。この他に外部制御用のリモート端子も備わっているが、他の業務用機器を持っていなければまず使わないものだ。<br>なお、背面の廃熱用ファンは基本的に停止していて、内部温度が一定以上になったときに回転する。そして、温度が下がると再び停止する仕組みだ。空調の効いた室内で使っている限りではほぼ回転することは無く、ファンノイズに悩まされることはないだろう。<br>電源はDC12Vで、ACアダプタを背負っている。このACアダプタは取り外せるようになっていて、カタログによると別売でバッテリーパックが用意されていた。更にXLR4ピンの電源端子に直接DC12Vを供給することもできる。USB PDトリガーアダプター等を使ってケーブルを自作すれば、モバイルバッテリーや高出力なUSB充電器を電源にすることも可能だ。<br>スピーカーとの共生方法を考える<br>筆者はこのモニターをオーディオシステムとセットで使いたい。設置場所として真っ先に考えたのはスピーカーの間だが、ここに物を置くと音質への影響が大きいうえ、リスニングポイントからだと画面から1m以上離れてしまうため、米粒を眺めているような状態になってしまう。<br>往年のブラウン管テレビ「QUALIA 015」のコンセプトのごとく、リスニングポイントの足下に設置して見下ろすということも試してみたが、下を向き続けるのは想像以上に首に負担がかかってしまう。ということでこの場所もNG。<br>何か台を作ることも考えたが、ふと本体を眺めていると、三脚を取り付けられそうなネジ穴が開いていた。ものは試しにカメラ用の三脚（雲台）を取り付けてみると、バッチリとハマった。<br>これで、モニターをアイポイントまで持ち上げつつ、目との距離もかなり縮めることができるようになった。スマートフォンを操作する時のように、目からモニターまで50cm程度にすることも可能だ。<br>映像を鑑賞しない時は電源コード等を抜くだけで簡単に動かすことができるから、映像を見ない時は全てを目の前から取り除くことができる。これで、モニター設置方法も決まった。<br>BDプレーヤーを捕獲するも、また一難……<br>最後はディスクプレーヤーの用意だ。デジタル映像再生の分野は、オーディオ同様プレーヤー本体に限らずHDMIケーブル、はたまた電源ケーブル画に変化があると言われているが、筆者は映像に関してずぶの素人。<br>いきなり万単位のアイテムを買う勇気は無く、まずはお試しということで、近所のリサイクルショップに在庫していたソニーの「BDP-S6500」というBDプレーヤーを捕獲してきた。<br>筐体サイズはフルサイズコンポの約半分、重量は僅か0.9kgで信じられないほど軽い。出力端子は映像・音声用のHDMIと音声用のS/PDIF同軸のみ。これも時代の流れだとは思うが、アナログでの出力端子が一切ない。なくても実用上問題ないとか、コストの削減とか、搭載しない理由はいろいろあるのだと思われるが、この潔さには感心した。<br>唯一残念だと感じたのはディスク再生時の回転音で、ディスクが高速回転しているから仕方ないのだが、常にブーンという音が耳につく。<br>ディスク外周部を読み取っている時は回転数が下がって気にならないレベルの音になるが、内周部を読み取っている時は明らかにうるささを感じる。肌感ではあるが、PS3といったゲーム機の方がBD再生時の静音性は高いかもしれない。<br>お楽しみの視聴タイム。XEL-1の画を観た時の感動が蘇る<br>さて、ここからはお楽しみの視聴である。<br>観たいソフトは沢山ある中、まずはこれまで何度も見てきた映画『ダイ・ハード』を選択。40年近く前の作品であり、舞台も基本的には夜なので暗いシーンが多い。そのため、黒い部分の白浮きが多かったり、シャドウ部分がハイライトに引っ張られてしまうと途端に雰囲気台無しといった状態になるが、そのようなことは全くなく、素晴らしい暗部の再現性である。<br>特に驚いたのは、敵が戦車に対してロケットランチャーを発車するシーンと、その報復に主人公が敵から回収した爆薬を使ってナカトミビルを爆破するシーンだ。<br>舞い上がる火炎の奥行きがはっきりと分かり、こんなに立体的だったのかと今になって気がつくことができた。また、爆発する瞬間に現れるフラッシュの力強さにも目を見張るものがあり、ホワイトアウトしたかのような激しい点滅を堪能できる。<br>この他にも、いつか観ようと買い込んでいたブルーレイディスクを再生したが、どれも満足のいくものであった。<br>一方でBDP-S6500の内蔵機能やPCを使ってYouTubeなどのストリーミング映像を再生した時には、明らかにノイズが目立った。ピクチャーモニター故、ソースに含まれているものをありのままに出すという特性を有しているからであると理解しているが、こうもハッキリ現れてしまうと、まだまだディスクの発売は続けていただきたいと思ってしまった。<br>バッテリーを背負ってACコードレス化すると、更に便利に<br>本機の電源ユニットは脱着可能な構造になっている。外したところにはオプションとして用意されていたバッテリーを装着するか、DC入力ポートに電源を直接供給することで、AC100Vレスで動かすことができるという仕組みだ。<br>純正バッテリーは既に生産完了となっているが、少し調べるとカムコーダー等の業務用機器では定番のVマウントバッテリーが使えると分かり、早速装着してみた。<br>バッテリーは容量99Whの物を用意した。本機の定格消費電流は1.9Aであるため、計算上フル充電から3時間程度使える。実際に2時間の映画をまるまる再生してもバッテリー切れにはならず、実用上も全く問題なかった。<br>また副次的な効果として、画質と音質の両方に影響があった。映像は明らかに発色の純度が上がり、音質はキレを増したのである。<br>音に関して正確に記すと、モニターを置く前の音に戻ったような印象だ。純正の電源ユニットはスイッチング電源を採用しているため、ここから発せられていたスイッチングノイズがオーディオ機器に回り込み、音に影響を与えていたと考えられる。映像についても同様の</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W27.html" class="archive-link"><span>&#128202; 2026-W27</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W26.html" class="archive-link"><span>&#128202; 2026-W26</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W25.html" class="archive-link"><span>&#128202; 2026-W25</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W24.html" class="archive-link"><span>&#128202; 2026-W24</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
-<a href="daily/2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
-<a href="daily/2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
-<a href="daily/2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-06-29.html" class="archive-link active-date"><span>2026-06-29</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
+<a href="2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
+<a href="2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
+<a href="2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
+<a href="2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
+<a href="2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
+<a href="2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
