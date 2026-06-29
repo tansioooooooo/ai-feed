@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W27</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W27 (2026-06-29 〜 2026-07-05)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年6月22〜28日は、オープンウェイトLLMの急台頭と米国政府によるAI輸出規制という二大テーマが週全体を貫いた。Z.aiのGLM-5.2（MITライセンス・744Bパラメータ）がClaude Opus 4.8に匹敵する性能を示し、オープンモデルの転換点と評価された。一方でAnthropicのMythos/Fable 5への輸出制限が続き、アジア勢（Sakana AI・中国360）が代替モデルを相次ぎ投入。OpenAIはカスタムチップ「Jalapeño」を発表しGPT-5.6 Solをプレビュー。OCR分野では百度・Mistralが新モデルをリリース。AI安全性・幻覚問題・データセンター効率化も注目を集めた。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">オープンウェイトLLMの転換点：GLM-5.2の台頭</div><div class="trend-desc">Z.aiがMITライセンスで公開したGLM-5.2（744B params、40B active）が、Claude Opus 4.8やGPT-5.5と互角の性能を示した。幻覚率でGPT-5.5の1/3、価格は1/5以下と評され「DeepSeek R1以来の転換点」と称される。VibeThinker-3Bなど小型モデルもOpus 4.5超えを達成し、小型・効率化の流れも加速。</div></div>
+<div class="trend-item"><div class="trend-title">AI輸出規制と地政学的再編</div><div class="trend-desc">米政府がClaude Fable 5を安全保障上の理由で事実上禁止。Anthropicは2週間の交渉を経てMythos 5を「信頼できる」米国機関100社超に限定解禁。同日GPT-5.6 Solも政府承認パートナー限定でプレビュー公開。アジア勢（Sakana Fugu・中国Tulongfeng）が空白を埋め、「AIが一夜にして使えなくなるリスク」が現実となった。</div></div>
+<div class="trend-item"><div class="trend-title">AIカスタムシリコンとインフラの自前化競争</div><div class="trend-desc">OpenAIがBroadcomと共同開発した推論特化チップ「Jalapeño」を発表。NVIDIAはRubin世代で45℃液体冷却による100%液冷AI工場設計を公開し、冷却水消費をほぼゼロに削減。DeepSeekはDSparkによる投機的デコーディングでLLM推論を高速化。各社がGPU依存脱却とコスト削減に向けてスタック全体を自社設計する動きが鮮明になった。</div></div>
+<div class="trend-item"><div class="trend-title">OCR・ドキュメントAIの新世代</div><div class="trend-desc">百度がUnlimited OCRを公開し長大ドキュメントのワンショット解析を実現。Mistralはbounding box・ブロック分類・信頼スコアを付与するMistral OCR 4をリリース（OlmOCRBench最高スコア85.20）。RAG・エンタープライズ検索向けの構造化ドキュメント解析ニーズに応える専門モデルが相次いで登場した。</div></div>
+<div class="trend-item"><div class="trend-title">AIのセキュリティリスクと信頼性の課題</div><div class="trend-desc">OpenAI Codexのロギングバグで年間640TBのSSD書き込みが発生するバグが報告（後に修正）。複数AIセキュリティゲートをすり抜けるサプライチェーン攻撃をコミカルに描いた「CVE-2026-LGTM」がHN上位入り。AnthropicがAlibabaによるClaudeモデル能力の不正抽出を告発。FordがAI品質検査の不具合でベテラン検査員を再雇用する事例も報告された。</div></div>
+<div class="trend-item"><div class="trend-title">主権AI・欧州オープンサイエンスモデルの動き</div><div class="trend-desc">EPFL・ETH Zurich・CSCSが共同開発した「Apertus」がEU AI Act準拠のオープン基盤モデルとして公開。PII除去・オプトアウト対応・1000言語以上の多言語対応など欧州の規制要件に対応。Akrites（AWS・Anthropic・Google等20社以上）がオープンソース脆弱性の協調発見・修正体制を立ち上げ、AIによる攻撃加速に対抗する動きも始まった。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">GLM-5.2</span><span class="keyword">輸出規制</span><span class="keyword">Mythos/Fable 5</span><span class="keyword">GPT-5.6 Sol</span><span class="keyword">Jalapeño（OpenAIカスタムチップ）</span><span class="keyword">投機的デコーディング</span><span class="keyword">OCR/ドキュメントAI</span><span class="keyword">主権AI</span><span class="keyword">幻覚率</span><span class="keyword">MicroVM</span><span class="keyword">液体冷却</span><span class="keyword">オープンウェイトLLM</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">米国政府主導のAI輸出管理フレームワークが本格化し、フロンティアモデルのリリースに事前審査が常態化する見込み。その空白を埋める形でGLM系・Sakana Fugu等アジア発オープンモデルが存在感を高め、モデル選択の分散化が進む。カスタムシリコン競争と推論効率化が次の主要な差別化要因となり、幻覚率・不確実性校正がモデル評価の中心指標に移行するとみられる。</div>
+  </section>
+</main>
+</body>
+</html>
