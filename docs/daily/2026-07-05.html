@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-07-05</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-07-05</span>
     <span class="updated">2026/07/05 09:34 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://twitter.com/AnthropicAI/status/2072106151890809341" target="_blank" class="card-title">商務省、Claude Fable 5とMythos 5への輸出規制を解除</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5</span><div class="card-meta"><span class="date">06/30 23:55</span> &middot; <span class="score">&#9650; 970</span> &middot; <a href="https://news.ycombinator.com/item?id=48740771" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">We’ve received notice that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5.<br>We&#x27;ll begin restoring access tomorrow, and will share an update soon.<br>We’re grateful to our users for their patience, and to everyone who worked with us on redeploying the models.</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://www.quantamagazine.org/for-the-first-time-a-cell-built-from-scratch-grows-and-divides-20260701/" target="_blank" class="card-title">初めて、ゼロから作られた細胞が成長・分裂</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">For first time, a cell built from scratch grows and divides</span><div class="card-meta"><span class="date">07/01 14:20</span> &middot; <span class="score">&#9650; 949</span> &middot; <a href="https://news.ycombinator.com/item?id=48747304" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">For the First Time, a Cell Built From Scratch Grows and Divides<br>Introduction<br>For the very first time, biologists packed nonliving components into a cell-like membrane, piece by piece, and witnessed the bag of molecules start to behave like life. The lab-made synthetic cell grew, replicated its DNA, and divided, demonstrating the basic functions of a cell cycle.<br>It’s “an impressive step,” said Jack Szostak, who studies the origins of life at the University of Chicago and was not involved in the research. “I don’t know of any other effort to put together an artificial cell from biological components that has progressed so far.”<br>The cell is not alive by any definition. It can’t survive without constant deliveries of food and ribosomes, the machinery needed to make proteins. It has no defenses or a good waste removal system. But it’s the strongest demonstration yet that it is possible to generate life from nonlife, a goal that synthetic biologists have been chasing for decades.<br>“It’s a big step forward to this holy grail of making a living thing out of dead components,” said Sijbren Otto, a systems chemist at the Stratingh Institute for Chemistry in the Netherlands who was not involved in the work. “It’s not completely there yet, but it’s definitely getting quite close.”<br>Since these cells were pieced together from scratch, and all the molecular parts were crafted in the lab, scientists can tinker with the system and switch components in and out. “I have a blueprint, I have a full chemical ingredient list of every component,” said Kate Adamala, a synthetic biologist at the University of Minnesota who led the new study, which is not yet peer-reviewed; the paper was posted on the scientific preprint site biorxiv.org on July 2. With such flexibility, this kind of synthetic cell could eventually be coaxed to create new materials, such as biofuels and drugs, and help researchers study disease.<br>It could also give scientists insight into some of their deepest existential questions: What is the minimum needed to sustain life? How could life start? What happens if we alter the biology that composes life on Earth today?<br>Or, as Adamala put it: “What else can biology do?”<br>Building Life<br>Some 4 billion years ago, a bunch of nonliving molecules got together to form the first protocells. They fed, grew, and divided. Then, over time, evolutionary processes emerged that let these cells change and diversify into many different types, decorating a barren world with all manner of strange beings. A purely chemical world blossomed into a biological one. Scientists cannot agree on how this shift from nonlife to life, or abiogenesis, happened, but some have turned their sights on trying it out for themselves in the lab.<br>For decades, researchers have taken different approaches to this challenge. Some, like the synthetic biologist John Glass at the J. Craig Venter Institute, are stripping down bacterial cells to their smallest, barest genomes to reveal a cell’s minimum requirements to stay alive. Others, like Otto, try to build cells with molecules that differ from those found in Earth biology.<br>Adamala also works from the ground up, but with biological molecules found in nature today. When she started her lab in 2016, she envisioned assembling a synthetic cell, a proof of concept, that could undergo a complete cycle of cell division using its own genome.<br>She found an instruction manual in what all known cells have in common: They grow, they duplicate their DNA, they divide, and they evolve. They transcribe their DNA into RNA and then make proteins to carry out these tasks and others that keep a cell running, such as metabolizing molecules for energy. All of this is done inside a lipid membrane, which holds all the necessary materials in one place. Adamala’s team needed to build their synthetic cell a genome and supply it with all the materials to carry out those tasks.<br>They developed and optimized different ingredients, most inspired by other labs, before combining them together inside liposomes — hollow sacs enclosed by a simple lipid membrane. This would serve as the cellular body.<br>They started with a cell’s most fundamental system: its mechanism for copying its DNA and passing it down to daughter cells. They adopted a DNA replication system, pioneered by the synthetic biologists Hannes Mutschler and Christophe Danelon, and tweaked it to work alongside other systems, including a commercial pack of 36 enzymes that let the cell read DNA and make proteins. Adamala’s team fiddled with their cellular brew, switching genes in and out and adjusting concentrations of various molecules, to get the crucial information-carrying and protein-making genetic systems to jibe.<br>Their tiny synthetic genome did not encode any metabolic genes, which would let the cell process food and energy, or many of the complex molecules a cell needs. So, in parallel, the researchers prepped some supply packs.<br>They filled other liposomes with sugar, lipids, and enzymes,</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main" target="_blank" class="card-title">『Command &amp; Conquer: Generals』がFableでmacOS/iPhone/iPadにネイティブ移植</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Command and Conquer Generals natively ported to macOS, iPhone, iPad using Fable</span><div class="card-meta"><span class="date">07/04 19:41</span> &middot; <span class="score">&#9650; 563</span> &middot; <a href="https://news.ycombinator.com/item?id=48788283" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Zero Hour running natively on Apple Silicon Macs, iPhone, and iPad — campaign, skirmish, and Generals Challenge, with touch controls built for RTS (tap-select, drag-box, long-press deselect, two-finger scroll, pinch zoom). No emulation: this is the real 2003 engine compiled for ARM64, rendering DirectX 8 → DXVK → Vulkan → MoltenVK → Metal.<br>Built on EA&#x27;s GPL v3 source release via fbraz3/GeneralsX<br>(which did the heavy lifting of the macOS/Linux port — this fork adds the iOS/iPadOS<br>port and a set of engine fixes). The original GeneralsX README lives on the upstream-main branch.<br>No game assets are included or distributed. You need your own copy (Steam, ~$5 on sale).<br>Prerequisites (one time):<br># Toolchain<br>xcode-select --install<br>brew install cmake ninja meson pkgconf<br>brew install --cask steamcmd<br># vcpkg (full clone — a shallow clone breaks manifest baselines)<br>git clone https://github.com/microsoft/vcpkg ~/vcpkg &amp;&amp; ~/vcpkg/bootstrap-vcpkg.sh<br>export VCPKG_ROOT=~/vcpkg          # add to your shell profile<br># LunarG Vulkan SDK (NOT the Homebrew cask) — https://vulkan.lunarg.com/sdk/home<br>export VULKAN_SDK=$HOME/VulkanSDK/&lt;version&gt;/macOS   # add to your shell profileClone, build, get assets, play:<br>git clone https://github.com/ammaarreshi/Generals-Mac-iOS-iPad.git GeneralsX<br>cd GeneralsX<br>./scripts/build/macos/build-macos-zh.sh     # checks deps, configures, builds<br>./scripts/build/macos/deploy-macos-zh.sh    # creates ~/GeneralsX/GeneralsZH + run.sh<br>./scripts/get-assets.sh &lt;your_steam_username&gt;   # fetches game data you own<br>cd ~/GeneralsX/GeneralsZH &amp;&amp; ./run.sh -winOn top of the macOS prerequisites: full Xcode (signed into your Apple ID),<br>brew install xcodegen, and a (free or paid) Apple Developer team.<br>cd GeneralsX<br>git submodule update --init references/fbraz3-dxvk   # iOS DXVK is built from this + Patches/dxvk-ios.patch<br>./scripts/build/ios/fetch-moltenvk.sh                # pinned MoltenVK.framework (checksummed)<br>./scripts/build/ios/stage-fonts.sh                   # Liberation fonts, renamed as the game expects<br>cmake --preset ios-vulkan<br>cmake --build build/ios-vulkan --target z_generals<br>GX_TEAM_ID=&lt;your-team-id&gt; GX_BUNDLE_ID=com.you.generalszh \<br>    ./scripts/build/ios/package-ios-zh.sh --install  # assembles, signs, installsFind your team id in Xcode → Settings → Accounts. Assets ship inside the app<br>bundle (self-contained install); --dev skips the ~2.7 GB copy for fast code<br>iteration.<br>- Long sessions on iPad can be killed by iOS for memory (~3 GB+ resident); the app exits to the home screen with no dialog. Session logs (current + previous) are in the Files app under the game&#x27;s folder. Under investigation.<br>- Backgrounding mid-game can occasionally crash on iOS — the lifecycle pause covers the common paths; a rare race remains. Save often.<br>Engine code GPL v3 (EA&#x27;s source release → GeneralsX → this fork). Game assets: not included, not licensed here. Credits: Westwood/EA Pacific (the game), EA (the source release), fbraz3/GeneralsX (the base port), TheSuperHackers/GeneralsGameCode (community mainline), DXVK, MoltenVK, SDL, OpenAL Soft, FFmpeg, Liberation Fonts.<br>This port was built as a human+AI collaboration: engineering by<br>Claude Code (Anthropic&#x27;s Claude, Fable model),<br>directed and playtested on real devices by Ammaar Reshi. The engineering log in<br>docs/port/ is the unedited record of how that worked.</div></details></div>
@@ -241,133 +245,120 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://www.gizmodo.jp/article/bernie-sanders-new-ai-bill-would-pay-americans-1000-a-year/" target="_blank" class="card-title">AIが稼いだお金から年間約16万円の給付金が受け取れる法案、提出される | ギズモード・ジャパン</a><p class="card-desc">マーク・キューバンはAIのトークンに連邦税を課すべきって言ってたよな…。 いまあるAIシステムは、全人類の知的・創造的な成果をもとに構築されたもの。だとすれば、そこから生まれる収益は、ひと握りのテック業界の大物たちだけでなく、国民に直接還元されるべき。バーニー・サンダース連邦上院議員はそう主張していま...</p><div class="card-meta"><span class="date">07/03 05:10</span> &middot; <span class="score">&#128278; 69</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">AIが稼いだお金から年間約16万円の給付金が受け取れる法案、提出される<br>15,639<br>マーク・キューバンはAIのトークンに連邦税を課すべきって言ってたよな…。<br>いまあるAIシステムは、全人類の知的・創造的な成果をもとに構築されたもの。だとすれば、そこから生まれる収益は、ひと握りのテック業界の大物たちだけでなく、国民に直接還元されるべき。バーニー・サンダース連邦上院議員はそう主張しています。<br>AIの富はひと握りの大富豪のもの？ みんなのもの？<br>バーモント州選出のサンダース上院議員（無所属）は、アメリカのAI業界のための政府系投資基金を新設する法案を提出しました。<br>基金の規模は約7兆ドル（1138兆円）で、アメリカ国内にある主要AI研究所の現在の評価額に基づいて算出された数字なのだとか。アメリカ国民は、対象となる企業の株式の50%を公的持ち分として保有することになるそうです。<br>納税者は、基金を通じて年間1,000ドル（約16万円）の給付金を受け取ることになります。サンダース上院議員は、この金額について、｢AI産業が発展するにつれておそらく増加するだろう｣と記者団に語りました。<br>さらに、この基金が将来的に｢多額の資金を…社会プログラムに投入し、すべてのアメリカ人が医療や教育、適切な住居、その他の生活における基本的な必需品を確実に得られるようにする｣とも述べています。<br>Advertisement<br>公共資源としてのAI<br>サンダース氏の法案は、1986年の内国歳入法（アメリカの連邦所得税法）の改正案として提出されました。法案は、AIは公有地で採掘された貴重な鉱物や石油と同じように、究極的には公共資源であるにもかかわらず、ごく少数の企業が、あたかもそれが専有的な私的財産であるかのように、その資源から利益を得ていると主張しています。<br>法案には、｢AIの経済的価値は、書籍や楽曲、芸術作品、ジャーナリズム、コンピュータコード、科学研究、動画、会話、画像、そして世代を超えて受け継がれてきたアイデアなど、人類の集合知に由来する｣と書かれています。<br>そしてさらに、｢ごく少数の富裕な支配層が、人工知能によって生み出される経済的価値の大部分を支配するために、何億にのぼる人々の創造的な成果を、当事者の許可も承認も得ず、対価を払うことなく、事実上盗み取ってきた｣と続きます。<br>……言われてみれば、たしかにそうかも。<br>現在、アメリカを含む世界67カ国で100以上の政府系基金が運営されています。その一例として、1854年に設立された｢テキサス州恒久学校基金（Texas Permanent School Fund）｣が挙げられます。<br>同基金は、石油やガスなどの天然資源の採掘による収益を原資として、同州の公立学校制度に資金を提供しています。<br>広がる超党派の支持<br>AI技術によって不安定化する経済のインパクトをやわらげるための有効な手段として、最も裕福なAI企業の持ち分の一部をアメリカ国民に直接保有させようという提案は、カリフォルニア州のギャビン・ニューサム知事も行なっていたりします。<br>同知事は、州当局に対して、｢ユニバーサル・ベーシック・キャピタル（Universal Basic Capital）｣として知られるモデルの実現可能性に関する調査をはじめるよう指示したそう。<br>ちなみに、すべての人に基礎的な所得を給付する｢ユニバーサル・ベーシック・インカム（UBI）｣とは別物なので、混同しないように気をつけてください。<br>このような構想は、AI業界内部からもある程度支持されているようです。OpenAI（オープンエーアイ）とAnthropic（アンソロピック）は、AI業界の利益の一部を一般市民と共有し、技術の普及による雇用喪失から労働者を保護するためには、なんらかの形でこのシステムが必要になる可能性があるとしています。<br>両社ともに今年後半にIPO（新規株式公開）を完了させる見通しですが、最近は強力な新規AIモデルの開発と導入を監督し、必要に応じてそのペースを緩和させるための国際機関の設立を呼びかけています。<br>資産1兆ドル超えを果たし、｢人類初の兆万長者｣になったイーロン・マスクも、AIがもたらす労働市場への混乱の帳尻を合わせるために、連邦政府が国民に給付金を支給する必要があるかもしれないと示唆しています。<br>アメリカのAI業界に極めて寛大な裁量権を与えてきたトランプ大統領でさえ、OpenAIのようなAI研究企業との株式持分契約を通じて、国民に直接給付を行なう可能性を検討していると報じられています。<br>サンダース上院議員が提出した新たな法案は、このアイデアを連邦法にしようとする初めての試みになります。<br>雇用喪失をはじめ、電気料金や水道料金の高騰など、AIが国民にもたらす不安は、AIから得られる恩恵を国民とシェアすることで多少はやわらげられると思います。<br>Source: Moby Japan, Bernie Sanders, The New York Times, Forbs<br>Advertisement<br>Advertisement<br>Advertisement</div></details></div></div></div>
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://xkcd.com/3266/large/" target="_blank" class="card-title">穴</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Holes</span><div class="card-meta"><span class="date">07/03 17:54</span> &middot; <span class="score">&#9650; 249</span> &middot; <a href="https://news.ycombinator.com/item?id=48777832" target="_blank" class="comment-link">comments &rarr;</a></div></div>
 <div class="card" data-source="hackernews" data-category="neta"><div class="card-source" style="color:#ff6600">HN<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://github.com/FossPrime/Steam-Controller-Auto-Charge" target="_blank" class="card-title">Steamコントローラー自動充電——CVで磁気充電パックへ誘導</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Steam Controller Auto-Charge – pilot to magnetic charging puck using CV</span><div class="card-meta"><span class="date">07/03 22:39</span> &middot; <span class="score">&#9650; 196</span> &middot; <a href="https://news.ycombinator.com/item?id=48780865" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Steam Controller Auto-Charge is an open-source web application designed to automatically pilot a Steam Controller into its magnetic charging puck using optical flow computer vision and WebHID telemetry.<br>- Optical Flow Tracking: Utilizes OpenCV.js to track user-selected points on the controller and the charging puck via an overhead camera.<br>- WebHID Telemetry &amp; Haptic Navigation: Connects to the Triton Controller natively via WebHID, streaming input and telemetry (Report 67). Navigates the controller towards the puck by firing 70Hz asymmetric haptic pulses through the internal dual Linear Resonant Actuators (LRAs).<br>- Proximity Creep Mode: Automatically cuts haptic pulse frequency by 50% when the controller is within 150 pixels of the puck to ensure a gentle magnetic dock.<br>- Battery Status Polling: Intercepts Report ID 121(0x79) to confirm successful magnetic charging, and parses Report ID67(0x43) to display live battery percentage and battery cell voltage (mV).<br>- Nix Package Manager: The only build dependency you need. It works seamlessly on Windows, Mac, and Linux.<br>- A Chromium-based browser supporting the WebHID API.<br>- An overhead webcam pointing down at your desk.<br> <br>- Mount a webcam directly overhead pointing at the desk.<br>- Start the project with a single command (this will automatically fetch dependencies and build the WASM module):<br>nix-shell --run &quot;npm install &amp;&amp; npm run dev&quot;- Mount a webcam directly overhead pointing at the desk.<br>- Place the Steam Controller Auto-Charge puck on the desk.<br>- Place your Steam Controller on the desk, upright.<br>- Open the web interface and click Connect Steam Controller to pair it via WebHID.<br>- Click ✨ Auto-Track to engage automatic tracking. The button will highlight to indicate it&#x27;s active and will automatically resume tracking on page reload. Click it again to disengage.<br>- The controller will now autonomously navigate to the puck using a Lucas-Kanade optical flow loop combined with object avoidance powered by an in-browser Rust/WASM CNN!<br>(Note: Manual tracking is still available if you prefer. Just click the puck, then the top of the controller, then the bottom of the controller).<br>- App.vue: Vue 3 application logic handling camera streams, UI reactivity, PID tracking loop, and OpenCV.js Lucas-Kanade optical flow (- calcOpticalFlowPyrLK).<br>- steamController.ts: WebHID abstraction class mapping standard API calls to the Steam Controller&#x27;s specific byte payloads for LRA pulses and battery status polling.<br>- objectDetector.ts&amp;- objectWorker.ts: Offloads object detection to a Web Worker to ensure the main tracking loop remains fluid.<br>- wasm-object-detect/: Rust implementation compiled to WebAssembly for high-performance visual processing.<br>Huge thanks to Very Lazy Pixel for inspiring this project! Check out their video here: https://www.youtube.com/watch?v=g-8S8zk4dn8<br>This project is licensed under the MIT License - see the LICENSE file for details.</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-07.html" class="archive-link"><span>&#128197; 2026-07</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W27.html" class="archive-link"><span>&#128202; 2026-W27</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W26.html" class="archive-link"><span>&#128202; 2026-W26</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W25.html" class="archive-link"><span>&#128202; 2026-W25</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W24.html" class="archive-link"><span>&#128202; 2026-W24</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W19.html" class="archive-link"><span>&#128202; 2026-W19</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-07-05.html" class="archive-link"><span>2026-07-05</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
-<a href="daily/2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
-<a href="daily/2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
-<a href="daily/2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
-<a href="daily/2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-07-05.html" class="archive-link active-date"><span>2026-07-05</span><span class="archive-count">37 articles</span></a>
+<a href="2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
+<a href="2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
+<a href="2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
+<a href="2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
+<a href="2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
+<a href="2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
+<a href="2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
+<a href="2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
+<a href="2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
+<a href="2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
+<a href="2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
