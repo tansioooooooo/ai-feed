@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-07-07</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-07-07</span>
     <span class="updated">2026/07/07 10:19 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://f-droid.org/2026/07/01/adv-malware.html" target="_blank" class="card-title">Android開発者検証：保護を装った脅威</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Android Developer Verification: Threat masquerading as protection</span><div class="card-meta"><span class="date">07/02 03:00</span> &middot; <span class="score">&#9650; 1725</span> &middot; <a href="https://news.ycombinator.com/item?id=48755965" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">What We Talk About When We Talk About Malware<br>Posted on Jul 01, 2026 by marcpruxIf you are running Android 8 or higher, a virus has been installed on your device and is silently awaiting remote activation. Over the past few months, devices around the world have been infected with this novel strain, with as many as 4 billion Android handsets and tablets estimated to have already been contaminated, meaning that around half of all humanity may be at risk from this threat.<br>Disguising itself as the innocuously-titled “Android Developer Verifier” (ADV) process, this trojan horse runs surreptitiously in the background as a system service with full root privileges, quietly awaiting an activation signal. The service cannot be blocked, disabled, or removed. Unlike a commonplace bit of malware, this extraordinary strain won’t be detected and neutralized by Play Protect (the malware scanning and remediation service that is installed on all Android Certified devices). In fact, Play Protect is itself the vector through which this virus is transmitted and installed.<br>That is because it is Google themselves who is propagating ADV. And once activated, this malevolent process has exactly one goal: to block you from running software by developers who haven’t been approved centrally by Google.<br>Threat masquerading as Protection<br>We first raised the alarm about the Android Developer Verification program last September (“F-Droid and Google’s Developer Registration Decree”) shortly after it was first announced. Google’s looming requirement that all Android developers register themselves centrally is rationalized as a solution to help stem the spread of malware. However it doesn’t actually feature any capabilities to prevent a malevolent actor from distributing malware in the first place; the only alleged benefit of ADV is that it may help slow the actions of an already-identified recidivist by requiring that they create (or buy) another account in order to continue distributing their malware with a new signing key.<br>For this fairly narrow threat vector of malware recidivism, a variety of considerably less draconian solutions have been proposed. Play Protect itself could be enhanced to scrutinize more closely those newly-installed apps that have elevated permissions or that were obtained through suspect channels, continuing with their recently touted advances in on-device security capabilities. Or a system of federated verifiers might be implemented (as proposed in “DCM: A Developers Certification Model for Mobile Ecosystems”, 2023) that would empower end-users to select their own trusted curators and authorities for ex-ante approval. Instead, Google has used this minor vector as a pretext to radically re-engineer the entire Android ecosystem by fiat, upending a 18 year tradition of open software development and positioning themselves as the world’s sole gatekeeper for which apps are permitted to exist.<br>What They Talk About When They Talk About Malware<br>Should a developer — contrary to our recommendation — elect to register themself with Google as a “verified” developer, they should expect to sign up for an account and pay a fee, surrender detailed personal information and upload government-issued identification, and then proceed to register the identifiers and signing keys for all the apps they intend to distribute (now or ever).<br>But the most diabolical stage is the compulsory agreement to the Android Developer Console Terms of Service. There are numerous causes for disquiet in this document, but the most concerning of all ought to be:<br>6.5 If You violate any of the Terms or if You distribute malware or other harmful applications, Google may terminate Your access to the ADC…<br>This reasonable-sounding clause begs the question: what exactly is meant by “malware”? No definition of the term is to be found anywhere in the document. With the absence of any formal definition, standard, or guideline, it implicitly states:<br>…and “malware” means whatever we say it means.<br>As we discussed in “What We Talk About When We Talk About Sideloading”, beware the dangers of allowing the terminology of debate to be defined by those who don’t have your best interests at heart. Malware being synonymous with “software we don’t like” means that they can unilaterally dictate — driven either by business incentives or by being compelled by a sufficiently powerful government — what the malware-du-jour definition is to be.<br>For precedent, personal content filtering in the form of “ad blockers” has long since been banned from the Play Store, and they have even classified some instances as malware. How long before they designate all ad-blocking software as malware, block installation on all Android certified devices worldwide, and permanently designate all developers of this class of software as malware creators? Such a move would certainly be aligned with their commercial incentives as the global ad-tech monopolist, and would be completely in accordance with the languag</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://www.comaps.app/" target="_blank" class="card-title">CoMaps ― オープンソースのオフライン地図アプリ</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">CoMaps – FOSS Offline Maps</span><div class="card-meta"><span class="date">07/06 18:55</span> &middot; <span class="score">&#9650; 574</span> &middot; <a href="https://news.ycombinator.com/item?id=48808928" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Hike, Bike, Drive Offline – Navigate with Privacy<br>Discover more of your journey - Powered by the community<br>Community + Open Maps<br>Offline Search and Route<br>Plan and navigate your trip abroad with just GPS, no need for mobile data. Search waypoints while on distant hiking trails or bike paths.<br>No Data Collection<br>The app is designed with privacy in mind - does not identify people, does not track you, and does not collect any information. CoMaps was also audited by<br>Save Your Battery<br>Efficiently uses the battery, doesn’t drain your battery like other navigation apps.<br>Free and Built by the Community<br>People like you are helping build the app by adding locations to , giving feedback on features, and contributing code on to create great maps together. The project is a fork of Organic Maps and Maps.Me, and driven by an open-source community.<br>Freedom Is Here<br>Discover your journey, navigate the world with privacy and community at the forefront.<br>Download</div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://github.com/MaximeRivest/Riddle" target="_blank" class="card-title">FableがreMarkableをハリー・ポッターのトム・リドルの日記に変えた</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Fable turned reMarkable into Tom Riddle&#x27;s diary from Harry Potter</span><div class="card-meta"><span class="date">07/06 23:00</span> &middot; <span class="score">&#9650; 470</span> &middot; <a href="https://news.ycombinator.com/item?id=48811591" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Write on the page with your pen. After a pause, the diary drinks your ink — your words fade into the paper — the page thinks for a moment, and an answer writes itself back in a flowing hand, stroke by stroke, then fades away.<br>No screen glow, no keyboard, no chat UI. Just ink appearing on paper.<br>This is the diary from the demo.<br>You need a reMarkable Paper Pro in developer mode with a launcher installed. If that sounds like a lot, it isn&#x27;t — remagic walks you through turning on developer mode and sets up everything with one command. Come back here, drop riddle in, and start writing to Tom.<br>Already have xovi + AppLoad? Install from the remagic catalog, grab the prebuilt bundle, or build from source.<br>remagic install riddle     # checksum-verified download → AppLoad<br>remagic config riddle      # settings form in your browser (+ QR for phone)Then in AppLoad: tap Reload, then The Diary. Write, and rest your pen. (Or install it from the Store app right on the tablet.)<br>- Grab riddle-&lt;version&gt;.zipfrom the latest release and unzip it into a folder:unzip riddle-*.zip -d riddle<br>- Copy the folder to your tablet:<br>scp -O -r riddle root@10.11.99.1:/home/root/xovi/exthome/appload/<br>- Add an API key: cp oracle.env.example oracle.envin that folder and put yourRIDDLE_OPENAI_KEYin it (any OpenAI-compatible key). Or skip it to use pi.<br>- In AppLoad: tap Reload, then The Diary. Write, and rest your pen.<br>⚠️ This modifies your device. It runs as root, stops the vendor UI (in takeover mode), and drives the e-ink engine directly. It has only been tested on a reMarkable Paper Pro (ferrari, aarch64, OS 3.26–3.27). It may not work on other models or OS versions, and you use it entirely at your own risk. Not affiliated with reMarkable AS. Keep SSH access working before you install anything — that is your escape hatch.<br> pen (raw evdev, full 4096-level pressure, hardware event rate)<br>   │ strokes<br>   ▼<br> riddle ── idle 2.8s → commit page → PNG ──► oracle (resident LLM process,<br>   │                                          streams reply sentence-by-sentence)<br>   ▼ strokes (Dancing Script → skeletonized to single-pixel pen paths)<br> display backend<br>   ├── qtfb        — windowed, inside xochitl (AppLoad app)<br>   └── quill       — full takeover: xochitl stopped, vendor e-ink engine<br>                     driven directly for instant ink (lowest latency there is)<br>- riddle/— the app (Rust). Pen input, ink surface, handwriting synthesis (rasterize → Zhang-Suen thinning → stroke tracing → animated replay), the oracle process manager, and both display backends.<br>- quill/— the takeover display host (C/C++). An epfb-re-style QImage-constructor interposition shim over the vendor- libqsgepaper.sowaveform engine, exposed as a small C ABI (- quill_init/- quill_buffer/- quill_swap) that riddle links against with- --features takeover. Also carries a small family of demos (- scribble, a pen-to-glass latency test, plus map, image, and GIF renderers).<br>The diary&#x27;s replies come from a vision LLM that reads your handwriting from the committed page (sent as an inline PNG). There are two backends, chosen at startup — pick whichever you have:<br>Set an API key and riddle talks straight to an OpenAI-compatible<br>/chat/completions endpoint. Works with OpenAI, OpenRouter, Groq, a local<br>server — anything that speaks the format. No extra software on the tablet.<br>export RIDDLE_OPENAI_KEY=&quot;sk-...&quot;                       # required<br>export RIDDLE_OPENAI_BASE=&quot;https://api.openai.com/v1&quot;   # optional (default)<br>export RIDDLE_OPENAI_MODEL=&quot;gpt-4o-mini&quot;                # optional; must see images<br>export RIDDLE_OPENAI_REASONING=&quot;low&quot;                    # thinking models only<br>export RIDDLE_OPENAI_MAX_TOKENS=&quot;2000&quot;                  # runaway guardAny vision-capable model works. On the tablet these live in oracle.env<br>next to the binary (see oracle.env.example, or just run<br>remagic config riddle — it has one-tap presets for OpenAI, OpenRouter,<br>and Gemini). Example with OpenRouter:<br>export RIDDLE_OPENAI_KEY=&quot;$OPENROUTER_API_KEY&quot;<br>export RIDDLE_OPENAI_BASE=&quot;https://openrouter.ai/api/v1&quot;<br>export RIDDLE_OPENAI_MODEL=&quot;openai/gpt-4o-mini&quot;Two gotchas with thinking models (Gemini 3.x, o-series): set<br>RIDDLE_OPENAI_REASONING=low for faster first ink (some providers reject<br>the field on non-thinking models — leave it unset there), and keep<br>RIDDLE_OPENAI_MAX_TOKENS roomy — hidden reasoning tokens count against it,<br>and a tight cap starves the visible reply.<br>Verify your setup before launching the diary:<br>riddle --oracle-test path/to/handwriting.png   # prints the streamed replyMeasured ~0.9–1.1 s to first ink on-device. The HTTPS is built into riddle (pure-Rust, no extra libraries).<br>If you already run pi, riddle will use<br>a resident pi --mode rpc process kept warm (Node + your subscription auth<br>loaded once), so each turn pays only model latency. Used automatically when<br>RIDDLE_OPENAI_KEY is not set.<br>Both stream the reply sentence-by-sentence, so the quill starts writing seconds<br>before the model finishes. The persona prompt live</div></details></div>
@@ -245,135 +249,122 @@ main { padding: 16px 24px; max-width: 900px; }
 <div id="panel-politics" class="panel"><div class="cards"><div class="card" data-source="hackernews" data-category="politics"><div class="card-source" style="color:#ff6600">HN<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://www.theargumentmag.com/p/should-dayquil-be-legal" target="_blank" class="card-title">DayQuilは合法であるべきか？</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Should DayQuil Be Legal?</span><div class="card-meta"><span class="date">07/06 15:44</span> &middot; <span class="score">&#9650; 218</span> &middot; <a href="https://news.ycombinator.com/item?id=48806289" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Should DayQuil be legal?<br>The combo drug grift is dangerous<br>If you walk down the cold and flu aisle at CVS and start looking closely at labels, you will count about 100 products and around six active ingredients. This is the meat and potatoes of the over-the-counter drug industry, which specializes in taking three generic medications and two placebos that cost 5 cents each individually and selling the combination product for $35.<br>Take your standard 12-ounce bottle of DayQuil, which costs around $15 at CVS. The entire bottle contains a small amount of acetaminophen (Tylenol) and two other ingredients that are supposed to help with your cough and congestion — dextromethorphan and phenylephrine — but in reality do nothing.<br>Most studies have found that dextromethorphan performs the same as a placebo and some suggested it was worse than honey. Oral phenylephrine is so ineffective that the Food and Drug Administration (FDA) proposed removing it from the market — it is now nearly three years into the glacial regulatory process of actually doing so.<br>So the only ingredient that’s doing anything in that bottle of DayQuil makes up just 2% of the bottle: the roughly 8 grams of acetaminophen, which separately would run you about 16 cents at Costco. Even if you opted for the $10 store-brand version of DayQuil, that’s more than a 6,000% markup rate.<br>Nearly every product in the cold and flu aisle is like this, as are many in quite a few other aisles.<br>Now, in some ways, this resembles other industries; consumers pay through the nose for convenience all the time. How is this any different from customers paying a markup for a fruit salad at the grocery store?<br>Well, the analogy breaks down along three lines:<br>- Grocery store customers typically pay four to 12 times as much for precut fruit as they would for the same quantity of unprepared fruit. That’s a lot, but still a far cry from 60 to 100 times more. <br>- Most of the fruit you get in a fruit salad actually is fruit, rather than, say, fruit-shaped rocks. But many of the active ingredients you get in these combo drugs don’t do anything helpful. <br>- No one is going to the hospital because they ate too much melon. But combo drugs are huge contributors to unintentional overdoses. <br>The placebos hiding in your medicine cabinet<br>DayQuil is hardly alone in packaging placebos in its products. The ineffective dextromethorphan is in all sorts of cough medication, from Robitussin to certain Tylenol and Mucinex formulations. You’ll also find lots of cough medication with guaifenesin, which has similarly thin scientific backing.<br>But the biggest offender, by far, is oral phenylephrine, which we can find in many combos besides DayQuil. Not only is the FDA clear-eyed about its ineffectiveness, the drug’s manufacturer is using it to actively mislead consumers.<br>Historically, Sudafed has contained pseudoephedrine, the wonder drug equally good at clearing congestion and making crystal meth. That Breaking Bad association meant that even though it was an over-the-counter drug, to get it, you had to talk to a pharmacist and give them your name, fingerprints, Social Security number, and custody of your firstborn child. This type of red tape ate into Big Pharma’s profit margins.<br>So what’s a struggling multibillion-dollar pharmaceutical company to do? Well, if you’re Sudafed, you find a placebo that sounds a little like pseudoephedrine, give it a practically identical name and branding campaign, put it on the shelf with the rest of the cold and flu drugs, and watch the dollars flow in.<br>“It is one of the most egregious examples of stupidity in the whole world of over-the-counter combination pills,” said Dr. Jerry Avorn, drug policy researcher at Harvard and author of the recent book Rethinking Medications.<br>Avorn is especially frustrated with the industry’s role in keeping phenylephrine on the shelf: “The pushback of the over-the-counter drug industry against obvious scientific data that this stuff is useless, and the FDA’s repeated inability to get it out of pills, is just one of the more astonishing examples of how over-the-counter drugs and science often have nothing to do with each other.”<br>The FDA is supposed to evaluate a potential drug for both effectiveness and safety before allowing a drugmaker to bring it to market. But that process has broken down over the last 40-odd years.1<br>Seeing new drugs come to market is, of course, very exciting — particularly if they promise to help patients suffering from diseases for which we do not already have good treatments. But that promise can only be fulfilled if the drugs actually work. And the FDA has developed a bad habit of approving drugs that had scant evidence of effectiveness.<br>The upshot is that these drugs have gone on to cost patients a lot of money but bring approximately zero value to their health. And as phenylephrine so aptly demonstrates, once a product is approved, it is much, much harder to take it off the market.<br>A pickier FDA doesn’t have to be </div></details></div>
 <div class="card" data-source="hatena" data-category="politics"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f76a6a;margin-left:8px;font-weight:600">政治</span></div><a href="https://ascii.jp/elem/000/004/416/4416397/" target="_blank" class="card-title">「メモリが高すぎる」米ユーザーらが半導体大手3社を提訴</a><p class="card-desc">世界的なメモリの価格高騰が続く中、怒った米国のユーザーたちが訴訟に踏み切った。 米国の個人14人と法人3社が2026年6月25日、半導体大手3社が不当にメモリ（DRAM）の価格を引き上げるカルテルを形成したとして、米国カリフォルニア州北部地区連邦地裁に訴えを起こした。提訴されたのは韓国のサムスン電子、SKハイニッ...</p><div class="card-meta"><span class="date">07/07 08:28</span> &middot; <span class="score">&#128278; 4</span></div></div></div></div>
 <div id="panel-neta" class="panel"><div class="cards"><div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.itmedia.co.jp/news/articles/2607/06/news053.html" target="_blank" class="card-title">佃煮の日「クソダサポスター」ホントにAIに作れない？　GeminiとChatGPTに挑戦させてみた結果</a><p class="card-desc">ITmedia NEWSにおける1週間の記事アクセス数を集計し、上位10記事を紹介する「ITmedia NEWS Weekly Top10」。今回は2026年06月27日から07月03日までの7日間について集計し、まとめた。 先週のアクセス3位は、農林水産省の公式Xが6月29日に投稿した「佃煮の日」ポスターが、良い意味で“クソダサい”と話題になったという記...</p><div class="card-meta"><span class="date">07/07 01:27</span> &middot; <span class="score">&#128278; 27</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">先週のアクセス3位は、農林水産省の公式Xが6月29日に投稿した「佃煮の日」ポスターが、良い意味で“クソダサい”と話題になったという記事だった。派手派手なグラデーション、集中線、目が飛び出した3人組──2000年代のWordで作ったような既視感が凝縮された、味わい深いポスターである。<br>コメント欄には「AIには出せない温かみがあって好き」「AI使わないところがほんと良い」という声が目立ったという。<br>……でも待ってほしい。今のAIなら、こういう雰囲気も作れるのでは？ というわけで、ChatGPT（5.1high）とGemini（3.1Pro）にチャレンジさせてみた。<br>まず両者に「2000年代風の、派手なグラデーション満載のクソダサポスターを作って」など指示し、元ポスターの要素を伝えた。<br>いや全然違うやろ！ 描き込みすぎだしリアルすぎだし色が多すぎる。まったく「2000年代のWord」っぽくない。そもそも「2000年代」という指示が曖昧すぎたのかもしれないが、Wordでこれは作れない気がする。<br>そこで「もっとシンプルに」と指示してみた。色は減ったものの、シンプルとはとても言えない。ダメだこりゃ。<br>次にGeminiで作ってみた。同じプロンプトを前提にしつつ、「解像度は低め」など、レトロ感を出すための指示を少し加えてみた。<br>なかなかいいところまで来た。ただ、当時のWordのグラデーションの雰囲気と違う。そこで「Word 2003で」と細かく指定したら、雰囲気はさらに近くなってきたが、なぜか横長になった。<br>行き詰まった筆者は、ChatGPTに「これをAIで再現するならプロンプトはどうなるか」と聞いた。すると「蛍光グリーンのベタ背景」「WordArt風の文字」「写真はあえてポスターに馴染みすぎない実写」など、ものすごく長文のプロンプトを提案してくれた。<br>それを使うと、確かにかなり近づいた。<br>でも違う。バランスが良すぎるのだ。文字のバランスが良く、余白が均等だし、謎の顔文字はまん丸。どこか整っていて、心に刺さらない。<br>……そもそも、AIが書いたプロンプトをAIに入れて、私はいったい何をやってるんだ？ 世界のコンピューティングパワーと電力をこんなことに使って申し訳ない。<br>やってみて分かったのは、「なつかしい」ポスターは結局、人間のディレクションと記憶がベースになって初めて作れる、ということだ。AIは描き込みすぎるし、バランスが良すぎる。記録の参照はできても、「あの頃こういうの、あったよねえ」という本当の記憶は持っていないし、手作業らしいズレもなかなか再現できない。<br>本物の農水省ポスターは、人間が一発のアイデアでサクッと作ったように見え、配置のズレも味わい深い。人間のアイデアと手作業だけで、AIより面白くて強いモノが作れるなら、それが一番いい。電気も使わないし。農水省のポスターを見ながら、そんなことを思った。<br>Copyright © ITmedia, Inc. All Rights Reserved.<br>Special<br>PR</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-07.html" class="archive-link"><span>&#128197; 2026-07</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W28.html" class="archive-link"><span>&#128202; 2026-W28</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W27.html" class="archive-link"><span>&#128202; 2026-W27</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W26.html" class="archive-link"><span>&#128202; 2026-W26</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W25.html" class="archive-link"><span>&#128202; 2026-W25</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W24.html" class="archive-link"><span>&#128202; 2026-W24</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-07-07.html" class="archive-link"><span>2026-07-07</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-07-06.html" class="archive-link"><span>2026-07-06</span><span class="archive-count">66 articles</span></a>
-<a href="daily/2026-07-05.html" class="archive-link"><span>2026-07-05</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
-<a href="daily/2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
-<a href="daily/2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
-<a href="daily/2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
-<a href="daily/2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-07-07.html" class="archive-link active-date"><span>2026-07-07</span><span class="archive-count">39 articles</span></a>
+<a href="2026-07-06.html" class="archive-link"><span>2026-07-06</span><span class="archive-count">66 articles</span></a>
+<a href="2026-07-05.html" class="archive-link"><span>2026-07-05</span><span class="archive-count">55 articles</span></a>
+<a href="2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
+<a href="2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
+<a href="2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
+<a href="2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
+<a href="2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
+<a href="2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
+<a href="2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
+<a href="2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
+<a href="2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
+<a href="2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
+<a href="2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
