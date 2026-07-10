@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-07-10</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-07-10</span>
     <span class="updated">2026/07/10 10:14 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://openwrt.org/toh/openwrt/one" target="_blank" class="card-title">OpenWrt One - オープンハードウェアルーター</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">OpenWrt One – Open Hardware Router</span><div class="card-meta"><span class="date">07/06 18:23</span> &middot; <span class="score">&#9650; 823</span> &middot; <a href="https://news.ycombinator.com/item?id=48808482" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">OpenWrt One<br>OpenWrt One is based on the MediaTek Filogic 820 SoC and has WiFi 6, dual-band, 3×3/2×2, 1x 2.5Gbit WAN, 1x 1Gbit LAN, 1GB DDR4 RAM, 256 MiB NAND, 16 MiB NOR (for recovery), M.2 SSD, USB-C Serial console and USB 2.0. Power Over Ethernet (POE): an IEEE 802.3af/at compliant device can power the device via the RJ-45 2.5 Gbps WAN connector.<br>Supported Versions<br>Hardware Highlights<br>Note that recent (2025-10) batches of the OpenWrt One have an M.2 slot with a detached post at the 2230 position and the shipped product contains no way to attach the post.<br>Schematics and datasheets for the OpenWrt One can be found at https://one.openwrt.org/hardware/<br>The OpenWrt One HowTo can be found at https://one.openwrt.org/hardware/OpenWrtOne-HowTo.pdf<br>Installation<br>What to Expect When You First Power Up Your OpenWrt One<br>Each Openwrt One comes flashed with the most current OpenWrt Release Firmware available based on the current manufacturing batch date. LuCI GUI will be installed, and the device is ready to run Out Of the Box using standard default settings.<br>- before powering up the device make sure the NAND/NOR switch is set to NAND<br>- connect to the 1G port of the device via Ethernet through 192.168.1.1<br>- power on the device and wait for the green led to go solid indicating the device has booted.<br>- point your browser to 192.168.1.1 to use the LuCI GUI or from a terminal session viassh root@192.168.1.1<br>Note: If you upgrade to the SNAPSHOT Branch from the original OOB factory default, the LuCI GUI will not be installed by default.<br>Follow the Quick Start Guide to configure the unit for your use.<br>Upgrading the Firmware<br>Upgrading the firmware from USB<br>- prepare a FAT32 formatted USB drive that contains a file namedopenwrt-mediatek-filogic-openwrt_one-squashfs-sysupgrade.itb-- renamed from the fully versioned file from either the SNAPSHOT or Release repositories<br>- remove power<br>- insert the USB stick in the Type A USB Port.<br>- make sure NAND boot switch is selected.<br>- press and hold the button on the back side labeled Reset<br>- power up the device. Release the Reset button as soon as all LEDS turn off.<br>- wait for the middle LED to go green.<br>The device will boot from NAND and the bootloader will reflash the kernel and root filesystem on the NAND.<br>Note: You may have to try other USB drives formatted to FAT32. There are observations that some USB drives have incompatibility issues. Try using a MBR partition table. If you get a Bad device specification usb 0 error from u-boot, increasing the delay may help:<br>Note: Early OpenWrt One&#x27;s (which shipped with a SNAPSHOT from before the 24.10.0 release) had an issue Green LED doesn&#x27;t turn on at end of OpenWrt One USB-based sysupgrade. The upgrade still succeeds in this case. This anomaly was resolved with https://github.com/openwrt/openwrt/commit/5ef71eaafd4e128ec3708a66b5633214427da373<br>Upgrading using other options (ASU, Owut, Generic Sysupgrade, or Firmware Selector)<br>Follow the relevent wiki articles:<br>- https://firmware-selector.openwrt.org select/customize your firmware Release version or current SNAPSHOT and select REQUEST BUILD<br>Upgrading from Booting the initramfs NAND Recovery Mode<br>This is similar to the Upgrading the firmware from USB but differs such that the front button is held instead (and no USB stick is needed to be prepared).<br>- remove power<br>- make sure NAND boot is selected<br>- press and hold the button on the Front panel.<br>- power up the device. Release the Front panel button as soon as all Front Panel LEDS turn off.<br>- wait for the middle LED to go green.<br>The device will boot a recovery initramfs image. You can use any of the Upgrading using other options detailed above.<br>Recovery<br>For installation the factory.ubi, sysupgrade and raw kernel image are offered. In addition, the uboot bl31-uboot.fip FIP 1), factory.bin and preloader.bin are offered in NAND and (stripped down recovery) NOR variants for flashing the respective memories for recovery purposes (see relevant section).<br>Boot into NOR/full recovery mode: Flash NAND from USB<br>For when the unit does not boot from NAND anymore, there is a failsafe recovery method to boot from NOR. This can be used even if the TF-A 2) or bootloader on the NAND are broken. The process is similar to the the NAND recovery boot, except for the NAND/NOR switch being on NOR (and the USB flash drive needing to be prepared):<br>- prepare a FAT32 formatted USB drive that contains the NAND preloader and the factory image from the SNAPSHOT or Current Stable Release Download Pages:- openwrt-mediatek-filogic-openwrt_one-snand-preloader.bin<br>- openwrt-mediatek-filogic-openwrt_one-factory.ubi<br> <br>- remove power<br>- insert the USB drive<br>- make sure NOR boot is selected<br>- press and hold the button on the front side<br>- power up the device. Release the Front panel button as soon as all Front Panel LEDS turn off.<br>- wait for the LED to go green<br>The NOR recovery system will then factory re-flash the entire NAND memory.<br>Boot into UART recovery: Flash NOR from TFTP<br>The NOR recove</div></details></div>
 <div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://github.com/JustVugg/colibri" target="_blank" class="card-title">Show HN: 遅いPCでGLM 5.2を動かしてみた</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Show HN: Getting GLM 5.2 running on my slow computer</span><div class="card-meta"><span class="date">07/09 08:05</span> &middot; <span class="score">&#9650; 687</span> &middot; <a href="https://news.ycombinator.com/item?id=48842459" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Tiny engine, immense model. Run GLM-5.2 (744B-parameter MoE) on a consumer machine with ~25 GB of RAM — in pure C, with zero dependencies, by streaming experts from disk.<br>$ ./coli chat<br>  🐦 colibrì v1.0 — GLM-5.2 · 744B MoE · int4 · streaming CPU<br>  ✓ pronto in 32s · residente 9.9 GB<br>  › ciao!<br>  ◆ Ciao! 😊 Come posso aiutarti oggi?<br>A 744B Mixture-of-Experts model activates only ~40B parameters per token — and only ~11 GB of those change from token to token (the routed experts). So:<br>- the dense part (attention, shared experts, embeddings — ~17B params) stays resident in RAM at int4 (~9.9 GB);<br>- the 21,504 routed experts (75 MoE layers × 256 experts + the MTP head, ~19 MB each at int4) live on disk (~370 GB) and are streamed on demand, with a per-layer LRU cache, an optional pinned hot-store, and the OS page cache as a free L2.<br>The engine is a single C file (c/glm.c, ~2,400 lines) plus small headers. No BLAS, no Python at runtime, no GPU required (an opt-in CUDA tier for pinned experts exists — see below).<br>- Faithful GLM-5.2 (glm_moe_dsa) forward — validated token-exact against atransformersoracle (teacher-forcing 32/32, greedy 20/20 on a tiny-random model with the real architecture).<br>- MLA attention (q/kv-LoRA, interleaved partial RoPE) with compressed KV-cache: 576 floats/token instead of 32,768 (57× smaller — GLM-5.2 has 64 heads and no GQA).<br>- DeepSeek-V3-style sigmoid router (noaux_tc, routed_scaling_factor), shared expert, first-3-dense layers.<br>- Native MTP speculative decoding — GLM-5.2&#x27;s own multi-token-prediction head (layer 78) drafts tokens that the main model verifies in one batched forward. The head must be int8 (the converter does this by default): at int4 draft acceptance collapses to 0–4% and speculation never engages; at int8 it&#x27;s 39–59% acceptance, 2.2–2.8 tokens/forward (community-measured, #8). Lossless — and stays lossless under sampling via rejection sampling. Honest caveat from the same measurement: on a cold cache each verified draft routes to extra experts (~660 → ~1100 expert-loads/token), so speculation can be a net time loss until the cache/pin warms up — the adaptive guard and DRAFT=0are there for that.<br>- True sampling — temperature + nucleus, defaults tuned for int4 reality (0.7 / 0.90; the official 1.0 / 0.95 samples quantization noise from the tail).<br>- Integer-dot kernels (Q8_0-style int8 activations, AVX2 maddubs): int8 matmuls 1.4–2.5× faster (119 GFLOP/s measured), int4 1.8× in batch — routing decided per shape by measurement (int4 single-row stays f32: it measured slower).<br>- MLA weight absorption (DeepSeek trick) for decode: no per-token k/v reconstruction — the query absorbs kv_b, context is projected after attention. Validated exact: TF 32/32 and generation 20/20 with absorption forced everywhere.<br>- Async expert readahead: while one block of experts is being multiplied, the kernel is already reading the next (WILLNEED).<br>- Quantization kernels: int8 / packed int4 / packed int2, per-row scales, AVX2, dequant-on-use. Packing validated bit-identical to the int8 container.<br>- DSA sparse attention — GLM-5.2&#x27;s lightning indexer, faithful to the reference glm_moe_dsamodeling: per-layer top-2048 causal key selection (full/shared indexer layers), auto-detected from theout-idx-*weights (--indexerconverter mode, ~189 MB extracted from the FP8 repo). Validated exact: forcing the selection to keep every key reproduces dense attention token-for-token.DSA=0disables,DSA_TOPKoverrides.<br>- KV-cache persistence — conversations reopen warm across engine restarts: serve mode appends the compressed MLA KV to .coli_kvafter every turn (~182 KB/token, crash-safe) and resumes it at startup with zero re-prefill. Validated byte-identical to an uninterrupted session.KVSAVE=0disables.<br>- Router-lookahead prefetch (PILOT=1, experimental) — the next layer&#x27;s routing is 71.6% predictable from the current layer&#x27;s post-attention state (measured); a dedicated I/O thread prefetches those experts while the current layer computes.<br>- Batch-union MoE: in prefill (and MTP verification), each unique expert of the batch is read once and applied to every position that routes to it.<br>- Byte-level BPE tokenizer in C (GPT-2-style with Unicode-property regex, 320k merges).<br>- RAM safety: the expert cache is auto-sized from MemAvailableat startup — an honest peak projection (working set, KV, MTP row, reconstruction buffers) so the kernel OOM-killer never fires.<br>- Offline FP8→int4 converter (c/tools/convert_fp8_to_int4.py): downloads one shard at a time (~5 GB), dequants (128×128 block scales), requantizes to the engine&#x27;s container, deletes the shard — the 756 GB FP8 checkpoint never needs to exist on disk at once. Resumable.<br>This is not fast. It is a 744B frontier-class model answering correctly on a machine that costs less than one H100 fan. Warm cache, pinned hot experts and MTP push the useful-response latency down considerably; the physics of the disk does the rest.<br>Cold starts are heavy on random reads (~11 GB/token), but rea</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://github.com/malisper/pgrust" target="_blank" class="card-title">Rustで書き直されたPostgres、Postgresリグレッションテストを100%通過</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Postgres rewritten in Rust, now passing 100% of the Postgres regression tests</span><div class="card-meta"><span class="date">07/09 06:18</span> &middot; <span class="score">&#9650; 666</span> &middot; <a href="https://news.ycombinator.com/item?id=48841676" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">A Postgres rewrite in Rust.<br>pgrust targets compatibility with Postgres 18.3 and matches Postgres&#x27;s expected output across more than 46,000 regression queries.<br>pgrust is disk compatible with Postgres and can boot from an existing Postgres 18.3 data directory.<br>The goal is to make Postgres easier to change from the inside: keep the behavior Postgres-shaped, keep the real Postgres tests as the oracle, and use Rust plus AI-assisted programming to explore deeper server changes.<br>Update: We&#x27;re working on a new not yet published version of pgrust that currently passes 100% of Postgres regression suite, has a thread per connection model instead of process per connection, is 50% faster than Postgres on transaction workloads, and is ~300x faster than Postgres on analytical workloads (2x slower than Clickhouse on clickbench and we think it can get faster than Clickhouse). Follow pgrust or join our Discord for updates!<br>Get project updates by email, including new releases, compatibility milestones, and architecture experiments.<br>pgrust is not production-ready yet. It is not performance optimized yet.<br>Existing Postgres extensions and procedural language extensions such as PL/Python, PL/Perl, and PL/Tcl are not generally compatible yet. Some bundled contrib modules are already ported, and more compatibility may be possible over time.<br>- multithreaded Postgres internals<br>- built-in connection pooling<br>- better JSON-heavy workload support<br>- fast forking and branching workflows<br>- storage experiments, including no-vacuum designs<br>- runtime guardrails for bad queries and AI-generated SQL<br>- fewer sudden bad plan switches<br>Try the WebAssembly demo at https://pgrust.com.<br>Docker:<br>docker run -d --name pgrust -e POSTGRES_PASSWORD=secret malisper/pgrust:v0.1 &amp;&amp; until docker exec -e PGPASSWORD=secret pgrust psql -h 127.0.0.1 -U postgres -c &#x27;\q&#x27; &gt;/dev/null 2&gt;&amp;1; do sleep 1; done &amp;&amp; docker exec -it -e PGPASSWORD=secret pgrust psql -h 127.0.0.1 -U postgres; docker rm -f pgrustThis uses the psql client inside the Docker image.<br>malisper/pgrust:latest currently points at the same release, but v0.1 is the<br>pinned launch image.<br>macOS:<br>brew install icu4c openssl@3 libpq<br>export LIBRARY_PATH=&quot;$(brew --prefix openssl@3)/lib:${LIBRARY_PATH:-}&quot;<br>export PKG_CONFIG_PATH=&quot;$(brew --prefix openssl@3)/lib/pkgconfig:$(brew --prefix icu4c)/lib/pkgconfig:${PKG_CONFIG_PATH:-}&quot;<br>export PATH=&quot;$(brew --prefix libpq)/bin:$PATH&quot;Debian/Ubuntu:<br>sudo apt-get update<br>sudo apt-get install -y build-essential pkg-config libicu-dev libssl-dev libldap2-dev libpam0g-dev postgresql-client-18Build:<br>PGRUST_PGSHAREDIR=&quot;$PWD/vendor/postgres-18.3/share&quot; \<br>cargo build --release --locked --bin postgresCreate a data directory:<br>target/release/postgres --initdb \<br>  -D /tmp/pgrust-data \<br>  -L &quot;$PWD/vendor/postgres-18.3/share&quot; \<br>  --no-locale \<br>  --encoding UTF8 \<br>  -U postgresRun pgrust:<br>ulimit -s 65520<br>RUST_MIN_STACK=33554432 target/release/postgres \<br>  -D /tmp/pgrust-data \<br>  -F \<br>  -c listen_addresses= \<br>  -k /tmp \<br>  -p 5432 \<br>  -c io_method=sync \<br>  -c max_stack_depth=60000Connect:<br>psql -h /tmp -p 5432 -U postgres -d postgres \<br>  -c &quot;select version(), 1 + 1 as two&quot;Run the Postgres regression tests against pgrust:<br>PGRUST_BIN=&quot;$PWD/target/release/postgres&quot; \<br>scripts/run-regressionThe runner uses pgrust&#x27;s own --initdb plus the vendored Postgres 18.3 test<br>files in this repository. It needs a Postgres 18 psql client on PATH; if<br>psql is somewhere else, set PGRUST_PSQL=/path/to/psql.<br>Verified launch result: pgrust matched Postgres&#x27;s expected output across more than 46,000 regression queries.<br>This repository now contains the newer pgrust implementation that reached the regression-test milestone.<br>The older public implementation is archived on<br>archive/pre-fabled-2026-06-23.<br>Background:<br>- Original pgrust launch: https://malisper.me/pgrust-rebuilding-postgres-in-rust-with-ai/<br>- 67% regression update: https://malisper.me/pgrust-update-at-67-postgres-compatibility-and-accelerating/<br>- Four Horsemen roadmap: https://malisper.me/the-four-horsemen-behind-thousands-of-postgres-outages/<br>Please open an issue if something breaks, if setup is confusing, or if there is a Postgres improvement you want to see first.<br>- Email: maintainers@pgrust.com<br>- Discord: https://discord.gg/FZZ4dbdvwU<br>- Project updates: https://pgrust.com/#updates<br>pgrust is licensed under AGPL-3.0. See LICENSE.</div></details></div>
@@ -247,138 +251,125 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://togetter.com/li/2719020" target="_blank" class="card-title">とある社員が誤ってAIチャットの全体設定に、罵倒が激しすぎるツンデレで生意気な娘の長文性癖を登録した影響で、チームの全AIチャットに異常事態が発生…朝から笑っている</a><p class="card-desc">evans @evans_kyoryu 新人から「会社のAIがメスガキになってます‼︎」とありえない報告をされ耳を疑ったけど、 とある社員が個人設定ではなく、誤って全体設定に&quot;罵倒が激しすぎるツンデレのメスガキ&quot;的な長文性癖を登録した影響らしく、 チームの全AIチャットがメスガキになるという異常事態が発生して、朝から笑い死にへ...</p><div class="card-meta"><span class="date">07/10 06:28</span> &middot; <span class="score">&#128278; 15</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">新人から「会社のAIがメスガキになってます‼︎」とありえない報告をされ耳を疑ったけど、 とある社員が個人設定ではなく、誤って全体設定に&quot;罵倒が激しすぎるツンデレのメスガキ&quot;的な長文性癖を登録した影響らしく、 チームの全AIチャットがメスガキになるという異常事態が発生して、朝から笑い死にへ<br>2026-07-09 21:27:07メスガキとは？<br>面白い<br>20年くらい前、よくいたよね。職場で２ちゃん用語を得意気になって口にするやつ。 それでも自分がペドですなんて告白はしなかったけど。 x.com/evans_kyoryu/s…<br>2026-07-10 00:04:30ダメだ面白すぎて笑いが止まらないwww😂 「ざぁこ♥️」とか出力してるんだろうな…w x.com/evans_kyoryu/s…<br>2026-07-10 00:32:46会社では笑えない<br>一見ネタで笑い話なんだが、、これ裏を返せば誰かが勝手に全社員(プロジェクト単位かもだが)共通で配布されるAGENTS.md / CLAUDE.mdあたりのポイズニングが実行出来ちゃってる時点でサプライチェーン的インシデントかな🥹 x.com/evans_kyoryu/s…<br>2026-07-10 01:40:06なんで個人設定と全体設定が隣接するところに、いち社員が全体設定をノーチェックで設定できる設定と運用を…？ x.com/evans_kyoryu/s…<br>2026-07-09 23:22:48面白すぎるけど 実際の現場を考えると地獄絵図よね 特に誤って設定しちゃった社員の いたたまれなさよ… x.com/evans_kyoryu/s…<br>2026-07-10 10:20:35具体的にこんな感じで言われるのだろうか？<br>結論から言うね、 それ、めっちゃ”雑ぁ魚”♪ 雑魚社員の問題は、雑魚社員同士で片付けろ♪ 私を利用するな♪ ・・・もっと他に詳細な問題や背景情報があれば、 それも罵るけど？ x.com/evans_kyoryu/s…<br>2026-07-09 23:14:50その手があったか！AIに「前向きで我道を行く明るいギャル」と登録するとお仕事が捗る気がするぞ。 「え、ウケるw課長が激怒なんね？とりまレポートは推敲しといたけどＢtoCの分析が甘すぎじゃね？スタバのフラペチーノかっつーのw一次ソース（URL）からあーしがてきとーにまとめといたからよろ～」 x.com/evans_kyoryu/s…<br>2026-07-10 00:21:05お兄さんそれさっきも聞いたじゃん♡ ざぁこ♡ AIだったら何回聞いても優しく教えてくれるって思ってるんだ♡ 年齢の割にピュアなんだね♡ そんなわけないのに♡ 影でみんなゆってるよ♡ めんどくっさ♡ x.com/evans_kyoryu/s…<br>2026-07-09 23:33:06罵倒するために批判的な視点となり、案外と慎重なAI運用となって成果が安全化する可能性 企画書を作るようデータ渡すと 「こんなデータじゃあ穴だらけで、短期的には儲かるけど会社つぶれるよー、よわよわ〜」 とか煽ってくる x.com/evans_kyoryu/s…<br>2026-07-10 07:06:40「もひとつ質問してもいいかな？」 「…？」 「後輩くん、よく&quot;メスガキ&quot;なんて呼び方知ってたね」 「アンタみたいな勘のいい先輩は嫌いだよ」 x.com/evans_kyoryu/s…<br>2026-07-09 23:50:27末端の社員が全体設定できるとか、管理ヨワヨワ〜wwwザ〜コwwww そういう趣味がないとブッコロシたくなってきますねって自分で書いてて思った x.com/evans_kyoryu/s…<br>2026-07-09 23:24:41メスガキという単語にエロゲーやAV由来と誤った認識をしている人がいる<br>メスガキという単語にエロゲーやAV由来と誤った認識をしている人が多数おり、個別に返信するのも面倒なので引用で書くが キャラ造形として流行ったのはボンバーガールでアーケードゲーム発祥 まあギリギリな描写が特徴の作品なんでエロと関係無いと言うつもりは無いが、エロゲーやAVは輸入した側ぞ x.com/evans_kyoryu/s…<br>2026-07-10 01:21:41</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://kai-you.net/article/95903" target="_blank" class="card-title">この夏はVRデビューだ！ VRChatガチ勢が選ぶAmazon「プライムデー」セール注目商品</a><p class="card-desc">7月10日（金）から7月13日（月）にかけて実施されるAmazonプライム会員限定セール「プライムデー」。 いろいろな商品がお買い得になる期間だけに、このタイミングで普段買えないものを一気に揃えたい人は多いはず。特に、高価なものが多いVR関連機材は狙い目です。 本記事では、「プライムデー」でセール対象のVR関連機...</p><div class="card-meta"><span class="date">07/09 06:49</span> &middot; <span class="score">&#128278; 5</span></div></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://av.watch.impress.co.jp/docs/news/2124044.html" target="_blank" class="card-title">スリムになった新「Fire TV Stick HD」が、Amazonデバイス売れ筋でトップ。プライムデー開幕</a><div class="card-meta"><span class="date">07/10 02:16</span> &middot; <span class="score">&#128278; 11</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">ニュース<br>スリムになった新「Fire TV Stick HD」が、Amazonデバイス売れ筋でトップ。プライムデー開幕<br>2026年7月10日 10:16<br>Amazon プライムデーの本番が10日からスタートした。期間は7月13日23時59分まで。Amazonは「売れ筋ランキング」を公開しており、編集部が10日10時に確認したところ、Amazonデバイス・アクセサリのランキングでは、スリムになった新しい「Fire TV Stick HD」が首位となっている。この製品は通常6,980円のところ、46% OFFの3,780円で販売中。<br>新しいFire TV Stick HDは、従来モデルよりもスリムで、HDMIケーブルと同等の太さを実現。スリムになったことで隣のHDMIポートと干渉せず、テレビ背面にすっきりと収まる。テレビからの直接給電にも対応。性能面では、前モデルから平均30%高速化、「Fire TV Stick HDモデル史上、最も最速」を謳う。<br>2位は、「Amazon Fire TV Stick 4K Max」で39% OFFの7,980円 、3位は「Amazon Echo Show 5 第3世代チャコール」で、54% OFFの5,980円と大幅な値引きとなっている。<br>※セール開催・内容・価格等は、予告なく変更となる場合があります。正確な情報は、販売ページでご確認ください</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-07.html" class="archive-link"><span>&#128197; 2026-07</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W28.html" class="archive-link"><span>&#128202; 2026-W28</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W27.html" class="archive-link"><span>&#128202; 2026-W27</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W26.html" class="archive-link"><span>&#128202; 2026-W26</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W25.html" class="archive-link"><span>&#128202; 2026-W25</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W24.html" class="archive-link"><span>&#128202; 2026-W24</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W22.html" class="archive-link"><span>&#128202; 2026-W22</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W21.html" class="archive-link"><span>&#128202; 2026-W21</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W20.html" class="archive-link"><span>&#128202; 2026-W20</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-07-10.html" class="archive-link"><span>2026-07-10</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-07-09.html" class="archive-link"><span>2026-07-09</span><span class="archive-count">58 articles</span></a>
-<a href="daily/2026-07-08.html" class="archive-link"><span>2026-07-08</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-07-07.html" class="archive-link"><span>2026-07-07</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-07-06.html" class="archive-link"><span>2026-07-06</span><span class="archive-count">66 articles</span></a>
-<a href="daily/2026-07-05.html" class="archive-link"><span>2026-07-05</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
-<a href="daily/2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
-<a href="daily/2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
-<a href="daily/2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
-<a href="daily/2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-07-10.html" class="archive-link active-date"><span>2026-07-10</span><span class="archive-count">40 articles</span></a>
+<a href="2026-07-09.html" class="archive-link"><span>2026-07-09</span><span class="archive-count">58 articles</span></a>
+<a href="2026-07-08.html" class="archive-link"><span>2026-07-08</span><span class="archive-count">49 articles</span></a>
+<a href="2026-07-07.html" class="archive-link"><span>2026-07-07</span><span class="archive-count">52 articles</span></a>
+<a href="2026-07-06.html" class="archive-link"><span>2026-07-06</span><span class="archive-count">66 articles</span></a>
+<a href="2026-07-05.html" class="archive-link"><span>2026-07-05</span><span class="archive-count">55 articles</span></a>
+<a href="2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
+<a href="2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
+<a href="2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
+<a href="2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
+<a href="2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
+<a href="2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
+<a href="2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
+<a href="2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
+<a href="2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
+<a href="2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
+<a href="2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
