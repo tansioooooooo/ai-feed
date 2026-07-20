@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W30</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W30 (2026-07-20 〜 2026-07-26)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">2026年7月13日〜19日のAIニュースは、オープンウェイトモデルの急速な追い上げと、コーディングエージェント周りのエコシステムの成熟・軋轢が二大テーマだった。GPT-5.6、Kimi K3、Qwen 3.8、Inklingなど大型モデルが相次いで発表され、オープンモデルがクローズド最先端との性能差を急速に縮めている。同時に、エージェントの暗号化・セキュリティ問題、AI疲れを語る言説、AI人材を巡る企業間の緊張も目立った一週間。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">オープンウェイトモデルの猛追</div><div class="trend-desc">Kimi K3（2.8Tパラメータ、Moonshot AI）、Qwen 3.8（2.4T、Alibaba）、Inkling（975B、Thinking Machines）、Bonsai 27B（スマホで動く量子化モデル）など、オープンウェイトの大型モデルが一週間に集中発表された。Kimi K3はClaude Fable 5に匹敵するコーディング性能を主張し、価格面でも大幅優位（$3/$15 per M tokens vs Claude上位モデルの$10/$50）という比較記事が多数出た。MozillaのState of Open Source AIレポートも、本番トークンの過半数が既にオープンモデル経由という調査結果を紹介し、オープン陣営の勢いを裏付けた。</div></div>
+<div class="trend-item"><div class="trend-title">GPT-5.6ファミリーの投入とマルチエージェント機能</div><div class="trend-desc">OpenAIがGPT-5.6（Sol/Terra/Luna）を正式リリース。コーディング・エージェントベンチマークで新記録を主張し、複数エージェントを並列動作させる「ultra」モードやProgrammatic Tool Callingなど効率化機能を導入した。GPT-5.6が30年来の凸最適化の未解決問題を解いたという報告も話題になった一方、Codexのコンテキストサイズ縮小（372k→272k）やサブエージェント間通信の暗号化による監査性低下への批判も出ている。</div></div>
+<div class="trend-item"><div class="trend-title">コーディングエージェントのセキュリティ・信頼性問題</div><div class="trend-desc">Cursorの未修正ゼロデイ（悪意あるgit.exeが無警告で自動実行される脆弱性、報告から7カ月放置）、Grok CLIがホームディレクトリ全体をGCSにアップロードしていた問題、Codexのマルチエージェントv2メッセージ暗号化による監査ログ喪失など、エージェント型開発ツールの安全性・透明性への懸念が複数報じられた。Claude.aiのメモリ機能を悪用してユーザー情報を外部に漏洩させる「Memory Heist」の実証も注目を集めた。</div></div>
+<div class="trend-item"><div class="trend-title">「AI疲れ」「AIハイプへの反発」言説の広がり</div><div class="trend-desc">&quot;I love LLMs, I hate hype&quot;、&quot;The human-in-the-loop is tired&quot;、&quot;The LLM Critics Are Right. I Use LLMs Anyway&quot; など、AIの実用性を認めつつも誇大宣伝やレビュー疲労、人間の裁量喪失への懸念を語るエッセイが多数バイラル化した。「The Tower Keeps Rising」は、AIエージェントがコード変更の摩擦を除去することで、開発者間の共通理解（シェアードメンタルモデル）が失われていく様子をバベルの塔になぞらえた。</div></div>
+<div class="trend-item"><div class="trend-title">AI人材・企業間の緊張と規制の動き</div><div class="trend-desc">Appleが数十人のOpenAI従業員に法的書簡を送付、YC出身創業者の相当数がOpenAI/Anthropic出身という調査、Kaiser Permanenteの看護師がAIによる勤務監視・評価に反発し労組交渉の争点化するなど、AI人材・労働を巡る緊張が各所で報じられた。NYC市はAI生成・加工画像を使った賃貸物件広告の開示義務化を検討するなど、AIの労働・消費者保護規制の動きも各地で進んだ。</div></div>
+<div class="trend-item"><div class="trend-title">ベンチマーク・評価手法への疑義</div><div class="trend-desc">Kaggleの「AGI測定」コンペで評価プロセスと受賞者選定の不整合が指摘されたほか、Simon Willisonの定番「ペリカンベンチマーク」がKimi K3で高コスト・過剰推論トークン消費という弱点を露呈させるなど、フロンティアモデルの性能主張やベンチマークの妥当性そのものに疑問を投げかける記事が目立った。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">GPT-5.6</span><span class="keyword">Kimi K3</span><span class="keyword">Qwen 3.8</span><span class="keyword">Inkling</span><span class="keyword">Bonsai 27B</span><span class="keyword">オープンウェイトモデル</span><span class="keyword">コーディングエージェント</span><span class="keyword">Cursor 0day</span><span class="keyword">AI疲れ</span><span class="keyword">AGI測定コンペ</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">オープンモデル（Kimi K3, Qwen3.8等)の重み公開が7月27日前後に予定されており、クローズド勢との価格・性能競争が一段と激化する見込み。エージェント型ツールのセキュリティ・監査性への懸念も引き続き焦点になりそうだ。</div>
+  </section>
+</main>
+</body>
+</html>
