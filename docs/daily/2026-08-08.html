@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Feed</title>
+<title>Tech Feed - 2026-08-08</title>
 <style>:root {
   --bg: #0f0f13;
   --surface: #1a1a22;
@@ -149,12 +149,15 @@ main { padding: 16px 24px; max-width: 900px; }
 @media (max-width: 600px) {
   header, main { padding-left: 16px; padding-right: 16px; }
   .tab { padding: 8px 12px; font-size: 12px; }
-}</style>
+}
+.active-date { border-color: var(--accent); color: var(--accent); }
+</style>
 </head>
 <body>
 <header>
   <div class="header-top">
-    <h1>Tech Feed</h1>
+    <h1><a href="../index.html">Tech Feed</a></h1>
+    <span class="subtitle">2026-08-08</span>
     <span class="updated">2026/08/08 07:40 UTC</span>
   </div>
   <div class="tabs">
@@ -167,6 +170,7 @@ main { padding: 16px 24px; max-width: 900px; }
   </div>
 </header>
 <main>
+  <a href="../index.html" class="back-link">&larr; Latest</a>
   <div id="panel-all" class="panel active"><div class="cards"><div class="card" data-source="hackernews" data-category="ai"><div class="card-source" style="color:#ff6600">HN<span style="color:#7c6af7;margin-left:8px;font-weight:600">AI</span></div><a href="https://www.seangoedecke.com/llms-reward-expertise/" target="_blank" class="card-title">LLMは専門知識に報いる</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">LLMs reward expertise</span><div class="card-meta"><span class="date">08/03 21:13</span> &middot; <span class="score">&#9650; 1405</span> &middot; <a href="https://news.ycombinator.com/item?id=49161518" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">LLMs reward expertise<br>In the 2010s, if you had technical gaps (say, you couldn’t write CSS), you had to either rely on a skilled colleague or just hope that the answer to your exact problem was out there on the internet. Today, everyone can write sort-of-okay CSS by delegating the task to an LLM. LLMs make everybody into a generalist.<br>Because of this, lots of people don’t think there’s any skill involved in working with LLMs. If you want the product that LLMs can deliver — PhD-level mathematics, pretty good but sometimes tasteless computer code, or awkward LinkedIn-style writing — you can simply ask for it. Since everyone is talking to the same models, “skilled prompters” are getting the same results as people touching LLMs for the first time.<br>This is wrong. The most important skill in prompting is expertise in the domain you’re prompting for.<br>A good illustration of this is Terence Tao’s conversation with ChatGPT about the recently-discovered counterexample to the Jacobian Conjecture. This is not the same ChatGPT I talk to! I couldn’t get to where Tao gets, even with unlimited tokens to burn.<br>There’s a lot to learn about good prompting from Tao’s conversation. Here are a few observations:<br>- Tao’s messages are very short and to-the-point. He doesn’t respond point-by-point to the model, just to the gist<br>- The model outputs are much more concise than when I try and talk to GPT-5.6 Sol about mathematics. By signalling expertise, Tao shunts the model into “talking-to-mathematicians” mode, not “explaining-to-amateurs” mode<br>- Tao pushes back when the model’s responses look wrong, but he doesn’t directly contradict; instead, he says things like “this looks more complex than I was hoping for”<br>- Tao makes several leaps and suggestions himself. He almost never takes the model’s advice about where to go next<br>However, you can’t prompt like Tao on mathematical questions just by following these tips. The key to his technique is actually understanding the mathematics: pulling the relevant idea out of ChatGPT’s multi-paragraph response, suggesting alternate approaches or formulations, and identifying what “looks weird”.<br>Terence Tao is a better mathematician than I am a programmer. But the idea here — that domain knowledge makes you better at using LLMs — is something I’ve also experienced in my own work. If you have a good theory of your codebase, you can push the LLM much harder than if you have no familiarity. Because you have your own sense of what a good solution might look like, you can say “no, I think it could be simpler here”, or “but don’t we already do X?”, or “can we express this problem in these familiar terms?“.<br>This touches on an idea I’ve written about before: that system design problems are dominated by concrete specifics, not generic principles. Of course both are useful, but I’d rather have familiarity with the codebase than a deep general understanding of software systems. In his conversation, Terence Tao asks a lot of specific questions like “does X work here?”, or “given Y and Z, why A?“. I can’t ask those questions about the Jacobian Conjecture, but I can ask them about the systems I own at GitHub.<br>If you have no domain knowledge, you can cling onto the LLM to at least get something. That’s not bad! But if you have domain knowledge, you can wring far more value out of the same LLM by steering it hard in the direction you want. Most of us will have to do a mix of both these approaches, since we have domain knowledge in some areas but not others.<br>The usefulness of domain knowledge suggests that human expertise will continue to be useful even as models get stronger. For many tasks, the human is the bottleneck, not the model, because the difficult part is in communicating to the model exactly what kind of solution the human wants. The information is “in the model” already, but it takes a very smart human to pull it out.<br>edit: this post got many comments on Hacker News. Some commenters share their anecdotes about how expertise has helped and lack of expertise has hurt. Other commenters say it’s plausible, but they have a sensible suspicion of a view that’s reassuring them about how they’re still valuable. I agree with that, though I suspect by the time we get around to studying this, the landscape will have changed under our feet again. Some commenters point out that OpenAI’s math prompts were inexpert, and so expertise isn’t required. Here I’d respond that OpenAI do have a team of expert mathematicians that checked and filtered the model’s suggested discoveries, and that you cannot currently skip that step.<br>If you liked this post, consider subscribing to email updates about my new posts, or sharing it on Hacker News.<br>Here&#x27;s a preview of a related post that shares tags with this one.<br>Powerful AIs might escape containment by releasing themselves as open-weight models<br>Before large language models, people who worried about AI safety often talked about the “boxing problem”. It goes like this. Suppose some geniu</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://birchtree.me/blog/xbox-goes-down-you-cant-play-games-you-own-on-disc/" target="_blank" class="card-title">Xboxがダウン、ディスク版のゲームすら遊べなくなる</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Xbox goes down. You can&#x27;t play games you own on disc</span><div class="card-meta"><span class="date">08/04 12:01</span> &middot; <span class="score">&#9650; 711</span> &middot; <a href="https://news.ycombinator.com/item?id=49167448" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">Xbox goes down. You can&#x27;t play games you own on disc.<br>Jay Peters: Xbox’s huge outage even blocked games on disc<br>An extended Xbox outage that began Sunday evening hasn’t just caused issues for people trying to play digital games — it blocked people from playing their disc-based games, too.<br>When Sony announced that they were discontinuing physical discs for PlayStation, I was less outraged than many. The reason I felt this way wasn&#x27;t because I loved what Sony was doing. I think it came from an understanding that physical media ain&#x27;t what it used to be.<br>I got an analog pocket a couple years ago, and I think it&#x27;s an awesome product. I was able to insert my Game Boy cartridges from 20 years ago and was able to play them immediately, just like I did back then. Well, on a backlit screen with 10x the pixel density, but still.<br>The impression I get is that a lot of people have this vision in their head for what physical media still is today, and it simply isn&#x27;t. Sure, I technically didn&#x27;t own Golden Sun on the GBA. I technically had a license, but for all intents and purposes, I owned that game. And the evidence is, without Nintendo authorizing anything, I&#x27;m able to play it on a new piece of hardware, and it works great. No network downtime is gonna prevent me from doing that.<br>But owning a game on a disc today isn&#x27;t really the same thing. It&#x27;s still just a license, and Microsoft, Sony, and Nintendo can either intentionally or, in this case, unintentionally prevent you from playing that game, even if you own the physical copy. This isn&#x27;t even to mention the fact that when you pop the disc in your drive, you&#x27;re not playing from the disc. It&#x27;s installing it to your internal hard drive and is probably installing a bunch of updates that are required to make the game actually work at all.<br>All I&#x27;m saying is it&#x27;s all digital on the PC side of things, and has been for ages, but we have means of maintaining access to the games we love over here, and it&#x27;s one of the reasons I&#x27;ve gravitated to the PC for quite a while now.</div></details></div>
 <div class="card" data-source="hackernews" data-category="tech"><div class="card-source" style="color:#ff6600">HN<span style="color:#4a9eff;margin-left:8px;font-weight:600">テクノロジー</span></div><a href="https://toneyalexander.github.io/inclusive-color-space/" target="_blank" class="card-title">Show HN: 多様な肌の色を生成するシンプルなアルゴリズムと色空間</a><span style="color:var(--muted);font-size:11px;display:block;margin-bottom:4px">Show HN: Simple algorithm and color space to generate diverse skin tones</span><div class="card-meta"><span class="date">08/04 15:16</span> &middot; <span class="score">&#9650; 620</span> &middot; <a href="https://news.ycombinator.com/item?id=49170165" target="_blank" class="comment-link">comments &rarr;</a></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">│<br>What is each direction on the picker adjusting? Jump to that explanation here.<br>If you&#x27;re just looking for the results, below is a custom color picker based on the color space written in Javascript and a sample procedural generation algorithm in Python (Javascript equivalents are in the page source) - feel free to take this math and go have fun depicting our diverse world!<br>The goal of this project was to define a color space that makes it easier to build inclusive color tools for a variety of contexts - such as character creators or digital art. If you see something here that sparks your curiosity, I would love for you to stick around and read below this section to learn more!<br># Plug the output of one of the select_point implementations into to_rgb(t, u, v)<br>def select_point(r_square: float = 2.) -&gt; tuple[float, float, float]:<br>    &quot;&quot;&quot;Uniformly sample from the sphere deterministically&quot;&quot;&quot;<br>    radius = r_square ** (1. / 2)<br>    phi = uniform(0, 2 * math.pi)<br>    costheta = uniform(-1, 1)<br>    n = uniform(0, 1)<br>    theta = math.acos(costheta)<br>    r = radius * (n ** (1.0 / 3))<br>    t = r * math.sin(theta) * math.cos(phi)<br>    u = r * math.sin(theta) * math.sin(phi)<br>    v = r * math.cos(theta)<br>    return (t, u, v)<br>def select_point(r_square: float = 2.) -&gt; tuple[float, float, float]:<br>    &quot;&quot;&quot;Uniformly sample from the sphere using rejection sampling&quot;&quot;&quot;<br>    radius = r_square ** (1. / 2)<br>    R = radius + 1<br>    while R &gt; radius:<br>        t = uniform(-radius, radius)<br>        u = uniform(-radius, radius)<br>        v = uniform(-radius, radius)<br>        R = (t**2 + u**2 + v**2) ** (1.0 / 2)<br>    return (t, u, v)<br>def to_rgb(t, u, v) -&gt; tuple[int, int, int]:<br>    x = (t - 0.15) / 0.45<br>    y = (v - 1.2 * t ** 2 + 0.2 * t + 0.655) / 1.84<br>    z = u / 3.6<br>    r = 28.77438370854 * x + 36.78307445559 * y - 19.69766918644 * z + 187.1436241611<br>    g = 35.38327306318 * x - 2.009931981182 * y + 47.93462563172 * z + 137.1073825503<br>    b = 36.14733717939 * x - 43.54346996173 * y - 28.50821294135 * z + 108.2241610738<br>    return int(r), int(g), int(b)<br>What colors are we? The short answer is maybe something like “brown” and the long answer is very, very long. Representing the broad range of human skin tones digitally is a hard problem. Often, a limited set of colors is presented as being good enough to cover the full spectrum of diversity. However, in using a specific set of colors, large groups of people are unable to accurately be represented, or might be unintentionally excluded.<br>The goal of this work is to identify the broadest inclusive range of colors in the RGB color space that correspond to plausible, but simplified skin tones. In particular, the aim was to identify simple, “good enough” equations which define that area, allowing the range to be used in a variety of contexts. Calling the equations &quot;good enough&quot; is intended to keep the limitations of this work at the forefront - the results are a useful starting point, but should not be taken to be authoritative.<br>Although there have been improvements in the set of colors that are presented as representative of us, there&#x27;s still a gap that needs to be closed. Emojis say we&#x27;re 5 shades (or cartoon-yellow); a makeup brand might say 50; and a character creator might shrug and tell you to pick from all 16,777,216 options. If you look outside - or just at yourself - you&#x27;ll quickly notice that none of those can compare to the variety of reality; one person is not just one color. Despite that, it can be useful to try to boil things down to fewer values. The Unicode Consortium and makeup companies can figure out their own ranges, but I believe we can find a better solution that&#x27;s somewhere between &quot;several&quot; and &quot;several million.&quot;<br>Taking the digital art world as an example, images such as the one below are often circulated in an attempt to assist other artists in identifying plausible colors.<br>In the video game world, nowadays the preset colors are often wide ranging and supplemented with a general color picker, but it would be even better if the initial experience presented better options.<br>Taking a step back to reality, this work has a number of inherent limitations.<br>As mentioned before, skin tones are much more complicated than a single color. They vary widely between different areas of the body and are subject to complex biological processes. The perceived color of the skin is affected by blood flow, concentrations of melanin, complex scattering of light through the layers of the skin, as well as things like vitiligo, freckles, hyperpigmentation, scarring, and other common variations.<br>Secondly, a variety of health conditions can cause people to have skin tones that are well outside what might be perceived as plausible. Argyria can often lead to skin that is blue-gray in color; high bilirubin can cause skin to be yellowish or greenish.<br>Additionally, it&#x27;s important to note that I am one person, not a researcher, and subject to my own general biases on top of my own perception of color. As far as I am aw</div></details></div>
@@ -241,168 +245,154 @@ main { padding: 16px 24px; max-width: 900px; }
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://anond.hatelabo.jp/20260807233039" target="_blank" class="card-title">ブックマーカー図鑑 3298 人収録　気づけば3000人超えてたよ 収録予定 http..</a><p class="card-desc">ブックマーカー図鑑 3298 人収録　気づけば3000人超えてたよ 収録予定 https://bookmarker-encyclopedia.netlify.app/queue.md 仕組みと仕様 LLMに渡してるプロンプトを記載 https://bookmarker-encyclopedia.netlify.app/how-it-works/ ChatGPT APIとかいろいろ試したけど結局Ch</p><div class="card-meta"><span class="date">08/07 14:35</span> &middot; <span class="score">&#128278; 468</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">ChatGPT APIとかいろいろ試したけど結局ChatGPT Chatに戻ったよ<br>API 高すぎ！<br>Terraですら1人あたり17円、Solなら30円超えちゃう！1000人で17000円ですよ！破産しちゃう！<br>その点ChatGPT ChatはSolでも使い放題素晴らしいね😉毎回クリックするのは地獄だけど😨<br>ブクマカなんてアクティブなのは、せいぜい1000人くらいと思ってたけど、結構いるもんだな<br>ブクマカのアイコン直リンクしてもええやろ！とけしかけた者ですが ここまで多くなってくると少しだけCDNにも気を使ってあげると地球に優しい気がしてきていて、 Intersection Observer API...<br>https://anond.hatelabo.jp/20260720235850 上の有能増田のおかげでリクエストしやすくなったのも大きい。 非表示にするべきか一つの指標になるから、続けられるだけ続けてほしい。<br>AIの需要 けっきょく有料版はあまり伸びないのかしらね、とふと思うなどする<br>熱愛ランキングほんとすき。自分の好きなブクマカ同士が見つかると壁になりたくなる。<br>収益ガン無視でPoC作れるのが個人開発の醍醐味だから応援してる ただ、手を広げすぎるとパンクする可能性あるので、機能追加しすぎたり、ビジネス化したりは、できるロードマップが...</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://www.asahi.com/articles/ASV8723PZV87UCVL05TM.html" target="_blank" class="card-title">世界に衝撃与えたリズムマシンTR-808　開発者は「当初は酷評」：朝日新聞</a><p class="card-desc">1980年に発売されて販売不振などで2年間で生産が終わったのに、今も世界のミュージシャンを魅了している日本製の電子楽器がある。ローランドが生産した、ドラムや手拍子、カウベルなど16種類の音が鳴らせる…</p><div class="card-meta"><span class="date">08/08 00:47</span> &middot; <span class="score">&#128278; 76</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">1980年に発売されて販売不振などで2年間で生産が終わったのに、今も世界のミュージシャンを魅了している日本製の電子楽器がある。ローランドが生産した、ドラムや手拍子、カウベルなど16種類の音が鳴らせるリズムマシン「TR-808」だ。生楽器のリアルな音の再現を目指した結果生まれたユニークな音が愛され、ヒップホップやテクノなどの音楽ジャンルの発展に貢献。ポップ音楽のヒット曲にも使われてきた。<br>開発を主導したローランド元社長の菊本忠男さん（84）は「酷評され、自分も長らく存在を忘れていた。でも、新しい音楽を作ろうとしていた人たちがハッピーアクシデントを起こしてくれた」と語る。開発をめぐるエピソードなどを聞いた。<br>元ローランド社長の菊本忠男さん 「ハッピーアクシデントでした」<br>――毎年8月8日になると、X（旧ツイッター）で「＃808DAY」というハッシュタグとともに、この楽器への思いを語る人たちがたくさんいます。そもそも808はどんなふうに生まれたのですか?<br>1970年代後半、ローランド創業者で社長（当時）の梯郁太郎さんが、アメリカ出張で「リアルな音がするリズムマシンが千ドル以下で発売できれば、現地に大きなマーケットがある」という情報を仕入れてきました。「音楽制作スタジオで、ドラマーを雇わなくてもレコーディングできて人件費が節約できるから、きっと売れる」と。<br>当時、現地で実際の打楽器の音をサンプリングした「Linn LM-1 Drum Computer」というリズムマシンが出る、という情報がありました。でも、5千ドルくらいする。梯さんは「同じようなものをもっと安く作れないか」というのですが、自分たちで作ったら1万ドルになると分かった。それではとてもローランドの製品にならない。<br>シンセサイザーメーカーの誇りを胸に アナログな手法で開発開始<br>そこで考えました。「LM-1」が出せるのは、楽器の生音をもとにした音だけ。ならば、シンセサイザーメーカーであるローランドは「ユーザーが自分で好きに音を作れるリズムマシンを開発したらどうでしょう」と。すると、「まあ、それでいってみようか」ということになったんです。<br>でも予想以上に難しかった。リアルで生々しい音にならず、そのまま1980年に発売しました。<br>――音はどうやって作ったんですか?<br>アナログな方法です。まずはオシロスコープで楽器や人間の手拍子の音の波形を分析して、大型のモジュラーシンセサイザー「SYSTEM-700」でサイン波や矩形波（くけいは）、ノイズなどを組み合わせて作りました。その音を、TR-808に内蔵したアナログ電子回路で再現できるようにしました。<br>ハンドクラップ（手拍子）は「リアルではないが周囲の評価は良かった」<br>――「うまくいった」と思える音は？<br>「ハンドクラップ」（手拍子）はリアルな音とはいえませんが、「まあ面白いかな」と思って入れたら最初から周囲の評価が良かったですね。<br>本物よりパリッとした、乾いたような音。大勢で同時にたたいた時のように「パラパラ」という音が4回鳴るようにして、ホワイトノイズ（サーッという白色雑音）に似たノイズで「パーン」という残響を表現しましたね。<br>――このハンドクラップの音は、ソウル音楽を代表するミュージシャン、マーヴィン・ゲイ（1939～84）の世界的ヒット曲「セクシャル・ヒーリング」（82年）で効果的に使われていますね。<br>YMOの「千のナイフ」（81年のアルバム「BGM」に収録されたバージョン）のイントロでも、ハンドクラップを16小節も鳴らしていますよ。<br>バスドラムは「評判が悪かった」ものの、のちに「アイデアルな音」に<br>――では、他の音は?<br>バスドラムは評判が悪かったです。いくらやってもリアルにならず、時間切れになりました。ところが、結果的には多くの人に愛される「アイデアル」（理想的）な音になったのですね。<br>――バスドラムの音は、ヒップホップ文化の先駆者として知られる米国のミュージシャン、アフリカ・バンバータ（1957～2026）らが電子音楽を導入した大ヒット曲「プラネット・ロック」（82年）で使われたことが世界的に有名です。<br>この音は大きなスピーカーで出すと、「ドン」というものすごい重低音が出るんです。<br>当時のステージで使われていたようなドラムは、もっとアタック（音の立ち上がり）ではじけるような音。実際の楽器とは全く違うものの、それが「ダンスミュージック」向きの理想的な音だった、ということなのでしょうね。<br>体に響く重低音 ミュージシャンたちが自在に活用<br>私がこの重低音の本来のすごさを実感したのは約5年前です。大きなスピーカーで鳴らしたのを聞いたら、おなかにまで響いてきた。「人間が本来求めている音なのかもしれない」と思いました。<br>この音を「悪魔の音」だと表現した敬虔（けいけん）なクリスチャンがいた、というエピソードを聞いたことがあります。教会でパイプオルガンの音が響いた時のような重低音で、ダンスフロアで聞くのは冒瀆（ぼうとく）だというんですね。「重低音というのは、宗教的な音でもあるんだ」と感じました。<br>――808にはユーザーが音を変えられる機能もあり、バスドラムの音は「DECAY(ディケイ）」というつまみをひねると長く伸ばせますね。さらに本物とは違う音になっていくわけですが……。<br>あくまでシンセサイザーとして作ったので、使う人が自分で音を変えられるようにしたかった。関係者に「ありえない音を出すなんてみっともないからやめて」「楽器メーカーが出す機械がこういう妙な音を出すのは良くない」と言われましたが、私は「嫌なら使わなければいいじゃないか」ということで付けた。そうしたら、ミュージシャンたちがこの機能を使い始めたんですよ。<br>音を伸ばすだけでなく、808の音を録音・加工して音程をつけてベースラインとして使われました。そんな使い方は予測していなかった。まさにハッピーアクシデントです。<br>でもね、梯さんと私は、自由に音をつくれる可能性をお客さんに提案することが電子楽器メーカーの務めだと思っていました。シンセサイザーとは「新しい音」を追求する機械なのですから。<br>菊本さんは1977 年から 2009 年までローランドに勤務し社長や技術開<br>発担当専務取締役などを歴任。名機として知られる「TR-909」（1983年発売）の開発も主導しました。記事後半では、808が1982年に生産終了となった後、海外のミュージシャンたちが独創的な使い方をしていることを知った時の心境や、「音づくり」「芸術」「重低音」についての思いもたっぷりお聞きしました。<br>演奏中につまみをぐるぐると…</div></details></div>
 <div class="card" data-source="hatena" data-category="neta"><div class="card-source" style="color:#008fde">Hatena<span style="color:#f7a94a;margin-left:8px;font-weight:600">ネタ系</span></div><a href="https://gigazine.net/news/20260807-dress-made-of-living-mycelium/" target="_blank" class="card-title">生きた菌糸で作られた「自ら傷を修復するドレス」が登場、汚れをはじき色やUV保護機能も追加可能</a><p class="card-desc">中国科学院深圳先進技術研究院などの研究チームが、生きた菌糸を利用し、表面の再生や損傷の修復が可能な「生きた布」を開発しました。異なる微生物を組み合わせることで着色や紫外線保護といった機能も追加でき、実際にこの素材を使ったドレスも試作されています。 A programmable fungal platform for engineered livi...</p><div class="card-meta"><span class="date">08/07 07:47</span> &middot; <span class="score">&#128278; 14</span></div><details style="margin-top:10px"><summary style="cursor:pointer;color:var(--accent);font-size:12px;user-select:none">📄 本文を読む</summary><div style="margin-top:10px;line-height:1.85;font-size:13px;color:var(--text);border-top:1px solid var(--border);padding-top:10px">生きた菌糸で作られた「自ら傷を修復するドレス」が登場、汚れをはじき色やUV保護機能も追加可能<br>中国科学院深圳先進技術研究院などの研究チームが、生きた菌糸を利用し、表面の再生や損傷の修復が可能な「生きた布」を開発しました。異なる微生物を組み合わせることで着色や紫外線保護といった機能も追加でき、実際にこの素材を使ったドレスも試作されています。<br>A programmable fungal platform for engineered living textiles | Science Advances<br>https://www.science.org/doi/10.1126/sciadv.aed6937<br>Dress made of living mycelium can renew and repair itself<br>https://www.dezeen.com/2026/08/05/dress-living-mycelium-renew-repair/<br>研究チームが開発したのは、生きた細胞を材料の一部として利用する「Engineered Living Material(ELM)」の一種です。菌糸由来の素材は包装材や建築、繊維などですでに利用されていますが、従来は乾燥や加熱などによって菌を死滅させ、成長しない安定した素材に加工することが一般的でした。今回の研究では、最終的な素材になった後も菌糸の生物学的な働きを利用できるようにしています。<br>研究チームはC. militaris(サナギタケ)の胞子を液体中で培養し、菌糸が集まった小さなペレットを作製しました。これを型に入れて45度で6時間乾燥させることでシート状に固め、さらにグリセリンを加えて柔軟性を高めています。<br>グリセリンを10％加えたサンプルでは未処理のものより延性が50±8％向上し、折ったりねじったりしても割れにくい布状の素材になりました。<br>特徴的なのが、加工後にも菌糸の活動を利用できる点です。栄養液を与えると菌糸が再び成長して表面を覆い、栄養液を与える場所を限定すれば模様を描くように菌糸を成長させることもできます。損傷した部分に新しい菌糸ペレットを詰めて栄養を与える実験では菌糸が隙間を覆い、接着剤などを使わずに表面を再生できました。さらに、修復を10回繰り返した後も、素材の変形しにくさを示すヤング率は元の約89％を維持していたとのこと。<br>成長した菌糸の表面は水を強くはじくため、汚れを含んだ水滴を置いて傾けると、水滴は表面をぬらさずに滑り落ちました。研究チームは、フッ素化合物などによるコーティングを追加することなく、菌糸そのものの構造と撥水性によって自己洗浄機能を実現できるとしています。<br>さらに研究チームは、菌糸そのものを染料で染めるのではなく、色素を作るように遺伝子改変した酵母を組み合わせることで着色する仕組みを開発しました。4種類の酵母を用意することで淡い青・赤・オレンジ・濃い紫を作り出せるほか、異なる酵母を一定の割合で混ぜることで中間色も作ることができます。これらの酵母を菌糸と共培養すると、菌糸素材そのものを着色でき、柔軟性などの機械的性質にも大きな影響は見られませんでした。<br>一方、メラニンを多く含むA. nigerを表面に成長させると、紫外線を吸収する保護層になります。UV-Cを3時間照射する実験では、この菌糸層で覆われた下に置かれた胞子はほぼ通常通り発芽したのに対し、保護されていない胞子では発芽率が大きく低下しました。<br>そして、研究チームはこうした機能を組み合わせた試作ドレスも製作しました。以下がドレスのデザイン画。<br>そして実際に作られたドレスがこれ。ドレス本体には酵母によって青く着色した約20枚の菌糸素材が使用され、襟には栄養によって模様を付けた素材、裾には自己洗浄性を持つ菌糸を密生させた花びら状の素材が配置されています。<br>また、この素材で作った小型の箱を土に埋めたところ、41日以内に形状がほぼ完全に分解されました。ただし、製造時の環境負荷がゼロというわけではなく、ライフサイクル評価では培養前処理の水や栄養分、培地の廃棄、グリセリンの製造などが大きな負荷要因になることも示されています。<br>研究チームは、記事作成時点では日常的な衣服としてすぐ実用化できる段階ではないと述べています。研究を率いたケ・リー氏は、コンセプトファッションやアクセサリー、装飾用繊維、展示物、生分解性包装などへの利用を挙げる一方、一般的な衣服や恒久的な建築材料として使うには、耐久性や耐湿性、安全性、製造品質の安定性をさらに改善する必要があるとしています。<br>in サイエンス, デザイン, Posted by log1i_yk<br>You can read the machine translated English article A &#x27;self-healing dress&#x27; made from living ….</div></details></div></div></div>
-  <div class="archive-section"><h2>Trend Reports</h2><div class="archive-list"><a href="monthly/2026-08.html" class="archive-link"><span>&#128197; 2026-08</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-07.html" class="archive-link"><span>&#128197; 2026-07</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-06.html" class="archive-link"><span>&#128197; 2026-06</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-05.html" class="archive-link"><span>&#128197; 2026-05</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-04.html" class="archive-link"><span>&#128197; 2026-04</span><span class="archive-count">月次レポート</span></a>
-<a href="monthly/2026-03.html" class="archive-link"><span>&#128197; 2026-03</span><span class="archive-count">月次レポート</span></a>
-<a href="weekly/2026-W32.html" class="archive-link"><span>&#128202; 2026-W32</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W31.html" class="archive-link"><span>&#128202; 2026-W31</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W30.html" class="archive-link"><span>&#128202; 2026-W30</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W29.html" class="archive-link"><span>&#128202; 2026-W29</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W28.html" class="archive-link"><span>&#128202; 2026-W28</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W27.html" class="archive-link"><span>&#128202; 2026-W27</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W26.html" class="archive-link"><span>&#128202; 2026-W26</span><span class="archive-count">週次レポート</span></a>
-<a href="weekly/2026-W25.html" class="archive-link"><span>&#128202; 2026-W25</span><span class="archive-count">週次レポート</span></a></div></div>
-  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="daily/2026-08-08.html" class="archive-link"><span>2026-08-08</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-08-07.html" class="archive-link"><span>2026-08-07</span><span class="archive-count">61 articles</span></a>
-<a href="daily/2026-08-06.html" class="archive-link"><span>2026-08-06</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-08-05.html" class="archive-link"><span>2026-08-05</span><span class="archive-count">58 articles</span></a>
-<a href="daily/2026-08-04.html" class="archive-link"><span>2026-08-04</span><span class="archive-count">58 articles</span></a>
-<a href="daily/2026-08-03.html" class="archive-link"><span>2026-08-03</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-08-02.html" class="archive-link"><span>2026-08-02</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-08-01.html" class="archive-link"><span>2026-08-01</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-07-31.html" class="archive-link"><span>2026-07-31</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-07-30.html" class="archive-link"><span>2026-07-30</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-07-29.html" class="archive-link"><span>2026-07-29</span><span class="archive-count">63 articles</span></a>
-<a href="daily/2026-07-28.html" class="archive-link"><span>2026-07-28</span><span class="archive-count">65 articles</span></a>
-<a href="daily/2026-07-27.html" class="archive-link"><span>2026-07-27</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-07-26.html" class="archive-link"><span>2026-07-26</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-07-25.html" class="archive-link"><span>2026-07-25</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-07-24.html" class="archive-link"><span>2026-07-24</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-07-23.html" class="archive-link"><span>2026-07-23</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-07-22.html" class="archive-link"><span>2026-07-22</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-07-21.html" class="archive-link"><span>2026-07-21</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-07-20.html" class="archive-link"><span>2026-07-20</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-07-19.html" class="archive-link"><span>2026-07-19</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-07-18.html" class="archive-link"><span>2026-07-18</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-07-17.html" class="archive-link"><span>2026-07-17</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-07-16.html" class="archive-link"><span>2026-07-16</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-07-15.html" class="archive-link"><span>2026-07-15</span><span class="archive-count">61 articles</span></a>
-<a href="daily/2026-07-14.html" class="archive-link"><span>2026-07-14</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-07-13.html" class="archive-link"><span>2026-07-13</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-07-12.html" class="archive-link"><span>2026-07-12</span><span class="archive-count">61 articles</span></a>
-<a href="daily/2026-07-11.html" class="archive-link"><span>2026-07-11</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-07-10.html" class="archive-link"><span>2026-07-10</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-07-09.html" class="archive-link"><span>2026-07-09</span><span class="archive-count">58 articles</span></a>
-<a href="daily/2026-07-08.html" class="archive-link"><span>2026-07-08</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-07-07.html" class="archive-link"><span>2026-07-07</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-07-06.html" class="archive-link"><span>2026-07-06</span><span class="archive-count">66 articles</span></a>
-<a href="daily/2026-07-05.html" class="archive-link"><span>2026-07-05</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
-<a href="daily/2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
-<a href="daily/2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
-<a href="daily/2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
-<a href="daily/2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
-<a href="daily/2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
-<a href="daily/2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
-<a href="daily/2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
-<a href="daily/2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
-<a href="daily/2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
-<a href="daily/2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
-<a href="daily/2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
-<a href="daily/2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
-<a href="daily/2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
-<a href="daily/2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
-<a href="daily/2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
-<a href="daily/2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
-<a href="daily/2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
-<a href="daily/2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
-<a href="daily/2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
-<a href="daily/2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
-<a href="daily/2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
-<a href="daily/2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
-<a href="daily/2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
-<a href="daily/2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
-<a href="daily/2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
-<a href="daily/2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
-<a href="daily/2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
-<a href="daily/2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
-<a href="daily/2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
-<a href="daily/2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
-<a href="daily/2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
-<a href="daily/2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
-<a href="daily/2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
+  <div class="archive-section"><h2>Archive</h2><div class="archive-list"><a href="2026-08-08.html" class="archive-link active-date"><span>2026-08-08</span><span class="archive-count">37 articles</span></a>
+<a href="2026-08-07.html" class="archive-link"><span>2026-08-07</span><span class="archive-count">61 articles</span></a>
+<a href="2026-08-06.html" class="archive-link"><span>2026-08-06</span><span class="archive-count">37 articles</span></a>
+<a href="2026-08-05.html" class="archive-link"><span>2026-08-05</span><span class="archive-count">58 articles</span></a>
+<a href="2026-08-04.html" class="archive-link"><span>2026-08-04</span><span class="archive-count">58 articles</span></a>
+<a href="2026-08-03.html" class="archive-link"><span>2026-08-03</span><span class="archive-count">57 articles</span></a>
+<a href="2026-08-02.html" class="archive-link"><span>2026-08-02</span><span class="archive-count">43 articles</span></a>
+<a href="2026-08-01.html" class="archive-link"><span>2026-08-01</span><span class="archive-count">44 articles</span></a>
+<a href="2026-07-31.html" class="archive-link"><span>2026-07-31</span><span class="archive-count">57 articles</span></a>
+<a href="2026-07-30.html" class="archive-link"><span>2026-07-30</span><span class="archive-count">57 articles</span></a>
+<a href="2026-07-29.html" class="archive-link"><span>2026-07-29</span><span class="archive-count">63 articles</span></a>
+<a href="2026-07-28.html" class="archive-link"><span>2026-07-28</span><span class="archive-count">65 articles</span></a>
+<a href="2026-07-27.html" class="archive-link"><span>2026-07-27</span><span class="archive-count">53 articles</span></a>
+<a href="2026-07-26.html" class="archive-link"><span>2026-07-26</span><span class="archive-count">40 articles</span></a>
+<a href="2026-07-25.html" class="archive-link"><span>2026-07-25</span><span class="archive-count">50 articles</span></a>
+<a href="2026-07-24.html" class="archive-link"><span>2026-07-24</span><span class="archive-count">59 articles</span></a>
+<a href="2026-07-23.html" class="archive-link"><span>2026-07-23</span><span class="archive-count">52 articles</span></a>
+<a href="2026-07-22.html" class="archive-link"><span>2026-07-22</span><span class="archive-count">51 articles</span></a>
+<a href="2026-07-21.html" class="archive-link"><span>2026-07-21</span><span class="archive-count">59 articles</span></a>
+<a href="2026-07-20.html" class="archive-link"><span>2026-07-20</span><span class="archive-count">60 articles</span></a>
+<a href="2026-07-19.html" class="archive-link"><span>2026-07-19</span><span class="archive-count">50 articles</span></a>
+<a href="2026-07-18.html" class="archive-link"><span>2026-07-18</span><span class="archive-count">45 articles</span></a>
+<a href="2026-07-17.html" class="archive-link"><span>2026-07-17</span><span class="archive-count">50 articles</span></a>
+<a href="2026-07-16.html" class="archive-link"><span>2026-07-16</span><span class="archive-count">51 articles</span></a>
+<a href="2026-07-15.html" class="archive-link"><span>2026-07-15</span><span class="archive-count">61 articles</span></a>
+<a href="2026-07-14.html" class="archive-link"><span>2026-07-14</span><span class="archive-count">52 articles</span></a>
+<a href="2026-07-13.html" class="archive-link"><span>2026-07-13</span><span class="archive-count">57 articles</span></a>
+<a href="2026-07-12.html" class="archive-link"><span>2026-07-12</span><span class="archive-count">61 articles</span></a>
+<a href="2026-07-11.html" class="archive-link"><span>2026-07-11</span><span class="archive-count">46 articles</span></a>
+<a href="2026-07-10.html" class="archive-link"><span>2026-07-10</span><span class="archive-count">51 articles</span></a>
+<a href="2026-07-09.html" class="archive-link"><span>2026-07-09</span><span class="archive-count">58 articles</span></a>
+<a href="2026-07-08.html" class="archive-link"><span>2026-07-08</span><span class="archive-count">49 articles</span></a>
+<a href="2026-07-07.html" class="archive-link"><span>2026-07-07</span><span class="archive-count">52 articles</span></a>
+<a href="2026-07-06.html" class="archive-link"><span>2026-07-06</span><span class="archive-count">66 articles</span></a>
+<a href="2026-07-05.html" class="archive-link"><span>2026-07-05</span><span class="archive-count">55 articles</span></a>
+<a href="2026-07-04.html" class="archive-link"><span>2026-07-04</span><span class="archive-count">48 articles</span></a>
+<a href="2026-07-03.html" class="archive-link"><span>2026-07-03</span><span class="archive-count">46 articles</span></a>
+<a href="2026-07-02.html" class="archive-link"><span>2026-07-02</span><span class="archive-count">53 articles</span></a>
+<a href="2026-07-01.html" class="archive-link"><span>2026-07-01</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-30.html" class="archive-link"><span>2026-06-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-29.html" class="archive-link"><span>2026-06-29</span><span class="archive-count">56 articles</span></a>
+<a href="2026-06-28.html" class="archive-link"><span>2026-06-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-27.html" class="archive-link"><span>2026-06-27</span><span class="archive-count">46 articles</span></a>
+<a href="2026-06-26.html" class="archive-link"><span>2026-06-26</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-25.html" class="archive-link"><span>2026-06-25</span><span class="archive-count">50 articles</span></a>
+<a href="2026-06-24.html" class="archive-link"><span>2026-06-24</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-23.html" class="archive-link"><span>2026-06-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-22.html" class="archive-link"><span>2026-06-22</span><span class="archive-count">63 articles</span></a>
+<a href="2026-06-21.html" class="archive-link"><span>2026-06-21</span><span class="archive-count">52 articles</span></a>
+<a href="2026-06-20.html" class="archive-link"><span>2026-06-20</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-19.html" class="archive-link"><span>2026-06-19</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-18.html" class="archive-link"><span>2026-06-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-06-17.html" class="archive-link"><span>2026-06-17</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-16.html" class="archive-link"><span>2026-06-16</span><span class="archive-count">62 articles</span></a>
+<a href="2026-06-15.html" class="archive-link"><span>2026-06-15</span><span class="archive-count">69 articles</span></a>
+<a href="2026-06-13.html" class="archive-link"><span>2026-06-13</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-12.html" class="archive-link"><span>2026-06-12</span><span class="archive-count">77 articles</span></a>
+<a href="2026-06-09.html" class="archive-link"><span>2026-06-09</span><span class="archive-count">54 articles</span></a>
+<a href="2026-06-08.html" class="archive-link"><span>2026-06-08</span><span class="archive-count">59 articles</span></a>
+<a href="2026-06-07.html" class="archive-link"><span>2026-06-07</span><span class="archive-count">45 articles</span></a>
+<a href="2026-06-06.html" class="archive-link"><span>2026-06-06</span><span class="archive-count">67 articles</span></a>
+<a href="2026-06-04.html" class="archive-link"><span>2026-06-04</span><span class="archive-count">36 articles</span></a>
+<a href="2026-06-03.html" class="archive-link"><span>2026-06-03</span><span class="archive-count">47 articles</span></a>
+<a href="2026-06-02.html" class="archive-link"><span>2026-06-02</span><span class="archive-count">57 articles</span></a>
+<a href="2026-06-01.html" class="archive-link"><span>2026-06-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-31.html" class="archive-link"><span>2026-05-31</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-30.html" class="archive-link"><span>2026-05-30</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-29.html" class="archive-link"><span>2026-05-29</span><span class="archive-count">54 articles</span></a>
+<a href="2026-05-28.html" class="archive-link"><span>2026-05-28</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-27.html" class="archive-link"><span>2026-05-27</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-26.html" class="archive-link"><span>2026-05-26</span><span class="archive-count">55 articles</span></a>
+<a href="2026-05-25.html" class="archive-link"><span>2026-05-25</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-24.html" class="archive-link"><span>2026-05-24</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-23.html" class="archive-link"><span>2026-05-23</span><span class="archive-count">46 articles</span></a>
+<a href="2026-05-22.html" class="archive-link"><span>2026-05-22</span><span class="archive-count">43 articles</span></a>
+<a href="2026-05-21.html" class="archive-link"><span>2026-05-21</span><span class="archive-count">47 articles</span></a>
+<a href="2026-05-20.html" class="archive-link"><span>2026-05-20</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-19.html" class="archive-link"><span>2026-05-19</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-18.html" class="archive-link"><span>2026-05-18</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-17.html" class="archive-link"><span>2026-05-17</span><span class="archive-count">49 articles</span></a>
+<a href="2026-05-16.html" class="archive-link"><span>2026-05-16</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-15.html" class="archive-link"><span>2026-05-15</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-14.html" class="archive-link"><span>2026-05-14</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-13.html" class="archive-link"><span>2026-05-13</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-12.html" class="archive-link"><span>2026-05-12</span><span class="archive-count">57 articles</span></a>
+<a href="2026-05-11.html" class="archive-link"><span>2026-05-11</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-10.html" class="archive-link"><span>2026-05-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-05-09.html" class="archive-link"><span>2026-05-09</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-08.html" class="archive-link"><span>2026-05-08</span><span class="archive-count">53 articles</span></a>
+<a href="2026-05-07.html" class="archive-link"><span>2026-05-07</span><span class="archive-count">41 articles</span></a>
+<a href="2026-05-06.html" class="archive-link"><span>2026-05-06</span><span class="archive-count">52 articles</span></a>
+<a href="2026-05-05.html" class="archive-link"><span>2026-05-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-05-04.html" class="archive-link"><span>2026-05-04</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-03.html" class="archive-link"><span>2026-05-03</span><span class="archive-count">48 articles</span></a>
+<a href="2026-05-02.html" class="archive-link"><span>2026-05-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-05-01.html" class="archive-link"><span>2026-05-01</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-30.html" class="archive-link"><span>2026-04-30</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-29.html" class="archive-link"><span>2026-04-29</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-28.html" class="archive-link"><span>2026-04-28</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-27.html" class="archive-link"><span>2026-04-27</span><span class="archive-count">60 articles</span></a>
+<a href="2026-04-26.html" class="archive-link"><span>2026-04-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-25.html" class="archive-link"><span>2026-04-25</span><span class="archive-count">46 articles</span></a>
+<a href="2026-04-24.html" class="archive-link"><span>2026-04-24</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-23.html" class="archive-link"><span>2026-04-23</span><span class="archive-count">48 articles</span></a>
+<a href="2026-04-22.html" class="archive-link"><span>2026-04-22</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-21.html" class="archive-link"><span>2026-04-21</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-20.html" class="archive-link"><span>2026-04-20</span><span class="archive-count">80 articles</span></a>
+<a href="2026-04-15.html" class="archive-link"><span>2026-04-15</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-14.html" class="archive-link"><span>2026-04-14</span><span class="archive-count">53 articles</span></a>
+<a href="2026-04-13.html" class="archive-link"><span>2026-04-13</span><span class="archive-count">44 articles</span></a>
+<a href="2026-04-12.html" class="archive-link"><span>2026-04-12</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-11.html" class="archive-link"><span>2026-04-11</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-10.html" class="archive-link"><span>2026-04-10</span><span class="archive-count">45 articles</span></a>
+<a href="2026-04-09.html" class="archive-link"><span>2026-04-09</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-08.html" class="archive-link"><span>2026-04-08</span><span class="archive-count">52 articles</span></a>
+<a href="2026-04-07.html" class="archive-link"><span>2026-04-07</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-06.html" class="archive-link"><span>2026-04-06</span><span class="archive-count">49 articles</span></a>
+<a href="2026-04-05.html" class="archive-link"><span>2026-04-05</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-04.html" class="archive-link"><span>2026-04-04</span><span class="archive-count">47 articles</span></a>
+<a href="2026-04-03.html" class="archive-link"><span>2026-04-03</span><span class="archive-count">50 articles</span></a>
+<a href="2026-04-02.html" class="archive-link"><span>2026-04-02</span><span class="archive-count">51 articles</span></a>
+<a href="2026-04-01.html" class="archive-link"><span>2026-04-01</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-31.html" class="archive-link"><span>2026-03-31</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-30.html" class="archive-link"><span>2026-03-30</span><span class="archive-count">52 articles</span></a>
+<a href="2026-03-29.html" class="archive-link"><span>2026-03-29</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-28.html" class="archive-link"><span>2026-03-28</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-27.html" class="archive-link"><span>2026-03-27</span><span class="archive-count">44 articles</span></a>
+<a href="2026-03-26.html" class="archive-link"><span>2026-03-26</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-25.html" class="archive-link"><span>2026-03-25</span><span class="archive-count">53 articles</span></a>
+<a href="2026-03-24.html" class="archive-link"><span>2026-03-24</span><span class="archive-count">51 articles</span></a>
+<a href="2026-03-23.html" class="archive-link"><span>2026-03-23</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-22.html" class="archive-link"><span>2026-03-22</span><span class="archive-count">54 articles</span></a>
+<a href="2026-03-21.html" class="archive-link"><span>2026-03-21</span><span class="archive-count">49 articles</span></a>
+<a href="2026-03-20.html" class="archive-link"><span>2026-03-20</span><span class="archive-count">48 articles</span></a>
+<a href="2026-03-19.html" class="archive-link"><span>2026-03-19</span><span class="archive-count">47 articles</span></a>
+<a href="2026-03-18.html" class="archive-link"><span>2026-03-18</span><span class="archive-count">46 articles</span></a>
+<a href="2026-03-17.html" class="archive-link"><span>2026-03-17</span><span class="archive-count">73 articles</span></a>
+<a href="2026-03-16.html" class="archive-link"><span>2026-03-16</span><span class="archive-count">69 articles</span></a>
+<a href="2026-03-15.html" class="archive-link"><span>2026-03-15</span><span class="archive-count">36 articles</span></a>
+<a href="2026-03-14.html" class="archive-link"><span>2026-03-14</span><span class="archive-count">39 articles</span></a>
+<a href="2026-03-13.html" class="archive-link"><span>2026-03-13</span><span class="archive-count">40 articles</span></a>
+<a href="2026-03-12.html" class="archive-link"><span>2026-03-12</span><span class="archive-count">37 articles</span></a>
+<a href="2026-03-11.html" class="archive-link"><span>2026-03-11</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-10.html" class="archive-link"><span>2026-03-10</span><span class="archive-count">27 articles</span></a>
+<a href="2026-03-09.html" class="archive-link"><span>2026-03-09</span><span class="archive-count">25 articles</span></a>
+<a href="2026-03-08.html" class="archive-link"><span>2026-03-08</span><span class="archive-count">29 articles</span></a>
+<a href="2026-03-07.html" class="archive-link"><span>2026-03-07</span><span class="archive-count">30 articles</span></a>
+<a href="2026-03-06.html" class="archive-link"><span>2026-03-06</span><span class="archive-count">31 articles</span></a></div></div>
 </main>
 <script>function switchTab(id, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
