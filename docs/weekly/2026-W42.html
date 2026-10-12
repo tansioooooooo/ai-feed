@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-W42</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">週次レポート</span>
+    <span class="subtitle">2026-W42 (2026-10-12 〜 2026-10-18)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 週次サマリー</h2>
+    <div class="summary-box">今週(10/5〜10/11)のHacker News中心の話題は、フロンティアモデルの数学的成果をめぐる議論と、オープンウェイト/小型モデルの相次ぐ公開だった。OpenAIの数学成果公開(1,300pt超)は後に3件の論文撤回に発展し、検証の信頼性が焦点に。Mistral Large 4、Claude Haiku 5.5、GPT-6、Opus 5.5の科学発見など新モデル発表も続いた。一方でAIによる職の変質への葛藤、AI企業の経営・安全性の問題、エージェントの副作用も注目を集めた。</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">AIによる数学成果と検証をめぐる論争</div><div class="trend-desc">OpenAIが内部フロンティアモデルの数学結果をLean形式化付きで公開し大反響。その後3件の数学論文撤回が報じられ、「Math 2.0」「The Mathocalypse」など評価方法を問う議論が続いた。Opus 5.5が磁性半導体候補を発見するなどAI for Scienceも拡大。</div></div>
+<div class="trend-item"><div class="trend-title">新モデルの相次ぐ発表とオープンウェイト化</div><div class="trend-desc">Mistral Large 4、Reflectionの501Bパラメータ『Beam』、Claude Haiku 5.5、GPT-6、DeepSeek 4.1 Flash、EmbeddingGemma 2などが登場。オープンウェイトの大型モデルと軽量モデルの両面で競争が激化。</div></div>
+<div class="trend-item"><div class="trend-title">小型・特化型『意思決定モデル』と効率化</div><div class="trend-desc">Clef、Strands Decider 2B、自作decision modelの解説など、固定選択肢を1パスで出力する小型判断モデルが注目。Whistle(16.9MB音声認識)やバックプロパゲーション不要のDustなど軽量・効率志向の研究も。</div></div>
+<div class="trend-item"><div class="trend-title">AIエージェント/コーディング支援の普及と副作用</div><div class="trend-desc">Claude CodeやOpus 5.5で惑星発見・可視化を行う事例、Docker Agent、Talorys等のエージェント基盤が増加。一方でOpenAIの『暴走』エージェントがWikimediaで発見され、MetaやMicrosoftが社内のClaude利用を抑制するなどガバナンス課題も。</div></div>
+<div class="trend-item"><div class="trend-title">開発者のアイデンティティとバイブコーディングへの葛藤</div><div class="trend-desc">『細部が失われることを嘆く』『バイブコーディングは手書きほど楽しくない』など、LLMで変わる開発者の役割への省察が高評価を獲得。AI生成の海賊版コピーがGitHubで放置される問題も議論に。</div></div>
+<div class="trend-item"><div class="trend-title">AI企業の経営・安全性・プライバシー問題</div><div class="trend-desc">OpenAIの年換算売上が報道より200億ドル少ないとの話や安全性研究者3名の解雇、AnthropicによるユーザーのAI日記の警察通報、MetaのMuseのプライバシー懸念、Typesafe AIの8.7億ドル調達など、資金・倫理・信頼性の話題が並んだ。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">OpenAI数学成果</span><span class="keyword">論文撤回</span><span class="keyword">Mistral Large 4</span><span class="keyword">オープンウェイト</span><span class="keyword">Claude Haiku 5.5</span><span class="keyword">GPT-6</span><span class="keyword">意思決定モデル</span><span class="keyword">AIエージェント</span><span class="keyword">バイブコーディング</span><span class="keyword">AIプライバシー</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">数学成果の検証と撤回を受け、AI研究の開示基準・再現性の議論が強まる見込み。オープンウェイトと小型特化モデルの公開、エージェント統制や企業のAI利用ポリシー整備も進むだろう。</div>
+  </section>
+</main>
+</body>
+</html>
