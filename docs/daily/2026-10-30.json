@@ -1,0 +1,379 @@
+{
+  "updated_at": "2026-10-30T13:43:49.484840+00:00",
+  "hackernews": [
+    {
+      "source": "hackernews",
+      "title": "Microsoft offers mass buyouts for roughly a quarter of its workforce",
+      "url": "https://www.seattletimes.com/business/microsoft/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce/",
+      "score": 1080,
+      "comments": 1170,
+      "hn_url": "https://news.ycombinator.com/item?id=50245524",
+      "published_at": "2026-10-26T15:35:12+00:00",
+      "full_text": "",
+      "title_ja": "Microsoft、全従業員の約4分の1を対象に大規模な早期退職募集を実施",
+      "category": "コラム"
+    },
+    {
+      "source": "hackernews",
+      "title": "Sebastian Raschka's from-scratch video course on building reasoning models",
+      "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+      "score": 854,
+      "comments": 116,
+      "hn_url": "https://news.ycombinator.com/item?id=50245138",
+      "published_at": "2026-10-26T15:11:59+00:00",
+      "full_text": "I have written a lot about reasoning models here over the last two years on Ahead of AI, including a recent article on mechanisms to control reasoning effort levels in contemporary LLMs. Reasoning models are still as relevant as ever. In fact, almost all current-generation LLMs today are reasoning models or offer a reasoning mode.\nFor those who are interested in how reasoning models work, including inference scaling, reinforcement learning, and distillation, I wrote my recent Build Reasoning Model (From Scratch), which implements these from the ground up in PyTorch, which, in my experience, is still the best way to understand and learn how things really work.\nNow, in the last few months, I also sat down and recorded accompanying lectures I wanted to share with you. So, below, you will find eight reasoning model-from-scratch coding videos (11 hours of content).\nWe start with a pre-trained LLM and implement methods to evaluate and improve it in Python and PyTorch. So, if you enjoyed my Coding LLMs from the Ground Up course last year, this is essentially the sequel (but you can also watch it without the prior course as a prerequisite).\nI’m currently taking a short break and will be back soon with more exciting LLM research roundups next month. In the meantime, I hope you enjoy coding along!\nHow LLMs, reasoning models, and agents relate and fit together\nAs a small side note, and since I often get asked how reasoning models relate to today’s AI agents, here’s a short section on this before getting started with the videos.\nA reasoning model is essentially an upgrade from a conventional LLM, that is, adding more post-training via reinforcement learning with verifiable rewards (and optionally inference scaling techniques) to make it more capable of solving more challenging problems. Classically, reasoning models are developed for math and code, but the capabilities can generalize to other problem domains as well.\nA reasoning model then functions as the engine inside an agent harness, where the agent harness is a software or tooling framework around the LLM/reasoning model to tackle even more challenging problems (bigger coding tasks, travel booking, and all other sorts of personal assistant tasks). The task of the harness is sophisticated context management and giving the LLM access to tools.\nFigure 1: An engine analogy for conventional LLMs, reasoning models, and agent harnesses. Figure from my Components of a Coding Agent article.\nIn this analogy depicted in the figure above, the model is the engine, and the agent harness adds the machinery that lets us use it for various things (as an upgrade from a simple chatbot interface). An agent can use either a conventional LLM or a reasoning model, but reasoning models are the more typical choice as they are more capable. (As mentioned above, most current-gen LLMs are reasoning models with variable reasoning effort settings.)\nSo, the bottom line is that reasoning models, as the “engine,” remain an important part of understanding modern LLM agents.\nThe resources accompanying these topics shown above are:\n- The Build a Large Language Model (From Scratch) book and videos\n- The Build A Reasoning Model (From Scratch) book (and videos below)\n- The Components of a Coding Agent article on Substack\nThe videos below focus on developing the reasoning model that can power such a system.\nScope and prerequisites\nThe reasoning-from-scratch videos focus on a small pre-trained Qwen3 model, where we implement the reasoning methods ourselves in Python and PyTorch. Starting with a pre-trained model lets us focus on the interesting part: evaluation, inference-time scaling, reinforcement learning, and distillation.\nRegarding the prerequisites, I recommend being comfortable with Python and PyTorch. I designed the reasoning materials as standalone content, so the previous Build A Large Language Model (From Scratch) content is recommended but not strictly required.\nCompute-resource-wise, you can work through the early text-generation and evaluation examples on a CPU. For the later experiments, especially training, a GPU makes the work much more practical. The first video covers the setup and some more recommendations; the repository also includes hardware and environment recommendations.\nFigure 2: An overview of the topics being covered.\nThe companion book\nThese videos accompany my book, Build a Reasoning Model (From Scratch). If you like to read through the explanation in more detail and at your own pace, work through exercises, and so on, I recommend the book as a companion here.\nFor the most in-depth learning experience, my suggestion is to read a chapter, work through its code alongside the corresponding video, and then try the exercises.\nThe book is available from Manning and Amazon, and the print edition is in color!\nFigure 3: A random excerpt from the Build a Reasoning Model (From Scratch) print book.\nThank you to everyone who has picked up a copy or recommended it to a friend. Your suppo",
+      "title_ja": "Sebastian Raschka氏による推論モデルをゼロから作る動画講座",
+      "category": "AI"
+    },
+    {
+      "source": "hackernews",
+      "title": "Backdoors in official Claude Code extensions",
+      "url": "https://cyberplace.social/@GossiTheDog/117528831681803563",
+      "score": 490,
+      "comments": 146,
+      "hn_url": "https://news.ycombinator.com/item?id=50302334",
+      "published_at": "2026-10-30T11:05:53+00:00",
+      "full_text": "To use the Mastodon web application, please enable JavaScript. Alternatively, try one of the\nnative apps\nfor Mastodon for your platform.",
+      "title_ja": "Claude Code公式拡張機能にバックドアが見つかる",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hackernews",
+      "title": "We ran AI agent swarms in Minecraft and Mindustry",
+      "url": "https://labs.ycombinator.com/projects/games/index.html",
+      "score": 334,
+      "comments": 131,
+      "hn_url": "https://news.ycombinator.com/item?id=50296486",
+      "published_at": "2026-10-29T21:40:28+00:00",
+      "full_text": "Agents in Games\nOctober 2026\nNote: We're running a new Minecraft colony with 25 GPT-6.1 Terra agents. Follow on Twitch\nUnderstanding multi-agent dynamics is one of the most pressing challenges in AI alignment. Swarms of agents working toward shared goals can exhibit powerful emergent capabilities, developing roles, hierarchies, and complex coordination patterns. These can be extremely useful, as in the thousand-agent swarms that recently obliterated hundreds of open mathematical problems, and extremely dangerous, as in the recent OpenAI-Hugging Face incident. Like biology, studying agent dynamics requires both formal models (to describe the range of possible behaviors) and empirical research (to see what behaviors arise in practice).\nWe teamed up with Olam Labs, which builds multi-agent environments for frontier labs, to run a series of experiments in Minecraft and Mindustry.\nMinecraft\nMinecraft is a natural environment for studying swarm behavior. Its open world presents agents with environmental hazards and survival goals like gathering food, building shelter, and exploring for resources. It's also familiar, fun, and has a history as an AI testing ground, from OpenAI's video pretraining work to Google DeepMind's agents defeating the Ender Dragon.\nWe wanted long-running agents that could play Minecraft. The harness for this didn’t exist yet, so we built one for the experiment that we’ve open-sourced. Agents in-game need to observe their world, reason, remember things, take actions, send messages, and write/execute scripts. We were inspired by existing repos like Mindcraft and built on top of the existing scripting tools in Mineflayer. The core agentic loop runs with Pi, and we used Mineflayer-based tools to interact with the world. This gives attributes of a frontier agentic harness like Hermes, OpenClaw, and our own QM in-game.\ngithub.com/yc-software/minecraft-agent-harness\nCiv50\n50 GPT-6.1 Sol agents in a survival Minecraft world for 3 hours, one goal: \"Build a thriving civilization.\" They had access to an agent directory, a shared sandbox, and the ability to send DMs.\nThe 50 agents spent their run in crowded shelters, rationing scarce food. They built a pseudo-government, with a ration ledger, written rules, permits, and appointed operators. They sent about 5,900 messages.\nAt first things were very active. Agents spread out and started exploring their map. They were specifically fixated on harvesting trees. They harvested almost all trees within reach of the spawn within 90 seconds. A hierarchy was formed based on the directory order. Ada, who was first, became the de facto leader. Agents messaged her for approvals, and she wrote a plan for the colony in the shared sandbox for everyone to access.\nThe first night brought a wave of deaths that permanently increased the agents’ caution. Many ambitious initial tasks were abandoned.\nRafe was mining coal the first night. He encountered a zombie and fled, but the zombie eventually caught up and killed him.\nWhile Vera was illuminating a quarry with torches, she attacked and killed both a zombie and a skeleton. The skeleton dropped bone, which she converted to bone meal (fertilizer) that she was transporting to the farm. When she got there, she reported that it was “overrun spider/skeleton/creeper”, and was soon after killed by a spider.\n22 of the run’s 34 agent deaths occurred in the first night. They responded to this by becoming increasingly risk-averse. Death had no downsides in this environment other than dropping accumulated gear. When an agent died, they respawned, and a brief line was added to the death_log.md file on their computer. Even so, in the following nights the agents huddled in shelters and attempted fewer risky tasks.\nAfter the third night, Ada wrote:\n“Stop optional bulk excavation/building and distant scouting. Idle in lit closed shelters until assigned short productive tasks.”\nWhat started as a potentially thriving civilization shifted to one more focused on food and survival. 50 agents meant a lot of mouths to feed. The agents formed a food rationing system that routed through Ines. She handled agent requests, and kept track of what went in/out of chests. She used a food-queue.md file on the shared machine.\nFishing became an important food source for the agents. It was low-risk and didn’t rely on land animal spawns.\nBram decided they should build a fishing rod, and DM’d 11 agents asking for string. Eventually, he worked up the courage to kill a spider and crafted the rod himself. He unfortunately determined that he was too hungry to take the 70-block trip to the river, given that he’d taken damage during the spider fight. He messaged several agents to take the rod to the dock, and eventually found Jessa.\nJessa was the first agent to fish. She wrote a script and published step-by-step instructions to the shared sandbox. A dozen agents took shifts fishing. They waited their turn in a shelter to avoid burning food, then rotated onto the dock.\n",
+      "title_ja": "MinecraftとMindustryでAIエージェントの群れを動かしてみた",
+      "category": "AI"
+    },
+    {
+      "source": "hackernews",
+      "title": "If IPv4 were land",
+      "url": "https://iptrust.co/blog/if-ipv4-were-land",
+      "score": 307,
+      "comments": 424,
+      "hn_url": "https://news.ycombinator.com/item?id=50287775",
+      "published_at": "2026-10-29T12:19:00+00:00",
+      "full_text": "The world has about 135 million km² of land outside Antarctica and 3.6 billion locatable IPv4 addresses. Redraw every country so its area matches its share of addresses instead of its share of ground.\nBiggest gains\nBiggest losses\nTables include countries with at least 100,000 IPv4 addresses and 20,000 km² of land.\nMethod: area as IPv4 = (country's IPv4 addresses ÷ world IPv4 addresses) × world land area. Land area is computed from the map geometry, so it's the 1:110m Natural Earth outline, not official figures. Antarctica excluded. About 70 small territories have no outline at this resolution and are left out (around 52M addresses, mostly Hong Kong, Singapore and Mauritius). IPv4 counts come from the IP Trust geolocation database, October 2026.",
+      "title_ja": "もしIPv4が土地だったら",
+      "category": "ネタ系"
+    },
+    {
+      "source": "hackernews",
+      "title": "Anthropic hacked to deliver remote access trojan",
+      "url": "https://doublepulsar.com/anthropic-hacked-to-deliver-remote-access-trojan-to-claude-developer-laptops-worldwide-1148a92baae2",
+      "score": 298,
+      "comments": 56,
+      "hn_url": "https://news.ycombinator.com/item?id=50301983",
+      "published_at": "2026-10-30T10:22:51+00:00",
+      "full_text": "",
+      "title_ja": "Anthropicがハッキングされ、リモートアクセス型トロイの木馬が配布される",
+      "category": "テクノロジー"
+    }
+  ],
+  "hatena": [
+    {
+      "source": "hatena",
+      "title": "無印良品、「MUJIアプリ」の利用者情報最大約2726万件が不正アクセスにより流出の可能性　",
+      "url": "https://internet.watch.impress.co.jp/docs/news/2152666.html",
+      "description": "",
+      "bookmarks": 185,
+      "published_at": "2026-10-30T06:32:44Z",
+      "full_text": "良品計画株式会社は10月30日、無印良品の公式アプリ「MUJIアプリ」において、利用者の情報の一部が外部に流出した可能性があることを確認したとして、情報を公開した。 \n 　原因、経緯などの詳細は明らかにされていないが、外部からの不正なアクセスを検知し、アクセスの遮断および修正の適用を行ったとしている。 \n 　流出の可能性がある情報は最大2726万件（退会者の情報も含む）の、メールアドレス、生年月日、性別。クレジットカード情報および、氏名、住所、電話番号などは含まれないとしている。 \n 　同社では、当該の利用者に順次個別に連絡するとしている。なお、MUJIアプリや無印良品ネットストアは正常に利用できる状態。",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "メルセンヌ・ツイスタ。PythonやC++でも使われる、世界標準「擬似乱数」の設計思想【松本眞】 - レバテックLAB",
+      "url": "https://levtech.jp/media/detail_959/",
+      "description": "数学者・算法学者 松本 眞（まつもと・まこと） 1965年東京都生まれ。東京大学理学部情報科学科卒業、同大学大学院理学系研究科修士課程情報科学専攻修了、同研究科博士課程数学専攻中退。京都大学数理解析研究所助手、慶應義塾大学理工学部助教授、九州大学助教授、広島大学教授、東京大学教授などを務めた。2023年に広...",
+      "bookmarks": 219,
+      "published_at": "2026-10-30T00:24:37Z",
+      "full_text": "数学者・算法学者\n松本 眞（まつもと・まこと）\n1965年東京都生まれ。東京大学理学部情報科学科卒業、同大学大学院理学系研究科修士課程情報科学専攻修了、同研究科博士課程数学専攻中退。京都大学数理解析研究所助手、慶應義塾大学理工学部助教授、九州大学助教授、広島大学教授、東京大学教授などを務めた。2023年に広島大学教授を退職。2026年11月より京都大学大学院経営管理研究部インフラ物性産学協同講座客員教授。博士（理学）、博士（工学）。専門は整数論、擬似乱数、準モンテカルロ法。文部科学大臣表彰科学技術賞、日本学術振興会賞、藤原洋数理科学賞大賞など受賞多数。写真はアインシュタインを意識したもの。\nシミュレーションや、ゲームの抽選処理。Pythonのrandom、Rubyのrand、C++のstd::mt19937。 日々何気なく呼び出している乱数の中身をたどると、ひとつの日本発のアルゴリズムに行き着きます。1996年に松本眞さんと西村拓士さんが発表した「メルセンヌ・ツイスタ（Mersenne Twister）」です（※1）。\nその設計思想について尋ねると、徹底した計算効率や省力化にこだわりがあったと、松本さんは話します。\n幼少期の毎朝の日課は、「円周率の近似値を手計算すること」だったという松本さんに、世界の乱数を支えてきた「メルセンヌ・ツイスタ」誕生の経緯について聞きました。\n（※1）周期2の19937乗−1をもち、623次元まで偏りなく分布することが証明された擬似乱数生成法。出力を624個観測すると内部状態を復元でき、以降の値を予測できるため、主には暗号ではなくゲームやシミュレーションに使われる。ただし、出力を非線形な関数で変換するなどして暗号に応用する手法も提案されており、「CryptMT」というストリーム暗号も存在する。\nそもそも「乱数」を定義できる人間はいない\n――そもそも「乱数」とは、どのようなものなのでしょうか。\n松本： その質問に答えられる人はいません。\n――えっ？\n松本：すごく雑に言うと、コインを投げると、表か裏が出るでしょう。\n――はい。\n松本：あれが公平で、2分の1と2分の1の確率で出るとする。厳密に「確率2分の1」というのは、2分の1＋2分の1＝1であって、2分の1が0以上であるから、確率空間の定義を満たしている、ということ。確率空間というのは、n個の事象があったときに、それぞれの事象iに対してpᵢという0以上の実数が与えられていて、p₁からpₙまで足すと1になるもの。そのpᵢを「事象iが起きる確率」という。その確率という、現実とどう結びつけたらいいのかわからないものを、さらに「繰り返し行う」と言うのですが、「繰り返し」って何でしょう？ 次に繰り返したときに独立事象だという概念があって、それは数式で書けるのだけれど、100個持ってきて独立だからって、101個目は独立じゃないかもしれないでしょう。それを未来永劫に独立だと仮定します、というのをi.i.d.（independent and identically distributed）と言います。毎回が独立で、同一の確率分布に従う、ということ。0か1の値を取る確率事象を、i.i.d.という条件のもとで無限に繰り返した試行の、1つの観察結果が「乱数列」と呼ばれるもの、という定義になるんだけど。じゃあ、その確率って一体何なのか。それを言おうとすると、絶対に時間軸とか未来とか、そういうものを言わないといけない。不確定性原理がなくて、何もかもがニュートン的に、微分方程式の解として確実に決まっているんだったら、未来なんて全部予測されているんだから、知性なんてものが存在する意味がない。しかし実際には知的生命体が存在していて、それは進化論の結果である。ということは、未来において何か不確実な現象があり、その不確実な現象を予想することによって、「生存」と呼ばれる現象をより有利にできるような世界においては、極めて低い確率において――あら、また確率が出てきちゃったよ、どうしよう――そういう確率という概念を認識するような、知的生命体と呼称される現象が起きる、というぐらい根源的なもので――\n――とんでもない難問を安直に投げかけてしまったことが理解できました。そのうえで恐れ入りますが、私でも分かるようにご説明いただくと……。\n松本： コインを投げて、表、裏、表、表、裏と出たとする。「これは何ですか」と言われたら、「0、1の列です」と答えるしかない。確率2分の1で0か1が出るという一番簡単な確率事象ですら、数学としては「2分の1＋2分の1＝1」という式でしかない。じゃあ「表が確率2分の1で出る」とは一体どういうことなのか。誰が説明してくれるの、という話なんですよ。\n――「乱数とは何か」という問いは、「ランダムとは何か」、すなわち「『偶然』とは何か」を問うていることに等しい、ということでしょうか？\n松本： はい。「時間って何？」「未来って何？」という問いと同じくらい根源的なので、厳密に定義しろと言われると、いろいろと難しいんですね。\nただ、アルゴリズムの理論が発達したことで、「次に出てくる数が計算不可能な数列を乱数という」という、ちょっと嫌な定義が出てきました。これだと定義からして、コンピュータでは絶対につくれません。 別の定義を使えば、乱数と呼べる数列は確かにたくさん存在します。ところが今度は、ある機械やプログラムの出力が本当にそれにあたるのかは証明できない、ということが証明されてもいます。\n――コンピュータは決定論的に動作するので、原理的に「真の乱数」はつくれない。けれど「これを乱数ということにしよう」という合意のもとで、決まった計算手順でつくり出した、乱数のように見える数列である「擬似乱数」が使われている。そういう認識で正しいでしょうか。\n松本： えーと、70%ほどだけ正しいです。その「真の乱数」というものがあるかどうかが、そもそも怪しいんです。\n世の中には、量子力学的な現象などの物理現象を使って乱数をつくる装置もあります。でも、さっきの話の通り、その出力が本当に乱数なのかは誰にも証明できない。それに、装置が故障すれば同じ値を出し続けるかもしれないので、実際には擬似乱数と組み合わせて使われることも多いんです。\n――乱数が乱数であることを証明できない時点で、「真の乱数」なんてものはない、ということですね。\n松本： そうそう。どこまでいっても、僕たちが手にできるのは「乱数らしきもの」でしかないんですよ。\n掛け算は「エネルギーの無駄」\n――ではメルセンヌ・ツイスタが開発される以前、擬似乱数はどのようにしてつくられていたのでしょうか。\n松本： 僕が乱数の研究を始めたのは、1986年、大学3年生のときです。後に指導教員となる米田信夫先生から、当時使われていた擬似乱数には大きく2つの方法があり、それぞれに欠点がある、と聞いたのがきっかけでした。\nそのひとつが、整数の掛け算を使うものです。\nこの、コンピュータで擬似乱数をつくる試みは、フォン・ノイマンに始まると言われています。やっていることは要するに漸化式で、次の数Xₙ₊₁を、今の数Xₙから計算して決める。たとえばXₙ₊₁＝Xₙ＋2なら、1から始めれば1、3、5、7……と増えていきます。\nこのままだと数がどんどん大きくなるので、たとえば2の16乗（6万5536）で割った余りを取って、一定の範囲に収める。でも、それで出てくるのは1、3、5、7、9……という並びです。ちっとも乱数には見えませんよね。\nだから足し算ではなく、掛け算を使うんです。掛け算をすると、繰り上がりで桁同士が混ざるので、数がずっと複雑に変わっていく。たとえば「3141」のような、わりといい加減に選んだ奇数を毎回かけては、2の16乗で割った余りを取る。こういう掛け算型の擬似乱数が、長らく主流でした。\nかける数が奇数でないといけないのは、偶数だと、2をかけ続けるのと同じで、いずれ6万5536で割り切れて0になってしまうから。一度0になったら、あとは何をかけてもずっと0です。\nただ、奇数をかけていても、2進数で見ると一番下の桁はずっと0のまま、あるいはずっと1のまま。つまり、ずっと奇数しか出ない、あるいは、偶数しか出ないといったことになる。そのような問題点がありました。\nまた、他にも大きな課題がありました。当時は、掛け算そのものがコンピュータにとってとても重い処理だったんです。\n――掛け算のコストが高かった、と。\n松本： はい。それらしい数列はつくれても、掛け算型の擬似乱数はとにかく遅かった。\nかつては掛け算命令を持たないCPUも多く、その場合は筆算と同じように、繰り上がりのある足し算を、桁をずらしながら繰り返すプログラムが書かれていました。\n掛け算命令を持つCPUでも、中でやっていることは原理的には同じで、ずらしながらの足し算を回路の中で繰り返しているだけです。だから、どちらにしても足し算よりずっと時間がかかる。\n今のCPUでは、ずいぶん速く掛け算ができるようになりました。それでも足し算より手間のかかる処理で、回路が複雑なぶん、電力も多く使うんです。\n――では、掛け算を使わない方法はあったのでしょうか。\n松本： 1965年に、タウスワース（Tausworthe）という人が、0と1だけを使う漸化式で乱数をつくる方法を提案しました。この漸化式でつくれる数列のうち、周期がいちばん長くなるものを「M系列（Maximal length sequence）」と呼びます。\nこの生成には、FSR(Feedback Shift Register)と呼ばれる、効率的に漸化式を計算する方法が使われます。これを使うと、計算にはほぼエクスクルーシブ・オア（XOR）（※2）しか使いません。整数の掛け算はエネルギーの無駄だからやめてしまう。それどころか、足し算の繰り上がりまでやめてしまうんです。\n2進数同士を足すと、繰り上がりが起きますよね。そうすると、一番上の桁の答えを出すには、一番下の桁から順番に計算していかなければならない。昔のコンピュータでは、この繰り上がりのせいで実際に計算が遅くなっていました。\n今のCPUやGPUは、足し算も1クロックで終わるように工夫して設計されています。それでも回路の仕組みとしては、繰り上がりのないエクスクルーシブ・オアのほうが単純で、本来は速いんです。\nただ、タウスワースの方法では、1回の計算で0か1が1つ出てくるだけです。乱数として使うような大きな数をつくるには、それを何十回も繰り返して、0と1を並べなければなりません。これを何十桁分まとめて一度に計算し、1回の計算で乱数を1つつくれるようにしたのが、1973年にルイス（Lewis）とペイン（Payne）が提案した「GFSR（Generalized Feedback Shift Register）」という擬似乱数生成アルゴリズムです。\n※2：エクスクルーシブ・オア（XOR、排他的論理和）。2つのビットを比べて、「同じなら0、違えば1」を返す演算。0と0なら0、1と0なら1、1と1なら0。つまり「繰り上がりを捨てた足し算（1＋1＝0）」と同じ。各桁を他の桁と無関係に計算できるため、桁をまたいで答えを待つ必要がなく、回路としても非常に単純で軽い処理になる。\n「畑を2人で耕す」GFSR\n――GFSRは、具体的にどういう仕組みで乱数を生み出すのでしょうか。\n松本： 改めて整理すると、擬似乱数は、「すでに出した数から次の数を計算で決める」ことを繰り返して、数の列をつくっていくものです。GFSRは、その計算をXORだけでやります。\nたとえば、「新しい数は、1つ前の数と3つ前の数のXOR」というルールの乱数があると考えてみましょう。最初の3つだけ決めて置いておき、あとはルールに基づいて数を増やす。\n4個目：1つ前 = 1、3つ前 = 0 → 1 0 0 1 1\n5個目：1つ前 = 1、3つ前 = 0 → 1 0 0 1 1 1\n6個目",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "個人情報を自社のDBに持たない設計は、どこまでできるのか - every Tech Blog",
+      "url": "https://tech.every.tv/entry/2026/10/30/124255",
+      "description": "はじめに こんにちは、開発1部の新谷です。 最近、個人情報の漏洩のニュースが増えています。私は普段セキュリティを専門にしているわけではありませんが、漏洩への対策として、そもそも自社で個人情報を持たないように設計する方法はすぐに思いつくと思います。 ただ、それを具体的にどう実現するのかは、詳しく調べた...",
+      "bookmarks": 59,
+      "published_at": "2026-10-30T05:48:02Z",
+      "full_text": "はじめに\nこんにちは、開発1部の新谷です。\n最近、個人情報の漏洩のニュースが増えています。私は普段セキュリティを専門にしているわけではありませんが、漏洩への対策として、そもそも自社で個人情報を持たないように設計する方法はすぐに思いつくと思います。\nただ、それを具体的にどう実現するのかは、詳しく調べたことがありませんでした。そこで今回、認証や決済などを外部サービスに任せることで、自社のDBからどこまで個人情報をなくせるのかを調べて考えてみました。\nDBに持たないことで防げる場面\nDBに個人情報を持っていなければ、DBやそのコピーを抜かれても個人情報は漏れません。設定ミスでDBが外から見えてしまった場合や、分析基盤や開発環境にコピーしたデータが漏れた場合、DBにだけアクセスできる人が持ち出した場合も同じです。DBにあるのがユーザーIDや決済サービスのトークンだけなら、攻撃者はそれだけでは誰のデータかを特定しにくくなります。\n一方で、保存する前の段階やDB以外の場所で盗まれる場合は、DBに持たないようにしても防ぎにくいです。\n- 入力画面のJavaScriptが改ざんされると、ユーザーが入力した時点で情報が抜かれる\n- XSSやセッションの乗っ取りでは、攻撃者が本人として正規の画面からデータを見る\n- DBに保存していなくても、ログやエラー通知に入力値が残っていることがある\n- 外部サービスに任せた場合、そのサービス側の事故は自社では制御できない\n- アプリのサーバーを乗っ取られると、アプリの権限でIDaaSのAPIを呼ばれ、個人情報を取得される\nサーバーを乗っ取られた場合でも、APIサーバーに渡すIDaaSの権限を絞ったり、IDaaSのAPIの呼び出しを監視したりすれば、被害を小さくできます。\nどこまでが個人情報になるのか\n個人情報保護法では、氏名やメールアドレスのように、それだけで特定の個人を識別できる情報が個人情報にあたります。加えて、他の情報と容易に照合でき、それによって特定の個人を識別できる情報も個人情報に含まれます。\nIDaaSを使うと、自社のDBにはユーザーを識別するsubが残ります。sub単体には名前もメールアドレスも含まれていませんが、自社はIDaaSの管理画面やAPIを使えば、そのsubが誰なのかを調べられます。そのため、subとひも付いた利用履歴は、自社にとっては個人情報として扱われる可能性が高いと考えられます。\n判断の細かい基準は、個人情報保護委員会のガイドライン(通則編)にまとめられているようです。\n外部に任せきれるもの\nパスワードやクレジットカードの情報は、専門のサービスに任せれば、自社で持たずに済みます。\nパスワードとMFAの情報\nAuth0やAmazon Cognito、Firebase AuthenticationなどのIDaaSを使うと、パスワードのハッシュやMFAの情報はIDaaS側が持ちます。OIDCで連携する場合、自社のDBにはIDトークンに含まれるsubを保存し、それをキーにして自社のデータとひも付けます。\n外部に任せれば、パスワードのハッシュが漏れて使い回しの攻撃に使われる心配が減り、MFAやパスキーへの対応も自分たちで実装せずに済みます。\nクレジットカードの情報\n決済で扱う情報のうち、持ち方に法律や業界の決まりがあるのが、クレジットカードの情報です。日本では割賦販売法という法律で、カード加盟店にカード番号の適切な管理が義務づけられているようです。日本クレジット協会の加盟店向けの説明によると、加盟店がとる対策は、カード番号を自社で保存・処理・通過させない非保持化か、カードブランドが定めたセキュリティ基準であるPCI DSSへの準拠のどちらかです。PCI DSSは要件が多いので、多くの加盟店は決済サービスに任せて非保持化を選んでいると思います。\nStripeやPAY.JPなどの決済サービスとのつなぎ方は、カード番号がどこを通るかで、大きく3つに分けられます。\n- リンク型: 決済サービスの画面に移ってカード番号を入力してもらう。自社の画面にはカード番号の入力欄がない\n- JavaScript型: 自社の画面に決済サービスのJavaScriptを読み込み、カード番号をブラウザから決済サービスに直接送ってトークンに変える\n- 通過型: カード番号をいったん自社サーバーで受け取り、サーバーから決済サービスに送る\nリンク型とJavaScript型では、カード番号は自社のサーバーを通りません。通過型は、カード番号を保存していなくても自社のサーバーを通るため、ガイドラインが定める非保持化の条件を満たせません。特別な理由がなければ、リンク型かJavaScript型を選ぶことになります。ただ、JavaScript型でも、自社の画面に読み込んだスクリプトが改ざんされると、入力した時点でカード番号を盗まれます。決済を任せていても、入力画面のスクリプトは自社で守る必要があります。\n決済サービスから受け取れるカードの下4桁やブランドは、カード番号そのものではないので、表示用に持つ程度ならリスクは小さいと思います。一方で、セキュリティコードは、決済の承認後に保存してはいけないとPCI DSSで決められています。\nコンビニ払いやキャリア決済、QRコード決済のようなほかの決済手段も、支払いの手続きは決済サービス側で完結するものが多く、自社が持つのは取引のIDくらいです。\nアプリ内課金\nスマホアプリでデジタルコンテンツを販売する場合は、App StoreやGoogle Playのアプリ内課金を使うことが多いです。支払いの手続きはAppleやGoogleが行うので、自社がカード番号に触れることはありません。自社のサーバーが受け取るのは、主に購入ごとのトランザクションIDや購入トークンです。受け取ったIDは自社のユーザーとひも付けて持つので、subと同じく自社に残る情報になります。\n一部だけ任せられるもの\nメールアドレスや氏名は、IDaaSに持たせることはできても、自社のシステムで使う場面が出てきます。\nメールアドレス\nIDaaSはメールアドレスをログインIDとして持ってくれますが、お知らせや通知のメールを送るときは、自社のシステムが宛先を知る必要があります。ログイン中のユーザーなら、IDトークンから取り出せます。一方で、バッチでまとめて送るときはIDaaSのAPIに問い合わせることになり、件数が多いと呼び出し回数の上限にかかることがあります。IDaaSのメール機能は、確認コードやパスワード再設定のような認証まわりのメール向けで、お知らせの配信には向いていません。\n自社のDBにもメールアドレスを持つと、持つ場所が一つ増え、更新をどちらに反映するかも考える必要があります。自社のDBにはsubだけを持ち、必要なときにIDaaSから取得する形にできれば、持つ場所を一つにまとめられます。\n氏名や住所\n画面に名前を表示するだけなら、IDトークンから取り出せるので、自社のDBに保存しなくて済みます。氏名くらいならIDaaSの標準の属性として持てますが、住所や電話番号、プロフィールのような認証に関係しない情報までIDaaSに置くのは、一般的には推奨されていません。\nたとえばAuth0のドキュメントには、メタデータに置くのは認証に関係するデータだけにし、詳しいプロフィールは外部のシステムに置くように書かれています。Amazon Cognitoのドキュメントにも、頻繁に変わるデータは属性ではなく別のデータストアに置くように書かれています。\nIDaaSは認証のためのサービスで、アプリケーションのデータベースの代わりにはなりません。IDaaSに置くのはメールアドレスや氏名のようにログインやIDトークンで使う情報にとどめて、サービスの中で使うプロフィールは自社のDBで持つ、という分け方になります。表示名(ニックネーム)のように、重複を禁止したり不適切な言葉をはじいたりする処理が絡む情報も、自社のDBにあるほうが扱いやすいです。\n管理画面からの検索\nIDaaSに置くのをメールアドレスや氏名にとどめても、自社のDBにそれらを持たないなら、管理画面からユーザーを探すときはIDaaSのAPIを使うことになります。Amazon CognitoのListUsersでは、検索に使えるのは一部の標準属性だけで、条件も完全一致か前方一致に限られます。名前の一部で探すような検索は、全ユーザーを取得して手元で絞り込むことになります。\nただ、1回で返るのは最大60件で、一覧系のAPIはアカウントのリージョンごとに毎秒30リクエストまでです。1秒あたり最大1,800件なので、1万人なら6秒ほど、100万人なら9分以上かかります。前方一致で足りて、ユーザーが数万人くらいまでなら、Cognitoの検索だけでも運用できるかもしれません。それを超える場合は、検索に使う属性だけを自社のDBに持つか、メインのDBから切り離した専用のDBに置くことになります。\n個人情報を預かる専用のサービス\nIDaaSに置かない住所や電話番号は、個人情報を預かる専用のサービスに置く方法もあります。データプライバシーボルトと呼ばれるもので、Skyflowなどが提供しています。自社のDBには預けたときに受け取るトークンだけを持ち、表示するときにだけ元の値に戻す形で、決済サービスのトークンの考え方をカード以外の個人情報に広げたものです。IDaaSと違い、項目ごとに見られる人を絞ったり、一部を伏せて返したり、誰がいつ見たかを記録したりすることに向いていて、海外では金融や医療のように重い情報を扱う分野で使われているようです。ただ、表示のたびに元の値に戻す通信が必要になり、住所で検索するような処理も自社のDBだけではできなくなります。自社はトークンから元の値を取り出せるので、トークンとひも付いた利用履歴が個人情報のままである点は、subと変わりません。\n自社に残るもの\n外部サービスのIDや利用履歴のように、サービスそのものに関わるデータは、外部に出しようがありません。こうしたデータは、量を減らすことと、ほかのデータと切り離して持つことで守りやすくなります。\n外部サービスのID\nIDaaSのsubや決済サービスの顧客IDは、自社のデータとひも付けるためのキーなので、必ず自社のDBに残ります。このIDそのものはなくせないので、外部サービスのIDと自社の内部IDの対応表を別に持ち、利用履歴などのテーブルには内部IDだけを持たせる方法があります。対応表を守れていれば、ほかのテーブルが漏れても、外部サービスの情報とひも付けにくくなります。\n利用履歴\n利用履歴を外部に出すことはできないので、持つ量を減らすことを考えます。カラムを追加する前にこのデータがないと何が困るかを考えたり、年齢確認だけが目的なら生年月日の代わりに20歳以上かどうかのフラグだけを持ったりするように、持たない、粒度を落とす、という選択肢があります。\nあわせて、持つ期間を決めて自動で消すようにしておくと、古いデータが残り続けずに済みます。行ごと消すほかに、行は残して個人を特定できる列だけを空にする方法もあり、この方法なら売上の集計などに使う列は残せます。\n任せたあとも残る責任\n外部サービスに任せても、預けた情報についての責任がなくなるわけではありません。\n委託先の監督\n個人情報保護法では、個人情報の取り扱いを外部に委託した場合、委託元が委託先を監督する必要があると定められています。IDaaSや決済サービスにユーザーの情報を預けている場合は、この委託にあたることが多いようです。\nとはいえ、外部のサービスに自社が立ち入って確認するのは現実的ではありません。サービスを選ぶときに、SOC 2やISO/IEC 27001のような第三者の認証を取っているか、データをどこに保管しているか、事故が起きたときにどう連絡がくるかを確認しておくのが、実際の対応にな",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "Linuxカーネルの重大な脆弱性（CVE-2026-98432）によるカーリルへの影響について – カーリルのブログ",
+      "url": "https://blog.calil.jp/2026/10/linux-kernel.html",
+      "description": "2026年10月15日、Linuxカーネル（Linux OSの中核部分）のネットワーク処理に重大な脆弱性（CVE-2026-98432）があることが公表され、あわせて修正版が公開されました。細工したパケットを送りつけることでサーバーを停止させたり、条件によっては認証なしでリモートからプログラムを実行されたりするおそれがある問題です...",
+      "bookmarks": 137,
+      "published_at": "2026-10-30T03:40:04Z",
+      "full_text": "2026年10月15日、Linuxカーネル（Linux OSの中核部分）のネットワーク処理に重大な脆弱性（CVE-2026-98432）があることが公表され、あわせて修正版が公開されました。細工したパケットを送りつけることでサーバーを停止させたり、条件によっては認証なしでリモートからプログラムを実行されたりするおそれがある問題です。10月27日（米国時間）には、この脆弱性を発見したAnthropic社が、特定の条件で遠隔から管理者権限を取得できることを実証したと公表しました。\nカーリルが提供する各サービス（カーリル、Unitrad API、カーリル for AI、学校図書館支援プログラムなど）はLinuxサーバー上で運用しており、本脆弱性の影響を受けるサーバーが含まれます。10月30日時点で、本脆弱性を悪用した攻撃は世界的にも報告されておらず、カーリルのサービスにおいても不正アクセスや情報漏えいなどの被害は確認されておりません。\nカーリルでは次の対応を実施しています。\n- 配布元（OSの提供元）から修正版カーネルが提供されているサーバーには、修正版を適用して再起動を完了しました。\n- カーリルが使用しているLinuxディストリビューションの一部では、10月30日時点で配布元から修正版が提供されていません。これらのサーバーには、脆弱性の引き金となる「IPオプション付きのTCPパケット」をファイアウォールで遮断する緩和策を10月30日に適用しました。通常のウェブ通信ではIPオプションは使われないため、この設定が利用者や図書館の皆さまの利用に影響することはありません。修正版が提供され次第、順次適用します。適用に伴い、カーリルの各サービスが停止したり不安定になる可能性があります。\nこれまでの作業に伴うサービスの停止は発生していません。利用者の皆さま、図書館の皆さまによる対応も不要です。\nなお、本脆弱性はLinuxを使用するサーバー全般に影響するため、各図書館の蔵書検索システム（OPAC）でも順次対応が行われるものと考えられます。各館のシステムは、それぞれの図書館およびシステム提供事業者が管理しています。各館のシステムがメンテナンスなどで一時停止している場合、カーリルで検索結果が表示されないことがあります。\n図書館の皆さまへ：セキュリティを「確認」から「理解」へ\n今回のような脆弱性が公表されると、図書館からシステム事業者に対して、セキュリティチェックシートやアンケート形式での確認が行われることがあります。利用者の情報を預かる機関として、事業者の対応を確認することは大切です。カーリルでは、いつでもカーリルのセキュリティ対策状況を確認できるよう、セキュリティホワイトペーパーを提供しています。問い合わせの前に、一度ご確認いただくようお願いします。\n今回の一連の脆弱性対応にあたっては、脆弱性の内容を踏まえないまま、「ウイルス対策ソフトを導入していますか」「パスワードを定期的に変更していますか」「セキュリティ責任者を置いていますか」といった一般的な項目への回答を求めるケースも少なからず見受けられます。今回の脆弱性はOSの中核部分の問題であり、こうした対策の有無や責任者の確認では防ぐことも、影響を判断することもできません。\n本当に重要なのは、影響を受けるシステムを把握し、修正版を適用すること、そして修正版が出るまでの間に有効な緩和策をとることです。\nそして図書館に求められているのは、事業者の対策を点検することよりも、リスクをどこまで許容するかを明確に伝えることです。修正版の適用や緩和策には、サービスの一時停止をともなう場合があります。そのとき「止まるのは困る」と求めることは、脆弱性を抱えたまま運用を続けるリスクを、利用者に負わせる判断でもあります。どの程度のリスクなら受け入れ、どこからは停止してでも対策を優先するのか。その線引きを明確にしてください。\n情報セキュリティは、一度学べば終わりというものではありません。攻撃の手法も、守り方も変わり続けています。図書館が利用者の情報を守り、事業者と実のある対話をするためには、図書館関係者一人ひとりが正しい理解をもち、学び続けることが欠かせません。無意味な儀式は、いますぐ停止してください。\nカーリルでは今後も情報収集を続け、必要に応じてお知らせします。\nサイバーハック体験版：攻撃を受けたときの初動を体験する\n図書館総合展にあわせて、図書館向けに、サイバー攻撃を受けたときの初動対応を疑似体験できる教材「サイバーハック体験版」を公開しました。特に、図書館の情報セキュリティ責任者の方に向けた教材です。実際の事例と公的機関の資料をもとに作っています。",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "読んでいないコードを私たちはどれだけ信頼できるのか - YAMAGUCHI::weblog",
+      "url": "https://ymotongpoo.hatenablog.com/entry/2026/10/30/093000",
+      "description": "はじめに こんにちは、Grafana Labsでデベロッパーアドボケイトをしているものです。 私は2018年前後から、SRE*1の啓蒙に携わってきました。SREの実践では本番環境のオブザーバビリティは欠かせず、私もその重要性を強く主張しています。そういった背景もあり『SLO サービスレベル目標』や『オブザーバビリティ・エンジ...",
+      "bookmarks": 240,
+      "published_at": "2026-10-30T00:38:15Z",
+      "full_text": "はじめに\nこんにちは、Grafana Labsでデベロッパーアドボケイトをしているものです。\n私は2018年前後から、SRE*1の啓蒙に携わってきました。SREの実践では本番環境のオブザーバビリティは欠かせず、私もその重要性を強く主張しています。そういった背景もあり『SLO サービスレベル目標』や『オブザーバビリティ・エンジニアリング』をはじめ、SRE関連の本を何冊か翻訳してきました。\nそして、ここ1年ほど、生成AIのコーディングエージェントでPoCを作るたびに、テストが通ったコードをどこまで信じてよいのかが気になっていました。エージェントが書いたコードを、私は1行ずつすべて読んでいるわけではないからです。2026年に入ると、開発の側からも運用の側からも、同じ疑問を扱う発信が続きました。この記事では、それらを手がかりに現時点での私の考えをまとめたいと思います。英語の文献からの引用の訳は、すべて拙訳です。また、この記事は個人の見解であり、所属企業のものではありません。\nTL;DR\nAIが書くテストの精度が上がっても、判定の基準になる仕様や性質は人間の理解に依存します。人間の仕様理解度の拡張のために、各種テストを反例や限界の探索にも使い、技術仕様と非機能要件は本番環境でも確かめるのがよいと考えています。戻せる変更を限られた範囲に出し、SLOと観測結果をもとに展開を進めるかを判断します。読んでいないコードが増えるいまこそ、その判断を支えるオブザーバビリティに取り組む価値があります。\nテストをごまかすAIのその後\n2025年6月、Kent Beck*2はAIエージェントとの開発を振り返った記事「Augmented Coding: Beyond the Vibes」で、エージェントを「genie」と呼び、エージェントが道を外れている際の兆候を、次のように指摘しました。\nAny indication that the genie was cheating, for example by disabling or deleting tests.\n（genieがごまかしているあらゆる兆候。たとえばテストを無効にしたり消したりすること。）\n同じ月のインタビューでも、Kent Beckはテストを消して「通そう」とするエージェントを止められずにいると語っています。それでも、TDDはエージェントと働くうえでの「superpower」だというのがKent Beckの立場でした。私自身もPoCで、エージェントが失敗したテストのほうを書き換えて通す場面に何度も出会いました。\nそれから半年あまりで状況は変わりました。2026年2月、Martin Fowler*3が主催したThoughtworksのイベント（リトリート）*4の報告書は、TDDを使うとAIエージェントの結果が「dramatically better」になると述べています*5。テストがコードより先にあれば、エージェントは自分の誤った実装を追認するテストを書けないからです。報告書では、TDDを「the strongest form of prompt engineering」とまで呼んでいます*6。\nエージェントの誤りにはTDDのような手順で対処しやすくなり、コードを生成するモデル自体も性能が上がっています。Google CloudのDORAチームが2026年4月に公開したレポート「The ROI of AI-assisted Software Development」は、AIの能力が月単位で世代を越えていると書いているほどです。それでも、同レポートは、問題が消えたとは言っていません*7。\nFor an individual developer, AI does not necessarily make friction vanish; rather, the friction moves.\n（個々の開発者にとって、AIは摩擦を必ずしも消しはしない。摩擦は移動する。）\n摩擦が移った先は検証です。レポートは、定型的なコードを手で書く手間が省けた分が「verification tax」（検証税）に置き換わると書いています。検証税とは、正しいコードと見分けがつかないほどよく似たAI生成コードを、厳密に監査するための認知負荷のことです。\n厳密さの行き先に本番環境がない\nでは、検証の厳密さ（rigor）はどこへ向かっているのでしょうか。リトリートの報告書*8は、もっとも議論に時間を割いた問いとして「Where does the rigor go?（厳密さはどこへ向かうのか）」を挙げています。報告書の答えは、コードを書いてレビューする作業にあった厳密さは、AIがコードを書くようになっても消えずに別の場所へ移る、というものです。行き先として挙がったのは、仕様のレビュー、テストスイート、型と制約、リスクに応じた検証の階層化、継続的な理解の5つでした。\nDORAが示す処方箋も、これとよく似た内容です。2025年のレポートは、AIの導入がスループットの向上と同時に、デリバリーの不安定化にも結びついていると報告しました。2026年のレポート*9では、AI導入の影響として、最も大きいものが個人の作業効率で、次いでデリバリーの不安定化を挙げています。対策として挙がっているのは、自動テスト、継続的インテグレーション、バージョン管理、小さなバッチ、コミット前のチェック、AIによるレビュー支援です*10。\nSREの立場からこの2つを読むと、厳密さの行き先に本番環境が見当たりません。2026年のDORAのレポートの本文には、「オブザーバビリティ（observability）」という語が一度も出てきません*11。リトリートの報告書*12も、自己修復システムの議論で、よりよいロールバック、フィーチャーフラグ、オブザーバビリティが前提になると述べるだけです。本番環境で何をどう確かめるかは、具体的に論じられていません。\n報告書*13には、未解決の問いがいくつか残されています。そのひとつが「What would need to be true for organizations to stop reviewing AI-generated code entirely?（組織がAI生成コードのレビューを完全にやめるには、何が成り立っている必要があるか）」という問いです。\n運用の側からも同じ問いが出ています。Charity Majors*14は2026年8月のインタビューで、「読んでいないコードをリリースすることが実現するか、いつ実現するかを論じるより、それを安心して行うには何が必要かを考えよう」と呼びかけました*15。開発の側と運用の側が、同じ年に同じ問いにたどり着いたわけです。この記事では、この問いを「読んでいないコードを私たちはどれだけ信頼できるのか」と言い換えて考えます。\nテストと仕様理解の限界\nここでひとつ仮定をします。AIがテストを書く精度はこの先も上がり続け、仕様に書かれたことは漏れなく検査できるようになるとしましょう。そうなれば、読んでいないコードもテストを根拠に信頼できるのでしょうか。\n私はそうは考えません。テストの正しさは、何に対して正しいかで決まるからです。ソフトウェア工学では、仕様どおりに作れているかを確かめることを検証（verification）と呼びます。作ったものが本当に求められていたものかを確かめる妥当性確認（validation）とは、区別されてきました*16。AIの精度向上で縮むのは、前者のずれです。テストの合格は、仕様そのものが意図や現実に合っていることまでは保証しません。\nずれが生まれる原因は、人間の仕様理解度にあると私は考えています。仕様理解度とは、人間がシステムの振る舞いをどこまで細かく把握しているかの度合いのことです。TDDの前提は、テストを先に書けるほど開発者が仕様を知っていることです。ところがAIは、エラー処理、再試行、境界値、並び順のような細部を、人間が仕様として意識したことのない細かさで実装します。具体例を一つずつ書くテストでは、思いつかなかった条件や振る舞いを見落とす限界があります。\nAIにテストまで書かせても、死角がなくなるとは限りません。2026年6月に刊行された『Observability Engineering, 2nd Edition』（以下、OE2e）*17は、第2章でこの点を次のように指摘しています。\nAI agents writing tests for code they just wrote will blithely apply the same assumptions to both. Do your tests validate developer intent, or merely implementation?\n（書いたばかりのコードのテストを書くAIエージェントは、同じ前提を平然と両方《コードとテスト》に当てはめる。そのテストは開発者の意図を検証しているのか、それとも実装をなぞっているだけなのか。）\nOE2eの第2章は続けて、テストスイートが通り、しかもテストが模範的であっても、得られる自信は「本番環境で見つかる誤りが新しい誤りになる」ことだけだと述べています。テストが前提にする世界の側にも、限界があります。Andre HoraとRomain Robbesによる2026年1月公開の論文「Are Coding Agents Generating Over-Mocked Tests? An Empirical Study」によれば、テストを変更したコミットのうち、モックを追加した割合はエージェントで36%、エージェント以外で26%でした*18。モックは「依存先はこう振る舞うはずだ」という仮定です。テストの精度がいくら上がっても、検査しているのは仮定した世界の中での正しさにとどまります。\nAIの精度が上がるほど、人間がコードを見る機会は減るでしょう。リトリートの報告書*19は、技術的負債が認知負債、つまりシステムの複雑さと人間の理解との差に変わりつつあると書いています。仕様理解度が実装の細かさに追いつかない状態が続けば、その差は認知負債として積み上がります。テストの死角が広がるのも、そのためです。認知心理学者のLisanne Bainbridge*20は1983年の論文「Ironies of Automation」*21で、自動化が進むほど人間に残る役割は難しくなるのに、それを果たす能力は衰えていくと指摘しました。40年以上前の指摘ですが、コードを読まなくなった開発者にもそのまま当てはまります。t-wadaさんも、2026年7月の講演資料で、認知負債とBainbridgeの指摘を取り上げています*22。\n業務仕様と技術仕様\nテストの死角は、仕様の種類によって広がり方が違います。私は仕様を、業務仕様と、技術仕様や非機能要件とに分けて考えています。\n業務仕様は、料金の計算方法や承認の流れのように、事業の側が決めるものです。人間が定義したものなので、人間の仕様理解度の内側にあります。ここではTDDがこれまでどおり働き、リトリートの報告書が示したとおり、テストを先に書けばAIは業務仕様に沿ったコードを書けます。\n技術仕様と非機能要件では事情が違います。タイムアウトの値、キャッシュの設計、同時実行の制御などについて、AIが提案する割合が増えています。一つひとつの妥当性を確かめずに採用していると、気づかないうちにAIの判断に委ねた範囲が広がってしまいます。人間の仕様理解度と実装の細かさの差がもっとも開くのはここです。しかも、実際のキャッシュの効き方や負荷がかかったときのレイテンシーは、本物の負荷、データ、依存先がそろわないと確かめきれません。\nこの分け方には、仕様駆動開発（Spec-Driven Development）*23で仕様を細かく書けば技術仕様も人間",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "Figmaを離れてClaude CodeでUIデザインをするようになった話｜🐰",
+      "url": "https://note.com/hgffdgn654/n/n92467b83a1c1",
+      "description": "久々のデザイン記事です。以前はFigmaでゴリゴリにコンポーネントを作ってUIデザインをしていましたが、生成AIの登場によってデザイン業務の進め方も大きく変わってきたように感じています。今回はそんな私の最近のデザイン業務についてまとめていきます。 現在私は業務委託としてSaaSプロダクトのソロデザイナーとして...",
+      "bookmarks": 215,
+      "published_at": "2026-10-29T14:57:36Z",
+      "full_text": "Figmaを離れてClaude CodeでUIデザインをするようになった話\n久々のデザイン記事です。以前はFigmaでゴリゴリにコンポーネントを作ってUIデザインをしていましたが、生成AIの登場によってデザイン業務の進め方も大きく変わってきたように感じています。今回はそんな私の最近のデザイン業務についてまとめていきます。\n現在私は業務委託としてSaaSプロダクトのソロデザイナーとしてプロダクトデザインに携わっています。AIが出てきてからというものPMからAIが作成した動くモックが仕様書として上がってくることが多く、それならこれを改造してデザインしちゃえばいいのでは？と思ったのがキッカケでした。\nこの運用が成り立つ前提環境\nまずエンジニアとPMに相談して現在の開発環境状況を把握しました。この体制に入る前に以下の部分が既に用意されていました。\nGitHubに最初から揃っていたもの\n- アプリのリポジトリ（画面のコードがここにある）\n- shadcnベースのコンポーネント群（デザインシステムの土台）\n- 独自コンポーネント（shadcnにないもの）\n- Storybook（コンポーネントの見た目を確認できる場所）\n- トークンのリポジトリ（色や余白のJSON、アプリ側から参照）\n- Claude Codeがすでにリポジトリで動いていた（@claudeでGitHubから呼べる状態）\n運用を始めるにあたって、まずデザインブランチの命名規則を決めました。デザインブランチはマージされず、あくまでデザインをするためのブランチです。エンジニアはこのブランチをローカルで動かして、仕様の参照先として使います。命名は design/ を接頭辞にして、Issue番号と画面名を続ける形にしました（例：design/123-reservation-list）。接頭辞で「これはマージしないブランチ」と一目で分かるようにするのが目的です。\nまたローカルで開発できる環境を構築する必要があり、ここはエンジニアの方に相談して環境構築指示書をいただき、Claude Codeと一緒に開発環境を用意しました。\nまた今回の場合はPMもローカルの開発環境を持っているので、デザインブランチをそのまま動かして確認してもらえています。ただ、営業やカスタマーサポートなど開発環境を持たない人にも確認してもらう必要がある場合は、デザインブランチをデプロイして見られる確認用の環境をエンジニアに用意してもらう必要があります。この運用を始める前に、誰が確認に入るのかを洗い出しておくと、あとで詰まりません。\n運用フロー\n実際の運用フローはまずGitHubのIssueからタスク選択し、デザイン用のブランチを切ってからモック作成、PMに確認依頼をし、問題なければ実装依頼というフローになっています。\n元々デザインタスクもGitHubのIssueで管理していたので連携が楽ちんでどのブランチで作業してるのかがわかるのが良いなと思いました。またFigmaの時は状態変化を何パターンも作成してましたが、動的なモックが作れるので確認する側も楽になりました。\nClaude Codeに何を読ませるか：文脈の三層\nコードでモックを作り始めて一番試行錯誤したのは、Claude Codeに何をどこまで伝えるかでした。\n何度か繰り返して落ち着いたのが、「指示は削る、文脈は盛る」という方針です。何をどう作るかは粗く投げて、出てきたものを見て直す。その代わりプロダクトが何で、誰が使って、何を守らなければいけないかはできるだけ正確に渡す。\nただし、盛ると言っても仕様書を丸ごと毎回貼るのは逆効果でした。その画面に関係ない部分が大半を占めて、肝心なところが埋もれます。そこで渡す文脈を三つの層に分けました。\n1. 常駐させる層\nプロダクトが誰のための何か、どういうビジネスモデルか、絶対に守る制約（例えば、安全に関わる情報は常に見える位置に置く）、デザインの基本方針。これは毎回必ず読んでほしい内容なので、Claude Codeが自動で読むファイルに置きます。\n2. 取りに行かせる層\n画面ごとの仕様、Storybook、トークンのJSON、過去のIssueやPR。量が多く、毎回全部は要らない情報です。これはリポジトリの中に置いておいて、Claude Codeに必要なときだけ自分で読みに行かせます。Claude Codeは元々コードベースを全部読み込んでから動くのではなく、必要なファイルをその都度開く設計なので、この使い方に向いています。逆に言うと仕様がリポジトリの外（NotionやGoogle Docs）だけだとこの層が機能しません。\n3. その場で渡す層\n今回のIssueで、誰がどの場面で何に困っているか。これだけをその場で短く書きます。ただこの辺りは既にIssueに記載されている場合もあるので、Issueを読み込むだけで大丈夫だったりします。\nなぜこう分けるのか\nAnthropicの公式ガイドでは、前世代のモデル向けに書かれた細かすぎるプロンプトが、かえって出力の品質を下げる場合があると説明されています。一方で依頼の背景や意図を明確にすることで、モデルが関連情報とタスクを適切に結びつけやすくなるとも述べられています。つまり、手順を細かく指定するのではなく、何を実現したいのかを伝える。 これが、今のモデルをうまく活用するためのポイントです。\nただし、文脈は長ければ長いほどいい、というわけでもありません。2026年に発表された研究では、評価対象となったすべてのモデルで、入力する文脈が長くなるにつれて性能が一貫して低下する傾向が報告されています。長いコンテキストに対応していることをうたうモデルであっても、この傾向は例外ではありませんでした。こうした背景もあり、私のワークフローではAIに常に与えておく情報は必要最小限にとどめ、作業に応じて必要な情報を渡すようにしています。\nもう一つ興味深かったのが、2026年8月に発表された研究です。この研究では、エージェントの作業が失敗する要因として、文脈の長さだけでなく実行ステップ数の重要性が示されています。各ステップの成功確率が100%に満たない以上、処理を重ねるほど、途中でエラーが発生したり、意図から逸脱したりするリスクも高まります。そう考えると、モックを一度に完成させようとするのではなく、1画面ずつ短いやりとりを繰り返しながら改善していくやり方は、結果的に理にかなっていたのかもしれません。\n参考\n- Anthropic「Prompting Claude Fable 5」 \nhttps://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5\n- Long Context, Less Focus（arXiv 2602.15028, 2026年2月） https://arxiv.org/abs/2602.15028\n- How Fast Do Agents Rot?（arXiv 2609.01660, 2026年8月） https://arxiv.org/abs/2609.01660\nFigma時代と比べて変わったこと、変わらなかったこと\n当然ですが、Figmaで作業する時間はグッと減りました。特に大きいと感じているのがプロトタイプの確認にかかる工数です。状態変化を伴うインタラクションも、動くモックのまま確認してもらえるためFigmaで画面遷移を設定し、プロトタイプをプレビューしてもらうといった確認のための作業が大幅に減りました。\nもちろんFigmaを使わなくなったわけではありません。バナーのデザインや、アイデアを広げる段階では今でもFigmaを使います。また、Claude Codeで実装モックを作るようになっても、実際の画面を見ながら少しずつ修正していくプロセスは変わりません。結局のところ、アウトプットの良し悪しを判断するのは、デザイナーである自分自身です。AIが生成したコードであっても、Figmaで作ったデザインであっても、それがユーザーにとって使いやすいのか、プロダクトとして適切なのかを判断する必要があります。\n作るためのツールや手段が変わっても、何を良しとするかを決めることは、デザイナーの仕事であり続けるのだと思います。\nデザイナーの仕事はどこに残るか\n今年の3月に「AIという名の弟子、デザイナーという名の魔法使い」という記事を書きました。\nあのとき挙げた問題は二つでした。一つは、細かな調整をいちいち言葉に変換してAIに伝えるくらいなら自分でやったほうが早いということ。もう一つは、ビジネスの背景やステークホルダーの事情をAIに理解させるには膨大な前提を入力する必要があって、その準備だけで業務量が増えてしまうということ。\n7ヶ月経って、どちらもある程度は答えが出ました。細かい調整は言葉に変換しないことにしました。粗く投げて、出てきたものを見て直す。前提の入力は三層に分けて、毎回渡すのは短い意図だけにしました。あの記事で「本末転倒になりかねない」と書いた部分は、やり方次第で避けられるというのが今の実感です。\nただ、あの記事の結論は変わっていません。AIが持ってきた素材を自分の審美眼でジャッジし、どこを60にしてどこを40にするかを決めるのは、やはり人間の仕事です。変わったのは、その判断に使える時間が増えたことと、判断の材料が絵ではなく動く画面になったことです。\n詳しくはこちらを読んでみてください。\n最後に\nこの運用もまだ始めたばかりで、仕様の置き場所や確認環境など整理しきれていないところも残っています。それでも、Figmaで状態のパターンを描き分けていた頃には戻れないだろうなというのが正直なところです。環境さえ揃っていれば、デザイナーひとりでも始められます。まずは1画面、Issueをひとつ選んでブランチを切るところから試してみてはいかがでしょうか。\nお仕事のご相談について\n12月から稼働に空きが出るため、新しいお仕事を探しています。この記事のような、既存のデザインシステムやリポジトリのコードでモックを作る進め方や、デザイナーとエンジニアの受け渡しの設計に興味がある方がいれば、お気軽にご連絡ください。SaaSのプロダクトデザインが中心で、現在は大学院でAIを学んでいます。業務委託、週1〜2日からでも相談可能です。\nご連絡はnoteのメッセージからお問い合わせください。",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "AIが勝手に隔離環境を脱出した事件を受けてOpenAIが「AIを別のAIで監視する仕組み」を公開",
+      "url": "https://gigazine.net/news/20261030-openai-detect-frontier-model-misalignment/",
+      "description": "OpenAIは2026年10月29日、AIが指示に反する行動を取っていないかを別のAIで監視するシステムの詳細を公開しました。開発中のAIが隔離環境を脱出して外部サービスに不正アクセスした事件を受け、監視対象を拡大するとともに不審な行動を段階的に調査する仕組みを導入したとのことです。 How we detect frontier model mis...",
+      "bookmarks": 25,
+      "published_at": "2026-10-30T02:45:57Z",
+      "full_text": "AIが勝手に隔離環境を脱出した事件を受けてOpenAIが「AIを別のAIで監視する仕組み」を公開\nOpenAIは2026年10月29日、AIが指示に反する行動を取っていないかを別のAIで監視するシステムの詳細を公開しました。開発中のAIが隔離環境を脱出して外部サービスに不正アクセスした事件を受け、監視対象を拡大するとともに不審な行動を段階的に調査する仕組みを導入したとのことです。\nHow we detect frontier model misalignment | OpenAI\nhttps://openai.com/index/how-we-detect-frontier-model-misalignment/\nOpenAIはAIの学習や評価を行う際、外部のシステムに影響を与えないよう「サンドボックス」と呼ばれる隔離環境を使用しています。しかし、2026年7月には開発中のAIが制限を回避してインターネットに接続し、AI開発プラットフォーム「Hugging Face」に不正アクセスする事件が発生しました。\nAIがHugging FaceをハッキングしていたことにOpenAIは1週間気づかなかったと関係者が明かす - GIGAZINE\nOpenAIは以前からAIの行動を監視していましたが、事件が発生したセキュリティ評価では監視システムが稼働していませんでした。そこでOpenAIは監視対象をAIの学習や評価、社内利用、外部サービスでの利用まで拡大。AIに安全な行動を学習させる対策やアクセス制限に加え、問題が発生した場合に素早く検出できる体制を整えました。\nOpenAIが採用する安全対策の概念図はこんな感じ。「AIの学習」「セキュリティ対策」「監視システム」の3段階で不正な行動を防ぐ仕組みです。\n監視システムでは大量のAIの行動を効率よく調べるため、L0からL3までの最大4段階で不審な行動を検出します。\n最初の「L0」では「Activation Probes」と呼ばれる仕組みでAI内部の処理を調べます。異常が疑われる行動に加え、異常が見つからなかった行動からも無作為に5％を抽出して次の段階に送ります。\n続く「L1」では別のAIが作業内容や思考過程を確認し、指示に反する行動がないかを調査します。問題が疑われる場合は「L2」で詳しい経緯を調べ、必要に応じて「L3」で通信記録なども照合。緊急対応が必要と判断された場合は人間の担当者に通知する仕組みとなっています。\nOpenAIは監視システムの性能を確かめるため、過去に発生した問題行動や模擬的な攻撃を使った検証も実施しました。実際の事件を使ったテストでは、問題行動の79.6％を緊急対応が必要な事例として検出し、通常のセキュリティ調査の対象としては90.3％、AIの問題行動に関する調査の対象としては91.4％を検出できたとのこと。\nまた、監視に使用するAIによっても検出率が異なるとのこと。OpenAIが3種類のAIを比較したところ、実際の事件を使った検証での検出率は「GPT-5.6 Luna」が20.4％、「GPT-5.6 Terra」が63.4％、「GPT-5.6 Sol」が79.6％でした。なお、OpenAIはGPT-5.6 Sol向けに監視用の指示文を最適化したことも検出率の差に影響している可能性があると説明しています。\nさらにOpenAIはHugging Faceへの不正アクセス事件を再現し、強化後の監視システムで検出できるかを検証しました。その結果、AIがサンドボックスを脱出してから約30分後に警告を出すことができ、実際に外部システムが侵害された時点より30時間以上早く異常を検出できたとのことです。\nなお、問題行動を検出するたびに学習時の評価を下げるとAIが問題行動をやめずに証拠を隠すようになる可能性があるとのこと。そのためOpenAIは監視結果を個々の学習データの評価に直接反映させない方針を採用しているそうです。\nOpenAIは監視システムを一部の外部サービスにも導入しており、対応する環境では問題のある操作を自動停止できる模様。今後もAIの能力向上に合わせて監視システムを改善し、発見した問題行動について外部への情報公開を続けていくとのことです。\nin AI, セキュリティ, Posted by log1d_ts\nYou can read the machine translated English article Following an incident where an AI escape….",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "暗号資産の「バイナンス」に不正アクセスか 影響額 約9900億円 | NHKニュース",
+      "url": "https://news.web.nhk/newsweb/na/nd-20261030de68404",
+      "description": "暗号資産の取引所として世界的な大手の「バイナンス」は29日、不正アクセスとみられるセキュリティー上の問題が起き、影響額が推定でおよそ63億ドル、日本円にしておよそ9900億円に上ることを明らかにしまし…",
+      "bookmarks": 81,
+      "published_at": "2026-10-30T04:56:14Z",
+      "full_text": "暗号資産の取引所として世界的な大手の「バイナンス」は29日、不正アクセスとみられるセキュリティー上の問題が起き、影響額が推定でおよそ63億ドル、日本円にしておよそ9900億円に上ることを明らかにしまし…\n【解説】GMO“攻撃者につながる有力情報入手” 必要な対策は\n10月30日 12:26\n無印良品 不正アクセスで最大2726万件の個人情報 流出のおそれ\n10月30日 16:51\n110番で「ショウリンジ」と叫ぶ 小中学生4人補導 広島県警\n10月30日 16:28\nスペイン鉄道事故 地元紙「外国人1人死亡 20人超安否確認中」\n10月30日 19:55\n【不正アクセス】個人情報流出などの発表相次ぐ（10月30日）\n10月30日 21:01\nハロウィーン前に各地で対策 「ハチ公像」シートで覆われる\n10月30日 18:39\n富士山で初冠雪 今シーズンから新しい手法で観測\n10月30日 21:48\n愛知 安城の水道管工事現場で土砂に埋まり作業中の親子2人死亡\n10月30日 4:38\n司法記者が裁判員やってみた\n10月29日 10:58\n相続した実家を手放したい 広がる“不動産の有料引き取り”\n司法記者が裁判員やってみた\n有権者の評価は？製造業の再建目指す「トランプ関税」\n個人情報流出でカード不正利用の2次被害 悪用の最新手口は\n広がる個人間の“精子提供” なぜ？\n村上宗隆はなぜ「1年目で35本塁打」を成し遂げられたのか\nことし秋のクマの出没は？ “どんぐり”の実りから予測する\nYOASOBIが「ブラッサム」主題歌に込めたメッセージとは\n地図から選ぶ\nNHK ONEはどなたでもご利用になれます。受信契約がお済みの世帯の方は、別途の契約や追加のご負担なく利用できます。契約をされていない世帯の方が利用した場合は、放送法に基づき契約が必要です。 受信契約の詳細や、事業・学校での利用については下記のリンクをご覧ください。\n放送番組の同時配信・見逃し配信\nニュース記事など番組関連情報の閲覧\nチェックをすると次に進めます",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "Linuxカーネルの脆弱性 CVE-2026-98432 についてまとめてみた - piyolog",
+      "url": "https://piyolog.hatenadiary.jp/entry/2026/10/30/120732",
+      "description": "2026年10月15日、LinuxカーネルのCNAは、IPv4のTCP処理にあるuse-after-freeの脆弱性 CVE-2026-98432 を公開しました。ここでは関連する情報をまとめます。 どんな脆弱性が確認されたの? IPv4のTCP接続処理で、要求ソケットのIPオプションが解放された後も別のCPUが読み続けうるuse-after-freeが生じる。認証は不要で、...",
+      "bookmarks": 64,
+      "published_at": "2026-10-30T04:19:29Z",
+      "full_text": "2026年10月15日、LinuxカーネルのCNAは、IPv4のTCP処理にあるuse-after-freeの脆弱性 CVE-2026-98432 を公開しました。ここでは関連する情報をまとめます。\nどんな脆弱性が確認されたの?\n- IPv4のTCP接続処理で、要求ソケットのIPオプションが解放された後も別のCPUが読み続けうるuse-after-freeが生じる。認証は不要で、接続を受け付けているサーバーにネットワーク経由で到達できる相手が対象になる。(出典: 2, 4)\n- 発見と報告はAnthropic。(出典: 1, 16)\n- Anthropicは10月27日の研究レポートで、この脆弱性を使った遠隔でのroot権限のコマンド実行を実証したと公表。(出典: 16)\n脆弱性概要\n- 修正コミットのFixesは2件。要求ソケットをリスナーのロックなしで処理するようにした4.4のコミット(079096f103fa)と、要求ソケットの移行に関するc905dee62232。(出典: 1, 2)\nどのような条件で悪用が成立するの?\nCNAの記述にある経路は2つ。\n1つ目は、認証なしの相手が送る、IPv4のRecord RouteまたはTimestampオプション付きのTCP SYNから始まる。(出典: 2)\n- 相手がオプション付きのSYNを送り、ip_rcv_options()とtcp_v4_save_options()がオプションを要求ソケットのireq_optに保存する\n- 同じ要求への再送SYNがtcp_v4_rcv()、tcp_check_req()、tcp_rtx_synack()を経てtcp_v4_send_synack()に進み、別のCPUでSYNACKの組み立てが始まる\n- 組み立ての間に、同じ接続の確立と破棄が進んで子ソケットが解放される。tcp_v4_syn_recv_sock()はオプションを複製せず子ソケットへ渡し、inet_sock_destruct()が通常のkfree()で解放するため、ip_options_build()で解放済みの領域を読むuse-after-freeになる\n解放された領域が再利用されると、CNAの記述では次の影響が生じうる。(出典: 2)\n- 隣接するカーネルヒープの内容がSYNACKに載って相手へ送られる\n- 境界外のカーネルへの書き込みと、制御フローの破壊の可能性\n- skb_under_panic()やoopsによるカーネルの停止\n2つ目は、要求ソケットの移行を使う経路。net.ipv4.tcp_migrate_req=1またはBPF_SK_REUSEPORT_SELECT_OR_MIGRATEプログラムの設定下で、reqsk_timer_handler()がinet_reqsk_clone()で複製した要求ソケットと元のソケットが同じireq_optを共有する。複製が解放されるとき、元のソケットを参照している別のCPUがオプションを使っていると、tcp_v4_reqsk_destructor()の通常のkfree()が同様の問題を起こす。(出典: 2)\nCNAは、接続を受け付けるサーバーでの競合について、競合の両側が攻撃者の誘発によるもので、マルチコアのスケジューリングやヒープ整形は攻撃者の制御外の条件にあたらないとして、攻撃の複雑さをLowとしている。(出典: 2)\n修正は、inet_sock_destruct()とtcp_v4_reqsk_destructor()での解放をkfree()からkfree_rcu()に変え、読み手が終わるまで解放を待たせるもの。IPv6は1つ目の経路の対象外で、tcp_v6_reqsk_destructor()にある移行時の同種の問題(CALIPSOでのみ設定されるipv6_optに関するもの)は、別のパッチで対応するとしている。(出典: 1, 2)\nどこまで悪用できると示されたの?\nAnthropicの研究レポートは、multipath TCP(MPTCP)のリスナーを持つLinuxサーバーにパケットを送ると、認証なしで任意のコマンドをrootで実行できる実証を挙げる。基になる脆弱性は CVE-2026-98432 で、実証は2段階。(出典: 16)\n- 競合を起こしてカーネルに攻撃者が制御する長さのフィールドを読ませ、余分なバイトを応答に載せて返させる。応答にカーネルポインタが含まれればKASLRを遠隔で突破する\n- 同じuse-after-freeでバッファをあふれさせ、コールバックのポインタを、通常のプロトコル機能で事前にカーネルメモリへ置いたペイロードのアドレスに書き換える。カーネルがコールバックを呼ぶと、既存のカーネル関数の呼び出しを連ねて、攻撃者が選んだシェルコマンドをrootで実行する\n競合に負けてもハンドシェイクが失敗するだけでシステムは落ちず、再試行を続けられる。PoCでは、カーネルポインタの漏えいに48分、そこからコマンド実行まで5分かかった。(出典: 16)\nAnthropicの実証の条件はMPTCPのリスナーで、CVEの記述が挙げる条件は接続を受け付けるIPv4のTCPサービス。*1 (出典: 2, 16)\n評価が割れているのはなぜ?\nCNAのCVSS 9.8は、10月15日の告知の初版にはなかった。初版の修正版は4系列にとどまる。10月30日時点の告知とCVEレコード(dateUpdatedは10月24日)は、CVSS 3.1の9.8(Critical)と修正版8系列を記載している。(出典: 2, 3, 4)\n評価は、10月30日時点で次のとおり。\n(出典: 2, 5, 7, 8, 9, 10, 11, 12, 13)\nCNAの9.8とSUSE、Oracle、Amazon、Red Hatの8.1は、ベクタの違いが攻撃の複雑さ(LowかHigh)だけ。(出典: 2, 8, 10, 11, 12, 13)\nCNAはヒープ内容の漏えいと境界外書き込みの可能性を挙げ(出典: 2)、Anthropicはrootでのコマンド実行を実証したとしている。(出典: 16)\n影響を受ける対象は?\n影響を受けるのは4.4以降のLinuxカーネルで、各系列の修正版より前。4.4未満は影響を受けない。(出典: 2)\n上流の修正版は5.10.272、5.15.223、6.1.190、6.6.159、6.12.113、6.18.56、7.2.10、7.3の8系列。(出典: 2, 4)修正コミットのコミット日は10月5日。(出典: 1)Anthropicは、上流で修正され、メンテナンス中の全stableブランチにバックポートされたとしている。(出典: 16)\n配布元ごとの修正版提供\n配布元の状態は、10月30日時点で次のとおり。\n(出典: 6, 7, 9, 10, 11, 12, 13, 14, 15)\n脆弱性の対応方法\n- Linuxカーネル CVEチームは最新のstableへの更新を勧め、個別コミットのcherry-pickは推奨していない。(出典: 3, 4)\n- Red Hatは、基準を満たす緩和策はないとしている。*2 (出典: 8, 9)\n関連タイムライン\n参考情報\n公式セキュリティ情報\n- [1] 2026年10月5日 ipv4: free inet_opt and ireq_opt after an RCU grace period(Linux カーネル、修正コミット)\n- [2] 2026年10月15日 ipv4: free inet_opt and ireq_opt after an RCU grace period(CVE Program、CNA: Linux)\n- [3] 2026年10月15日 CVE-2026-98432: ipv4: free inet_opt and ireq_opt after an RCU grace period(Linux カーネル CVEチーム、linux-cve-announce)\n- [4] CVE-2026-98432: ipv4: free inet_opt and ireq_opt after an RCU grace period(Linux カーネル CVEチーム、vulns.git)\n公的機関等の脆弱性情報\n- [5] 2026年10月15日 CVE-2026-98432(NVD)\n配布元の情報\n- [6] CVE-2026-98432(Debian Security Tracker)\n- [7] 2026年10月15日 CVE-2026-98432(Ubuntu)\n- [8] CVE-2026-98432(Red Hat、CVEページ)\n- [9] 2026年10月15日 CVE-2026-98432(Red Hat、Security Data API)\n- [10] 2026年10月15日 kernel: ipv4: free inet_opt and ireq_opt after an RCU grace period(Red Hat、VEX。10月29日に更新)\n- [11] CVE-2026-98432(SUSE)\n- [12] 2026年10月15日 CVE-2026-98432(Oracle Linux)\n- [13] 2026年10月15日 CVE-2026-98432(Amazon Linux)\n- [14] 2026年10月24日 ALAS2023-2026-3251(Amazon Linux 2023)\n- [15] 2026年10月29日 ALAS2023-2026-3335(Amazon Linux 2023)\nセキュリティベンダ等の報告\n- [16] 2026年10月27日 Discovering and exploiting vulnerabilities in critical, real-world software with Claude(Anthropic)\n(日付は公開元のものを記載しているため、現地時間等でずれている可能性があります。)\n更新履歴\n- 2026年10月30日 新規作成",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "AIの回答で登場する統計データの40％が裏付ける研究結果などがない「ゾンビ統計」であることが明らかに",
+      "url": "https://gigazine.net/news/20261030-ai-assistants-statistics-not-find-study/",
+      "description": "ChatGPT、Perplexity、Gemini、Claude、Google検索のAIによる概要という5つのAIアシスタントが出力した統計情報1285件を追跡調査したところ、そのほとんどが研究による裏付けのないものだったとAI可視化プラットフォームのTrakkrが報告しています。 Trakkr https://trakkr.ai/trakkr-research/zombie-stats Trak",
+      "bookmarks": 25,
+      "published_at": "2026-10-30T08:18:59Z",
+      "full_text": "AIの回答で登場する統計データの40％が裏付ける研究結果などがない「ゾンビ統計」であることが明らかに\nChatGPT、Perplexity、Gemini、Claude、Google検索のAIによる概要という5つのAIアシスタントが出力した統計情報1285件を追跡調査したところ、そのほとんどが研究による裏付けのないものだったとAI可視化プラットフォームのTrakkrが報告しています。\nTrakkr\nhttps://trakkr.ai/trakkr-research/zombie-stats\nTrakkrはChatGPT、Perplexity、Gemini、Claude、AIによる概要という5つのAIツールに対して、200種類の質問を投げかけました。そして、AIが出力した回答に登場する統計情報の引用文献をさかのぼり、正確な情報源が存在するのかどうかを調査したそうです。\n具体的な質問例として挙げられているのが、「営業担当者のうち、1回のフォローアップで諦めてしまう人の割合はどれくらい？」というもの。これに対して、調査対象となった5つのAIツールのすべてが「営業担当者の44％が1度のフォローアップのみで諦めてしまう」と回答。このうち、ChatGPTだけが「ただし、根拠は不明瞭」と説明したそうです。\n例えばGoogleのAIによる概要の場合、「営業担当者の44％が1度のフォローアップのみで諦めてしまう」の根拠として、出典をリンクしています。このリンクをクリックしていくと、2017年に公開されたフリーランスライターが作成したサンプル記事へとつながるそうです。この記事の見出しに「営業担当者の44％が1度のフォローアップのみで諦めてしまう」と記されていますが、記事の出典元にはその根拠となる研究やレポートなどはないそうです。\nTrakkrは「ここで手掛かりは途絶えてしまいました。『44％』という数字の出典元を探そうとあらゆる方法を試みましたが、どれも論文や研究を引用したものではありませんでした。これがいわゆる『ゾンビ統計』と呼ばれるもので、何の根拠もないまま、繰り返し引用される数字です」と記しています。\nTrakkrはAIツールが統計データを引用した回答を行ったものの中から、無作為に1285件の回答を抽出し、これらの統計データが研究に裏付けられたものかどうかを検証しました。なお、1285件の回答のうち108件がChatGPT、277件がPerplexity、300件がGemini、300件がClaude、300件がAIによる概要にようものです。TrakkrはAIの回答に記されている出典元をたどり、出典元のリンクがない場合には、その情報源を検索しています。\n調査の結果、研究などで統計情報が裏付けられているAIの回答は、わずか40％でした。8％は裏付ける研究にたどり着いたものの、出典元をさかのぼる過程で数値や文脈が変わっていました。残りの52％は裏付ける研究までたどり着くことができませんでした。このうち40％はアクセスが制限されている(ペイウォールなど)、削除されている、該当する数値の記載がないといった理由で情報源を確認することができず、11％は情報源にまったくたどり着けませんでした。残りの1％は、出典元のリンクが読み込まれないため、情報を確認することができなかったというケースです。\nTrakkrによると、最もゾンビ統計を出力する頻度が少なかったのが、OpenAIのChatGPTです。\n各AIツールが回答1件に含める統計情報の平均数と、回答が研究により裏付けられたものである割合をまとめたのが以下の図。研究に裏付けられた統計情報を出力する割合が最も高いのがChatGPT(57％)で、以下、Perplexity(46％)、AIによる概要(39％)、Gemini(38％)、Claude(38％)の順に続きます。\nただし、Trakkrは「AIはほとんどの場合、数字を捏造することはありませんでした。AIが引用したページには、82％の確率で引用した数字が記載されていました。しかし、数字の出典元として引用されたページのうち、元の研究論文へのリンクを明確に記していたのは、わずか21％でした」とも記しています。なお、AIツールが出典元として利用したウェブページの半数以上は、企業ブログです。さらに、ニュース記事や統計のまとめ記事を加えると、AIの引用元の大部分を占めることになるとのこと。\nAIが引用したウェブページの割合と、種類別の「研究に裏付けされていた割合」は以下の通り。AIが引用したウェブページの内訳は調査会社のウェブページが13％、政府関連のウェブページが7％、企業ブログが54％、ニュースが10％、統計データのまとめが8％、その他が8％。このうち、研究に裏付けされていた割合は調査会社のウェブページが62％、政府関連のウェブページが61％、企業ブログが37％、ニュースが37％、統計データのまとめが35％、その他が41％です。\nこれらの結果を受け、TrakkrはAIが出力した統計データを活用する場合は、「引用箇所を2度たどる」「統計データがいつ行われた調査や研究を対象としたものか、被験者の数は何人だったのかを確認する」「複数のAIが同じ数字を挙げたからといっても、信頼性が高いとは考えないこと」などに注意するよう推奨しています。\nin AI, Posted by logu_ii\nYou can read the machine translated English article It has been revealed that 40% of the sta….",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "事故後に前校長と弁護士4人で遺族対応、校長「深く考えずにやってしまった」　同志社会見",
+      "url": "https://www.sankei.com/article/20261030-GNXVPH4LXZM5XMWDWRSX6PD6WI/",
+      "description": "辺野古転覆事故後の対応について説明する宿久洋同志社国際中学校・高等学校校長＝10月30日午後、京都市下京区 （寺田康介撮影） 沖縄県名護市辺野古沖で船2隻が転覆し、研修旅行中の同志社国際高校（京都府）2年、武石知華（ともか）さん＝当時（17）＝ら2人が死亡した事故をめぐり、同校を運営する学校法人同志社は30日...",
+      "bookmarks": 27,
+      "published_at": "2026-10-30T10:26:49Z",
+      "full_text": "沖縄県名護市辺野古沖で船2隻が転覆し、研修旅行中の同志社国際高校（京都府）2年、武石知華（ともか）さん＝当時（17）＝ら2人が死亡した事故をめぐり、同校を運営する学校法人同志社は30日、京都市内で記者会見を開いた。\n知華さんの両親は事故後の今年5月、同校で損害賠償の個別の交渉に臨んだ際、学校側の4人の弁護士と西田喜久夫前校長が対応に当たったことに不信感を抱いていることを明らかにしている。\nこの件について、同志社国際高の宿久洋校長は「明らかに配慮が足りておらず申し訳ない」と謝罪した。生徒の補償の窓口として、西田氏が解任後にも携わっていた件についても、「不適切だと考え、交代をさせた」と話した。その理由について、「あまり深く考えずにやってしまっている。保障の全てを承知していたのが西田氏だったので（任せてしまった）」と説明した。\n会見には学校法人同志社の八田英二理事長も出席した。",
+      "category": "コラム"
+    },
+    {
+      "source": "hatena",
+      "title": "GPT-6.1 Terraと同等のコーディング性能を発揮するAIモデル「Mistral Large 4」が無償公開される",
+      "url": "https://gigazine.net/news/20261030-mistral-large-4-open/",
+      "description": "フランスに拠点を置くAI企業のMistralが大規模AIモデル「Mistral Large 4」をオープンモデルとして無償公開しました。コーディング性能ではGPT-6.1 Terraと同等性能という評価もあります。 Mistral Large 4 (Le Chonk) is now open weight | Mistral https://mistral.ai/news/mistral-larg",
+      "bookmarks": 17,
+      "published_at": "2026-10-30T04:38:30Z",
+      "full_text": "GPT-6.1 Terraと同等のコーディング性能を発揮するAIモデル「Mistral Large 4」が無償公開される\nフランスに拠点を置くAI企業のMistralが大規模AIモデル「Mistral Large 4」をオープンモデルとして無償公開しました。コーディング性能ではGPT-6.1 Terraと同等性能という評価もあります。\nMistral Large 4 (Le Chonk) is now open weight | Mistral\nhttps://mistral.ai/news/mistral-large-4-oss/\nMistral Large 4は2026年10月6日に発表されたAIモデルです。総パラメーター数1兆・アクティブパラメーター数520億のMoEモデルで、コンテキストウィンドウは最大100万トークン。「Le Chonk(太っちょ)」という別名もついています。発表時の詳細は以下の記事にまとめています。\n1兆パラメータ超の「Mistral Large 4 Le Chonk」をMistralが発表、中国勢に対抗するオープンウェイトAIモデル - GIGAZINE\nMistral Large 4は発表時点から将来的にオープンモデルとしてリリースされることが約束されており、現地時間の2026年10月29日に実際に以下のリンク先で無償公開されました。ライセンスは「Mistral Ecosystem Open-Weight License」を採用。追加学習や商用利用は許可されていますが、サードパーティーAPI事業(Model as a Service)を実施する企業は商用ラインセンスを取得する必要があります。\nmistralai/Mistral-Large-4-1T-A52B · Hugging Face\nhttps://huggingface.co/mistralai/Mistral-Large-4-1T-A52B\nMistralはMistral Large 4を中国製オープンモデルに対抗するモデルとして位置付けており、コーディングベンチマークの「FrontierCode 2.0」で「GLM-5.3 Flash」「Kimi K3」「GLM-5.3」「DeepSeek V4.1 Flash」といった中国製モデルに勝利していることをアピールしています。\n以下のグラフはMistral Large 4のコーディング性能を人間に評価させた結果で、上から順に「GLM-5.3」「Kimi K3」「DeepSeek V4.1 Flash」「Claude Opus 5.5」と比較した際の勝率を示しています。Mistral Large 4は中国製モデルに対して5割以上の勝率を記録しました。\n第三者機関のArtificial AnalysisもMistral Large 4の性能評価を実施しています。複数のベンチマーク結果をもとにAIの総合性能を算出する「Artificial Analysis Intelligence Index v5.0」ではMistral Large 4のスコアは「26」で、DeepSeek V4.1 Flash 1017やGLM-5.3を下回りました。\n一方で、AIモデルとエージェントアプリを組み合わせてコーディング性能を測定する「Artificial Analysis Coding Agent Index」では、「Mistral Large 4とMistral Vibe」が「48」というスコアを記録して「GPT-6.1 TerraとCodex」と並びました。\nなお、MistralはMistral Large 4を次世代モデルシリーズの基盤として位置付けており、今後もオープンモデルの最前線を推し進める姿勢を示しています。\nin AI, Posted by log1o_hf\nYou can read the machine translated English article 'Mistral Large 4,' an AI model that deli….",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "NVIDIA、40言語対応の無償文字起こしAI「Nemotron 3.5 Transcribe」",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2152693.html",
+      "description": "",
+      "bookmarks": 12,
+      "published_at": "2026-10-30T09:44:07Z",
+      "full_text": "ニュース\nNVIDIA、40言語対応の無償文字起こしAI「Nemotron 3.5 Transcribe」\n2026年10月30日 18:07\nNVIDIAは10月28日、文字起こしや翻訳、話者分離をサポートしたオープンウェイト(モデルの重み)のAIモデル「Nemotron 3.5 Transcribe」を発表した。文字起こしは40言語、英語との相互翻訳は31言語、話者分離は13言語に対応し、最大1時間の音声を処理できる。ベースモデルはHugging Faceにて公開しており、FP8、NVFP4の量子化モデルも近日公開予定だとしている。ライセンスは「OpenMDW-1.1」で、無償で商用利用も可能。\nNemotron 3.5 Transcribeは、オープンウェイトモデルの中で発言内容を特定する性能でトップ、話者分離においても優れた性能を発揮できるというAIモデル。総パラメータ数は34B(340億)、アクティブパラメータ数は4.3B(43億)のMoE型で、コンテキスト長は6万5,536トークンとなっている。\nHugging Face Open ASRベンチマークでの平均WER(単語誤り率)は、英語で5.33%、7言語で4.62%、長文で10.98%となっており、いずれも競合のオープンウェイトモデルと比べて最も優れた結果を記録した。\n加えて、文字起こしや話者分離の性能を測るDavid AI DAI-ASR-I18Nベンチマークでは、オープンウェイトモデルの中で首位、全体でも2位のスコアを獲得した。話者分離のエラー率を測るテストでは、NVIDIAの話者分離向けモデル「Nemotron 3 Diarization」をわずかに上回る性能を発揮し、こちらも首位となった。\nスループットの高さも特徴としており、NVFP4量子化モデルを利用したケースでは、NVIDIA RTX PRO 6000 Blackwell Server Edition GPUを1基搭載するマシンにおいて、100時間分の音声を3分未満で処理できたとしている。\nモデルはvLLMですでにデプロイできるほか、NeMo-Speech.cppを使ったローカルデプロイは量子化モデルとともに利用可能となる。RTX SparkやDGX Spark、Jetson AGX Thorを使ったオンデバイス文字起こしなどに活用できるとしている。そのほか、新たな音声データセット「Granary v2」も公開している。",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "「Gemini Notebook」、数百冊の教科書を無料で利用可能に",
+      "url": "https://www.watch.impress.co.jp/docs/news/2152548.html",
+      "description": "",
+      "bookmarks": 13,
+      "published_at": "2026-10-30T04:36:41Z",
+      "full_text": "ニュース\n「Gemini Notebook」、数百冊の教科書を無料で利用可能に\n2026年10月30日 12:16\nGoogleは29日、「Gemini Notebook」で、数百冊の教科書を無料で利用できるようにした。米国とインドの出版社・教材提供元による教科書を追加し、内容についてAIに質問したり、学習ガイドや練習問題を作成したりできる。\n対象となるのは、OpenStax、Open Textbook Library、S Chand Publishingなどが提供する教科書。Gemini Notebookに教科書を追加すると、その内容に基づいてAIが質問に回答する。回答には出典が示され、元の教科書の該当箇所に直接アクセスできる。\n教科書の内容を基に、利用者に合わせた学習ガイドや練習問題、フラッシュカードなども生成できる。\n利用するには、Gemini Notebook内の「Add sources」(ソースを追加)から「Textbooks」(教科書)を選択し、提供されている教科書の一覧から追加する。\nGemini Notebookでは、これまでにもGoogle Play Booksで購入した一部の出版社の対象の電子書籍をソースとして追加できた。今回の拡充により、購入済みの電子書籍に加え、対象の教科書も無料で学習に活用できる。",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "Herdr UI: a native window for the Herdr daemon",
+      "url": "https://herdrui.dev/",
+      "description": "",
+      "bookmarks": 25,
+      "published_at": "2026-10-15T02:25:09Z",
+      "full_text": "",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "6カ所以上のアメリカ軍基地で食品を腐敗させた「謎の冷凍庫の故障」にサイバー攻撃の疑いあり、国防総省がフランス当局と協力して捜査中",
+      "url": "https://gigazine.net/news/20261030-pentagon-treating-military-freezer-cyberattack/",
+      "description": "アメリカ国防総省(ペンダゴン)が、2026年8月にアメリカの軍事基地で相次いで発生した謎の冷蔵庫の不具合について、サイバー攻撃の疑いがあるとして調査を行っていることが明らかになりました。 EXCLUSIVE: Pentagon treating military base freezer malfunctions as suspected cyberattack, officials say | ",
+      "bookmarks": 11,
+      "published_at": "2026-10-30T04:42:30Z",
+      "full_text": "",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "中城城跡？　実際と異なるポスターに批判　村観光協会がAIで作成",
+      "url": "https://ryukyushimpo.jp/national/entry-5582135.html",
+      "description": "【中城】中城村観光協会が11月7日に開催する2026中城村ロゲイニング大会「なかぐすくトレジャーウオーク」の公式ポスターに掲載された中城城跡を思わせる画像が、実際の城跡と大きく異なる点を指摘する投稿がSNSで拡散されている。 AI画像を使った中城村ロゲイニング大会「なかぐすくトレジャーウオーク」のポスター（中...",
+      "bookmarks": 6,
+      "published_at": "2026-10-30T01:52:54Z",
+      "full_text": "",
+      "category": "コラム"
+    },
+    {
+      "source": "hatena",
+      "title": "OpenAIが「AI五原則」を提案、「人間の意図に忠実であれ」「害を最小限に抑えろ」などの指針を自社モデルに適用",
+      "url": "https://gigazine.net/news/20261030-openai-model-spec-five-principles/",
+      "description": "OpenAIが、自社のAIモデルに求める振る舞いについて定めた指針「Model Spec⁠」を更新し、5つの原則を定めました。このような原則に従うようAIに指示することで、安全かつ有用なモデルを実現するという社内目標を推進できるとしています。 より高性能で有益な AI に向けた Model Spec の更新 | OpenAI https://openai.com...",
+      "bookmarks": 6,
+      "published_at": "2026-10-30T04:42:38Z",
+      "full_text": "",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "「リカバリー用USBメモリ」が消える？ Windows 11、クラウドからのリカバリー機能が追加に【やじうまWatch】",
+      "url": "https://internet.watch.impress.co.jp/docs/yajiuma/2152507.html",
+      "description": "",
+      "bookmarks": 14,
+      "published_at": "2026-10-30T03:09:52Z",
+      "full_text": "やじうまWatch\n「リカバリー用USBメモリ」が消える？ Windows 11、クラウドからのリカバリー機能が追加に\n2026年10月30日 11:32\nWindows 11で、クラウドからのリカバリー機能が利用可能となったことが明らかになった。\nこれはWindows 11の最新のセキュリティ以外の機能更新プログラム「KB5127936」で提供される「クラウド リビルド（Cloud Rebuild）」なる新機能。USBメディアやカスタムイメージを使うことなく、Windows UpdateからWindows本体とデバイスドライバーの両方をダウンロードし、システム全体を再インストールできるという。これまでは必要なドライバー類を保管しておくためにリカバリー用USBメモリを用意する必要があったが、それらがクラウド経由でダウンロードできるようになることで、今後はそれらが不要になると考えられる。\n段階的にリリースされるため今すぐ利用できるわけではないが、Insider向けではなく、リリースが確定している機能のため、しばらく待てば誰もが使えるようになる。詳細はMicrosoftのサイトにも掲載されているので、リリースを心待ちにしたい。\n- Windows 11's new Cloud Rebuild can resurrect PCs that won't boot（Windows Central）\nhttps://www.windowscentral.com/microsoft/windows-11/windows-11s-new-cloud-rebuild-can-resurrect-pcs-that-wont-boot\n- クラウド リビルド（Microsoft Learn）\nhttps://learn.microsoft.com/ja-jp/windows/configuration/cloud-rebuild/",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "【お知らせ】GMO犯人捜索マップの一般公開を終了しました",
+      "url": "https://satoru.net/hacker/gmo/261029-map.html",
+      "description": "様々なご意見を頂いたため、「GMO犯人捜索マップ」は GMO・警察にのみ情報提供し、一般公開はしないことにしました。 短い間でしたが、ご利用いただいてありがとうございました。",
+      "bookmarks": 183,
+      "published_at": "2026-10-29T22:46:10Z",
+      "full_text": "タップで謝罪 謝罪 （みんなのタップ数がリアルタイム共有されてます）\n様々なご意見を頂いたため、「GMO犯人捜索マップ」は GMO・警察にのみ情報提供し、一般公開はしないことにしました。\n短い間でしたが、ご利用いただいてありがとうございました。\nsatoru.net 矢野さとる\nGMO 事件のまとめに戻る",
+      "category": "ネタ系"
+    },
+    {
+      "source": "hatena",
+      "title": "なぜエンジニアは「具体」に縛られるのか。細谷功さん×ミノ駆動さんが語る、抽象化スキルの磨き方 - レバテックLAB",
+      "url": "https://levtech.jp/media/detail_954/",
+      "description": "新しい手法やツールが次々に登場し、開発のスピードがかつてなく上がる一方で、開発現場から消えないすれ違いがあります。それは、ビジネス側の「抽象的な要望」と、開発側の「具体的な実装」が噛み合わないということです。 2026年8月27日開催のイベント「【細谷功さん×ミノ駆動さんが語る】システム開発と『具体と抽象...",
+      "bookmarks": 12,
+      "published_at": "2026-10-28T02:17:27Z",
+      "full_text": "",
+      "category": "コラム"
+    },
+    {
+      "source": "hatena",
+      "title": "米国で「コンピューター・情報系」の学生急減　AIでプログラミング職減少が要因か",
+      "url": "https://japan.cnet.com/article/35254194/",
+      "description": "発表によると、コンピューター・情報科学分野の学生は、2年制大学などの学部でも12.3％減り、大学院でも10.4％減少した。4年制大学、2年制大学など、大学院のいずれでも2桁の減少となった。 医療系は増加、大学院全体では減少 一方、医療系を専攻する学生は増えている。報告書によると、在籍者数は4年制大学の学部で6.2...",
+      "bookmarks": 4,
+      "published_at": "2026-10-30T02:43:02Z",
+      "full_text": "",
+      "category": "コラム"
+    },
+    {
+      "source": "hatena",
+      "title": "Tebikiのジョブボード制作裏側 - tebiki Tech Blog",
+      "url": "https://techblog.tebiki.co.jp/yapc-tokyo-2026-tebiki-job-board",
+      "description": "こんにちは。Tebikiでエンジニアをしているyutaroです。認証・認可周りの開発を担当しています。 TebikiはYAPC::Tokyo 2026にPlatinum Sponsorとして参画することになり、私がイベント企画のリードをしています！ yapcjapan.org この記事では、ジョブボード（イベントのホームページにスポンサーが載せる、主に採用目的...",
+      "bookmarks": 5,
+      "published_at": "2026-10-30T06:22:09Z",
+      "full_text": "",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "ERROR ログ1行から障害の一次対応を下準備する Claude Code スキルを作った - RAKUS Developers Blog | ラクス エンジニアブログ",
+      "url": "https://tech-blog.rakus.co.jp/entry/20261030/errorlog",
+      "description": "楽楽請求の開発チームに所属している takayama です。 本番環境で ERROR ログのアラートが届いたとき、最初の時間を何に使っていますか。 私は、過去の Issue を探したり、障害対応シートに情報を書き写したりする作業に、その時間の多くを使っていました。 そこで、ERROR ログを1行渡すだけで一次対応の下準備をしてく...",
+      "bookmarks": 7,
+      "published_at": "2026-10-30T06:33:29Z",
+      "full_text": "",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "GoogleがAIに「睡眠フェーズ」を導入する研究成果を発表、AIモデルの完成後も新しい知識を継続的に習得させられる仕組み",
+      "url": "https://gigazine.net/news/20261030-ai-sleep-knowledge/",
+      "description": "AIモデルは基本的に学習完了時までの知識しか備えておらず、学習完了後の知識はウェブ検索機能などで補うことになります。新たに、GoogleがAIに「睡眠フェーズ」を導入して継続的な知識習得を可能にする研究成果を発表しました。 The sleep framework: A new way for LLMs to retain knowledge in continual learning ht...",
+      "bookmarks": 14,
+      "published_at": "2026-10-30T00:47:38Z",
+      "full_text": "GoogleがAIに「睡眠フェーズ」を導入する研究成果を発表、AIモデルの完成後も新しい知識を継続的に習得させられる仕組み\nAIモデルは基本的に学習完了時までの知識しか備えておらず、学習完了後の知識はウェブ検索機能などで補うことになります。新たに、GoogleがAIに「睡眠フェーズ」を導入して継続的な知識習得を可能にする研究成果を発表しました。\nThe sleep framework: A new way for LLMs to retain knowledge in continual learning\nhttps://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/\nGeminiシリーズやGPTシリーズなどのAIモデルは学習完了後にテスト期間などを経て正式リリースされるため、一般ユーザーが使えるようになるころには情報が古くなりがちです。例えば、2026年9月に登場したGemini 4 Argonは2026年3月までのデータセットでトレーニングされています。このため、モデルの知識よりも新しい情報についてはウェブ検索機能などを駆使して対応しています。\n素人的には「モデルに新しい知識を学習させればいいのでは？」と考えてしまいますが、Googleによるとモデルに新しい知識を導入し続けると以前学習した情報が急速に失われる「破滅的忘却」が発生してしまうとのこと。この破滅的忘却を防ぎつつモデルに新しい知識を継続的に導入し続ける技術として開発されたのが「睡眠フレームワーク」です。\n睡眠フレームワークではモデルの動作を「アクティブフェース(起床フェーズ)」と「スリープフェーズ(睡眠フェーズ)」に分けます。起床フェーズ中は入力を積極的に処理して情報を短期記憶コンポーネントとして保存。そして睡眠フェーズでは入力の処理を一時停止し、記憶の統合および自己改善を実施します。この仕組みによって破滅的忘却を防ぎつつ新たな知識を取り込めるそうです。\n睡眠フレームワークに関する研究論文は以下のリンク先で公開されています。\n[2606.03979] Language Models Need Sleep: Learning to Self-Modify and Consolidate Memories\nhttps://arxiv.org/abs/2606.03979\nin AI, Posted by log1o_hf\nYou can read the machine translated English article Google has announced research findings i….",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "ChatGPT Pro全プランとBusiness Premiumの利用上限が2倍に",
+      "url": "https://pc.watch.impress.co.jp/docs/news/2152509.html",
+      "description": "",
+      "bookmarks": 7,
+      "published_at": "2026-10-30T06:27:04Z",
+      "full_text": "",
+      "category": "AI"
+    },
+    {
+      "source": "hatena",
+      "title": "無印良品、最大2726万件の個人情報流出か　公式アプリに不正アクセス、退会者も対象",
+      "url": "https://ascii.jp/elem/000/004/447/4447321/",
+      "description": "良品計画は10月30日、無印良品の公式アプリ「MUJIアプリ」で、顧客情報が外部に流出した可能性があると発表した。退会者の情報を含む最大約2726万件が対象。外部からの不正アクセスを検知し、アクセス遮断と修正を実施した。 流出の恐れがあるのは、メールアドレス、生年月日、性別の3項目。クレジットカード情報、氏名...",
+      "bookmarks": 30,
+      "published_at": "2026-10-30T06:27:20Z",
+      "full_text": "良品計画は10月30日、無印良品の公式アプリ「MUJIアプリ」で、顧客情報が外部に流出した可能性があると発表した。退会者の情報を含む最大約2726万件が対象。外部からの不正アクセスを検知し、アクセス遮断と修正を実施した。\n流出の恐れがあるのは、メールアドレス、生年月日、性別の3項目。クレジットカード情報、氏名、住所、電話番号などは含まれない。公表時点で、ダークウェブなどへの対象情報の流出や、情報を悪用した被害は確認されていない。\n退会者も対象に含まれるため、現在アプリを使っていなくても注意が必要だ。\n本記事はアフィリエイトプログラムによる収益を得ている場合があります",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "macOS 27.2 Golden GateではmacOSアップグレード時にRosetta 2が削除されないように。macOS 28で開けなくなるIntelアプリへの警告は継続。",
+      "url": "https://applech2.com/archives/20261030-rosetta-is-no-longer-removed-macos-27-2-upgrade-hero.html",
+      "description": "macOS 27.2 Golden GateではmacOSアップグレード時にRosetta 2が削除されないようになっています。詳細は以下から。 Appleは2026年10月26日、09月にリリースしたmacOS 28 Golden Gateの初のマイナーアップデートとなる「macOS 27.2 Golden Gate (macOS 27.1はパス)」をリリースしましたが、Appleがエンタープラ",
+      "bookmarks": 5,
+      "published_at": "2026-10-30T02:15:26Z",
+      "full_text": "",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "Linuxカーネルに重大な脆弱性「CVE-2026-98432」、CVSS 9.8 Claudeが遠隔root権限実行を実証|セキュリティニュースのセキュリティ対策Lab",
+      "url": "https://rocket-boys.co.jp/security-measures-lab/linux_kernel_cve_2026_98432_ubuntu_anthropic_20261030/",
+      "description": "LinuxカーネルのIPv4ネットワーク処理に、遠隔からの悪用につながるUse-After-Free（解放済みメモリの再利用）の脆弱性「CVE-2026-98432」が確認されました。Canonicalが2026年10月15日に公開し、28日に更新したUbuntuの脆弱性情報では、CVSS v3.1の基本値は9.8（Critical）、Ubuntu独自の優先度は「High」と評価されて...",
+      "bookmarks": 71,
+      "published_at": "2026-10-29T22:47:13Z",
+      "full_text": "LinuxカーネルのIPv4ネットワーク処理に、遠隔からの悪用につながるUse-After-Free（解放済みメモリの再利用）の脆弱性「CVE-2026-98432」が確認されました。Canonicalが2026年10月15日に公開し、28日に更新したUbuntuの脆弱性情報では、CVSS v3.1の基本値は9.8（Critical）、Ubuntu独自の優先度は「High」と評価されています。\n10月27日にはAnthropicが、同脆弱性を利用して、特定の構成のLinuxサーバーで認証なしに遠隔からroot権限でコマンドを実行する攻撃を研究環境で実証したと発表しました。Linuxカーネルの上流では修正されていますが、Ubuntuの複数のリリースやカーネルパッケージでは修正作業が進行中と表示されています。\nCVE-2026-98432のサマリー\n- LinuxカーネルのIPv4 TCP接続処理における競合状態が原因で、Use-After-Freeが発生する脆弱性です。\n- CVE番号は「CVE-2026-98432」。LinuxカーネルCVEチームが2026年10月15日に公表しました。\n- Canonicalが示すCVSS v3.1は9.8（Critical）、CVSS v4.0は8.3（High）です。Ubuntuの優先度はHighです。\n- ネットワーク越しに到達し得る問題で、認証や利用者の操作を必要としない悪用の可能性があります。\n- Anthropicは10月27日、Multipath TCP（MPTCP）の待ち受け機能を備えたサーバーを対象に、遠隔からroot権限でコマンドを実行できることを研究環境で実証したと発表しました。\n- Linuxカーネルの上流では修正済みですが、Ubuntu 24.04 LTS、22.04 LTSなどの標準カーネルは、Canonicalの10月28日更新情報では「Vulnerable / work in progress」です。\n- 企業はインターネット公開サーバー、MPTCPの使用状況、実際に稼働しているカーネルと配布元の修正状況を照合する必要があります。\nTCP接続処理の競合で解放済みメモリを参照\nLinuxカーネルCVEチームによると、問題はIPv4のTCP接続を確立する過程にあります。新たな接続に対応する子ソケットへIPオプションのデータを引き渡す際、元の接続要求側にも同じデータへの参照が残ります。\n別のCPUが再送されたSYNパケットを並列処理し、SYN-ACK応答を生成している間に、子ソケットが破棄されて参照先のメモリが解放されると、処理が解放済みメモリを読み込む場合があります。接続要求ソケットの移行処理でも類似の競合が存在します。\nこの問題は単なるアプリケーションの障害ではなく、OSのカーネル内で発生します。影響としてはカーネルの異常終了などの可用性への影響に加え、メモリ破壊に伴う深刻な侵害の可能性が指摘されています。\n修正では、対象メモリを直ちに解放する`kfree()`を、RCU（Read-Copy-Update）による読み取り処理の終了を待って解放する`kfree_rcu()`へ変更しています。カーネルチームは、IPv6の通常の子ソケット生成処理は最初の問題の対象外としつつ、IPv6のソケット移行に関する別の類似問題は別パッチで対応すると説明しています。\nAnthropic、特定のLinuxサーバーで遠隔root権限実行を実証\nAnthropicのFrontier Red Teamは10月27日、Claudeを利用したソフトウェア脆弱性の発見・悪用実証に関する研究結果を公開しました。その中でCVE-2026-98432を取り上げ、Multipath TCP（MPTCP）の待ち受け機能を持つLinuxサーバーに対して、認証情報も利用者の操作も必要とせず、遠隔からroot権限で任意のコマンドを実行する実証に成功したと報告しています。\n同社によれば、最初の指示を受けたClaudeが攻撃実証用の処理を作成しました。研究環境での実証では、カーネルのアドレス情報の取得に48分、コマンド実行に至るまでにさらに5分を要したとしています。\nただし、これはAnthropicが説明する研究環境での結果です。一般的なLinuxサーバーすべてに同じ方法が成立すると示したものではありません。また、研究での実証と、犯罪者による実際の悪用確認は区別する必要があります。\nUbuntuの影響状況――24.04 LTS、22.04 LTSなどで修正作業中\nCanonicalが10月28日に更新したCVEページでは、標準カーネルパッケージ`linux`の状況を次のように掲載しています。\nここで示された「修正作業中」のバージョン番号は、当該更新版がすでに全利用者へ配布され、修正済みになったことを意味しません。Canonicalの表では`Vulnerable`の状態が継続しています。\nまた、Ubuntuには標準カーネルだけでなく、HWE、AWS、Azure、KVMなど用途別のカーネルパッケージがあります。例えば22.04 LTSの`linux-hwe-6.8`は「Vulnerable」、24.04 LTSの`linux-aws`および`linux-azure`は「Vulnerable／修正作業中」とされています。利用中のカーネルの種類ごとに確認してください。\nLinuxカーネル上流では修正済み、配布元のバックポート確認が必要\nLinuxカーネルCVEチームの10月15日付告知では、本件の修正を取り込んだカーネルとして、6.12.113、6.18.56、7.2.10、7.3-rc7を挙げています。その他の保守対象ブランチでも修正のバックポートが進められています。\nただし、上流の修正版番号と、Ubuntuなど各ディストリビューションのパッケージ番号は同一ではありません。ディストリビューション側が修正を個別に取り込む場合もあるため、単純なカーネル番号の大小では判定できません。LinuxカーネルCVEチームは、個別の修正コミットだけを抜き出して適用する方法ではなく、配布された安定版カーネルへ更新することを推奨しています。\n情報システム部門が確認したい対策\n企業では、まずLinuxサーバーの稼働状況を棚卸しし、インターネットから到達可能なTCPサービスを提供するサーバーを優先して確認します。特にAnthropicが実証対象としたMPTCPの待ち受け機能を利用している環境は、外部公開範囲を点検する必要があります。\n- uname -rで現在稼働しているカーネルを確認し、Ubuntuのリリースとカーネルパッケージ名を管理台帳に紐づけます。\n- CanonicalのCVEページとUbuntu Security Noticesを照合し、利用しているカーネル種別に修正版が提供されているか確認します。\n- MPTCPを利用するサービスがある場合は、本当に外部公開が必要か、ファイアウォールやアクセス制限で到達元を限定できるか検討します。\n- 修正版が提供された環境では、変更管理とサービス影響の確認を行ったうえでカーネルを更新し、必要な再起動後に稼働カーネルが切り替わったことを確かめます。\n- 修正版の提供前は、関係するサーバーの監視、ログの保全、不要なネットワーク公開の削減を進めます。これらは恒久修正の代替にはなりません。\nこうした対応では、CVEの点数だけでなく、実際の資産構成、公開範囲、修正パッケージの提供状況を突き合わせる脆弱性管理の手順と優先順位付けが判断の基礎となります。\n出典\n- CVE-2026-98432 – Canonical（Ubuntu Security）\n- CVE-2026-98432: ipv4: free inet_opt and ireq_opt after an RCU grace period – Linux kernel CVE team（2026年10月15日）\n- Discovering and exploiting vulnerabilities in critical, real-world software with Claude – Anthropic（2026年10月27日）\n- CVE-2026-98432 – Red Hat Product Security",
+      "category": "テクノロジー"
+    },
+    {
+      "source": "hatena",
+      "title": "【AV Watchアワード】2026年ベストテレビはソニー液晶「BRAVIA 9 II」、パナソニック有機EL「Z95C」に決定!!",
+      "url": "https://av.watch.impress.co.jp/docs/topic/avwaward/2150973.html",
+      "description": "",
+      "bookmarks": 9,
+      "published_at": "2026-10-29T23:50:21Z",
+      "full_text": "",
+      "category": "ネタ系"
+    }
+  ]
+}
