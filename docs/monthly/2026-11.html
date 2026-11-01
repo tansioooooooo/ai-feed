@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI トレンドレポート 2026-11</title>
+<style>:root {
+  --bg: #0f0f13;
+  --surface: #1a1a22;
+  --border: #2a2a38;
+  --text: #e8e8f0;
+  --muted: #7a7a9a;
+  --accent: #7c6af7;
+  --green: #4ade80;
+  --orange: #fb923c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+header {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.header-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
+h1 a { color: var(--text); text-decoration: none; }
+h1 a:hover { color: var(--accent); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.period-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+main { padding: 20px 24px; max-width: 860px; }
+section { margin-bottom: 28px; }
+section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 10px;
+}
+.summary-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+  color: var(--text);
+}
+.trends-list { display: flex; flex-direction: column; gap: 12px; }
+.trend-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.trend-title {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.trend-desc { color: var(--text); line-height: 1.7; }
+.keywords { display: flex; flex-wrap: wrap; gap: 8px; }
+.keyword {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 12px;
+  color: var(--text);
+}
+.outlook-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: 10px;
+  padding: 16px 20px;
+  line-height: 1.8;
+}
+.articles-grid { display: flex; flex-direction: column; gap: 8px; }
+.article-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.article-source {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.article-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.article-link:hover { color: var(--accent); }
+.article-score { color: var(--muted); font-size: 11px; white-space: nowrap; flex-shrink: 0; }
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.back-link:hover { text-decoration: underline; }
+.stats-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.stat-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-align: center;
+  min-width: 80px;
+}
+.stat-num { font-size: 22px; font-weight: 700; color: var(--accent); }
+.stat-label { font-size: 11px; color: var(--muted); margin-top: 2px; }
+@media (max-width: 600px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+}</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1><a href="../index.html">AI Feed</a></h1>
+    <span class="period-badge">月次レポート</span>
+    <span class="subtitle">2026-11 (2026-11-01 〜 2026-11-30)</span>
+  </div>
+</header>
+<main>
+  <a href="../index.html" class="back-link">&larr; 最新フィードへ</a>
+
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">総記事数</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">HN</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Hatena</div></div>
+    <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Twitter</div></div>
+  </div>
+
+  <section>
+    <h2>📋 月次サマリー</h2>
+    <div class="summary-box">2026年10月のAIニュースは、Gemini 4・GPT-6系・Claude Haiku 5.5・Mistral Large 4など主要モデルが相次いで登場した。Meta「Muse Spark Open」(816B)、Kimi、Beamといった大型オープンウェイトの公開も続いた。OpenCode 2.0やPi 1.0などコーディングエージェント基盤が成熟する一方、OpenAIの安全担当退社や論文撤回、FTC調査など信頼性・規制面の話題も目立った。AI需要によるメモリ逼迫も指摘された。(注: 30日分すべてではなく、一部日の上位記事とタイトル一覧のサンプルに基づく分析)</div>
+  </section>
+
+  <section>
+    <h2>🔥 主要トレンド</h2>
+    <div class="trends-list"><div class="trend-item"><div class="trend-title">フロンティアモデルの連続リリース</div><div class="trend-desc">Gemini 4 Carbon/Argon、GPT-6/6.1 Terra、Claude Haiku 5.5、Mistral Large 4、FLUX 3、MiniMax M3.1などが公開。Gemini 4 CarbonはArtificial Analysis Intelligence Indexで首位に立った。</div></div>
+<div class="trend-item"><div class="trend-title">オープンウェイトモデルの大型化と実用化</div><div class="trend-desc">Meta Muse Spark Open(816B/アクティブ42B、1Mコンテキスト)、Mistral Large 4、Reflection Beam(501B)、Kimi K3.1、Kolibriなどが公開された。IBM CEOはオンプレでの実用性に言及し、Mac Studio 2台でのローカル実行も話題になった。</div></div>
+<div class="trend-item"><div class="trend-title">コーディングエージェント基盤の進化</div><div class="trend-desc">OpenCode 2.0(常駐サービス、Code Mode、バックグラウンドサブエージェント)、Pi 1.0/Pi Durable、Docker Agent、OpenShellなど。MCPをコードで呼ぶ方式や長時間エージェントが主流化している。</div></div>
+<div class="trend-item"><div class="trend-title">AI企業の信頼性・倫理・規制への懸念</div><div class="trend-desc">OpenAIの安全研究者解雇や安全担当リーダーの退社、数学成果の撤回、FTCの製品リスク調査、Anthropic S-1報道、Claudeの学習データ・通報を巡る批判、スクレイピング規制法案などが議論を呼んだ。</div></div>
+<div class="trend-item"><div class="trend-title">AIによる科学・研究・検証の加速</div><div class="trend-desc">OpenAIの数学・物理の新発見、Opus 5.5による材料候補・創薬・ドードー目撃記録の発見、LLMによる形式検証の現実化、Genie 4などのワールドモデルが注目された。</div></div>
+<div class="trend-item"><div class="trend-title">AIインフラ・コスト・労働への波及</div><div class="trend-desc">Micron CEOがAI需要でメモリ逼迫が2027〜28年まで続くと発言し、OpenAIとAnthropicはLLM価格を最大80%値下げ。Cerebrasの1兆パラメータ展開、MicrosoftやAmazonの人員再編、AIで仕事が増えるという議論も出た。</div></div>
+</div>
+  </section>
+
+  <section>
+    <h2>💡 注目キーワード</h2>
+    <div class="keywords"><span class="keyword">Gemini 4</span><span class="keyword">GPT-6</span><span class="keyword">Claude Opus 5.5</span><span class="keyword">オープンウェイト</span><span class="keyword">コーディングエージェント</span><span class="keyword">Code Mode / MCP</span><span class="keyword">Genie 4(ワールドモデル)</span><span class="keyword">決定モデル(Clef/Jev)</span><span class="keyword">AI安全性・規制</span><span class="keyword">メモリ逼迫</span></div>
+  </section>
+
+  <section>
+    <h2>🟠 HN ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🔵 はてな ランキング TOP0</h2>
+    <div class="articles-grid"><p style="color:var(--muted)">記事なし</p></div>
+  </section>
+
+  <section>
+    <h2>🌅 展望</h2>
+    <div class="outlook-box">11月はGemini 4やGPT-6系の追加モデル、オープンウェイトとエージェント基盤の競争がさらに続く見通し。価格下落と規制・安全性を巡る議論、AI上場やメモリ供給逼迫の動向にも注目したい。</div>
+  </section>
+</main>
+</body>
+</html>
